@@ -188,8 +188,9 @@
                                                 {
                                                     $id = $row['DriverID'];
                                                     $name = $row['FirstName']." ".$row['LastName'];
+                                                    $email = $row['Email'];
                                                 ?>
-                                                <option value="<?php echo $id ?>"><?php echo $name ?></option>
+                                                <option value="<?php echo $id ?>"><?php echo $name ?>( ID:<?php echo $id ?>, Email:<?php echo $email ?>)</option>
                                                 <?php 
                                                 }
                                                 ?>
