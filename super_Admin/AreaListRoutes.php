@@ -262,56 +262,54 @@ if(!isset($_SESSION['id']))
                                             $Price2=$_POST['Price2']; 
                                             $Price3=$_POST['Price3'];
                                             $Price4=$_POST['Price4'];
-                                            $RouteID=$_POST['RouteID'];
+                                            //$RouteID=$_POST['RouteID'];
+                                            $RouteID=$city1_name.'To'.$city2_name;
+                                            $sq11=mysqli_query($con,"SELECT * FROM AreaFromTo WHERE RouteID  ='$RouteID'");
+                                            $row11=mysqli_fetch_assoc($sq11);
+                                            $count11 = mysqli_num_rows($sq11);
                                           
                                              
                                             date_default_timezone_set('Asia/Kolkata');
                                             $date=date('Y-m-d');
                                             $time = date('h:i A'); 
                                             
-                                            // if($city1_name == $city2_name)
-                                            // {
-                                            //     $perr="From Area and To Area  can not be same";
-                                            //     echo "<script type='text/javascript'>alert(\"$perr\");</script>";
-                                            //     echo'<script>window.location="AreaListRoutes.php";</script>';  
-                                            // }
-                                            // else
-                                            // {
-                                                if($count>0)
+                                            if($count11 > 0)
+                                            {
+                                                $perr="This Route ID Already Exist";
+                                                echo "<script type='text/javascript'>alert(\"$perr\");</script>";
+                                                echo'<script>window.location="AreaListRoutes.php";</script>';  
+                                            }
+                                            elseif($count>0)
+                                            {
+                                                $perr="This data already added";
+                                                echo "<script type='text/javascript'>alert(\"$perr\");</script>";
+                                                echo'<script>window.location="AreaListRoutes.php";</script>';  
+                                            }
+                                            else
+                                            {
+                                                $insert=mysqli_query($con,"INSERT INTO `AreaFromTo`(`RouteID`, `FromArea`,`ToArea`,`Enabled`, `Price1`, `Price2`, `Price3`, `Price4`)
+                                                                                             VALUES('$RouteID','$city1_name','$city2_name','1','$Price1','$Price2','$Price3','$Price4')");
+                                               // die(mysqli_error($con));
+                                                $insert_id=mysqli_insert_id($con);
+                                                if($insert)
                                                 {
-                                                    $perr="This data already added";
-                                                    echo "<script type='text/javascript'>alert(\"$perr\");</script>";
-                                                    echo'<script>window.location="AreaListRoutes.php";</script>';  
+                                                    $perr="Inserted Successfully!";
+                                                  //  echo "<script type='text/javascript'>alert(\"$perr\");</script>";
+                                                     echo'<script>window.location="AreaListRoutes.php";</script>';  
                                                 }
                                                 else
                                                 {
-                                                    $insert=mysqli_query($con,"INSERT INTO `AreaFromTo`(`RouteID`, `FromArea`, `fromZipcode`, `ToArea`, `toZipcode`, `Enabled`, `Price1`, `Price2`, `Price3`, `Price4`)
-                                                                                                 VALUES('$RouteID','$city1_name','','$city2_name','','1','$Price1','$Price2','$Price3','$Price4')");
-                                                   // die(mysqli_error($con));
-                                                    $insert_id=mysqli_insert_id($con);
-                                                    if($insert)
-                                                    {
-                                                        $perr="Inserted Successfully!";
-                                                      //  echo "<script type='text/javascript'>alert(\"$perr\");</script>";
-                                                         echo'<script>window.location="AreaListRoutes.php";</script>';  
-                                                    }
-                                                    else
-                                                    {
-                                                        $perr="Insert Unsuccess";
-                                                        echo "<script type='text/javascript'>alert(\"$perr\");</script>";
-                                                    }
+                                                    $perr="Insert Unsuccess";
+                                                    echo "<script type='text/javascript'>alert(\"$perr\");</script>";
                                                 }
+                                            }
                                             //}
                                             
                                         }
                                     ?>
                            
-                                <form role="form" method="post" class="validate" enctype="multipart/form-data">
+                                <form role="form" method="post" class="validate" enctype="multipart/form-data"  id="myForm">
                                     <div class="form-group" col-md-12>
-                                        <div class="form-group col-md-12">
-                                            <label class="control-label" for="name">Route ID</label>
-                                            <input type="text" name="RouteID" class="form-control" id="emailInput"  placeholder="Route ID" required>
-                                        </div>
                                         <div class="form-group col-md-12">
                                             <label class="control-label" for="name">From Area</label>
                                             <select name="FromArea" class="form-control required" required>
@@ -345,24 +343,82 @@ if(!isset($_SESSION['id']))
                                             </select>
                                         </div>
                                     </div>
+                                     <!-- Float inputs with unique IDs and associated error messages -->
                                     <div class="form-group col-md-12">
                                         <label class="control-label" for="name">Mini Package Price</label>
-                                        <input type="number" min='1' name="Price1" class="form-control required"  placeholder="Mini Package Price" required>
+                                        <input type="text" inputmode="decimal" id="price1" name="Price1" class="form-control required float-input" placeholder="Mini Package Price" required>
+                                        <div id="error-message1" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label class="control-label" for="name">Small Package Price</label>
-                                        <input type="number" min='1' name="Price2" class="form-control required"  placeholder="Small Package Price 2" required>
+                                        <input type="text" inputmode="decimal" id="price2" name="Price2" class="form-control required float-input" placeholder="Small Package Price" required>
+                                        <div id="error-message2" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label class="control-label" for="name">Large Package Price</label>
-                                        <input type="number" min='1' name="Price3" class="form-control required"  placeholder="Large Package Price" required>
+                                        <input type="text" inputmode="decimal" id="price3" name="Price3" class="form-control required float-input" placeholder="Large Package Price" required>
+                                        <div id="error-message3" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label class="control-label" for="name">Extra Large Package Price</label>
-                                        <input type="number" min='1' name="Price4" class="form-control required"  placeholder="Extra Large Package Price" required>
+                                        <input type="text" inputmode="decimal" id="price4" name="Price4" class="form-control required float-input" placeholder="Extra Large Package Price" required>
+                                        <div id="error-message4" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
                                     </div>
+                                    
+                                    <!-- Submission warning message -->
+                                    <div id="submission-warning" class="text-danger" style="display: none; margin-bottom: 10px;">
+                                        Please correct the highlighted errors before submitting the form.
+                                    </div>
+                                    
                                     <input type="submit" name="submit" class="btn btn-primary" value="Submit"/ style="width:13%; margin-top: 15px;">
                                 </form>
+                             <script>
+                                    // Regex to ensure only two decimal places
+                                    const regex = /^[+-]?\d+(\.\d{1,2})?$/;  
+                                    
+                                    // Function to validate an input field
+                                    function validateInput(input, errorMessage) {
+                                        if (!regex.test(input.value) && input.value !== '') {
+                                            errorMessage.style.display = "block";  // Show error message if invalid
+                                            return false;  // Indicate invalid input
+                                        } else {
+                                            errorMessage.style.display = "none";  // Hide error message if valid
+                                            return true;  // Indicate valid input
+                                        }
+                                    }
+                                    
+                                    const form = document.getElementById("myForm");
+                                    const floatInputs = document.querySelectorAll(".float-input");
+                                    const submissionWarning = document.getElementById("submission-warning");
+                                    
+                                    // Add 'input' event listener to each float input field
+                                    floatInputs.forEach((input, index) => {
+                                        const errorMessage = document.getElementById(`error-message${index + 1}`);
+                                        input.addEventListener("input", () => {
+                                            validateInput(input, errorMessage);  // Validate on input
+                                        });
+                                    });
+                                    
+                                    // Add 'submit' event listener to the form
+                                    form.addEventListener("submit", (event) => {
+                                        let allValid = true;  // Assume all inputs are valid initially
+                                    
+                                        // Validate all float inputs and set allValid to false if any is invalid
+                                        floatInputs.forEach((input, index) => {
+                                            const errorMessage = document.getElementById(`error-message${index + 1}`);
+                                            if (!validateInput(input, errorMessage)) {
+                                                allValid = false;  // Mark form as invalid
+                                            }
+                                        });
+                                    
+                                        if (!allValid) {
+                                            event.preventDefault();  // Prevent form submission if any input is invalid
+                                            submissionWarning.style.display = "block";  // Show warning message
+                                        } else {
+                                            submissionWarning.style.display = "none";  // Hide warning message if all inputs are valid
+                                        }
+                                    });
+                                    </script>
                             </div>                 
                         </div>
                <br><br>

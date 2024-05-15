@@ -113,7 +113,7 @@
                 <tbody>
                      <?php
                         $path="https://cisswork.com/Android/SenderApp/images/";
-                        $def="https://cisswork.com/Android/SenderApp/super_Admin/logo (2).png";
+                        $def="https://cisswork.com/Android/SenderApp/logo (2).png";
                         $sql="SELECT * FROM Drivers ORDER BY DriverID  desc";
                         $res=mysqli_query($con,$sql);
                         date_default_timezone_set("Asia/Kolkata");
@@ -122,10 +122,6 @@
                         $date=$fet['date'];  
                         $ct=date('Y-m-d h:i:s');
                         $date11 = date('Y-m-d h:i:s', strtotime('+24 hour', strtotime($date)));
-                        if($ct==$date11)
-                        {
-                            $update=mysqli_query($con,"UPDATE driver_register SET Driver_lat='0.0',Driver_lng='0.0',login_status='0'");
-                        }
                         $count=0;
                         while($row=mysqli_fetch_assoc($res))
                         {
@@ -137,9 +133,9 @@
                 <tr>
                     <td><?php echo ++$count;?></td>
                     <td><?php echo $row['UserName'] ?></td>
-                    <td class="center"><?php echo $row['title']." ".$row['FirstName']." ".$row['LastName']." ".$row['surname'];?> </td>
+                    <td class="center"><?php echo $row['FirstName']." ".$row['LastName'];?> </td>
                     <td class="center"><?php echo $row['Email'];?></td>
-                    <td class="center"><?php echo $row['password'];?></td>
+                    <td class="center"><?php echo $row['Password'];?></td>
                     <td class="center"><?php echo $row['country_code'].$row['Phone'];?></td>
                      <td class="center"><?php echo $row['country_code'].$row['Phone2'];?></td>
                       <td class="center"><?php echo $row['country_code'].$row['Phone3'];?></td>
@@ -349,27 +345,6 @@
     })
   })
 </script>
- 
-<script>
-function openReasonPrompt(idd) {
-    let driverId = idd;
-    let reason = prompt("Please enter reason:");
 
-    if (reason !== null && reason.trim() !== "") {
-        // If the user provides a non-empty reason, set it in the input field
-        document.getElementById("reason").value = reason;
-        
-        // Add the driver_id and reason to the form action URL
-        let form = document.getElementById("reasonForm");
-        form.action = "https://cerbr.com/Cerber_super_Admin/viewdriver.php?driver_id=" + encodeURIComponent(driverId) + "&reason=" + encodeURIComponent(reason);
-        
-        // Submit the form
-        form.submit();
-    } else {
-        // If the user clicks Cancel or leaves the input blank
-        alert("Reason cannot be empty. Please provide a reason.");
-    }
-}
-</script>
 </body>
 </html>
