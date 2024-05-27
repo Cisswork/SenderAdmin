@@ -40,7 +40,7 @@
                    </ul>
             </li>
             <li><a href="review.php"> <img src="dist/img/driver1.png" style="width:20px;"> <span>Driver Ratings</span></a> </li>
-            <li><a href="bookinghistory.php"><i class="fa fa-file-text"></i> Booking History</a></li> 
+            <li><a href="bookinghistory.php"><i class="fa fa-file-text"></i> Trip History</a></li> 
             <li class="">
                   <a href="view_package.php">
                    <img src="dist/img/vehicle.png " style="width:18px;"> <span>Package Management</span>

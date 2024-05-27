@@ -1,0 +1,614 @@
+[08-May-2024 18:02:00 Asia/Kolkata] PHP Notice:  Undefined variable: val in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 462
+[08-May-2024 18:02:01 Asia/Kolkata] PHP Notice:  Undefined variable: val in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 462
+[08-May-2024 18:17:34 Asia/Kolkata] PHP Notice:  Undefined variable: push in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 525
+[08-May-2024 18:17:34 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function getPush() on null in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php:525
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 525
+[08-May-2024 18:18:47 Asia/Kolkata] PHP Notice:  Undefined variable: push in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 525
+[08-May-2024 18:18:47 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function getPush() on null in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php:525
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 525
+[08-May-2024 18:19:44 Asia/Kolkata] PHP Notice:  Undefined variable: regId in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 553
+[08-May-2024 18:29:01 Asia/Kolkata] PHP Notice:  Undefined variable: token in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 444
+[08-May-2024 18:30:16 Asia/Kolkata] PHP Notice:  Undefined variable: token in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 444
+[08-May-2024 18:31:04 Asia/Kolkata] PHP Notice:  Undefined variable: token in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 444
+[08-May-2024 18:31:48 Asia/Kolkata] PHP Notice:  Undefined variable: token in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 444
+[08-May-2024 18:32:33 Asia/Kolkata] PHP Notice:  Undefined variable: token in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 444
+[08-May-2024 18:33:38 Asia/Kolkata] PHP Notice:  Undefined variable: deviceTokenu in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/notification.php on line 407
+[09-May-2024 01:43:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:43:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:43:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:43:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:43:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 01:43:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 01:43:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 01:43:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 01:43:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 01:43:57 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:43:57 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:44:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:44:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[09-May-2024 01:44:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:44:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:44:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:14 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:14 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:14 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:14 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:14 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:17 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:44:17 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:44:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:44:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:44:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:28 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:28 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:28 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:28 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:28 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php on line 116
+[09-May-2024 01:44:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:44:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 01:44:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 01:47:36 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:47:36 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:47:39 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:47:39 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:47:47 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:47:47 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:47:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:47:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:47:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:47:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:49:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:49:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 01:49:27 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 01:49:27 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:08:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:08:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:08:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:08:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:08:37 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:08:37 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:08:48 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:08:48 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:10:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:10:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:10:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:10:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:10:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 07:10:26 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 07:10:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 07:10:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 07:10:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 07:10:26 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 07:10:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 07:10:26 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 07:10:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 07:10:26 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 07:10:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[09-May-2024 07:10:26 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[09-May-2024 07:10:30 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:10:30 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 07:10:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 07:10:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 07:10:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 07:10:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 07:10:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[09-May-2024 07:10:39 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 07:10:39 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[09-May-2024 11:50:19 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[09-May-2024 11:50:19 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[12-May-2024 21:45:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[12-May-2024 21:45:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[12-May-2024 21:45:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[12-May-2024 21:45:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:35:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:35:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:36:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:36:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:36:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:36:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:37:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:37:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:37:46 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:37:46 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:41:45 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:41:45 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:41:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:41:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[13-May-2024 05:42:03 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[13-May-2024 05:42:03 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 11:51:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 11:51:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 11:51:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 11:51:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 11:52:15 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 11:52:15 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 11:52:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 11:52:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 11:52:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 11:52:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 11:52:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 11:52:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 11:52:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 11:52:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 11:52:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 11:53:18 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php on line 116
+[15-May-2024 12:11:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 12:11:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 13:01:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 13:01:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 13:06:37 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 13:06:37 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 13:25:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 13:25:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 13:25:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 812
+[15-May-2024 13:25:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 820
+[15-May-2024 13:28:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[15-May-2024 13:28:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[15-May-2024 13:31:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 13:31:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 13:31:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 13:31:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 13:31:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/view_package.php on line 121
+[15-May-2024 13:34:15 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[15-May-2024 13:34:15 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[15-May-2024 13:37:36 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:36 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:36 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:36 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:36 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:36 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:51 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:51 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[15-May-2024 13:37:51 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[16-May-2024 06:35:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[16-May-2024 06:35:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[17-May-2024 13:01:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[17-May-2024 13:01:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[17-May-2024 13:03:50 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:03:50 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:03:50 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:03:50 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:03:50 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:04:11 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:04:11 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:04:11 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:04:11 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:04:11 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:15 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:05:15 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:05:15 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:05:15 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:15 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:40 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:05:40 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:05:40 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:05:40 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:40 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:55 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:55 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:55 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:05:55 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 99
+[17-May-2024 13:05:55 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 99
+[17-May-2024 13:06:05 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:06:05 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:06:05 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:06:05 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 99
+[17-May-2024 13:06:05 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 99
+[17-May-2024 13:06:51 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:06:51 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:06:51 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:06:51 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:06:51 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:06:58 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:06:58 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:06:58 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:06:58 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:06:58 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:07:08 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:07:08 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:07:08 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:07:08 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:07:08 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:08:02 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:08:02 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:08:02 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:08:02 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:08:02 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:08:09 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:08:09 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:08:09 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:08:09 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:08:09 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 98
+[17-May-2024 13:10:01 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:10:01 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:15:02 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:15:02 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:15:06 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:15:06 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 97
+[17-May-2024 13:19:09 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 93
+[17-May-2024 13:19:09 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 93
+[17-May-2024 13:19:27 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 93
+[17-May-2024 13:19:27 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 93
+[17-May-2024 13:21:06 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 96
+[17-May-2024 13:21:06 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 96
+[17-May-2024 13:21:36 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 96
+[17-May-2024 13:21:36 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 96
+[17-May-2024 13:21:38 UTC] PHP Warning:  require_once(../stripe-payment/vendor/autoload.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 96
+[17-May-2024 13:21:38 UTC] PHP Fatal error:  require_once(): Failed opening required '../stripe-payment/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/addcustomer.php on line 96
+[17-May-2024 13:23:10 UTC] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php:12
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php on line 12
+[17-May-2024 13:25:06 UTC] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php:12
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php on line 12
+[17-May-2024 13:30:04 UTC] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php:12
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php on line 12
+[17-May-2024 13:31:08 UTC] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php:12
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php on line 12
+[18-May-2024 09:46:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[18-May-2024 09:46:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[18-May-2024 09:48:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[18-May-2024 09:48:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[18-May-2024 09:50:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[18-May-2024 09:50:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[18-May-2024 09:50:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[18-May-2024 09:50:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 06:37:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 06:37:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 06:38:11 UTC] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php:12
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/check_phone_number.php on line 12
+[27-May-2024 06:53:46 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 06:53:46 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 06:53:46 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 06:53:46 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 656
+[27-May-2024 07:00:46 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:00:46 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:00:46 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:00:46 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 641
+[27-May-2024 07:21:35 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:21:35 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:21:35 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:21:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 641
+[27-May-2024 07:24:40 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:24:40 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:24:40 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:24:40 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 641
+[27-May-2024 07:48:38 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:48:38 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:48:38 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:48:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 651
+[27-May-2024 07:49:10 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:10 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:10 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 651
+[27-May-2024 07:49:27 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:27 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:27 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:27 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 651
+[27-May-2024 07:49:39 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:39 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:39 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:49:39 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 651
+[27-May-2024 07:50:34 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:50:34 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:50:34 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 07:50:34 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 651
+[27-May-2024 08:05:14 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 08:05:14 UTC] PHP Warning:  include(resize_customer.php): failed to open stream: No such file or directory in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 08:05:14 UTC] PHP Warning:  include(): Failed opening 'resize_customer.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 188
+[27-May-2024 08:05:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/userdetails.php on line 651
+[27-May-2024 08:05:19 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:05:19 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:31 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:31 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:31 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:31 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:05:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:05:41 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:05:41 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:05:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:05:43 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:05:45 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:05:45 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:07:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:07:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:08:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:08:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:08:02 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/ridecancellreport.php on line 134
+[27-May-2024 08:09:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:09:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:10:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:10:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:12:06 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:12:06 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:12:06 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 202
+[27-May-2024 08:12:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 207
+[27-May-2024 08:12:06 UTC] PHP Warning:  A non-numeric value encountered in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/earning_trip.php on line 280
+[27-May-2024 08:12:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 08:12:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 09:14:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 09:14:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:11:12 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:11:12 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:16:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php on line 116
+[27-May-2024 10:24:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:24:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:25:25 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:25:25 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:25:29 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:25:29 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:26:41 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:26:41 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:28:47 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:28:47 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:30:18 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:30:18 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:30:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:30:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:30:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:30:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:30:27 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:30:27 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:30:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:30:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 10:30:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php on line 116
+[27-May-2024 10:43:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php:131
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php on line 131
+[27-May-2024 10:43:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php:131
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php on line 131
+[27-May-2024 10:45:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php:130
+Stack trace:
+#0 {main}
+  thrown in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/invoice.php on line 130
+[27-May-2024 10:52:07 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 10:52:07 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 11:02:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 325
+[27-May-2024 11:02:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 333
+[27-May-2024 11:29:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 419
+[27-May-2024 11:29:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 442
+[27-May-2024 11:29:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 478
+[27-May-2024 11:29:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 501
+[27-May-2024 11:29:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 681
+[27-May-2024 11:46:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 677
+[27-May-2024 11:46:29 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 677
+[27-May-2024 12:05:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 677
+[27-May-2024 12:05:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 677
+[27-May-2024 12:06:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 677
+[27-May-2024 12:06:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home3/cisswwy3/public_html/Android/SenderApp/super_Admin/dashboard.php on line 677

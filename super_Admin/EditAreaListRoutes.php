@@ -279,7 +279,7 @@ if(!isset($_SESSION['id']))
                                         }
                                     ?>
                            
-                                <form role="form" method="post" class="validate" enctype="multipart/form-data">
+                                <form role="form" method="post" class="validate" enctype="multipart/form-data" id="myForm">
                                     <div class="form-group" col-md-12>
                                         <div class="form-group col-md-12">
                                             <label class="control-label" for="name">Route ID</label>
@@ -298,24 +298,81 @@ if(!isset($_SESSION['id']))
                                             </select>
                                         </div>
                                     </div>
+                                    
                                     <div class="form-group col-md-12">
-                                        <label class="control-label" for="name">Price 1</label>
-                                        <input type="number" min='1' name="Price1" value="<?php echo $fetch['Price1'];?>" class="form-control required"  placeholder="Price 1" required>
+                                        <label class="control-label" for="name">Mini Package Price</label>
+                                        <input type="text" inputmode="decimal" id="price1" name="Price1" value="<?php echo $fetch['Price1'];?>"  class="form-control required float-input" placeholder="Mini Package Price" required>
+                                        <div id="error-message1" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label class="control-label" for="name">Price 2</label>
-                                        <input type="number" min='1' name="Price2" value="<?php echo $fetch['Price2'];?>" class="form-control required"  placeholder="Price 2" required>
+                                        <label class="control-label" for="name">Small Package Price</label>
+                                        <input type="text" inputmode="decimal" id="price2" name="Price2" value="<?php echo $fetch['Price2'];?>"  class="form-control required float-input" placeholder="Small Package Price" required>
+                                        <div id="error-message2" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label class="control-label" for="name">Price 3</label>
-                                        <input type="number" min='1' name="Price3" value="<?php echo $fetch['Price3'];?>" class="form-control required"  placeholder="Price 3" required>
+                                        <label class="control-label" for="name">Large Package Price</label>
+                                        <input type="text" inputmode="decimal" id="price3" name="Price3" value="<?php echo $fetch['Price3'];?>" class="form-control required float-input" placeholder="Large Package Price" required>
+                                        <div id="error-message3" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label class="control-label" for="name">Price 4</label>
-                                        <input type="number" min='1' name="Price4" value="<?php echo $fetch['Price4'];?>" class="form-control required"  placeholder="Price 4" required>
+                                        <label class="control-label" for="name">Extra Large Package Price</label>
+                                        <input type="text" inputmode="decimal" id="price4" name="Price4" value="<?php echo $fetch['Price4'];?>" class="form-control required float-input" placeholder="Extra Large Package Price" required>
+                                        <div id="error-message4" class="text-danger" style="display: none;">Please enter a valid float with up to 2 decimal places.</div>
+                                    </div>
+                                    
+                                    <!-- Submission warning message -->
+                                    <div id="submission-warning" class="text-danger" style="display: none; margin-bottom: 10px;">
+                                        Please correct the highlighted errors before submitting the form.
                                     </div>
                                     <input type="submit" name="submit" class="btn btn-primary" value="Submit"/ style="width:13%; margin-top: 15px;">
                                 </form>
+                                <script>
+                                    // Regex to ensure only two decimal places
+                                    const regex = /^[+-]?\d+(\.\d{1,2})?$/;  
+                                    
+                                    // Function to validate an input field
+                                    function validateInput(input, errorMessage) {
+                                        if (!regex.test(input.value) && input.value !== '') {
+                                            errorMessage.style.display = "block";  // Show error message if invalid
+                                            return false;  // Indicate invalid input
+                                        } else {
+                                            errorMessage.style.display = "none";  // Hide error message if valid
+                                            return true;  // Indicate valid input
+                                        }
+                                    }
+                                    
+                                    const form = document.getElementById("myForm");
+                                    const floatInputs = document.querySelectorAll(".float-input");
+                                    const submissionWarning = document.getElementById("submission-warning");
+                                    
+                                    // Add 'input' event listener to each float input field
+                                    floatInputs.forEach((input, index) => {
+                                        const errorMessage = document.getElementById(`error-message${index + 1}`);
+                                        input.addEventListener("input", () => {
+                                            validateInput(input, errorMessage);  // Validate on input
+                                        });
+                                    });
+                                    
+                                    // Add 'submit' event listener to the form
+                                    form.addEventListener("submit", (event) => {
+                                        let allValid = true;  // Assume all inputs are valid initially
+                                    
+                                        // Validate all float inputs and set allValid to false if any is invalid
+                                        floatInputs.forEach((input, index) => {
+                                            const errorMessage = document.getElementById(`error-message${index + 1}`);
+                                            if (!validateInput(input, errorMessage)) {
+                                                allValid = false;  // Mark form as invalid
+                                            }
+                                        });
+                                    
+                                        if (!allValid) {
+                                            event.preventDefault();  // Prevent form submission if any input is invalid
+                                            submissionWarning.style.display = "block";  // Show warning message
+                                        } else {
+                                            submissionWarning.style.display = "none";  // Hide warning message if all inputs are valid
+                                        }
+                                    });
+                                </script>
                             </div>                 
                         </div>    
     </section>

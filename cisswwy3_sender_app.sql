@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 15, 2024 at 07:16 PM
+-- Generation Time: May 27, 2024 at 05:23 PM
 -- Server version: 5.7.23-23
--- PHP Version: 8.1.27
+-- PHP Version: 8.1.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -142,47 +142,6 @@ INSERT INTO `AreaZipCodes` (`id`, `ZipCode`, `AreaName`) VALUES
 (28, '42001', 'indore'),
 (33, '12345', 'test'),
 (34, '450661', 'area 1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `booking_transaction_history`
---
-
-CREATE TABLE `booking_transaction_history` (
-  `id` int(11) NOT NULL,
-  `external_order_id` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `m_order_id` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `amount_to_pay` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `currency` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `lynk_id` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `lynk_payment_id` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `datetime` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `booking_transaction_history`
---
-
-INSERT INTO `booking_transaction_history` (`id`, `external_order_id`, `m_order_id`, `amount_to_pay`, `currency`, `lynk_id`, `lynk_payment_id`, `status`, `datetime`) VALUES
-(1, '50', '12482', '500', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-08-25 05:08:07'),
-(2, '51', '12483', '500', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-08-25 05:09:07'),
-(3, '52', '12484', '500', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-08-25 05:12:09'),
-(4, '212', '15781', '110', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-05 06:04:16'),
-(5, '211', '15782', '60', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-05 06:05:20'),
-(6, '213', '15783', '150', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-05 06:07:01'),
-(7, '217', '15784', '190', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-05 07:11:45'),
-(8, '220', '15785', '550', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-05 10:54:05'),
-(9, '238', '15811', '80', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-06 03:06:04'),
-(10, '240', '15812', '170', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-06 03:13:02'),
-(11, '242', '15813', '3320', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-06 04:25:14'),
-(12, '243', '15814', '590', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-06 04:37:21'),
-(13, '244', '15815', '350', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-06 04:42:25'),
-(14, '248', '15817', '230', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-06 05:46:05'),
-(15, '260', '15876', '290', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-07 06:36:14'),
-(16, '261', '15877', '650', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-07 06:47:58'),
-(17, '263', '15879', '90', 'JMD', 'auth0|6452a95499f880869d29bacd', '0', 'RECEIVED', '2023-09-07 10:19:59');
 
 -- --------------------------------------------------------
 
@@ -369,6 +328,7 @@ INSERT INTO `canclebooking` (`id`, `user_id`, `company_id`, `driver_id`, `status
 (311, '133', 214, '82', 'cancle', 'Driver Negotiating For The Price', '796', '', '01:30:00', '2024-01-10'),
 (312, '132', 216, '73', 'cancle', 'Booked By Mistake', '814', '', '01:41:00', '2024-01-10'),
 (313, '132', 216, '73', 'cancle', 'Driver Arrived Late ', '815', '', '01:48:00', '2024-01-10'),
+(316, '7', 0, '17', 'cancle', 'Driver Arrived Late', '4', '', '05:19:00', '2024-05-27'),
 (315, '127', 214, '82', 'cancle', 'Booked By Mistake', '813', '', '03:13:00', '2024-01-10');
 
 -- --------------------------------------------------------
@@ -984,141 +944,6 @@ INSERT INTO `chat_info` (`id`, `user_id`, `host_id`, `booking_id`, `date`, `time
 -- --------------------------------------------------------
 
 --
--- Table structure for table `company_car_tbl`
---
-
-CREATE TABLE `company_car_tbl` (
-  `id` int(200) NOT NULL,
-  `company_id` int(11) NOT NULL,
-  `car_id` int(11) NOT NULL,
-  `car_name` varchar(200) NOT NULL,
-  `seats` varchar(200) NOT NULL,
-  `base_fare` varchar(255) NOT NULL,
-  `distance_fare` varchar(255) NOT NULL,
-  `time_fare` varchar(255) NOT NULL,
-  `service_charge` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `company_car_tbl`
---
-
-INSERT INTO `company_car_tbl` (`id`, `company_id`, `car_id`, `car_name`, `seats`, `base_fare`, `distance_fare`, `time_fare`, `service_charge`, `status`) VALUES
-(42, 214, 7, 'SEDAN', 'Luxury', '600', '10', '', '', 'Approve'),
-(41, 214, 2, 'SUV', 'Luxury', '100', '40', '', '10', 'Approve'),
-(40, 213, 2, 'SUV', 'Any', '50', '60', '', '', 'Approve'),
-(39, 209, 7, 'SEDAN', 'Mini', '600', '139', '1', '1', 'Approve'),
-(20, 1, 2, 'SUV', 'Mini', '20', '20', '10', '10', 'Approve'),
-(53, 214, 2, 'SUV', 'Any', '666', '78', '', '', 'Approve'),
-(49, 214, 10, 'Pick-Up Truck', 'Any', '700', '10', '', '5', 'Approve'),
-(52, 214, 3, 'MINI VAN', 'Mini', '66', '2', '', '3', 'Approve'),
-(48, 216, 10, 'Pick-Up Truck', 'Any', '10', '5', '', '5', 'Approve'),
-(47, 216, 10, 'Pick-Up Truck', 'Any', '56', '5', '', '5', 'Approve'),
-(46, 216, 10, 'Pick-Up Truck', 'Any', '6001', '20', '', '', 'Approve'),
-(45, 228, 10, 'Pick-Up Truck', 'Any', '557', '65', '', '5', 'Approve'),
-(43, 216, 2, 'SUV', 'Any', '557', '65', '', '10', 'Approve'),
-(44, 216, 7, 'SEDAN', 'Mini', '600', '60', '', '', 'Approve'),
-(54, 214, 3, 'MINI VAN', 'Any', '500', '20', '', '', 'Approve');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `company_register`
---
-
-CREATE TABLE `company_register` (
-  `id` int(11) NOT NULL,
-  `manager_name` varchar(200) NOT NULL,
-  `fullname` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `country_code` varchar(255) NOT NULL,
-  `contact` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `Driver_lat` varchar(200) NOT NULL,
-  `Driver_lng` varchar(200) NOT NULL,
-  `address` varchar(200) NOT NULL,
-  `dob` varchar(200) NOT NULL,
-  `gender` varchar(200) NOT NULL,
-  `city` varchar(200) NOT NULL,
-  `country` varchar(200) NOT NULL,
-  `pin_code` varchar(200) NOT NULL,
-  `car_id` varchar(200) NOT NULL,
-  `vehicle_type` varchar(200) NOT NULL,
-  `vehicle_no` varchar(200) NOT NULL,
-  `image` varchar(500) NOT NULL,
-  `Driver_device_id` varchar(200) NOT NULL,
-  `iosDriver_device_id` varchar(500) NOT NULL,
-  `device_status` varchar(200) NOT NULL,
-  `admin_status` varchar(200) NOT NULL,
-  `accept_percentage` varchar(200) NOT NULL,
-  `reject_percentage` varchar(200) NOT NULL,
-  `accept_count` varchar(200) NOT NULL,
-  `reject_count` varchar(200) NOT NULL,
-  `status` varchar(200) NOT NULL,
-  `wallet_balance` varchar(200) NOT NULL,
-  `login_status` varchar(100) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `logout_time` varchar(255) NOT NULL,
-  `commission` varchar(200) NOT NULL,
-  `login_device_key` varchar(200) NOT NULL,
-  `access_token` varchar(200) NOT NULL,
-  `last_login_time` varchar(200) NOT NULL,
-  `referral_code` varchar(200) NOT NULL,
-  `user_code` varchar(200) NOT NULL,
-  `points` varchar(200) NOT NULL,
-  `usd` varchar(200) NOT NULL,
-  `referral_person` varchar(200) NOT NULL,
-  `rf_use_date_time` varchar(255) NOT NULL,
-  `booking_cancel_time` varchar(255) NOT NULL,
-  `invoice_status` varchar(255) NOT NULL,
-  `payment_receipt` varchar(255) NOT NULL,
-  `driver_online_time` varchar(255) NOT NULL,
-  `CPV_DC_ID_photo` varchar(10000) NOT NULL,
-  `created_at` varchar(255) NOT NULL,
-  `updated_at` varchar(255) NOT NULL,
-  `secret_key` varchar(255) NOT NULL,
-  `available_status` varchar(255) NOT NULL,
-  `firebase_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `invite_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `admin_commission` int(11) NOT NULL,
-  `id_proof_image` mediumtext NOT NULL,
-  `id_expiry_date` varchar(111) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `company_register`
---
-
-INSERT INTO `company_register` (`id`, `manager_name`, `fullname`, `email`, `country_code`, `contact`, `password`, `Driver_lat`, `Driver_lng`, `address`, `dob`, `gender`, `city`, `country`, `pin_code`, `car_id`, `vehicle_type`, `vehicle_no`, `image`, `Driver_device_id`, `iosDriver_device_id`, `device_status`, `admin_status`, `accept_percentage`, `reject_percentage`, `accept_count`, `reject_count`, `status`, `wallet_balance`, `login_status`, `date`, `logout_time`, `commission`, `login_device_key`, `access_token`, `last_login_time`, `referral_code`, `user_code`, `points`, `usd`, `referral_person`, `rf_use_date_time`, `booking_cancel_time`, `invoice_status`, `payment_receipt`, `driver_online_time`, `CPV_DC_ID_photo`, `created_at`, `updated_at`, `secret_key`, `available_status`, `firebase_id`, `invite_code`, `admin_commission`, `id_proof_image`, `id_expiry_date`) VALUES
-(233, 'Ajay', 'Dice', 'dice@outlook.com', '+91', '8574839293', '123456Aa', '0.0', '0.0', 'Surat', '', '', '', 'India', '', '', '', '', 'l69xE3vBms_1704786631.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-09 07:50:31', '2024-01-09 07:50:31', '', '', '2024-01-09 07:50:31', '', '2024-01-09 07:50:31', '', '233706958918574839293', '', '', 'D23398', 11, 'sE81q50kuF_1704786631.png', '2024-03-02'),
-(234, 'gfhfg', 'rgv', 'gnj@gmail.com', '+1', '565657', '123456Aa', '0.0', '0.0', 'dfgf', '', '', '', 'dfgf', '', '', '', '', 'pz2Bjiuxrn_1704787292.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-09 08:01:32', '2024-01-09 08:01:32', '', '', '2024-01-09 08:01:32', '', '2024-01-09 08:01:32', '', '2343884071565657', '', '', 'r23416', 11, '5ACws9k7jm_1704787292.jpeg', '2024-01-09'),
-(232, 'Tina', 'Dice', 'dice@gmail.com', '+91', '7658393829', '123456Aa', '0.0', '0.0', 'Surat', '', '', '', 'India', '', '', '', '', '54AEltirqn_1704786452.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-09 07:47:32', '2024-01-09 07:47:32', '', '', '2024-01-09 07:47:32', '', '2024-01-09 07:47:32', '', '232914433917658393829', '', '', 'D23221', 11, 'q6AzG3B4o8_1704786452.jpeg', '2024-03-01'),
-(214, 'Nikita', 'Cube', 'cube@gmail.com', '+91', '78373739', '123456Aa', '0.0', '0.0', 'Vijay Nagar, Indore', '', '', '', 'India', '', '', '', '', 'Ar9q4El671_1703511185.jpeg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-25 13:33:05', '2023-12-25 13:33:05', '', '', '2023-12-25 13:33:05', '', '2023-12-25 13:33:05', '', '2142246569178373739', '', '', 'C21489', 11, '9HsuijwFEv_1703511185.jpeg', '2023-12-30'),
-(215, 'Ajay', 'Adam', 'adam@yahoo.com', '+911', '8757474', '123456Aa', '0.0', '0.0', 'Pune', '', '', '', 'India', '', '', '', '', 'BEqFmils70_1703755369.jpeg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-28 09:22:49', '2023-12-28 09:22:49', '', '', '2023-12-28 09:22:49', '', '2023-12-28 09:22:49', '', '2157846029118757474', '', '', 'A21516', 0, '3HjvlG89pi_1703755369.jpeg', '2024-01-25'),
-(216, 'Tirth', 'Admin', 'tirth@outlook.com', '+91', '5768798', '123456Aa', '0.0', '0.0', 'Ahmedabad', '', '', '', 'India', '', '', '', '', '3jB4lk2ow9_1703755830.jpeg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-28 09:30:30', '2023-12-28 09:30:30', '', '', '2023-12-28 09:30:30', '', '2023-12-28 09:30:30', '', '216131897915768798', '', '', 'A21665', 11, 'o85yzGu379_1703755830.jpeg', ''),
-(217, 'Tirth', 'Admin', 'tirth1@outlook.com', '+91', '3455456', '123456Aa', '0.0', '0.0', 'Ahmedabad', '', '', '', 'India', '', '', '', '', 'xD26rGEm7w_1703755904.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-28 09:31:44', '2023-12-28 09:31:44', '', '', '2023-12-28 09:31:44', '', '2023-12-28 09:31:44', '', '217857089913455456', '', '', 'A21719', 0, 'uD9CqEl6rA_1703755904.jpeg', ''),
-(218, 'abc', 'abc', 'abc@gmail.com', '+', '6666751', '123456Aa', '0.0', '0.0', 'XYZ', '', '', '', 'xyz', '', '', '', '', 'G2C3o75Dym_1703756440.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-28 09:40:40', '2023-12-28 09:40:40', '', '', '2023-12-28 09:40:40', '', '2023-12-28 09:40:40', '', '2183866086666751', '', '', 'a21881', 0, 'AnFiDzj4B3_1703756440.jpeg', ''),
-(219, 'Abc', 'Xyz', 'xyz@gmail.com', '+1', '576879', '123456Aa', '0.0', '0.0', 'Rau', '', '', '', 'India', '', '', '', '', 'ukGvFq5A1p_1703756656.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-28 09:44:16', '2023-12-28 09:44:16', '', '', '2023-12-28 09:44:16', '', '2023-12-28 09:44:16', '', '2197988051576879', '', '', 'X21928', 11, 'By0v7CGj5r_1703756656.jpeg', ''),
-(220, 'gfh', 'fgh', 'ghgfgd@gmail.com', '+1', '7567676', '123456Aa', '0.0', '0.0', 'cvhfgtu', '', '', '', 'tyt', '', '', '', '', '3ynvzD0j95_1703844848.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:14:08', '2023-12-29 10:14:08', '', '', '2023-12-29 10:14:08', '', '2023-12-29 10:14:08', '', '22019148417567676', '', '', 'f22078', 11, '1w0nxzGop4_1703844848.jpeg', '2024-01-06'),
-(221, 'hkghk', 'gvnghi', 'hjh@gmail.com', '+1', '567756', '123456Aa', '0.0', '0.0', 'gtyh7u6eryr', '', '', '', 'rtyt', '', '', '', '', 'E2yGHpF50j_1703844974.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:16:14', '2023-12-29 10:16:14', '', '', '2023-12-29 10:16:14', '', '2023-12-29 10:16:14', '', '2219230311567756', '', '', 'g22152', 0, 'tvrys2A4lj_1703844974.jpeg', ''),
-(222, 'fgjghk', 'ygfjhyg', 'lkjk@gmail.com', '+1', '5675765', '123456Aa', '0.0', '0.0', 'tfhtgfhn', '', '', '', 'tfhtiuk', '', '', '', '', 'wEB6smnly8_1703845036.jpeg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:17:16', '2023-12-29 10:17:16', '', '', '2023-12-29 10:17:16', '', '2023-12-29 10:17:16', '', '22271576215675765', '', '', 'y22261', 0, 'ik2DwAz0C1_1703845036.jpeg', '2024-02-10'),
-(223, 'barkha patel', 'Mycom', 'barkha@gmail.com', '+1', '54986578984', '123456Aa', '0.0', '0.0', 'indore', '', '', '', 'India', '', '', '', '', 'E6i57sBDvz_1703845746.jpg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:29:06', '2023-12-29 10:29:06', '', '', '2023-12-29 10:29:06', '', '2023-12-29 10:29:06', '', '223218930154986578984', '', '', 'M22348', 11, '3k1HGiz7Ct_1703845746.jpg', '2024-02-29'),
-(224, 'amit', 'CC', 'cc@gmail.com', '+91', '6785955', '123456Aa', '0.0', '0.0', 'Mumbai', '', '', '', 'India', '', '', '', '', '8iu1C0DlBs_1703846232.jpeg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:37:12', '2023-12-29 10:37:12', '', '', '2023-12-29 10:37:12', '', '2023-12-29 10:37:12', '', '224730363916785955', '', '', 'C22432', 11, 'i057j6n2sl_1703846232.jpeg', ''),
-(225, 'Umesh Chouhan', 'Jindal Industries', 'umesh@gmail.com', '+1', '9685516899', 'Um35h123@', '0.0', '0.0', 'lemon city indore', '', '', '', 'India', '', '', '', '', 'uliD16v50H_1703846824.jpg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:47:04', '2023-12-29 10:47:04', '', '', '2023-12-29 10:47:04', '', '2023-12-29 10:47:04', '', '22552982519685516899', '', '', 'J22554', 11, '4q9Hk0tFn8_1703846824.png', ''),
-(226, 'ass', 'NN', 'ass@gmail.com', '+1', '676887', '123456Aa', '0.0', '0.0', 'fhrtu', '', '', '', 'tytu', '', '', '', '', 'ynFsto48vB_1703847399.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:56:39', '2023-12-29 10:56:39', '', '', '2023-12-29 10:56:39', '', '2023-12-29 10:56:39', '', '2262680941676887', '', '', 'N22620', 11, 'w9yn7u8q1C_1703847399.jpeg', ''),
-(227, 'gfhfgj', 'tfhgfh', 'rthfgbvh@gmail.com', '+1', '76576767', '123456Aa', '0.0', '0.0', 'ty', '', '', '', 'tghhh', '', '', '', '', 'uEw4kAxrtG_1703847591.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-29 10:59:51', '2023-12-29 10:59:51', '', '', '2023-12-29 10:59:51', '', '2023-12-29 10:59:51', '', '227694017176576767', '', '', 't22738', 11, 'FsoujwGrB3_1703847591.jpeg', ''),
-(228, 'Ricky Ponting', 'Rapido', 'ricky@gmail.com', '+91', '5555555555', 'Ricky@123', '0.0', '0.0', 'Indore', '', '', '', 'indore', '', '', '', '', '1kDlF7ipGE_1704181311.jpg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-02 07:41:51', '2024-01-02 07:41:51', '', '', '2024-01-02 07:41:51', '', '2024-01-02 07:41:51', '', '228139500915555555555', '', '', 'R22823', 11, '5tmkiwq78u_1704181311.ai_1703921159884.jpg', '2024-01-31'),
-(229, 'xyz', 'company', 'company@yahoo.com', '+91', '8474949494', '123456Aa', '0.0', '0.0', 'Indore', '', '', '', 'India', '', '', '', '', '095nD2r3mw_1704784964.jpeg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-09 07:22:44', '2024-01-09 07:22:44', '', '', '2024-01-09 07:22:44', '', '2024-01-09 07:22:44', '', '229829393918474949494', '', '', 'c22994', 11, 'lwz6jrvp0t_1704784964.jpeg', ''),
-(230, 'xyz', 'Company1', 'company1@outlook.com', '+1', '57383738', '123456Aa', '0.0', '0.0', 'Kingston', '', '', '', 'Jamaica', '', '', '', '', 'y7jvE3kqmz_1704785387.jpeg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-09 07:29:47', '2024-01-09 07:29:47', '', '', '2024-01-09 07:29:47', '', '2024-01-09 07:29:47', '', '230975859157383738', '', '', 'C23046', 11, '47l50HjqGA_1704785387.png', '2024-02-10'),
-(231, 'XYZ', 'ABC Company1', 'abc1@yahoo.com', '+91', '8675937393', '123456Aa', '0.0', '0.0', 'Indore', '', '', '', 'India', '', '', '', '', '5xy9t8iovr_1704785829.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-09 07:37:09', '2024-01-09 07:37:09', '', '', '2024-01-09 07:37:09', '', '2024-01-09 07:37:09', '', '231550390918675937393', '', '', 'A23174', 11, 'zspEv8tu5n_1704785829.jpeg', '2024-02-10'),
-(209, 'Reynold James', 'Calypso', 'reynold.jm.james@gmail.com', '+1', '3322939', 'Swordsman1!', '0.0', '0.0', '19 Carhille Avenue', '', '', '', 'Jamaica', '', '', '', '', '0Dkst24xqA_1703265644.PNG', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-22 17:20:44', '2023-12-22 17:20:44', '', '', '2023-12-22 17:20:44', '', '2023-12-22 17:20:44', '', '20995349913322939', '', '', 'C20999', 11, '1Gwx9tnsjH_1703265644.PNG', ''),
-(235, 'Shivani', 'Admin123', 'shivani@outlook.com', '+91', '8769546234', '123456Aa', '0.0', '0.0', 'Indore', '', '', '', 'India', '', '', '', '', 'zqu5FAx8B2_1704787941.jpeg', '', '', '', 'free', '', '', '', '', 'Pending', '', '', '', '', '', '', '', '', '', '', '', '', '', '2024-01-09 08:12:21', '2024-01-09 08:12:21', '', '', '2024-01-09 08:12:21', '', '2024-01-09 08:12:21', '', '235226491918769546234', '', '', 'A23547', 11, 'n7319wi4ot_1704787941.jpeg', ''),
-(213, 'Manager Cerbr', 'Cerbr Taxi', 'mickjr101@gmail.com', '+1', '5051908', 'Password1', '0.0', '0.0', '10 Ardenne', '', '', '', 'Jamaica', '', '', '', '', '5urD6349qt_1703266808.jpg', '', '', '', 'free', '', '', '', '', 'Approve', '', '', '', '', '', '', '', '', '', '', '', '', '', '2023-12-22 17:40:08', '2023-12-22 17:40:08', '', '', '2023-12-22 17:40:08', '', '2023-12-22 17:40:08', '', '21343226315051908', '', '', 'C21325', 6, '5GqBkxDuwH_1703266808', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `Drivers`
 --
 
@@ -1185,7 +1010,7 @@ INSERT INTO `Drivers` (`DriverID`, `FriendlyID`, `UserName`, `Password`, `FirstN
 (14, '', 'xyz', '123456Aa', 'xyz', 'xyz', 'Navlakha', 'Navlakha', 'Indore', 'Madhya Pradesh', '452001', '', '', 'xyz@gmail.com', '+91', '9424522338', '9424522338', '9424522338', 0, '1', 0, NULL, '2024-03-16 12:01:33', NULL, '', '', '57657', 0x383241346c6a476d6e7a5f313731303539303439332e6a7067, 'EqGp5F3zC9_1710590493.jpg', '', '', '', '0', '0', '2024-03-16 05:31:33', '', '', '', '', '', '', '', '', '', ''),
 (15, '', 'Savitaaa', '123456Aaaaaaaaaaaaaaaaaaa', 'Savitaaa', 'Gangwal', 'ghgfhgf', 'ghfggf', 'gfhhhh', 'gfhhhhhhh', '123456', '', '', 'savitaaa@gmail.com', '+1', '68769789780', '5565655656', '54444444566', 0, '1', 0, NULL, '2024-03-18 06:29:28', NULL, '', '', '45444', 0x72446d374845737534775f313731303734333336382e6a7067, 'nqpuAD275l_1710743368.JPEG', '', '', '', '0', '0', '2024-03-18 11:59:28', '', '', '', '', '', '', '', '', '', ''),
 (16, '', 'BG', '123456Aa', 'BG', 'NH', 'indore', 'indore', 'khandwa', 'madhya pradesh', '450001', '', '', 'bpg@gmail.com', '+1', '216578985', '2132654598', '213265898', 0, '0', 0, NULL, '2024-03-18 06:43:28', NULL, '', '', '346547567', 0x304443773976757271375f313731303734343230382e706e67, '598Gkz6qsD_1710744208.png', '', '', '', '0', '0', '2024-03-18 12:13:28', '', '', '', '', '', '', '', '', '', ''),
-(17, '', 'Driver', '123456', 'Driver', 'Dr', 'Indore ', 'Dewas', 'Indore', 'Madhya Pradesh ', '452001', '22.6856661', '75.8596314', 'driver1@gmail.com', '+91', '9876543225', '9876345684', '8655588885', 0, '1', 0, NULL, '2024-03-18 07:29:43', NULL, '', '', '123', 0x7436707969416d3875455f313731303934323039322e6a7067, '', '', '', '', '0', '0', '05/08/2024 01:11:45', '', '', '', '', '3,21', '', 'IN', 'Available', '0.0', '2024-05-08 13:11:41 '),
+(17, '', 'Driver', '123456', 'Driver', 'Dr', 'Indore ', 'Dewas', 'Indore', 'Madhya Pradesh ', '452001', '22.6856559', '75.8596365', 'driver1@gmail.com', '+91', '9876543225', '9876345684', '8655588885', 0, '1', 0, NULL, '2024-03-18 07:29:43', NULL, '', '', '123', 0x7436707969416d3875455f313731303934323039322e6a7067, '', 'fr0hUjThRReflQ8_Ag4JBC:APA91bEHyJIJ8CRm8Ph5DF88WkwSrWyIoqfzSUweGCm5WihvTZicyfxCqlCHGO2MQrh6dkBnxwIMSEjuqoT_ociQsOSKvQJEd9pf07wc0Xjk0JbdXoStZtaRUqU7Vr8ZYhjAj4oUxEMP', '', 'Android', '0', '1', '05/27/2024 04:39:43', '', 'RMX2193', '6ce966c0-6421-1ff3-9867-178c30747207', '', '3,21', '', 'IN', 'Available', '0.0', '2024-05-27 17:21:35 '),
 (18, '', 'Ankush', '123456', 'Ramesh', 'Sharma', 'jahhaah', 'babab', 'Indore', 'mp', '452001', '22.6856556', '75.8597525', 'ramesh@gmail.com', '+1', '7584643358', '8754236265', '8527413256', 0, '1', 0, NULL, '2024-03-18 09:57:43', NULL, '', '', '123', 0x426a393269757877746c5f313731303735353836332e6a7067, '2qjv791okn_1710756861.jpg', '', '', '', '0', '1', '03/18/2024 04:19:08', '', '', '', '', '', '', 'US', 'Available', '115.50365447998047', '2024-03-18 16:19:09 '),
 (19, '', 'Newdriver', '123456', 'Newdriver', 'Driver', 'sairam plaza', 'Mangal nagar ', 'Indore', 'Madhya Pradesh', '452001', '22.6856691', '75.85973', 'newdriver@gmail.com', '+91', '5855699855', '9635888555', '3698111445', 0, '1', 0, NULL, '2024-03-18 10:54:55', NULL, '', '', '123456', 0x6f336b386e36694335315f313731303735393239352e6a7067, '', '', '', '', '0', '0', '03/18/2024 04:48:46', '', '', '', '', '3,2', '', 'IN', 'Available', '329.96783447265625', '2024-03-18 16:48:45 '),
 (20, '', 'Lalit', '123456', 'Lalit', 'Patel', 'Navlakha ', 'Mangal Nagar ', 'Indore', 'MP', '452001', '22.6856866', '75.8596581', 'lalit@gmail.com', '+91', '7583816688', '7583816688', '7583816688', 0, '1', 0, NULL, '2024-03-19 07:06:29', NULL, '', '', '123456', 0x4469476d3731337532795f313731303833313938392e6a7067, '', 'eTNPcGv-Swegf2fJOfQrIz:APA91bFvMqYSODVtywSJ0Vogo1W_2Q1O4zKUr-YILFS4UakzYJJDonHDIEMfSpBsWHCNA_BOgvt9jvsb6N_PkYxC', '', 'Android', '0', '1', '03/21/2024 05:25:43', '', 'CPH1809', 'a465c8c0-d568-1f25-9691-7590286d6937', '', '', '', 'IN', 'Available', '248.9341278076172', '2024-03-21 17:26:45 '),
@@ -1198,179 +1023,10 @@ INSERT INTO `Drivers` (`DriverID`, `FriendlyID`, `UserName`, `Password`, `FirstN
 (29, '', '', '123456789', 'test', 'testd', '45665 Tlajomulco de Zúñiga, Jalisco, Mexico', 'ugg', 'gcg', 'vv', '11234', '', '', '123456@123456.com', '+1', '2122222222', '', '', 0, '1', 0, NULL, '2024-05-07 00:31:16', NULL, '', '', 'staff', 0x3046423234706f31776b5f313731353034313837362e706e67, '', 'fv9vWaGJRxac6ePP-R8Fs2:APA91bHByY-LBDowp8lPQYiZYP5gJMbyZ9wFv-LSAxsaMyQx5RWbchZwfxvDVK_TzdxqelT4_bqbnS1skuXc2K6ti9V583juBBATiHK8kbayhtMCVhfBX9ekGU5v7dx4bN33ftpnZ642', '', 'Android', '0', '1', '05/09/2024 07:22:12', '', 'moto g pure', 'b1eec7e0-f1fb-1fba-b31c-9bd704b0677b', '', '1,21,3,11,2,33,12,Route1,NarwarToDewas,indoreToarea 3,area 3Toarea 1', '', 'US', '', '', ''),
 (30, '', '', '123456789', 'mooooo', 'dooooo', '45664 Jalisco, Mexico', 'fhgj', 'ggg', 'ghg', '123466', '', '', '1112@112.com', '+1', '2122552222', '', '', 0, '0', 0, NULL, '2024-05-07 00:33:44', NULL, '', '', 'off yy', 0x76427733366c463130485f313731353034323032342e706e67, '', 'cWZdRJFySG6MjEjbQI6oA9:APA91bH0CcJTBmv2hSvTBlsPtjSWtCtL1C7-YxwuWkmQItCNM9-RfSSplrNI_iHW-p1rNQSEgQ9BboxmeZHdu4VC', '', 'Android', '0', '0', '2024-05-07 06:03:44', '', '', '', '', '21,3,11', '', 'US', '', '', ''),
 (31, '', '', '123456789', 'newdriver', 'now', 'Indianapolis, IN, USA', 'hyg', 'hvj', 'dgj', '12345 ', '0', '0', '1212@1212.com', '+1', '2124443366', '', '', 0, '1', 0, NULL, '2024-05-07 00:52:30', NULL, '', '', '2156', 0x397634424533463043485f313731353034333135302e706e67, '', 'eAr2WxdTQnu7VdrucUMWjT:APA91bEnnY1KVVHAMBDFG26feY4P5u6UOp89K9UOrr51HQuomSFpkGLtIIpFWr5NlKaY1-1oENlDgZMo-Aa5YUOk', '', 'Android', '0', '0', '05/07/2024 06:23:25', '', 'moto g pure', 'e30e64f0-b06d-1fb4-bfbb-3d9ea979d1fd', '', '1', '', 'US', 'UnAvailable', '0', '2024-05-07 17:27:37 '),
-(32, '', '', '123456', 'vishnu ', 'prajapati ', 'Indore, Madhya Pradesh, India', 'indore', 'indore', 'Madhya Pradesh ', '452001', '22.6856596', '75.8596328', 'vishnuprajapati@gmail.com', '+91', '8982411736', '', '', 0, '1', 0, NULL, '2024-05-08 07:51:04', NULL, '', '', 'gjjhyuhvijbct', 0x727839776f456d386e345f313731353135343636342e706e67, '', 'fRYEM-6gRc-qLYpTr0uJAt:APA91bHtH_iIS34HnlYacRdywIwNfGErRDBorIiZxc-oNebgAR5qCyzBPAJUYzcfgMVNc7cjiXvBHJEFPmh_g0Ho1TTrXvhiSWipjKzeVatU2fM5SaRNxS8c_hJATcjpxLKhSawrJkz8', '', 'Android', '0', '1', '05/08/2024 06:18:28', '', 'moto g04', 'e6f99d90-489a-1fb9-8622-bba1279c1df6', '', '21,3', '', 'IN', 'Available', '0.0', '2024-05-15 18:21:19 '),
-(33, '', '', '123456789', 'test once', 'test', 'GHJGHJGHJG, Bhel Chowk, Karanpur, Dehradun, Uttara', 'hhh', 'hhj', 'hhh', '25255', '', '', '12121212@12121212.com', '+1', '2125556666', '', '', 0, '0', 0, NULL, '2024-05-09 01:47:23', NULL, '', '', '123456789', 0x453343357875366f347a5f313731353231393234332e706e67, '', '', '', '', '0', '0', '2024-05-09 07:17:23', '', '', '', '', '1', '', 'US', '', '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `driver_bank_details`
---
-
-CREATE TABLE `driver_bank_details` (
-  `id` int(11) NOT NULL,
-  `driver_id` int(11) NOT NULL,
-  `account_holder_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `account_number` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `date` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `driver_bank_details`
---
-
-INSERT INTO `driver_bank_details` (`id`, `driver_id`, `account_holder_name`, `account_number`, `email`, `status`, `date`) VALUES
-(1, 175, 'Bp', '123456789', 'bp@gmail.com', '', '2023-06-03'),
-(3, 175, 'Bp', '123456789', 'bp@gmail.com', '', '2023-06-03'),
-(4, 175, 'driver ', '7896541233654', 'driver@gmail.com', '', '2023-06-03'),
-(5, 177, 'driver', '546789484649164', 'driver@gmail.com ', '', '2023-06-03'),
-(6, 178, 'driver', '78894532324554', 'driver123@gmail.com', '', '2023-06-07'),
-(7, 179, 'vishnu', '54646649198181881', 'vishnu@gmail.com', '', '2023-06-08'),
-(8, 1, 'viahnu', '466464949', 'vishnu1@gmail.com ', '', '2023-06-08'),
-(9, 2, 'driver ', '456789321', 'driver@gmail.com ', '', '2023-06-22'),
-(10, 3, 'gggg', '228888', 'dd@gmail.com', '', '2023-06-22'),
-(11, 7, 'sjjsjsjsksk', '36692848787', 'adam@gmail.com', '', '2023-07-06'),
-(12, 8, 'fu', '33333333', 'adam@gmail.com', '', '2023-07-06'),
-(13, 9, 'aajajsjsjsjj', '3645127570', 'fish@gmail.com', '', '2023-07-06'),
-(14, 10, 'hhy', '66663', 'bbb@gmail.com', '', '2023-07-13'),
-(15, 11, 'Malinda Gates', '555566667777', 'malinda@gmail.com', '', '2023-08-02'),
-(16, 12, 'vishnu', '424242155155', 'vishnuprajapati.ciss@gmail.com', '', '2023-08-08'),
-(17, 13, 'gooal', '2222555553255', 'gopal@gmail.com', '', '2023-08-08'),
-(18, 14, 'D V', '123456789', 'driver@test.com', '', '2023-08-14'),
-(19, 15, 'Driver Two', '1', 'driver2@test.com', '', '2023-08-14'),
-(20, 0, 'vishnu', '65456487546878', 'bhai@gmail.com', '', '2023-08-22'),
-(21, 0, 'Vinay Pathak', '5555555555', 'vinay@gmail.com', '', '2023-08-23'),
-(22, 0, 'viahnu', '515151551515515', 'vishu@gmail.com', '', '2023-08-25'),
-(23, 0, 'annana', '545166164661', 'hajahajjw@gmail.com', '', '2023-08-25'),
-(24, 0, 'john doe', '404335294', 'test@gmail.com', '', '2023-08-29'),
-(25, 0, 'D Iver', '123456789', 'mr@gmail.com', '', '2023-08-29'),
-(26, 18, 'jogn doe', '404335249', 'rdynold@gmail.com', '', '2023-08-29'),
-(27, 19, 'D You Insane', '123456789', 'driver@yahoo.com', '', '2023-08-29'),
-(28, 0, 'Driver', '123456789', 'driver@live.com', '', '2023-08-29'),
-(29, 0, 'aaaa', '11111111', 'asal07112017@gmail.com', '', '2023-08-29'),
-(30, 0, 'fdgfdg', '2255233222222', 'driver@gmail.com ', '', '2023-09-02'),
-(31, 0, 'vishnu', '466464566565662', 'ss@gmail.com', '', '2023-09-02'),
-(32, 0, 'hshjssjs', '433164949495964', 'hshshs@gmsil.com', '', '2023-09-04'),
-(33, 0, 'jdjdjdj', '6865566565665646566', 'hshshs@gmsil.com ', '', '2023-09-04'),
-(34, 0, 'bbnnnh', '59952388598558', 'ggdhh@gmail.com', '', '2023-09-04'),
-(35, 0, 'vishnu ', '25802580258', 'vishnuprajapati6114@gmail.com ', '', '2023-09-04'),
-(36, 0, 'dheeraj ', '1234567891', 'devidbrusli@gmail.com', '', '2023-09-05'),
-(37, 0, 'human', '112233445566778899', 'human@gmail.com', '', '2023-09-06'),
-(38, 0, 'ug', '866868686868686868', 'gjv@yf.yc', '', '2023-09-06'),
-(39, 0, 'Fox Animal', '1234567890', 'fox@gmail.com', '', '2023-09-06'),
-(40, 0, 'bbbbb', '1234567890', 'bb@bb.bb', '', '2023-09-06'),
-(41, 2, 'ghhjkj', '5566889628896', 'pp@gmail.com', '', '2023-09-06'),
-(42, 0, 'whjwjwj', '4664646646464', 'akki@gmail.com ', '', '2023-09-06'),
-(43, 13, 'shshibsisb', '6364851246', 'gdi@su.sj', '', '2023-09-06'),
-(44, 0, 'hhh', '5555865555', 'ggggggg@yahoo.com ', '', '2023-09-07'),
-(45, 0, 'hsjsjjdj', '64659585829262262', 'aaa@gmail.com', '', '2023-09-07'),
-(46, 30, 'yuhhhh', '6668888555588', 'vvvg@gmail.com', '', '2023-09-07'),
-(47, 30, 'bsbsnsn', '4997979798995', 'ddd@gmail.com ', '', '2023-09-07'),
-(48, 33, 'bsbsbsb', '949949949', 'sss@gmail.com', '', '2023-09-07'),
-(49, 33, 'banshs', '49949499494', 'hhh@gmail.com', '', '2023-09-07'),
-(50, 0, 'gzhzgz', '658688687997', 'jj@jj.jj', '', '2023-09-07'),
-(51, 0, 'Rupaul', '456756421989764', 'rileydrives@gmail.com', '', '2023-09-07'),
-(52, 0, 'hhhh', '987654321', 'devid123@gmail.com', '', '2023-09-07'),
-(53, 13, 'human', '1234567890', 'pp@pp.pp', '', '2023-09-08'),
-(54, 38, 'vvg', '254123658', 'dyf@yd.yd', '', '2023-09-08'),
-(55, 38, 'bbb', '9666688868', 'hh@hh.ss', '', '2023-09-08'),
-(56, 38, 'hhh', '66688968896', 'ch@fu.vu', '', '2023-09-08'),
-(57, 38, 'eheh', '6262626226', 'hsh@sjs.sjs', '', '2023-09-08'),
-(58, 0, 'iggif', '86688 688', 'xhxxhhxhxxh@gmail.com', '', '2023-09-29'),
-(59, 0, 'bhnjhy', '889986655', 'gghj@gmail.com', '', '2023-09-29'),
-(60, 36, 'Cerbr One', '123456789', 'cerbr1@lupinetech.com', '', '2023-10-18'),
-(61, 0, 'Mickayle Riley', '456739895', 'mickjr101@gmail.com', '', '2023-10-19'),
-(62, 0, 'driver ', '885236978', 'driver@gmail.com', '', '2023-10-31'),
-(63, 46, 'driver ', '215546769', 'driver@gmail.com', '', '2023-10-31'),
-(64, 46, 'driver ', '646499999', 'driver@gmail.com', '', '2023-10-31'),
-(65, 46, 'driver', '575728383', 'driver1@gmail.com ', '', '2023-10-31'),
-(66, 0, 'Arjun', '123456789', 'arjun@gmail.com', '', '2023-11-02'),
-(67, 43, 'Barkha ', '949499582', 'barkhapatelciss@gmail.com ', '', '2023-11-06'),
-(68, 0, 'vishnu', '849469595', 'vishnuprajapati@gmail.com ', '', '2023-11-07'),
-(69, 0, 'abiso Mohammed abbas', '228651590', 'abisoa169@gmail.com', '', '2023-11-13'),
-(70, 0, 'gg', '.70,864.9', 'gagagsg@gmail.com', '', '2023-11-21'),
-(71, 0, 'Manish', '127845455', 'manish@gmail.com', '', '2023-11-21'),
-(72, 0, 'Manish', '678484545', 'manish@gmail.com', '', '2023-11-21'),
-(73, 0, 'Anshu', '123784545', 'anshu@gmail.com', '', '2023-11-22'),
-(74, 0, 'kah', '976555688', 'yha@gmil.com', '', '2023-11-22'),
-(75, 0, 'vgagsg', '948485227', 'adad@gmail.com', '', '2023-11-22'),
-(76, 0, 'gggh', '599999999', 'vvvv@gmail.com', '', '2023-11-28'),
-(77, 0, 'Calypso Driver', '123456789', 'mickayle.riley@live.com', '', '2023-12-22'),
-(78, 0, 'River Calipso', '123456789', 'mickayle.riley@live.com', '', '2023-12-22'),
-(79, 0, 'vagabsv', '978789487', 'sumit@gmail.com', '', '2023-12-25'),
-(80, 0, 'Shivam', '123456708', 'shivam@gmail.com', '', '2023-12-25'),
-(81, 0, 'Shivam', '685548455', 'shivam@gmail.com', '', '2023-12-25'),
-(82, 0, 'Ravi', '157576468', 'ravi@outlook.com', '', '2023-12-30'),
-(83, 0, 'a', '979798454', 'abcd@gmail.com', '', '2023-12-30'),
-(84, 0, 'rtyjiu', '588789665', 'fcghj@gmail.com', '', '2023-12-30'),
-(85, 0, 'bbagG', '678878555', 'ha@gmail.com', '', '2023-12-30'),
-(86, 0, 'driver', '222222222', 'driver@gmail.com ', '', '2024-01-02'),
-(87, 0, 'James Bond', '666999669', 'james@gmail.com', '', '2024-01-02'),
-(88, 0, 'james', '123321123', 'james@gmail.com', '', '2024-01-02'),
-(89, 0, 'anu', '120566755', 'anu@outlook.com', '', '2024-01-03'),
-(90, 0, 'Anu', '185668544', 'anu@outlook.com', '', '2024-01-03'),
-(91, 0, 'Anu', '128575585', 'anu@outlook.com', '', '2024-01-03'),
-(92, 0, 'gsva', '545487845', 'gk@gmail.com', '', '2024-01-03'),
-(93, 0, 'vHabahga', '797875278', 'dinesh@gmail.com', '', '2024-01-04'),
-(94, 0, 'CT fggg', '088480008', 'dinesh@gmail.com', '', '2024-01-04'),
-(95, 0, 'jjjj', '666666666', 'prabhatchakravarty12@gmail.com', '', '2024-01-04'),
-(96, 0, 'Lalit', '754321898', 'lalit@gmail.com', '', '2024-01-09'),
-(97, 0, 'gzgz', '645757557', 'gzhjhg@gmail.com', '', '2024-01-09'),
-(98, 0, 'yoga', '545454545', 'ffaga@gmail.com', '', '2024-01-10'),
-(99, 0, 'Lalit', '754326980', 'lalit@gmail.com', '', '2024-01-10'),
-(100, 0, 'Disha', '421589635', 'disha@gmail.com', '', '2024-01-10'),
-(101, 0, 'Disha', '128455844', 'disha@gmail.com', '', '2024-01-10'),
-(102, 0, 'vishnu', '558555866', 'vishnuprajapati@gmail.com ', '', '2024-02-17');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `driver_card_detail`
---
-
-CREATE TABLE `driver_card_detail` (
-  `card_id` int(10) NOT NULL,
-  `driver_id` varchar(255) NOT NULL,
-  `card_no` varchar(255) NOT NULL,
-  `card_holder_name` varchar(255) NOT NULL,
-  `expiry_month` varchar(200) NOT NULL,
-  `expiry_year` varchar(200) NOT NULL,
-  `cvv` varchar(255) NOT NULL,
-  `card_type` varchar(255) NOT NULL,
-  `cardToken` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `driver_card_detail`
---
-
-INSERT INTO `driver_card_detail` (`card_id`, `driver_id`, `card_no`, `card_holder_name`, `expiry_month`, `expiry_year`, `cvv`, `card_type`, `cardToken`) VALUES
-(1, '42', '6515115477544440', 'raj', '2', '30', '786', '', ''),
-(14, '1', '659836578', 'barkha', '11', '30', '123', '', ''),
-(4, '1', '659836578', 'barkha', '11', '30', '123', '', ''),
-(5, '2', '4242 4242 4242 4242', 'vishnu', '12', '25', '', '', ''),
-(11, '1', '659836578', 'barkha', '11', '30', '123', '', ''),
-(12, '1', '659836578', 'barkha', '11', '30', '123', '', ''),
-(13, '1', '659836578', 'barkha', '11', '30', '123', '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `driver_documents`
---
-
-CREATE TABLE `driver_documents` (
-  `id` int(200) NOT NULL,
-  `driver_id` varchar(200) NOT NULL,
-  `license` varchar(1000) NOT NULL,
-  `taxi_reg_front` varchar(1000) NOT NULL,
-  `taxi_reg_back` varchar(1000) NOT NULL,
-  `taxi_permit_front` varchar(1000) NOT NULL,
-  `taxi_permit_back` varchar(1000) NOT NULL,
-  `license_back` varchar(1000) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+(32, '', '', '123456', 'vishnu ', 'prajapati ', 'Indore, Madhya Pradesh, India', 'indore', 'indore', 'Madhya Pradesh ', '452001', '0', '0', 'vishnuprajapati@gmail.com', '+91', '8982411736', '', '', 0, '1', 0, NULL, '2024-05-08 07:51:04', NULL, '', '', 'gjjhyuhvijbct', 0x727839776f456d386e345f313731353135343636342e706e67, '', '', '', '', '0', '0', '05/23/2024 02:51:39', '', '', '', '', '3,21', '', 'IN', 'UnAvailable', '0', '2024-05-23 14:51:42 '),
+(33, '', '', '123456789', 'test once', 'test', 'GHJGHJGHJG, Bhel Chowk, Karanpur, Dehradun, Uttara', 'hhh', 'hhj', 'hhh', '25255', '', '', '12121212@12121212.com', '+1', '2125556666', '', '', 0, '0', 0, NULL, '2024-05-09 01:47:23', NULL, '', '', '123456789', 0x453343357875366f347a5f313731353231393234332e706e67, '', '', '', '', '0', '0', '2024-05-09 07:17:23', '', '', '', '', '1', '', 'US', '', '', ''),
+(34, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '0', 0, NULL, '2024-05-23 06:41:25', NULL, '', '', '', 0x30436a6c3841713433745f31373136343436343835, '', '', '', '', '0', '0', '2024-05-23 12:11:25', '', '', '', '', '', '', '', '', '', ''),
+(35, '', '', '123456', 'fgg', 'fgh', 'Indore, Madhya Pradesh, India', 'txxttc', 'indore', 'mp', '66853', '', '', 'vvv@gmail.com', '+1', '5665358666', '', '', 0, '0', 0, NULL, '2024-05-23 09:22:34', NULL, '', '', 'guufgyuuu', 0x7545376f44776d6c48475f313731363435363135342e706e67, '', '', '', '', '0', '0', '2024-05-23 02:52:34', '', '', '', '', '1', '', 'US', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1401,145 +1057,6 @@ INSERT INTO `driver_faq` (`df_id`, `type_id`, `type`, `ques`, `answer`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `driver_wallet_transaction_history`
---
-
-CREATE TABLE `driver_wallet_transaction_history` (
-  `id` int(11) NOT NULL,
-  `driver_id` int(11) NOT NULL,
-  `wallet_amount` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `paid_amount` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `status` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `date` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `time` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `driver_wallet_transaction_history`
---
-
-INSERT INTO `driver_wallet_transaction_history` (`id`, `driver_id`, `wallet_amount`, `paid_amount`, `status`, `date`, `time`) VALUES
-(1, 2, '1000', '200', 'Wallet Money Added', '2023-06-29', '1:50 PM');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `driver_withdraw_request`
---
-
-CREATE TABLE `driver_withdraw_request` (
-  `withdraw_id` int(11) NOT NULL,
-  `trans_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `driver_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `driver_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `driver_contact` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `withdraw_credit` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `date` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `secret_key` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `day` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `month` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `year` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `amount_process` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `bank_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `account_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `cancel_reason` text COLLATE utf8_unicode_ci NOT NULL,
-  `payment_mode` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `booking_id` int(11) NOT NULL,
-  `time` varchar(215) COLLATE utf8_unicode_ci NOT NULL,
-  `admin_com` varchar(111) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `driver_withdraw_request`
---
-
-INSERT INTO `driver_withdraw_request` (`withdraw_id`, `trans_id`, `driver_id`, `driver_name`, `driver_contact`, `withdraw_credit`, `date`, `secret_key`, `status`, `day`, `month`, `year`, `amount_process`, `bank_name`, `account_no`, `cancel_reason`, `payment_mode`, `booking_id`, `time`, `admin_com`) VALUES
-(170, '', '55', '', '', '200', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 356, '04:28 PM', ''),
-(171, '', '55', '', '', '200', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 357, '04:35 PM', ''),
-(172, '', '55', '', '', '200', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 358, '04:40 PM', ''),
-(173, '', '61', '', '', '630', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 362, '03:03 PM', ''),
-(174, '', '61', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 371, '05:32 PM', ''),
-(175, '', '62', '', '', '1500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 377, '04:23 PM', ''),
-(176, '', '65', '', '', '910', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 379, '05:21 PM', ''),
-(177, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 382, '06:44 PM', ''),
-(178, '', '65', '', '', '650', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 383, '06:58 PM', ''),
-(179, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 384, '07:00 PM', ''),
-(180, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 386, '10:29 AM', ''),
-(181, '', '65', '', '', '650', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 387, '10:37 AM', ''),
-(182, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 391, '10:46 AM', ''),
-(183, '', '62', '', '', '1500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 393, '10:54 AM', ''),
-(184, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 408, '05:53 PM', ''),
-(185, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 410, '06:28 PM', ''),
-(186, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 433, '12:26 PM', ''),
-(187, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 434, '12:47 PM', ''),
-(188, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 437, '04:04 PM', ''),
-(189, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 439, '04:12 PM', ''),
-(190, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 440, '04:18 PM', ''),
-(191, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 441, '04:32 PM', ''),
-(192, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 442, '04:37 PM', ''),
-(193, '', '65', '', '', '500', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 443, '04:48 PM', ''),
-(194, '', '62', 'VishnuPrajapati', '8982411736', '3000', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Withdraw', 0, '07:57 AM', ''),
-(195, '', '69', 'asaasa', '4585557', '250', '23-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Withdraw', 0, '07:57 AM', ''),
-(196, '', '68', 'Anshuuas', '64884334', '500', '30-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Withdraw', 0, '07:57 AM', ''),
-(197, '', '55', 'AashuSharma', '85444596', '950', '30-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Withdraw', 0, '07:57 AM', ''),
-(198, '', '65', 'ArjunPatel', '7583816688', '10810', '30-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Withdraw', 0, '07:57 AM', ''),
-(199, '', '61', 'Vani', '987565', '1130', '30-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Withdraw', 0, '07:57 AM', ''),
-(200, '', '62', '', '', '1500', '30-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 445, '11:33 AM', ''),
-(201, '', '62', '', '', '1500', '30-11-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 448, '11:46 AM', ''),
-(202, '', '62', '', '', '1500', '01-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 449, '05:29 PM', ''),
-(203, '', '62', '', '', '1500', '01-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 450, '06:38 PM', ''),
-(204, '', '62', '', '', '5000', '01-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 460, '07:54 PM', ''),
-(205, '', '62', '', '', '100', '02-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 464, '04:41 PM', ''),
-(206, '', '70', '', '', '1320.5', '23-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 470, '12:25 AM', ''),
-(207, '', '70', 'RiverCalipso', '5051908', '1320.5', '22-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Withdraw', 0, '06:57 PM', ''),
-(208, '', '70', '', '', '1056.4', '23-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 471, '12:38 AM', ''),
-(209, '', '70', '', '', '13000', '23-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 475, '01:07 AM', ''),
-(210, '', '70', '', '', '903.5', '23-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 476, '01:20 AM', ''),
-(211, '', '41', '', '', '54', '25-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 478, '03:29 PM', ''),
-(212, '', '71', '', '', '60', '25-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 483, '06:48 PM', ''),
-(213, '', '72', '', '', '100', '27-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 487, '11:37 AM', ''),
-(214, '', '72', '', '', '100', '27-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 488, '11:52 AM', ''),
-(215, '', '72', '', '', '100', '27-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 489, '11:59 AM', ''),
-(216, '', '41', '', '', '82', '27-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 486, '12:03 PM', ''),
-(217, '', '41', '', '', '', '27-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 495, '12:12 PM', ''),
-(218, '', '72', '', '', '100', '27-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 491, '12:15 PM', ''),
-(219, '', '41', '', '', '24', '27-12-2023', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 494, '12:18 PM', ''),
-(220, '', '73', '', '', '654', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 722, '05:40 AM', ''),
-(221, '', '73', '', '', '557', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 723, '05:45 AM', ''),
-(222, '', '73', '', '', '557', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 726, '06:07 AM', ''),
-(223, '', '73', '', '', '557', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 727, '06:13 AM', ''),
-(224, '', '84', '', '', '1000', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 730, '06:26 AM', ''),
-(225, '', '73', '', '', '557', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 733, '06:41 AM', ''),
-(226, '', '73', '', '', '557', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 734, '06:43 AM', ''),
-(227, '', '73', '', '', '557', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 736, '06:47 AM', ''),
-(228, '', '73', '', '', '780', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 739, '07:21 AM', ''),
-(229, '', '73', '', '', '649.215', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 745, '07:46 AM', ''),
-(230, '', '84', '', '', '680', '05-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 750, '08:07 AM', ''),
-(231, '', '84', '', '', '1008', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 764, '01:47 AM', ''),
-(232, '', '84', '', '', '1011', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 765, '01:59 AM', ''),
-(233, '', '84', '', '', '564.43', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 766, '02:21 AM', ''),
-(234, '', '84', '', '', '675', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 767, '02:42 AM', ''),
-(235, '', '84', '', '', '564.43', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 768, '03:24 AM', ''),
-(236, '', '84', '', '', '563', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 772, '07:26 AM', ''),
-(237, '', '84', '', '', '622', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 773, '07:38 AM', ''),
-(238, '', '84', '', '', '619', '06-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 775, '08:13 AM', ''),
-(239, '', '82', '', '', '662', '08-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 787, '05:13 AM', ''),
-(240, '', '84', '', '', '760', '09-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 799, '08:41 AM', ''),
-(241, '', '84', '', '', '760', '10-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 823, '03:16 AM', ''),
-(243, '', '84', '', '', '760', '10-01-2024', '', 'Pending', '', '', '', '', '', '', '', 'Wallet', 828, '04:19 AM', ''),
-(244, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '03:54 PM', ''),
-(245, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '03:54 PM', 'Yes'),
-(246, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '03:59 PM', ''),
-(247, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '03:59 PM', 'Yes'),
-(248, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '04:00 PM', ''),
-(249, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '04:00 PM', 'Yes'),
-(250, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '04:02 PM', ''),
-(251, '', '4', '', '', '', '16-03-2024', '', 'Pending', '', '', '', '', '', '', '', 'Cash', 7, '04:02 PM', 'Yes');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `faq`
 --
 
@@ -1563,350 +1080,6 @@ INSERT INTO `faq` (`f_id`, `type_id`, `type`, `ques`, `answer`) VALUES
 (7, 0, 'Admin', 0x57686174206966206d7920647269766572206163636570747320746865207269646520616e64207468656e2069732061206e6f2d73686f773f, 0x53656e6465722044656c6976657279204170702074616b6573206974732070726f6d69736520746f20637573746f6d657273207665727920736572696f75736c792c20616e642074686572652069732061206e6f2d73686f772e3c6272202f3e3c6272202f3e3c6272202f3e3c6272202f3e0d0a506c656173652072656c617820616e6420646f206e6f742070616e69632062656361757365206f7572206e6574776f726b2077696c6c206d616b65207375726520796f752067657420616e6f74686572206472697665722077697468696e20746865206e65617265737420706f737369626c652074696d652e2052656d656d6265722077652061726520696e207468697320627573696e65737320746f20736572766520796f752e20546875732073657276696e6720796f75206973206f7572206d6f737420696d706f7274616e74206f626c69676174696f6e2e),
 (33, 0, 'Admin', 0x6768686969, 0x69696969),
 (35, 0, 'Admin', 0x6767686a207468667467756866672074757475797979797979797979797979797979797979797979797979797979797979797979797979797979797979792079, 0x7479797979797979797975206975757575373737373737373737373720756c6b6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c6c20686b6a6a206b6a202079696969696969696969696969696969696969696969696969696969696969696920686a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a67687261737a7a7a7a7a6668676767676767676767676767676767676767206767676767676767676a6b);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `getTransactionhistory`
---
-
-CREATE TABLE `getTransactionhistory` (
-  `wallet_id` int(11) NOT NULL,
-  `iUserId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `iDriverId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `eUserType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `eType` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `iTripId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `eFor` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tDescription` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ePaymentstatus` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `trip_payment_mode` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `transaction_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `card_no` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `last_balance` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `currentbal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dDateorig` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `iBalance` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ePaymentBy` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ePaymentTo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `eWithdrawStatus` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ewithdrawpaid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remaining_amount` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `getTransactionhistory`
---
-
-INSERT INTO `getTransactionhistory` (`wallet_id`, `iUserId`, `iDriverId`, `eUserType`, `eType`, `iTripId`, `eFor`, `tDescription`, `ePaymentstatus`, `trip_payment_mode`, `transaction_id`, `card_no`, `last_balance`, `currentbal`, `dDateorig`, `iBalance`, `ePaymentBy`, `ePaymentTo`, `eWithdrawStatus`, `ewithdrawpaid`, `remaining_amount`) VALUES
-(62, '', '', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '', '0', '2021-12-06 18:30:56', '', 'Driver', 'Driver', '', '', ''),
-(124, '', '59', 'Driver', 'Credit', '', 'Add Wallet By Card', 'Wallet credited by card', 'Paid', 'Card', '0', '4111111111111111', '0', '10', '2022-02-01 13:03:53', '10', 'Driver', 'Admin', '', '', '0'),
-(136, '108', '61', 'Driver', 'Credit', '20', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '', '2022-02-02 18:15:21', '26.057999', 'Driver', 'Admin', '', '', '0'),
-(138, '108', '61', 'Driver', 'Credit', '20', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.13', '-0.13', '2022-02-02 18:34:07', '26.057999', 'Driver', 'Admin', '', '', '0'),
-(139, '108', '61', 'Driver', 'Credit', '20', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.26', '-0.26', '2022-02-02 18:34:57', '26.057999', 'Driver', 'Admin', '', '', '0'),
-(140, '108', '61', 'Driver', 'Credit', '20', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.39', '-0.39', '2022-02-02 18:37:21', '26.057999', 'Driver', 'Admin', '', '', '0'),
-(141, '108', '61', 'Driver', 'Credit', '20', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.52', '-0.52', '2022-02-02 18:40:22', '26.057999', 'Driver', 'Admin', '', '', '0'),
-(142, '108', '61', 'Driver', 'Credit', '28', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.65', '-0.65', '2022-02-02 21:39:20', '23.836', 'Driver', 'Admin', '', '', '0'),
-(143, '108', '61', 'Driver', 'Credit', '29', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.77', '-0.77', '2022-02-04 17:24:21', '475.003', 'Driver', 'Admin', '', '', '0'),
-(144, '108', '61', 'Driver', 'Credit', '30', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-3.15', '-3.15', '2022-02-04 20:22:46', '21.311', 'Driver', 'Admin', '', '', '0'),
-(145, '108', '61', 'Driver', 'Credit', '31', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-3.26', '-3.26', '2022-02-04 20:26:21', '21.715', 'Driver', 'Admin', '', '', '0'),
-(146, '108', '61', 'Driver', 'Credit', '32', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-3.37', '-3.37', '2022-02-04 20:35:17', '22.321001', 'Driver', 'Admin', '', '', '0'),
-(147, '108', '61', 'Driver', 'Credit', '33', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-3.48', '-3.48', '2022-02-04 20:57:42', '20.2', 'Driver', 'Admin', '', '', '0'),
-(148, '', '61', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-3.58', '196.42', '2022-02-14 15:36:16', '200', 'Admin', 'Driver', '', '', ''),
-(149, '', '61', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '196.42', '198.02', '2022-02-14 15:36:36', '1.6', 'Admin', 'Driver', '', '', ''),
-(150, '', '', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '', '0', '2022-02-24 13:01:41', '', 'Driver', 'Driver', '', '', ''),
-(151, '', '', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '', '0', '2022-02-24 13:05:41', '', 'Driver', 'Driver', '', '', ''),
-(152, '', '', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '', '0', '2022-02-24 13:54:17', '', 'Driver', 'Driver', '', '', ''),
-(153, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '198.02', '188.02', '2022-02-24 15:35:36', '10', 'Driver', 'Driver', '', '', ''),
-(154, '108', '61', 'Driver', 'Credit', '37', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '198.02', '198.02', '2022-03-05 16:51:40', '22.422', 'Driver', 'Admin', '', '', '0'),
-(155, '108', '61', 'Driver', 'Credit', '38', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '197.91', '197.91', '2022-03-08 11:19:22', '31.411001', 'Driver', 'Admin', '', '', '0'),
-(156, '108', '61', 'Driver', 'Debit', '39', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '197.75', '197.63', '2022-03-08 11:48:00', '0.12', 'Driver', 'Admin', '', '', '0'),
-(157, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '197.63', '137.63', '2022-03-09 17:17:12', '60', 'Driver', 'Driver', '', '', ''),
-(158, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '197.63', '137.63', '2022-03-09 17:29:16', '60', 'Driver', 'Driver', '', '', ''),
-(159, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '197.63', '177.63', '2022-03-09 17:29:24', '20', 'Driver', 'Driver', '', '', ''),
-(160, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '197.63', '127.63', '2022-03-09 17:56:24', '70', 'Driver', 'Driver', '', '', ''),
-(161, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '127.63', '87.63', '2022-03-09 17:58:03', '40', 'Driver', 'Driver', '', '', ''),
-(162, '', '61', 'Driver', 'Credit', '', 'Withdraw Amount Refund', 'Withdraw request cancel by superadmin and credit to your wallet', 'Paid', '', '', '', '87.63', '127.63', '2022-03-09 18:47:04', '40', 'Admin', 'Driver', 'Cancel', '9', '0'),
-(163, '', '61', 'Driver', 'Credit', '', 'Withdraw Amount Refund', 'Withdraw request cancel by superadmin and credit to your wallet', 'Paid', '', '', '', '87.63', '127.63', '2022-03-09 18:48:50', '40', 'Admin', 'Driver', 'Cancel', '9', '0'),
-(164, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '127.63', '87.63', '2022-03-09 19:02:49', '40', 'Driver', 'Driver', '', '', ''),
-(165, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '87.63', '67.63', '2022-03-10 18:34:47', '20', 'Driver', 'Driver', '', '', ''),
-(166, '', '61', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '67.63', '567.63', '2022-03-10 19:46:46', '500', 'Admin', 'Driver', '', '', ''),
-(167, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '567.63', '512.63', '2022-03-10 20:28:08', '55', 'Driver', 'Driver', '', '', ''),
-(168, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '512.63', '452.63', '2022-03-10 20:33:48', '60', 'Driver', 'Driver', '', '', ''),
-(169, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '452.63', '382.63', '2022-03-10 20:36:45', '70', 'Driver', 'Driver', '', '', ''),
-(170, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '382.63', '326.63', '2022-03-10 20:55:21', '56', 'Driver', 'Driver', '', '', ''),
-(171, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '326.63', '261.63', '2022-03-10 20:55:58', '65', 'Driver', 'Driver', '', '', ''),
-(172, '128', '77', 'Driver', 'Debit', '42', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.1', '2022-03-16 18:04:49', '0.1', 'Driver', 'Admin', '', '', '0'),
-(177, '126', '76', 'Driver', 'Debit', '57', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.12', '2022-03-25 10:09:37', '0.12', 'Driver', 'Admin', '', '', '0'),
-(188, '108', '82', 'Driver', 'Debit', '84', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.86', '2022-04-01 16:03:10', '0.86', 'Driver', 'Admin', '', '', '0'),
-(189, '108', '82', 'Driver', 'Debit', '87', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.86', '-1.72', '2022-04-01 16:43:41', '0.86', 'Driver', 'Admin', '', '', '0'),
-(190, '108', '82', 'Driver', 'Debit', '88', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-1.72', '-3.03', '2022-04-01 16:44:55', '1.31', 'Driver', 'Admin', '', '', '0'),
-(191, '108', '82', 'Driver', 'Debit', '90', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-3.03', '-3.89', '2022-04-01 16:51:01', '0.86', 'Driver', 'Admin', '', '', '0'),
-(198, '108', '81', 'Driver', 'Debit', '102', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.86', '2022-04-01 22:05:56', '0.86', 'Driver', 'Admin', '', '', '0'),
-(199, '108', '81', 'Driver', 'Debit', '103', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.86', '-1.75', '2022-04-01 22:12:21', '0.89', 'Driver', 'Admin', '', '', '0'),
-(200, '108', '81', 'Driver', 'Debit', '104', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-1.75', '-10.52', '2022-04-01 22:31:01', '8.77', 'Driver', 'Admin', '', '', '0'),
-(201, '108', '81', 'Driver', 'Debit', '104', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-10.52', '-21.98', '2022-04-01 22:36:28', '11.46', 'Driver', 'Admin', '', '', '0'),
-(202, '108', '81', 'Driver', 'Debit', '106', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-21.98', '-22.84', '2022-04-01 22:41:16', '0.86', 'Driver', 'Admin', '', '', '0'),
-(205, '108', '81', 'Driver', 'Debit', '111', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-22.84', '-23.76', '2022-04-02 13:29:33', '0.92', 'Driver', 'Admin', '', '', '0'),
-(210, '108', '81', 'Driver', 'Debit', '115', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-23.76', '-28.33', '2022-04-02 18:22:05', '4.57', 'Driver', 'Admin', '', '', '0'),
-(211, '108', '81', 'Driver', 'Debit', '117', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-28.33', '-29.24', '2022-04-02 18:48:31', '0.91', 'Driver', 'Admin', '', '', '0'),
-(212, '108', '81', 'Driver', 'Debit', '118', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-29.24', '-40.19', '2022-04-02 19:11:25', '10.95', 'Driver', 'Admin', '', '', '0'),
-(213, '108', '81', 'Driver', 'Debit', '119', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-40.19', '-42.44', '2022-04-02 19:19:24', '2.25', 'Driver', 'Admin', '', '', '0'),
-(214, '147', '88', 'Driver', 'Debit', '124', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.1', '2022-04-04 15:37:37', '0.1', 'Driver', 'Admin', '', '', '0'),
-(219, '150', '90', 'Driver', 'Debit', '131', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.1', '2022-04-05 14:38:47', '0.1', 'Driver', 'Admin', '', '', '0'),
-(220, '150', '90', 'Driver', 'Debit', '132', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.1', '-0.21', '2022-04-05 14:40:07', '0.11', 'Driver', 'Admin', '', '', '0'),
-(221, '', '90', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-0.21', '999.79', '2022-04-05 14:45:00', '1000', 'Admin', 'Driver', '', '', ''),
-(222, '150', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '2000', '2022-04-05 14:45:37', '2000', 'Admin', 'Passenger', '', '', ''),
-(223, '150', '90', 'Driver', 'Debit', '134', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '999.79', '999.64', '2022-04-05 14:46:46', '0.15', 'Driver', 'Admin', '', '', '0'),
-(224, '150', '90', 'Driver', 'Debit', '135', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '999.64', '999.48', '2022-04-05 14:47:45', '0.16', 'Driver', 'Admin', '', '', '0'),
-(225, '150', '90', 'Driver', 'Debit', '136', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '999.48', '999.1', '2022-04-05 15:29:43', '0.38', 'Driver', 'Admin', '', '', '0'),
-(226, '150', '90', 'Driver', 'Debit', '137', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '999.1', '998.72', '2022-04-05 15:30:36', '0.38', 'Driver', 'Admin', '', '', '0'),
-(227, '', '', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '', '0', '2022-04-05 15:44:34', '', 'Driver', 'Driver', '', '', ''),
-(228, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '261.63', '161.63', '2022-04-05 15:50:41', '100', 'Driver', 'Driver', '', '', ''),
-(229, '', '61', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '161.63', '5161.63', '2022-04-05 15:51:52', '5000', 'Admin', 'Driver', '', '', ''),
-(230, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '5161.63', '961.63', '2022-04-05 15:55:35', '4200', 'Driver', 'Driver', '', '', ''),
-(231, '', '61', 'Driver', 'Debit', '', 'Withdraw Request', 'Withdraw request to superadmin', 'Paid', '', '', '', '961.63', '411.63', '2022-04-05 16:25:27', '550', 'Driver', 'Driver', '', '', ''),
-(232, '150', '90', 'Driver', 'Debit', '138', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.31', '2022-04-07 12:41:09', '0.31', 'Driver', 'Admin', '', '', '0'),
-(233, '150', '90', 'Driver', 'Debit', '139', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.31', '-0.62', '2022-04-07 12:44:13', '0.31', 'Driver', 'Admin', '', '', '0'),
-(238, '143', '76', 'Driver', 'Debit', '150', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.12', '-0.22', '2022-04-21 22:21:34', '0.1', 'Driver', 'Admin', '', '', '0'),
-(241, '108', '61', 'Driver', 'Debit', '168', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '411.08', '410.98', '2022-05-02 20:52:33', '0.1', 'Driver', 'Admin', '', '', '0'),
-(242, '108', '61', 'Driver', 'Debit', '169', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '410.98', '410.86', '2022-05-02 20:56:43', '0.12', 'Driver', 'Admin', '', '', '0'),
-(311, '108', '61', 'Driver', 'Debit', '50', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '410.86', '410.76', '2022-05-27 20:24:12', '0.1', 'Driver', 'Admin', '', '', '0'),
-(312, '108', '61', 'Driver', 'Debit', '65', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '410.76', '410.66', '2022-05-30 18:50:03', '0.1', 'Driver', 'Admin', '', '', '0'),
-(313, '174', '107', 'Driver', 'Debit', '66', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '', '-0.32', '2022-05-30 20:15:53', '0.32', 'Driver', 'Admin', '', '', '0'),
-(316, '142', '76', 'Driver', 'Debit', '75', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.22', '-0.32', '2022-05-31 17:05:32', '0.1', 'Driver', 'Admin', '', '', '0'),
-(318, '167', '76', 'Driver', 'Debit', '78', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.32', '-1.05', '2022-06-01 04:30:18', '0.73', 'Driver', 'Admin', '', '', '0'),
-(319, '174', '107', 'Driver', 'Debit', '80', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.32', '-0.62', '2022-06-02 12:30:59', '0.3', 'Driver', 'Admin', '', '', '0'),
-(320, '174', '107', 'Driver', 'Debit', '81', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.62', '-0.92', '2022-06-02 12:35:45', '0.3', 'Driver', 'Admin', '', '', '0'),
-(333, '195', '76', 'Driver', 'Debit', '108', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-1.05', '-1.151', '2022-06-04 18:40:10', '0.1', 'Driver', 'Admin', '', '', '0'),
-(335, '108', '121', 'Driver', 'Debit', '114', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '0', '-0.1111', '2022-06-14 19:51:55', '0.11', 'Driver', 'Admin', '', '', '0'),
-(341, '', '129', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '200', '2022-11-17 13:11:52', '200', 'Admin', 'Driver', '', '', ''),
-(343, '142', '76', 'Driver', 'Debit', '127', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-2.25897', '-2.360475', '2022-11-20 01:06:00', '0.1', 'Driver', 'Admin', '', '', '0'),
-(344, '142', '76', 'Driver', 'Debit', '128', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-2.360475', '-3.99213', '2022-11-20 02:18:05', '1.63', 'Driver', 'Admin', '', '', '0'),
-(345, '142', '76', 'Driver', 'Debit', '129', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-3.99213', '-4.78902', '2022-11-21 18:35:12', '0.8', 'Driver', 'Admin', '', '', '0'),
-(346, '142', '76', 'Driver', 'Debit', '130', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-4.78902', '-4.89002', '2022-11-22 13:20:36', '0.1', 'Driver', 'Admin', '', '', '0'),
-(347, '142', '76', 'Driver', 'Debit', '131', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-4.89002', '-4.99607', '2022-11-22 13:22:08', '0.11', 'Driver', 'Admin', '', '', '0'),
-(348, '142', '76', 'Driver', 'Debit', '132', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-4.99607', '-5.12737', '2022-11-22 13:27:20', '0.13', 'Driver', 'Admin', '', '', '0'),
-(361, '142', '76', 'Driver', 'Debit', '148', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-5.12737', '-5.499555', '2022-11-24 22:16:02', '0.37', 'Driver', 'Admin', '', '', '0'),
-(366, '142', '76', 'Driver', 'Debit', '155', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-5.499555', '-5.600555', '2022-11-26 04:17:28', '0.1', 'Driver', 'Admin', '', '', '0'),
-(367, '142', '76', 'Driver', 'Debit', '156', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-5.600555', '-5.706605', '2022-11-26 09:48:09', '0.11', 'Driver', 'Admin', '', '', '0'),
-(400, '142', '76', 'Driver', 'Debit', '212', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-5.706605', '-5.807605', '2022-12-11 01:28:19', '0.1', 'Driver', 'Admin', '', '', '0'),
-(412, '', '76', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-5.807605', '94.192395', '2023-01-18 17:32:39', '100', 'Admin', 'Driver', '', '', ''),
-(415, '', '76', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '94.192395', '1094.192395', '2023-01-23 14:35:43', '1000', 'Admin', 'Driver', '', '', ''),
-(419, '223', '76', 'Driver', 'Debit', '259', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.02544', '-0.11501', '2023-01-25 22:43:44', '0.09', 'Driver', 'Admin', '', '', '0'),
-(420, '167', '76', 'Driver', 'Debit', '260', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.11501', '-0.123755', '2023-01-26 18:55:38', '0.01', 'Driver', 'Admin', '', '', '0'),
-(421, '223', '76', 'Driver', 'Debit', '261', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.123755', '-0.132235', '2023-01-26 19:52:21', '0.01', 'Driver', 'Admin', '', '', '0'),
-(422, '224', '76', 'Driver', 'Debit', '263', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.132235', '-0.180889003', '2023-01-28 01:37:07', '0.05', 'Driver', 'Admin', '', '', '0'),
-(423, '126', '76', 'Driver', 'Debit', '271', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.180889003', '-0.189369003', '2023-02-13 15:28:37', '0.01', 'Driver', 'Admin', '', '', '0'),
-(424, '147', '90', 'Passenger', 'Debit', '274', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-14 16:26:53', '23.46', 'Passenger', 'Driver', '', '', '0'),
-(425, '147', '90', 'Driver', 'Credit', '274', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-0.62', '22.49', '2023-02-14 16:26:53', '23.11', 'Driver', 'Admin', '', '', '0'),
-(426, '147', '90', 'Driver', 'Debit', '274', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-0.62', '-0.97', '2023-02-14 16:26:53', '0.35', 'Passenger', 'Driver', '', '', '23.46'),
-(427, '147', '90', 'Driver', 'Debit', '275', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.97', '-1.27753', '2023-02-14 16:38:16', '0.31', 'Driver', 'Admin', '', '', '0'),
-(428, '147', '90', 'Passenger', 'Debit', '276', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-14 17:00:34', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(429, '147', '90', 'Driver', 'Credit', '276', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-1.27753', '18.81247', '2023-02-14 17:00:34', '20.09', 'Driver', 'Admin', '', '', '0'),
-(430, '147', '90', 'Driver', 'Debit', '276', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-1.27753', '-1.58753', '2023-02-14 17:00:34', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(431, '147', '90', 'Passenger', 'Debit', '277', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-14 17:20:02', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(432, '147', '90', 'Driver', 'Credit', '277', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-1.58753', '18.50247', '2023-02-14 17:20:02', '20.09', 'Driver', 'Admin', '', '', '0'),
-(433, '147', '90', 'Driver', 'Debit', '277', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-1.58753', '-1.89753', '2023-02-14 17:20:02', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(434, '147', '90', 'Passenger', 'Debit', '280', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-14 19:22:59', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(435, '147', '90', 'Driver', 'Credit', '280', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-1.89753', '18.19247', '2023-02-14 19:22:59', '20.09', 'Driver', 'Admin', '', '', '0'),
-(436, '147', '90', 'Driver', 'Debit', '280', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-1.89753', '-2.20753', '2023-02-14 19:22:59', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(437, '147', '90', 'Passenger', 'Debit', '281', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-15 18:34:44', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(438, '147', '90', 'Driver', 'Credit', '281', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-2.20753', '17.88247', '2023-02-15 18:34:44', '20.09', 'Driver', 'Admin', '', '', '0'),
-(439, '147', '90', 'Driver', 'Debit', '281', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-2.20753', '-2.51753', '2023-02-15 18:34:44', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(440, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:28:43', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(441, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-2.51753', '17.57247', '2023-02-17 15:28:43', '20.09', 'Driver', 'Admin', '', '', '0'),
-(442, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-2.51753', '-2.82753', '2023-02-17 15:28:43', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(443, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:34:53', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(444, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-2.82753', '17.26247', '2023-02-17 15:34:53', '20.09', 'Driver', 'Admin', '', '', '0'),
-(445, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-2.82753', '-3.13753', '2023-02-17 15:34:53', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(446, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:37:38', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(447, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-3.13753', '16.95247', '2023-02-17 15:37:38', '20.09', 'Driver', 'Admin', '', '', '0'),
-(448, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-3.13753', '-3.44753', '2023-02-17 15:37:38', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(449, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:39:13', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(450, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-3.44753', '16.64247', '2023-02-17 15:39:13', '20.09', 'Driver', 'Admin', '', '', '0'),
-(451, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-3.44753', '-3.75753', '2023-02-17 15:39:13', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(452, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:40:28', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(453, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-3.75753', '16.33247', '2023-02-17 15:40:28', '20.09', 'Driver', 'Admin', '', '', '0'),
-(454, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-3.75753', '-4.06753', '2023-02-17 15:40:28', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(455, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:41:42', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(456, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-4.06753', '16.02247', '2023-02-17 15:41:42', '20.09', 'Driver', 'Admin', '', '', '0'),
-(457, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-4.06753', '-4.37753', '2023-02-17 15:41:42', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(458, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:44:13', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(459, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-4.37753', '15.71247', '2023-02-17 15:44:13', '20.09', 'Driver', 'Admin', '', '', '0'),
-(460, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-4.37753', '-4.68753', '2023-02-17 15:44:13', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(461, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4111111111111111', '', '', '2023-02-17 15:44:50', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(462, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4111111111111111', '-4.68753', '15.40247', '2023-02-17 15:44:50', '20.09', 'Driver', 'Admin', '', '', '0'),
-(463, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4111111111111111', '-4.68753', '-4.99753', '2023-02-17 15:44:50', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(464, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 15:45:50', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(465, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-4.99753', '15.09247', '2023-02-17 15:45:50', '20.09', 'Driver', 'Admin', '', '', '0'),
-(466, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-4.99753', '-5.30753', '2023-02-17 15:45:50', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(467, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 15:46:59', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(468, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-5.30753', '14.78247', '2023-02-17 15:46:59', '20.09', 'Driver', 'Admin', '', '', '0'),
-(469, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-5.30753', '-5.61753', '2023-02-17 15:46:59', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(470, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 15:49:45', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(471, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-5.61753', '14.47247', '2023-02-17 15:49:45', '20.09', 'Driver', 'Admin', '', '', '0'),
-(472, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-5.61753', '-5.92753', '2023-02-17 15:49:45', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(473, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 15:56:40', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(474, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-5.92753', '14.16247', '2023-02-17 15:56:40', '20.09', 'Driver', 'Admin', '', '', '0'),
-(475, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-5.92753', '-6.23753', '2023-02-17 15:56:40', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(476, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 16:14:57', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(477, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-6.23753', '13.85247', '2023-02-17 16:14:57', '20.09', 'Driver', 'Admin', '', '', '0'),
-(478, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-6.23753', '-6.54753', '2023-02-17 16:14:57', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(479, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 16:16:09', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(480, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-6.54753', '13.54247', '2023-02-17 16:16:09', '20.09', 'Driver', 'Admin', '', '', '0'),
-(481, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-6.54753', '-6.85753', '2023-02-17 16:16:09', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(482, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 16:18:56', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(483, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-6.85753', '13.23247', '2023-02-17 16:18:56', '20.09', 'Driver', 'Admin', '', '', '0'),
-(484, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-6.85753', '-7.16753', '2023-02-17 16:18:56', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(485, '147,', '90,', 'Passenger', 'Debit', '282,', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 16:22:35', '20.4,', 'Passenger', 'Driver', '', '', '0'),
-(486, '147,', '90,', 'Driver', 'Credit', '282,', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-7.16753', '12.92247', '2023-02-17 16:22:35', '20.09', 'Driver', 'Admin', '', '', '0'),
-(487, '147,', '90,', 'Driver', 'Debit', '282,', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-7.16753', '-7.47753', '2023-02-17 16:22:35', '0.31', 'Passenger', 'Driver', '', '', '20.4,'),
-(488, '147', '90', 'Passenger', 'Debit', '282', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 16:23:32', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(489, '147', '90', 'Driver', 'Credit', '282', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-7.47753', '12.61247', '2023-02-17 16:23:32', '20.09', 'Driver', 'Admin', '', '', '0'),
-(490, '147', '90', 'Driver', 'Debit', '282', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-7.47753', '-7.78753', '2023-02-17 16:23:32', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(491, '147', '90', 'Passenger', 'Debit', '285', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-17 16:26:17', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(492, '147', '90', 'Driver', 'Credit', '285', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-7.78753', '12.30247', '2023-02-17 16:26:17', '20.09', 'Driver', 'Admin', '', '', '0'),
-(493, '147', '90', 'Driver', 'Debit', '285', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-7.78753', '-8.09753', '2023-02-17 16:26:17', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(497, '126', '76', 'Driver', 'Debit', '295', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.189369003', '-0.197849003', '2023-02-17 22:23:47', '0.01', 'Driver', 'Admin', '', '', '0'),
-(498, '147', '90', 'Passenger', 'Debit', '299', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4242424242424242', '', '', '2023-02-18 11:02:20', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(499, '147', '90', 'Driver', 'Credit', '299', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4242424242424242', '-8.09753', '11.99247', '2023-02-18 11:02:20', '20.09', 'Driver', 'Admin', '', '', '0'),
-(500, '147', '90', 'Driver', 'Debit', '299', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4242424242424242', '-8.09753', '-8.40753', '2023-02-18 11:02:20', '0.31', 'Passenger', 'Driver', '', '', '20.4'),
-(504, '167', '76', 'Passenger', 'Debit', '309', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4133310403578300', '', '', '2023-02-28 17:38:48', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(505, '167', '76', 'Driver', 'Credit', '309', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4133310403578300', '-0.197849003', '20.002150997', '2023-02-28 17:38:48', '20.2', 'Driver', 'Admin', '', '', '0'),
-(506, '167', '76', 'Driver', 'Debit', '309', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4133310403578300', '-0.197849003', '-0.397849003', '2023-02-28 17:38:48', '0.2', 'Passenger', 'Driver', '', '', '20.4'),
-(507, '167', '76', 'Passenger', 'Debit', '310', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '4133310403578300', '', '', '2023-02-28 17:44:17', '20.4', 'Passenger', 'Driver', '', '', '0'),
-(508, '167', '76', 'Driver', 'Credit', '310', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '4133310403578300', '-0.397849003', '19.802150997', '2023-02-28 17:44:17', '20.2', 'Driver', 'Admin', '', '', '0'),
-(509, '167', '76', 'Driver', 'Debit', '310', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '4133310403578300', '-0.397849003', '-0.597849003', '2023-02-28 17:44:17', '0.2', 'Passenger', 'Driver', '', '', '20.4'),
-(570, '225', '76', 'Passenger', 'Debit', '408', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-03-16 19:11:23', '0.848', 'Passenger', 'Driver', '', '', '0'),
-(571, '225', '76', 'Driver', 'Credit', '408', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.597849003', '0.242150997', '2023-03-16 19:11:23', '0.84', 'Driver', 'Admin', '', '', '0'),
-(572, '225', '76', 'Driver', 'Debit', '408', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.597849003', '-0.607849003', '2023-03-16 19:11:23', '0.01', 'Passenger', 'Driver', '', '', '0.848'),
-(585, '126', '153', 'Passenger', 'Debit', '426', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-03-18 22:21:38', '3.7206', 'Passenger', 'Driver', '', '', '0'),
-(586, '126', '153', 'Driver', 'Credit', '426', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '0', '3.68', '2023-03-18 22:21:38', '3.68', 'Driver', 'Admin', '', '', '0'),
-(587, '126', '153', 'Driver', 'Debit', '426', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '0', '-0.04', '2023-03-18 22:21:38', '0.04', 'Passenger', 'Driver', '', '', '3.7206'),
-(588, '126', '153', 'Passenger', 'Debit', '427', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-03-18 22:49:06', '2.4433', 'Passenger', 'Driver', '', '', '0'),
-(589, '126', '153', 'Driver', 'Credit', '427', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.04', '2.38', '2023-03-18 22:49:06', '2.42', 'Driver', 'Admin', '', '', '0'),
-(590, '126', '153', 'Driver', 'Debit', '427', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.04', '-0.06', '2023-03-18 22:49:06', '0.02', 'Passenger', 'Driver', '', '', '2.4433'),
-(591, '211', '141', 'Passenger', 'Debit', '428', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-03-21 11:18:25', '1.015', 'Passenger', 'Driver', '', '', '0'),
-(592, '211', '141', 'Driver', 'Credit', '428', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '0', '1.01', '2023-03-21 11:18:25', '1.01', 'Driver', 'Admin', '', '', '0'),
-(593, '211', '141', 'Driver', 'Debit', '428', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '0', '-0.01', '2023-03-21 11:18:25', '0.01', 'Passenger', 'Driver', '', '', '1.015'),
-(594, '231', '141', 'Passenger', 'Debit', '431', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-03-31 16:34:40', '1.015', 'Passenger', 'Driver', '', '', '0'),
-(595, '231', '141', 'Driver', 'Credit', '431', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.01', '1', '2023-03-31 16:34:40', '1.01', 'Driver', 'Admin', '', '', '0'),
-(596, '231', '141', 'Driver', 'Debit', '431', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.01', '-0.02', '2023-03-31 16:34:40', '0.01', 'Passenger', 'Driver', '', '', '1.015'),
-(597, '231', '141', 'Passenger', 'Debit', '436', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-03-31 17:05:33', '1.015', 'Passenger', 'Driver', '', '', '0'),
-(598, '231', '141', 'Driver', 'Credit', '436', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '0', '1.01', '2023-03-31 17:05:33', '1.01', 'Driver', 'Admin', '', '', '0'),
-(599, '231', '141', 'Driver', 'Debit', '436', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '0', '-0.01', '2023-03-31 17:05:33', '0.01', 'Passenger', 'Driver', '', '', '1.015'),
-(600, '231', '141', 'Passenger', 'Debit', '437', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-01 12:43:36', '1.5225', 'Passenger', 'Driver', '', '', '0'),
-(601, '231', '141', 'Driver', 'Credit', '437', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.01', '1.5', '2023-04-01 12:43:36', '1.51', 'Driver', 'Admin', '', '', '0'),
-(602, '231', '141', 'Driver', 'Debit', '437', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.01', '-0.02', '2023-04-01 12:43:36', '0.01', 'Passenger', 'Driver', '', '', '1.5225'),
-(603, '231', '141', 'Passenger', 'Debit', '438', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-01 12:46:52', '3.045', 'Passenger', 'Driver', '', '', '0'),
-(604, '231', '141', 'Driver', 'Credit', '438', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.02', '3.01', '2023-04-01 12:46:52', '3.03', 'Driver', 'Admin', '', '', '0'),
-(605, '231', '141', 'Driver', 'Debit', '438', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.02', '-0.04', '2023-04-01 12:46:52', '0.02', 'Passenger', 'Driver', '', '', '3.045'),
-(606, '126', '76', 'Passenger', 'Debit', '441', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-03 23:40:09', '0.848', 'Passenger', 'Driver', '', '', '0'),
-(607, '126', '76', 'Driver', 'Credit', '441', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.607849003', '0.232150997', '2023-04-03 23:40:09', '0.84', 'Driver', 'Admin', '', '', '0'),
-(608, '126', '76', 'Driver', 'Debit', '441', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.607849003', '-0.617849003', '2023-04-03 23:40:09', '0.01', 'Passenger', 'Driver', '', '', '0.848'),
-(609, '126', '76', 'Passenger', 'Debit', '443', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-03 23:46:41', '0.85330003', 'Passenger', 'Driver', '', '', '0'),
-(610, '126', '76', 'Driver', 'Credit', '443', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.617849003', '0.222150997', '2023-04-03 23:46:41', '0.84', 'Driver', 'Admin', '', '', '0'),
-(611, '126', '76', 'Driver', 'Debit', '443', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.617849003', '-0.627849003', '2023-04-03 23:46:41', '0.01', 'Passenger', 'Driver', '', '', '0.85330003'),
-(612, '126', '76', 'Passenger', 'Debit', '444', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-04 02:15:22', '0.848', 'Passenger', 'Driver', '', '', '0'),
-(613, '126', '76', 'Driver', 'Credit', '444', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.627849003', '0.212150997', '2023-04-04 02:15:22', '0.84', 'Driver', 'Admin', '', '', '0'),
-(614, '126', '76', 'Driver', 'Debit', '444', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.627849003', '-0.637849003', '2023-04-04 02:15:22', '0.01', 'Passenger', 'Driver', '', '', '0.848'),
-(615, '231', '73', 'Driver', 'Debit', '450', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '0', '-0.306', '2023-04-06 13:10:38', '0.31', 'Driver', 'Admin', '', '', '0'),
-(616, '245', '158', 'Driver', 'Debit', '451', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '0', '-0.00848', '2023-04-10 03:00:50', '0.01', 'Driver', 'Admin', '', '', '0'),
-(617, '245', '158', 'Passenger', 'Debit', '452', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-10 03:04:31', '0.848', 'Passenger', 'Driver', '', '', '0'),
-(618, '245', '158', 'Driver', 'Credit', '452', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.00848', '0.83152', '2023-04-10 03:04:31', '0.84', 'Driver', 'Admin', '', '', '0'),
-(619, '245', '158', 'Driver', 'Debit', '452', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.00848', '-0.01848', '2023-04-10 03:04:31', '0.01', 'Passenger', 'Driver', '', '', '0.848'),
-(620, '245', '158', 'Passenger', 'Debit', '454', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-10 19:33:27', '0.848', 'Passenger', 'Driver', '', '', '0'),
-(621, '245', '158', 'Driver', 'Credit', '454', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.01848', '0.82152', '2023-04-10 19:33:27', '0.84', 'Driver', 'Admin', '', '', '0'),
-(622, '245', '158', 'Driver', 'Debit', '454', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.01848', '-0.02848', '2023-04-10 19:33:27', '0.01', 'Passenger', 'Driver', '', '', '0.848'),
-(623, '245', '158', 'Passenger', 'Debit', '460', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-12 12:56:11', '0.848', 'Passenger', 'Driver', '', '', '0'),
-(624, '245', '158', 'Driver', 'Credit', '460', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.02848', '0.81152', '2023-04-12 12:56:11', '0.84', 'Driver', 'Admin', '', '', '0'),
-(625, '245', '158', 'Driver', 'Debit', '460', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.02848', '-0.03848', '2023-04-12 12:56:11', '0.01', 'Passenger', 'Driver', '', '', '0.848'),
-(626, '245', '158', 'Driver', 'Debit', '461', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.03848', '-0.04696', '2023-04-12 12:58:09', '0.01', 'Driver', 'Admin', '', '', '0'),
-(627, '222', '141', 'Driver', 'Debit', '465', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.04', '-0.045075', '2023-04-13 18:46:18', '0.01', 'Driver', 'Admin', '', '', '0'),
-(628, '222', '141', 'Driver', 'Debit', '466', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.045075', '-0.05015', '2023-04-14 18:39:21', '0.01', 'Driver', 'Admin', '', '', '0'),
-(629, '222', '141', 'Driver', 'Debit', '466', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.05015', '-0.055225', '2023-04-14 18:39:23', '0.01', 'Driver', 'Admin', '', '', '0'),
-(630, '222', '141', 'Driver', 'Debit', '466', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.055225', '-0.0603', '2023-04-14 18:39:24', '0.01', 'Driver', 'Admin', '', '', '0'),
-(631, '222', '141', 'Driver', 'Debit', '466', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.0603', '-0.0679125', '2023-04-14 18:40:29', '0.01', 'Driver', 'Admin', '', '', '0'),
-(632, '222', '141', 'Driver', 'Debit', '467', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.0679125', '-0.0729875', '2023-04-14 18:55:14', '0.01', 'Driver', 'Admin', '', '', '0'),
-(633, '222', '148', 'Driver', 'Debit', '468', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '0', '-0.00848', '2023-04-14 19:56:19', '0.01', 'Driver', 'Admin', '', '', '0'),
-(634, '222', '148', 'Driver', 'Debit', '469', 'Trip Payment', 'Trip commission taken', 'Paid', 'Cash', '', '', '-0.00848', '-0.01696', '2023-04-14 20:10:49', '0.01', 'Driver', 'Admin', '', '', '0'),
-(635, '211', '141', 'Passenger', 'Debit', '470', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-18 17:23:02', '1.015', 'Passenger', 'Driver', '', '', '0'),
-(636, '211', '141', 'Driver', 'Credit', '470', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '-0.0729875', '0.9370125', '2023-04-18 17:23:02', '1.01', 'Driver', 'Admin', '', '', '0'),
-(637, '211', '141', 'Driver', 'Debit', '470', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '-0.0729875', '-0.0829875', '2023-04-18 17:23:02', '0.01', 'Passenger', 'Driver', '', '', '1.015'),
-(638, '231', '159', 'Passenger', 'Debit', '471', 'Trip Payment', 'Pay trip payment by card', 'Paid', 'Card', '', '', '', '', '2023-04-18 18:15:33', '0.848', 'Passenger', 'Driver', '', '', '0'),
-(639, '231', '159', 'Driver', 'Credit', '471', 'Trip Payment', 'Trip amount credited by user through card payment', 'Paid', 'Card', '', '', '0', '0.84', '2023-04-18 18:15:33', '0.84', 'Driver', 'Admin', '', '', '0'),
-(640, '231', '159', 'Driver', 'Debit', '471', 'Trip Payment', 'Trip commission taken', 'Paid', 'Card', '', '', '0', '-0.01', '2023-04-18 18:15:33', '0.01', 'Passenger', 'Driver', '', '', '0.848'),
-(641, '', '159', 'Driver', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-0.01', '499.99', '2023-04-18 18:24:42', '500', 'Admin', 'Driver', '', '', ''),
-(642, '', '61', 'Driver', 'Credit', '', 'Withdraw Amount Refund', 'Withdraw request cancel by superadmin and credit to your wallet', 'Paid', '', '', '', '410.5489', '4610.5489', '2023-05-26 17:47:49', '4200', 'Admin', 'Driver', 'Cancel', '19', '0'),
-(643, '15', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '1', '2023-09-02 13:47:25', '1', 'Admin', 'Passenger', '', '', '');
-INSERT INTO `getTransactionhistory` (`wallet_id`, `iUserId`, `iDriverId`, `eUserType`, `eType`, `iTripId`, `eFor`, `tDescription`, `ePaymentstatus`, `trip_payment_mode`, `transaction_id`, `card_no`, `last_balance`, `currentbal`, `dDateorig`, `iBalance`, `ePaymentBy`, `ePaymentTo`, `eWithdrawStatus`, `ewithdrawpaid`, `remaining_amount`) VALUES
-(644, '32', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '100', '2023-09-06 18:01:45', '100', 'Admin', 'Passenger', '', '', ''),
-(645, '32', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '100', '1100', '2023-09-06 18:01:53', '1000', 'Admin', 'Passenger', '', '', ''),
-(646, '17', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '15000', '2023-09-07 19:48:09', '15000', 'Admin', 'Passenger', '', '', ''),
-(647, '40', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '150', '2023-09-27 13:26:01', '150', 'Admin', 'Passenger', '', '', ''),
-(648, '40', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '150', '301', '2023-09-27 18:43:56', '151', 'Admin', 'Passenger', '', '', ''),
-(649, '56', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '1000', '2023-10-18 11:23:28', '1000', 'Admin', 'Passenger', '', '', ''),
-(650, '68', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '0.1', '2023-10-30 11:53:06', '.1', 'Admin', 'Passenger', '', '', ''),
-(651, '68', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0.1', '1.1', '2023-10-30 11:53:23', '1', 'Admin', 'Passenger', '', '', ''),
-(652, '68', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '1.1', '11.1', '2023-10-30 11:53:43', '10', 'Admin', 'Passenger', '', '', ''),
-(653, '68', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '11.1', '511.1', '2023-10-30 11:55:01', '500', 'Admin', 'Passenger', '', '', ''),
-(654, '67', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '5000', '2023-10-30 11:55:36', '5000', 'Admin', 'Passenger', '', '', ''),
-(655, '67', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5000', '5122', '2023-10-30 11:55:49', '122', 'Admin', 'Passenger', '', '', ''),
-(656, '67', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5122', '5222', '2023-10-30 11:58:36', '100', 'Admin', 'Passenger', '', '', ''),
-(657, '63', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '1000', '2023-10-30 12:19:45', '1000', 'Admin', 'Passenger', '', '', ''),
-(658, '63', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '1000', '1122', '2023-10-30 12:20:06', '122', 'Admin', 'Passenger', '', '', ''),
-(659, '63', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '1122', '1222', '2023-10-30 12:20:43', '100', 'Admin', 'Passenger', '', '', ''),
-(660, '63', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '1222', '1322', '2023-10-30 12:21:27', '100', 'Admin', 'Passenger', '', '', ''),
-(661, '63', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '1322', '1400', '2023-10-30 12:22:12', '78', 'Admin', 'Passenger', '', '', ''),
-(662, '82', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '250', '2023-11-01 12:41:32', '250', 'Admin', 'Passenger', '', '', ''),
-(663, '69', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '350', '2023-11-01 12:42:53', '350', 'Admin', 'Passenger', '', '', ''),
-(665, '106', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '300', '2023-11-21 18:20:02', '300', 'Admin', 'Passenger', '', '', ''),
-(666, '107', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '', '200', '2023-11-21 18:23:04', '200', 'Admin', 'Passenger', '', '', ''),
-(667, '107', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '200', '1200', '2023-11-21 18:27:27', '1000', 'Admin', 'Passenger', '', '', ''),
-(668, '7', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '130', '50130', '2023-11-28 11:38:13', '50000', 'Admin', 'Passenger', '', '', ''),
-(669, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '400', '1400', '2023-12-29 15:10:05', '1000', 'Admin', 'Passenger', '', '', ''),
-(670, '129', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '250', '350', '2023-12-30 11:19:47', '100', 'Admin', 'Passenger', '', '', ''),
-(671, '15', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '1', '100001', '2024-01-02 15:12:21', '100000', 'Admin', 'Passenger', '', '', ''),
-(672, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '150', '4150', '2024-01-02 16:24:12', '4000', 'Admin', 'Passenger', '', '', ''),
-(673, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '390', '5945', '2024-01-05 15:32:19', '5555', 'Admin', 'Passenger', '', '', ''),
-(674, '133', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '1000', '2024-01-05 16:49:52', '1000', 'Admin', 'Passenger', '', '', ''),
-(675, '133', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '1000', '2000', '2024-01-05 16:55:06', '1000', 'Admin', 'Passenger', '', '', ''),
-(676, '24', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '150', '10150', '2024-01-05 17:45:10', '10000', 'Admin', 'Passenger', '', '', ''),
-(677, '133', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '145', '17145', '2024-01-06 12:12:27', '17000', 'Admin', 'Passenger', '', '', ''),
-(678, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-557', '9443', '2024-01-11 11:04:47', '10000', 'Admin', 'Passenger', '', '', ''),
-(679, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-68', '1932', '2024-01-11 17:58:25', '2000', 'Admin', 'Passenger', '', '', ''),
-(680, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '238', '5238', '2024-01-11 18:39:17', '5000', 'Admin', 'Passenger', '', '', ''),
-(681, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5238', '5238.1', '2024-01-11 18:45:51', '.1', 'Admin', 'Passenger', '', '', ''),
-(682, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5238.1', '5239.09', '2024-01-11 18:46:34', '.99', 'Admin', 'Passenger', '', '', ''),
-(683, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5239.09', '5239.19', '2024-01-11 18:46:49', '.1', 'Admin', 'Passenger', '', '', ''),
-(684, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5239.19', '5239.99', '2024-01-11 18:47:07', '.80', 'Admin', 'Passenger', '', '', ''),
-(685, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5239.99', '5240.09', '2024-01-11 18:47:17', '.1', 'Admin', 'Passenger', '', '', ''),
-(686, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '6154.09', '6154.19', '2024-01-11 18:47:42', '.1', 'Admin', 'Passenger', '', '', ''),
-(687, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '6154.19', '6154.69', '2024-01-11 18:48:04', '0.5', 'Admin', 'Passenger', '', '', ''),
-(688, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '6154.69', '6154.7', '2024-01-11 18:48:33', '0.010', 'Admin', 'Passenger', '', '', ''),
-(689, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '6154.7', '6154.701', '2024-01-11 18:49:01', '0.001', 'Admin', 'Passenger', '', '', ''),
-(690, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '6154.701', '6154.791', '2024-01-11 18:49:33', '0.09', 'Admin', 'Passenger', '', '', ''),
-(691, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '7068.791', '7068.891', '2024-01-11 18:50:01', '.10', 'Admin', 'Passenger', '', '', ''),
-(692, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '7068.891', '7069.091', '2024-01-11 18:51:19', '.200', 'Admin', 'Passenger', '', '', ''),
-(693, '132', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '10000', '2024-01-16 15:50:16', '10000', 'Admin', 'Passenger', '', '', ''),
-(694, '132', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '7225', '47225', '2024-01-16 16:38:58', '40000', 'Admin', 'Passenger', '', '', ''),
-(695, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '100', '2024-01-19 14:55:30', '100', 'Admin', 'Passenger', '', '', ''),
-(696, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-455', '45', '2024-01-25 12:23:59', '500', 'Admin', 'Passenger', '', '', ''),
-(697, '139', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '500', '2024-01-25 13:58:01', '500', 'Admin', 'Passenger', '', '', ''),
-(698, '139', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '500', '1000', '2024-01-25 14:38:07', '500', 'Admin', 'Passenger', '', '', ''),
-(699, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '-510', '0', '2024-01-25 14:38:47', '510', 'Admin', 'Passenger', '', '', ''),
-(700, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '1000', '2024-01-25 14:42:47', '1000', 'Admin', 'Passenger', '', '', ''),
-(701, '127', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '5468.091', '6468.091', '2024-01-25 15:14:06', '1000', 'Admin', 'Passenger', '', '', ''),
-(702, '19', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '200', '2024-01-29 17:09:11', '200', 'Admin', 'Passenger', '', '', ''),
-(703, '19', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '200', '2000', '2024-01-29 17:09:23', '1800', 'Admin', 'Passenger', '', '', ''),
-(704, '126', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '0', '1000', '2024-01-30 01:50:05', '1000', 'Admin', 'Passenger', '', '', ''),
-(705, '126', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '330', '5330', '2024-01-30 01:57:54', '5000', 'Admin', 'Passenger', '', '', ''),
-(706, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '345', '545', '2024-01-30 12:43:17', '200', 'Admin', 'Passenger', '', '', ''),
-(707, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '545', '645', '2024-01-30 12:44:30', '100', 'Admin', 'Passenger', '', '', ''),
-(708, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '90', '590', '2024-01-30 12:53:57', '500', 'Admin', 'Passenger', '', '', ''),
-(709, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '590', '690', '2024-01-30 12:54:49', '100', 'Admin', 'Passenger', '', '', ''),
-(710, '134', '', 'Passenger', 'Credit', '', 'Add by superadmin', 'Amount credited by superadmin', 'Paid', '', '', '', '135', '635', '2024-01-30 12:57:43', '500', 'Admin', 'Passenger', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2146,7 +1319,9 @@ INSERT INTO `notification_tbl` (`id`, `user_id`, `u_name`, `email`, `country_cod
 (137, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '09-05-2024', '12:08 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '32', '', '22.6856717', '75.8596401', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '09-05-2024', '12:08 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+19698558558558', '+1+18552558', 'vgttgvbh', 'pi_3PEQcjIhs7ZBuE9x1819gb1g', 'pm_1PCflOIhs7ZBuE9xUEyxIH3A', '452014', '454552', '', '', '', '', '', '', ''),
 (138, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Large', '', 'Card', '', '', '13-05-2024', '03:10 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '13-05-2024', '03:10 AM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+12125553333', '+1+12125556698', 'this is hopefully the last test', 'pi_3PFk8OIhs7ZBuE9x0liGuUVM', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', ''),
 (139, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Large', '', 'Card', '', '', '13-05-2024', '03:20 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '13-05-2024', '03:20 AM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+12122222222', '+1+12122222222', 'this is a test again', 'pi_3PFkHqIhs7ZBuE9x2k2Uu7lT', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', ''),
-(140, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '14-05-2024', '05:42 PM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '14-05-2024', '05:42 PM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '400', '400.00', '0.0', '+1+12122222222', '+1+12122222222', 'test new', 'pi_3PGKDPIhs7ZBuE9x2KuCzc2U', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', '');
+(140, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '14-05-2024', '05:42 PM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '14-05-2024', '05:42 PM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '400', '400.00', '0.0', '+1+12122222222', '+1+12122222222', 'test new', 'pi_3PGKDPIhs7ZBuE9x2KuCzc2U', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', ''),
+(141, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '23-05-2024', '03:25 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856563', '75.859645', '22.2138885', '75.4723411', 'New Booking', '', '', '', '', '', 0, '23-05-2024', '03:25 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '200', '200.00', '0.0', '+1+18085059284', '+1+19754853453', '', 'pi_3PJYNMIhs7ZBuE9x2dbPrLhr', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
+(142, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '23-05-2024', '03:34 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856543', '75.8596389', '22.2138885', '75.4723411', 'New Booking', '', '', '', '', '', 0, '23-05-2024', '03:34 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '200', '200.00', '0.0', '+1+18085059284', '+1+19754853453', 'good morning ????', 'pi_3PJYVOIhs7ZBuE9x28lgbXmk', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2180,434 +1355,42 @@ CREATE TABLE `panding_booking_request_driver` (
 --
 
 INSERT INTO `panding_booking_request_driver` (`id`, `trip_id`, `user_id`, `driver_id`, `total_price`, `ride_type`, `source_city`, `destination_city`, `city_status`, `status`, `date`, `time`, `admin_commission`, `trip_fare`, `total_fare`, `discount`, `coupen_id`, `notes`) VALUES
-(1, 1, 2, 41, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '14-02-2024', '06:14 PM', '', '', '510', '10', 0, ''),
-(2, 1, 2, 71, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(3, 1, 2, 72, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(4, 1, 2, 73, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(5, 1, 2, 78, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(6, 1, 2, 80, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(7, 1, 2, 81, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(8, 1, 2, 82, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(9, 1, 2, 83, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(10, 1, 2, 84, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(11, 1, 2, 85, '500', 'Ride_now', 'indore', 'ujjain', 'Out City', 'cancel', '2024-02-14', '06:14 PM', '', '', '510', '10', 0, ''),
-(12, 2, 1, 41, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '14-02-2024', '06:22 PM', '', '', '100', '0', 0, ''),
-(13, 2, 1, 71, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(14, 2, 1, 72, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(15, 2, 1, 73, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(16, 2, 1, 78, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(17, 2, 1, 80, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(18, 2, 1, 81, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(19, 2, 1, 82, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(20, 2, 1, 83, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(21, 2, 1, 84, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(22, 2, 1, 85, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:22 PM', '', '', '100', '0', 0, ''),
-(23, 3, 1, 41, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '14-02-2024', '06:29 PM', '', '', '100', '0', 0, ''),
-(24, 3, 1, 71, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(25, 3, 1, 72, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(26, 3, 1, 73, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(27, 3, 1, 78, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(28, 3, 1, 80, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(29, 3, 1, 81, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(30, 3, 1, 82, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(31, 3, 1, 83, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(32, 3, 1, 84, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(33, 3, 1, 85, '100', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-02-14', '06:29 PM', '', '', '100', '0', 0, ''),
-(34, 4, 1, 4, '42.5', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '22-02-2024', '04:33 PM', '', '', '50', '7.5', 1, 'please arhent'),
-(35, 5, 1, 4, '42.5', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '26-02-2024', '12:46 PM', '', '', '50', '7.5', 1, 'fgdfgdfgdfgfdgdf'),
-(36, 6, 1, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '14-03-2024', '01:05 PM', '', '', '50', '0.0', 0, 'fdfdf'),
-(37, 7, 1, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '16-03-2024', '11:16 AM', '', '', '50', '0.0', 0, 'Sam Al jar lana'),
-(38, 8, 1, 4, '50.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '16-03-2024', '05:09 PM', '', '', '50', '0.0', 0, ''),
-(39, 9, 1, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '16-03-2024', '05:19 PM', '', '', '50', '0.0', 0, 'fdfdfdfd'),
-(40, 10, 1, 4, '50.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '16-03-2024', '06:23 PM', '', '', '50', '0.0', 0, ''),
-(41, 11, 1, 4, '100.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '16-03-2024', '06:33 PM', '', '', '100', '0.0', 0, ''),
-(42, 12, 24, 4, '0.0', 'Ride_now', 'indore', 'dewas', 'Out City', 'cancel', '18-03-2024', '12:50 PM', '', '', '', '0.0', 0, 'need fast delivery '),
-(43, 13, 24, 4, '0.0', 'Ride_now', 'indore', 'dewas', 'Out City', 'cancel', '18-03-2024', '03:48 PM', '', '', '', '0.0', 0, 'hhagag'),
-(44, 14, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '18-03-2024', '03:58 PM', '', '', '', '0.0', 0, 'cvhh'),
-(45, 15, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '18-03-2024', '04:10 PM', '', '', '', '0.0', 0, ''),
-(46, 16, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '18-03-2024', '04:12 PM', '', '', '', '0.0', 0, ''),
-(47, 17, 4, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '18-03-2024', '04:18 PM', '', '', '50', '0.0', 0, ''),
-(48, 18, 4, 4, '100.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '18-03-2024', '04:28 PM', '', '', '', '0.0', 0, ''),
-(49, 19, 4, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '18-03-2024', '04:30 PM', '', '', '50', '0.0', 0, ''),
-(50, 20, 4, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '18-03-2024', '04:34 PM', '', '', '50', '0.0', 0, ''),
-(51, 21, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '18-03-2024', '04:42 PM', '', '', '', '0.0', 0, 'bbb'),
-(52, 22, 4, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '18-03-2024', '04:55 PM', '', '', '50', '0.0', 0, ''),
-(53, 23, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '19-03-2024', '11:30 AM', '', '', '', '0.0', 0, 'cvjjcbb'),
-(54, 24, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '19-03-2024', '11:32 AM', '', '', '', '0.0', 0, ''),
-(55, 25, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '19-03-2024', '12:33 PM', '', '', '', '0.0', 0, ''),
-(56, 26, 4, 4, '0.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '19-03-2024', '12:39 PM', '', '', '', '0.0', 0, ''),
-(57, 27, 4, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '19-03-2024', '01:02 PM', '', '', '50', '0.0', 0, 'cvgffgh'),
-(58, 28, 4, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '19-03-2024', '01:24 PM', '', '', '50', '0.0', 0, 'gff'),
-(59, 29, 4, 4, '0.0', 'Ride_now', 'indore', 'ujjain', 'Out City', 'New Booking', '20-03-2024', '11:07 AM', '', '', '', '0.0', 0, ''),
-(60, 52, 4, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '21-03-2024', '04:16 PM', '', '', '50', '0.0', 0, ''),
-(61, 52, 4, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '04:16 PM', '', '', '50', '0.0', 0, ''),
-(62, 52, 4, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '04:16 PM', '', '', '50', '0.0', 0, ''),
-(63, 52, 4, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-03-21', '04:16 PM', '', '', '50', '0.0', 0, ''),
-(64, 53, 4, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '21-03-2024', '04:40 PM', '', '', '50', '0.0', 0, 'hello'),
-(65, 53, 4, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '04:40 PM', '', '', '50', '0.0', 0, 'hello'),
-(66, 53, 4, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '04:40 PM', '', '', '50', '0.0', 0, 'hello'),
-(67, 53, 4, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-03-21', '04:40 PM', '', '', '50', '0.0', 0, 'hello'),
-(68, 54, 4, 19, '100.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '21-03-2024', '04:54 PM', '', '', '100', '0.0', 0, 'yes '),
-(69, 54, 4, 21, '100.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '04:54 PM', '', '', '100', '0.0', 0, 'yes '),
-(70, 54, 4, 22, '100.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '04:54 PM', '', '', '100', '0.0', 0, 'yes '),
-(71, 54, 4, 23, '100.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-03-21', '04:54 PM', '', '', '100', '0.0', 0, 'yes '),
-(72, 55, 4, 19, '150.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '21-03-2024', '05:00 PM', '', '', '150', '0.0', 0, ''),
-(73, 55, 4, 21, '150.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '05:00 PM', '', '', '150', '0.0', 0, ''),
-(74, 55, 4, 22, '150.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '05:00 PM', '', '', '150', '0.0', 0, ''),
-(75, 55, 4, 23, '150.0', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-03-21', '05:00 PM', '', '', '150', '0.0', 0, ''),
-(76, 56, 4, 19, '200.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '21-03-2024', '05:04 PM', '', '', '200', '0.0', 0, 'notes '),
-(77, 56, 4, 21, '200.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '05:04 PM', '', '', '200', '0.0', 0, 'notes '),
-(78, 56, 4, 22, '200.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '05:04 PM', '', '', '200', '0.0', 0, 'notes '),
-(79, 56, 4, 23, '200.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-03-21', '05:04 PM', '', '', '200', '0.0', 0, 'notes '),
-(80, 57, 4, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '21-03-2024', '05:20 PM', '', '', '50', '0.0', 0, 'cvbhhh'),
-(81, 57, 4, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-03-21', '05:20 PM', '', '', '50', '0.0', 0, 'cvbhhh'),
-(82, 57, 4, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-03-21', '05:20 PM', '', '', '50', '0.0', 0, 'cvbhhh'),
-(83, 57, 4, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-21', '05:20 PM', '', '', '50', '0.0', 0, 'cvbhhh'),
-(84, 69, 4, 10, '55.0', 'Ride_now', 'indore', 'indore', 'In City', 'cancel', '28-03-2024', '12:59 PM', '', '', '55', '0.0', 0, ''),
-(85, 69, 4, 19, '55.0', 'Ride_now', 'indore', 'indore', 'In City', 'cancel', '2024-03-28', '12:59 PM', '', '', '55', '0.0', 0, ''),
-(86, 69, 4, 22, '55.0', 'Ride_now', 'indore', 'indore', 'In City', 'cancel', '2024-03-28', '12:59 PM', '', '', '55', '0.0', 0, ''),
-(87, 69, 4, 23, '55.0', 'Ride_now', 'indore', 'indore', 'In City', 'accept', '2024-03-28', '12:59 PM', '', '', '55', '0.0', 0, ''),
-(88, 70, 4, 10, '55.0', 'Ride_now', 'indore', 'dewas', 'Out City', 'cancel', '28-03-2024', '01:00 PM', '', '', '55', '0.0', 0, ''),
-(89, 70, 4, 19, '55.0', 'Ride_now', 'indore', 'dewas', 'Out City', 'cancel', '2024-03-28', '01:00 PM', '', '', '55', '0.0', 0, ''),
-(90, 70, 4, 22, '55.0', 'Ride_now', 'indore', 'dewas', 'Out City', 'cancel', '2024-03-28', '01:00 PM', '', '', '55', '0.0', 0, ''),
-(91, 70, 4, 23, '55.0', 'Ride_now', 'indore', 'dewas', 'Out City', 'accept', '2024-03-28', '01:00 PM', '', '', '55', '0.0', 0, ''),
-(92, 71, 13, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '29-03-2024', '02:46 PM', '', '', '50', '0.0', 0, ''),
-(93, 71, 13, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '02:46 PM', '', '', '50', '0.0', 0, ''),
-(94, 71, 13, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '02:46 PM', '', '', '50', '0.0', 0, ''),
-(95, 71, 13, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '02:46 PM', '', '', '50', '0.0', 0, ''),
-(96, 72, 14, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '29-03-2024', '02:55 PM', '', '', '50', '0.0', 0, ''),
-(97, 72, 14, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '02:55 PM', '', '', '50', '0.0', 0, ''),
-(98, 72, 14, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '02:55 PM', '', '', '50', '0.0', 0, ''),
-(99, 72, 14, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '02:55 PM', '', '', '50', '0.0', 0, ''),
-(100, 73, 13, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '29-03-2024', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(101, 73, 13, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(102, 73, 13, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(103, 73, 13, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(104, 74, 13, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '29-03-2024', '07:15 PM', '', '', '50', '0.0', 0, ''),
-(105, 74, 13, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '07:15 PM', '', '', '50', '0.0', 0, ''),
-(106, 74, 13, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '07:15 PM', '', '', '50', '0.0', 0, ''),
-(107, 74, 13, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-03-29', '07:15 PM', '', '', '50', '0.0', 0, ''),
-(108, 75, 15, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '02-04-2024', '11:55 AM', '', '', '50', '0.0', 0, ''),
-(109, 75, 15, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-04-02', '11:55 AM', '', '', '50', '0.0', 0, ''),
-(110, 75, 15, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-04-02', '11:55 AM', '', '', '50', '0.0', 0, ''),
-(111, 75, 15, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-04-02', '11:55 AM', '', '', '50', '0.0', 0, ''),
-(112, 76, 15, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '02-04-2024', '12:30 PM', '', '', '50', '0.0', 0, ''),
-(113, 76, 15, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-02', '12:30 PM', '', '', '50', '0.0', 0, ''),
-(114, 76, 15, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-02', '12:30 PM', '', '', '50', '0.0', 0, ''),
-(115, 76, 15, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-02', '12:30 PM', '', '', '50', '0.0', 0, ''),
-(116, 77, 15, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '02-04-2024', '01:37 PM', '', '', '50', '0.0', 0, ''),
-(117, 77, 15, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-02', '01:37 PM', '', '', '50', '0.0', 0, ''),
-(118, 77, 15, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-02', '01:37 PM', '', '', '50', '0.0', 0, ''),
-(119, 77, 15, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-02', '01:37 PM', '', '', '50', '0.0', 0, ''),
-(120, 79, 15, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-04-2024', '12:24 PM', '', '', '50', '0.0', 0, ''),
-(121, 79, 15, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-04', '12:24 PM', '', '', '50', '0.0', 0, ''),
-(122, 79, 15, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-04', '12:24 PM', '', '', '50', '0.0', 0, ''),
-(123, 79, 15, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-04', '12:24 PM', '', '', '50', '0.0', 0, ''),
-(124, 88, 15, 4, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '09-04-2024', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(125, 88, 15, 19, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-09', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(126, 88, 15, 21, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-09', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(127, 88, 15, 22, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-09', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(128, 88, 15, 23, '50.0', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-09', '06:30 PM', '', '', '50', '0.0', 0, ''),
-(129, 91, 17, 25, '100.0', 'Ride_now', 'bagana', 'harnawada', 'Out City', 'New Booking', '16-04-2024', '07:13 AM', '', '', '100', '0.0', 0, 'test trry'),
-(130, 92, 17, 25, '50.0', 'Ride_now', 'bagana', 'harnawada', 'Out City', 'cancel', '16-04-2024', '07:52 AM', '', '', '50', '0.0', 0, 'test again'),
-(131, 93, 17, 25, '50.00', 'Ride_now', 'bagana', 'ujjain', 'Out City', 'cancel', '16-04-2024', '07:26 PM', '', '', '50', '0.0', 0, '466766'),
-(132, 94, 16, 25, '100.00', 'Ride_now', 'bagana', 'harnawada', 'Out City', 'cancel', '17-04-2024', '07:57 PM', '', '', '100', '0.0', 0, 'this is for test'),
-(133, 95, 15, 4, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '19-04-2024', '04:37 PM', '', '', '100', '0.0', 0, ''),
-(134, 95, 15, 19, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:37 PM', '', '', '100', '0.0', 0, ''),
-(135, 95, 15, 21, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:37 PM', '', '', '100', '0.0', 0, ''),
-(136, 95, 15, 22, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:37 PM', '', '', '100', '0.0', 0, ''),
-(137, 95, 15, 23, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:37 PM', '', '', '100', '0.0', 0, ''),
-(138, 95, 15, 25, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:37 PM', '', '', '100', '0.0', 0, ''),
-(139, 95, 15, 27, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-04-19', '04:37 PM', '', '', '100', '0.0', 0, ''),
-(140, 96, 15, 4, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '19-04-2024', '04:47 PM', '', '', '100', '0.0', 0, ''),
-(141, 96, 15, 19, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:48 PM', '', '', '100', '0.0', 0, ''),
-(142, 96, 15, 21, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:48 PM', '', '', '100', '0.0', 0, ''),
-(143, 96, 15, 22, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:48 PM', '', '', '100', '0.0', 0, ''),
-(144, 96, 15, 23, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:48 PM', '', '', '100', '0.0', 0, ''),
-(145, 96, 15, 25, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:48 PM', '', '', '100', '0.0', 0, ''),
-(146, 96, 15, 27, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-04-19', '04:48 PM', '', '', '100', '0.0', 0, ''),
-(147, 97, 15, 4, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '19-04-2024', '04:51 PM', '', '', '100', '0.0', 0, ''),
-(148, 97, 15, 19, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:51 PM', '', '', '100', '0.0', 0, ''),
-(149, 97, 15, 21, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:51 PM', '', '', '100', '0.0', 0, ''),
-(150, 97, 15, 22, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:51 PM', '', '', '100', '0.0', 0, ''),
-(151, 97, 15, 23, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:51 PM', '', '', '100', '0.0', 0, ''),
-(152, 97, 15, 25, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:51 PM', '', '', '100', '0.0', 0, ''),
-(153, 97, 15, 27, '100.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-19', '04:51 PM', '', '', '100', '0.0', 0, ''),
-(154, 98, 16, 25, '100.00', 'Ride_now', '', '', 'In City', 'cancel', '21-04-2024', '10:32 AM', '', '', '100', '0.0', 0, ''),
-(155, 99, 16, 25, '50.00', 'Ride_now', 'bagana', 'harnawada', 'Out City', 'cancel', '21-04-2024', '10:56 AM', '', '', '50', '0.0', 0, ''),
-(156, 100, 16, 25, '50.00', 'Ride_now', 'bagana', 'harnawada', 'Out City', 'cancel', '21-04-2024', '11:17 AM', '', '', '50', '0.0', 0, ''),
-(157, 101, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '30-04-2024', '01:36 PM', '', '', '50', '0.0', 0, ''),
-(158, 101, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '01:36 PM', '', '', '50', '0.0', 0, ''),
-(159, 101, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '01:36 PM', '', '', '50', '0.0', 0, ''),
-(160, 101, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '01:36 PM', '', '', '50', '0.0', 0, ''),
-(161, 101, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '01:36 PM', '', '', '50', '0.0', 0, ''),
-(162, 101, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '01:36 PM', '', '', '50', '0.0', 0, ''),
-(163, 102, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '30-04-2024', '02:44 PM', '', '', '50', '0.0', 0, ''),
-(164, 102, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:44 PM', '', '', '50', '0.0', 0, ''),
-(165, 102, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:44 PM', '', '', '50', '0.0', 0, ''),
-(166, 102, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:44 PM', '', '', '50', '0.0', 0, ''),
-(167, 102, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:44 PM', '', '', '50', '0.0', 0, ''),
-(168, 102, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:44 PM', '', '', '50', '0.0', 0, ''),
-(169, 103, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '30-04-2024', '02:50 PM', '', '', '50', '0.0', 0, ''),
-(170, 103, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:50 PM', '', '', '50', '0.0', 0, ''),
-(171, 103, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:50 PM', '', '', '50', '0.0', 0, ''),
-(172, 103, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:50 PM', '', '', '50', '0.0', 0, ''),
-(173, 103, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:50 PM', '', '', '50', '0.0', 0, ''),
-(174, 103, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:50 PM', '', '', '50', '0.0', 0, ''),
-(175, 103, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-04-30', '02:50 PM', '', '', '50', '0.0', 0, ''),
-(176, 104, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '12:34 PM', '', '', '50', '0.0', 0, ''),
-(177, 104, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '12:34 PM', '', '', '50', '0.0', 0, ''),
-(178, 104, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '12:34 PM', '', '', '50', '0.0', 0, ''),
-(179, 104, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '12:34 PM', '', '', '50', '0.0', 0, ''),
-(180, 104, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '12:34 PM', '', '', '50', '0.0', 0, ''),
-(181, 104, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '12:34 PM', '', '', '50', '0.0', 0, ''),
-(182, 104, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '12:34 PM', '', '', '50', '0.0', 0, ''),
-(183, 105, 18, 4, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '04:05 PM', '', '', '50', '0.0', 0, 'ctgchvcytdfyuguufyxtc'),
-(184, 105, 18, 17, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-04', '04:05 PM', '', '', '50', '0.0', 0, 'ctgchvcytdfyuguufyxtc'),
-(185, 105, 18, 19, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:05 PM', '', '', '50', '0.0', 0, 'ctgchvcytdfyuguufyxtc'),
-(186, 105, 18, 21, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:05 PM', '', '', '50', '0.0', 0, 'ctgchvcytdfyuguufyxtc'),
-(187, 105, 18, 22, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:05 PM', '', '', '50', '0.0', 0, 'ctgchvcytdfyuguufyxtc'),
-(188, 105, 18, 23, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:05 PM', '', '', '50', '0.0', 0, 'ctgchvcytdfyuguufyxtc'),
-(189, 105, 18, 25, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:05 PM', '', '', '50', '0.0', 0, 'ctgchvcytdfyuguufyxtc'),
-(190, 106, 18, 4, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '04:07 PM', '', '', '50', '0.0', 0, 'g h hchvhcddjuxycctxctt h. hy. yr'),
-(191, 106, 18, 17, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-04', '04:07 PM', '', '', '50', '0.0', 0, 'g h hchvhcddjuxycctxctt h. hy. yr'),
-(192, 106, 18, 19, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:07 PM', '', '', '50', '0.0', 0, 'g h hchvhcddjuxycctxctt h. hy. yr'),
-(193, 106, 18, 21, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:07 PM', '', '', '50', '0.0', 0, 'g h hchvhcddjuxycctxctt h. hy. yr'),
-(194, 106, 18, 22, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:07 PM', '', '', '50', '0.0', 0, 'g h hchvhcddjuxycctxctt h. hy. yr'),
-(195, 106, 18, 23, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:07 PM', '', '', '50', '0.0', 0, 'g h hchvhcddjuxycctxctt h. hy. yr'),
-(196, 106, 18, 25, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:07 PM', '', '', '50', '0.0', 0, 'g h hchvhcddjuxycctxctt h. hy. yr'),
-(197, 107, 18, 4, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '04:25 PM', '', '', '50', '0.0', 0, ''),
-(198, 107, 18, 17, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-04', '04:25 PM', '', '', '50', '0.0', 0, ''),
-(199, 107, 18, 19, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:25 PM', '', '', '50', '0.0', 0, ''),
-(200, 107, 18, 21, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:25 PM', '', '', '50', '0.0', 0, ''),
-(201, 107, 18, 22, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:25 PM', '', '', '50', '0.0', 0, ''),
-(202, 107, 18, 23, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:25 PM', '', '', '50', '0.0', 0, ''),
-(203, 107, 18, 25, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '04:25 PM', '', '', '50', '0.0', 0, ''),
-(204, 108, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '05:12 PM', '', '', '50', '0.0', 0, 'fc fgvvuvhvyvtvvtvtvvtuvvyv'),
-(205, 108, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:12 PM', '', '', '50', '0.0', 0, 'fc fgvvuvhvyvtvvtvtvvtuvvyv'),
-(206, 108, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:12 PM', '', '', '50', '0.0', 0, 'fc fgvvuvhvyvtvvtvtvvtuvvyv'),
-(207, 108, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:12 PM', '', '', '50', '0.0', 0, 'fc fgvvuvhvyvtvvtvtvvtuvvyv'),
-(208, 108, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:12 PM', '', '', '50', '0.0', 0, 'fc fgvvuvhvyvtvvtvtvvtuvvyv'),
-(209, 108, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:12 PM', '', '', '50', '0.0', 0, 'fc fgvvuvhvyvtvvtvtvvtuvvyv'),
-(210, 108, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:12 PM', '', '', '50', '0.0', 0, 'fc fgvvuvhvyvtvvtvtvvtuvvyv'),
-(211, 109, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '05:13 PM', '', '', '50', '0.0', 0, 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv'),
-(212, 109, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:13 PM', '', '', '50', '0.0', 0, 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv'),
-(213, 109, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:13 PM', '', '', '50', '0.0', 0, 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv'),
-(214, 109, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:13 PM', '', '', '50', '0.0', 0, 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv'),
-(215, 109, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:13 PM', '', '', '50', '0.0', 0, 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv'),
-(216, 109, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:13 PM', '', '', '50', '0.0', 0, 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv'),
-(217, 109, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:13 PM', '', '', '50', '0.0', 0, 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv'),
-(218, 110, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '05:33 PM', '', '', '50', '0.0', 0, 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv'),
-(219, 110, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:33 PM', '', '', '50', '0.0', 0, 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv'),
-(220, 110, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:33 PM', '', '', '50', '0.0', 0, 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv'),
-(221, 110, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:33 PM', '', '', '50', '0.0', 0, 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv'),
-(222, 110, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:33 PM', '', '', '50', '0.0', 0, 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv'),
-(223, 110, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:33 PM', '', '', '50', '0.0', 0, 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv'),
-(224, 110, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:33 PM', '', '', '50', '0.0', 0, 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv'),
-(225, 111, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '05:34 PM', '', '', '50', '0.0', 0, 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg'),
-(226, 111, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:34 PM', '', '', '50', '0.0', 0, 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg'),
-(227, 111, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:34 PM', '', '', '50', '0.0', 0, 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg'),
-(228, 111, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:34 PM', '', '', '50', '0.0', 0, 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg'),
-(229, 111, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:34 PM', '', '', '50', '0.0', 0, 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg'),
-(230, 111, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:34 PM', '', '', '50', '0.0', 0, 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg'),
-(231, 111, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:34 PM', '', '', '50', '0.0', 0, 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg'),
-(232, 112, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '05:38 PM', '', '', '50', '0.0', 0, 'txxtxtyccytcttxtx '),
-(233, 112, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:38 PM', '', '', '50', '0.0', 0, 'txxtxtyccytcttxtx '),
-(234, 112, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:38 PM', '', '', '50', '0.0', 0, 'txxtxtyccytcttxtx '),
-(235, 112, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:38 PM', '', '', '50', '0.0', 0, 'txxtxtyccytcttxtx '),
-(236, 112, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:38 PM', '', '', '50', '0.0', 0, 'txxtxtyccytcttxtx '),
-(237, 112, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:38 PM', '', '', '50', '0.0', 0, 'txxtxtyccytcttxtx '),
-(238, 112, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:38 PM', '', '', '50', '0.0', 0, 'txxtxtyccytcttxtx '),
-(239, 113, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '05:42 PM', '', '', '50', '0.0', 0, 'thgfghgfhhfghfhgtygfyhvgy'),
-(240, 113, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:42 PM', '', '', '50', '0.0', 0, 'thgfghgfhhfghfhgtygfyhvgy'),
-(241, 113, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:42 PM', '', '', '50', '0.0', 0, 'thgfghgfhhfghfhgtygfyhvgy'),
-(242, 113, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:42 PM', '', '', '50', '0.0', 0, 'thgfghgfhhfghfhgtygfyhvgy'),
-(243, 113, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:42 PM', '', '', '50', '0.0', 0, 'thgfghgfhhfghfhgtygfyhvgy'),
-(244, 113, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:42 PM', '', '', '50', '0.0', 0, 'thgfghgfhhfghfhgtygfyhvgy'),
-(245, 113, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '05:42 PM', '', '', '50', '0.0', 0, 'thgfghgfhhfghfhgtygfyhvgy'),
-(246, 114, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '06:11 PM', '', '', '50', '0.0', 0, 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv'),
-(247, 114, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:11 PM', '', '', '50', '0.0', 0, 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv'),
-(248, 114, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:11 PM', '', '', '50', '0.0', 0, 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv'),
-(249, 114, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:11 PM', '', '', '50', '0.0', 0, 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv'),
-(250, 114, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:11 PM', '', '', '50', '0.0', 0, 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv'),
-(251, 114, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:11 PM', '', '', '50', '0.0', 0, 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv'),
-(252, 114, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:11 PM', '', '', '50', '0.0', 0, 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv'),
-(253, 115, 18, 4, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '06:53 PM', '', '', '50', '0.0', 0, 'hccjcjjvkvvkkviviv'),
-(254, 115, 18, 17, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-04', '06:53 PM', '', '', '50', '0.0', 0, 'hccjcjjvkvvkkviviv'),
-(255, 115, 18, 19, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:53 PM', '', '', '50', '0.0', 0, 'hccjcjjvkvvkkviviv'),
-(256, 115, 18, 21, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:53 PM', '', '', '50', '0.0', 0, 'hccjcjjvkvvkkviviv'),
-(257, 115, 18, 22, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:53 PM', '', '', '50', '0.0', 0, 'hccjcjjvkvvkkviviv'),
-(258, 115, 18, 23, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:53 PM', '', '', '50', '0.0', 0, 'hccjcjjvkvvkkviviv'),
-(259, 115, 18, 25, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '06:53 PM', '', '', '50', '0.0', 0, 'hccjcjjvkvvkkviviv'),
-(260, 116, 18, 4, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '07:26 PM', '', '', '50', '0.0', 0, 'ugikjgucycxxyccuuv'),
-(261, 116, 18, 17, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-04', '07:26 PM', '', '', '50', '0.0', 0, 'ugikjgucycxxyccuuv'),
-(262, 116, 18, 19, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:26 PM', '', '', '50', '0.0', 0, 'ugikjgucycxxyccuuv'),
-(263, 116, 18, 21, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:26 PM', '', '', '50', '0.0', 0, 'ugikjgucycxxyccuuv'),
-(264, 116, 18, 22, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:26 PM', '', '', '50', '0.0', 0, 'ugikjgucycxxyccuuv'),
-(265, 116, 18, 23, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:26 PM', '', '', '50', '0.0', 0, 'ugikjgucycxxyccuuv'),
-(266, 116, 18, 25, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:26 PM', '', '', '50', '0.0', 0, 'ugikjgucycxxyccuuv'),
-(267, 117, 18, 4, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '04-05-2024', '07:31 PM', '', '', '50', '0.0', 0, 'v. gcgv'),
-(268, 117, 18, 17, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:32 PM', '', '', '50', '0.0', 0, 'v. gcgv'),
-(269, 117, 18, 19, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:32 PM', '', '', '50', '0.0', 0, 'v. gcgv'),
-(270, 117, 18, 21, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:32 PM', '', '', '50', '0.0', 0, 'v. gcgv'),
-(271, 117, 18, 22, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:32 PM', '', '', '50', '0.0', 0, 'v. gcgv'),
-(272, 117, 18, 23, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:32 PM', '', '', '50', '0.0', 0, 'v. gcgv'),
-(273, 117, 18, 25, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-04', '07:32 PM', '', '', '50', '0.0', 0, 'v. gcgv'),
-(274, 118, 17, 10, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '07-05-2024', '05:56 AM', '', '', '50', '0.0', 0, 'test this note I just created '),
-(275, 118, 17, 25, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '05:56 AM', '', '', '50', '0.0', 0, 'test this note I just created '),
-(276, 119, 17, 10, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '07-05-2024', '07:07 AM', '', '', '50', '0.0', 0, 'this is Another test'),
-(277, 119, 17, 25, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '07:07 AM', '', '', '50', '0.0', 0, 'this is Another test'),
-(278, 119, 17, 29, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '07:07 AM', '', '', '50', '0.0', 0, 'this is Another test'),
-(279, 119, 17, 31, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '07:07 AM', '', '', '50', '0.0', 0, 'this is Another test'),
-(280, 120, 17, 10, '100.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '07-05-2024', '07:50 AM', '', '', '100', '0.0', 0, 'test again '),
-(281, 120, 17, 25, '100.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '07:50 AM', '', '', '100', '0.0', 0, 'test again '),
-(282, 120, 17, 29, '100.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '07:50 AM', '', '', '100', '0.0', 0, 'test again '),
-(283, 120, 17, 31, '100.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'accept', '2024-05-07', '07:50 AM', '', '', '100', '0.0', 0, 'test again '),
-(284, 121, 17, 10, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '07-05-2024', '07:52 AM', '', '', '200', '0.0', 0, 'test xhgjnh'),
-(285, 121, 17, 25, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '07:52 AM', '', '', '200', '0.0', 0, 'test xhgjnh'),
-(286, 121, 17, 29, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '07:52 AM', '', '', '200', '0.0', 0, 'test xhgjnh'),
-(287, 121, 17, 31, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'accept', '2024-05-07', '07:52 AM', '', '', '200', '0.0', 0, 'test xhgjnh'),
-(288, 122, 17, 10, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '07-05-2024', '05:21 PM', '', '', '400', '0.0', 0, 'test again this'),
-(289, 122, 17, 25, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '05:21 PM', '', '', '400', '0.0', 0, 'test again this'),
-(290, 122, 17, 29, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '05:21 PM', '', '', '400', '0.0', 0, 'test again this'),
-(291, 122, 17, 31, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '05:21 PM', '', '', '400', '0.0', 0, 'test again this'),
-(292, 123, 17, 10, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '07-05-2024', '05:32 PM', '', '', '50', '0.0', 0, 'test test tst'),
-(293, 123, 17, 25, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '05:32 PM', '', '', '50', '0.0', 0, 'test test tst'),
-(294, 123, 17, 29, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '05:32 PM', '', '', '50', '0.0', 0, 'test test tst'),
-(295, 123, 17, 31, '50.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-07', '05:32 PM', '', '', '50', '0.0', 0, 'test test tst'),
-(296, 124, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(297, 124, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(298, 124, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(299, 124, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(300, 124, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(301, 124, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(302, 124, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(303, 124, 18, 29, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(304, 124, 18, 32, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '02:52 PM', '', '', '50', '0.0', 0, ''),
-(305, 125, 18, 4, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(306, 125, 18, 17, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(307, 125, 18, 19, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(308, 125, 18, 21, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(309, 125, 18, 22, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(310, 125, 18, 23, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(311, 125, 18, 25, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(312, 125, 18, 29, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(313, 125, 18, 32, '50.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-08', '03:02 PM', '', '', '50', '0.0', 0, ''),
-(314, 126, 18, 4, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(315, 126, 18, 17, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(316, 126, 18, 19, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(317, 126, 18, 21, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(318, 126, 18, 22, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(319, 126, 18, 23, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(320, 126, 18, 25, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(321, 126, 18, 29, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(322, 126, 18, 32, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-08', '03:14 PM', '', '', '200', '0.0', 0, 'helooo'),
-(323, 127, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(324, 127, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(325, 127, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(326, 127, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(327, 127, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(328, 127, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(329, 127, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(330, 127, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg');
-INSERT INTO `panding_booking_request_driver` (`id`, `trip_id`, `user_id`, `driver_id`, `total_price`, `ride_type`, `source_city`, `destination_city`, `city_status`, `status`, `date`, `time`, `admin_commission`, `trip_fare`, `total_fare`, `discount`, `coupen_id`, `notes`) VALUES
-(331, 127, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:40 PM', '', '', '200', '0.0', 0, 'gjjutvhhytchuyyfg'),
-(332, 128, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(333, 128, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(334, 128, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(335, 128, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(336, 128, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(337, 128, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(338, 128, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(339, 128, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(340, 128, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '04:42 PM', '', '', '200', '0.0', 0, 'g. g. h. hvvuvv'),
-(341, 129, 18, 4, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '08-05-2024', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(342, 129, 18, 17, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(343, 129, 18, 19, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(344, 129, 18, 21, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(345, 129, 18, 22, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(346, 129, 18, 23, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(347, 129, 18, 25, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(348, 129, 18, 29, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(349, 129, 18, 32, '200.00', 'Ride_later', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-08', '05:03 PM', '', '', '200', '0.0', 0, 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub'),
-(350, 130, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(351, 130, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(352, 130, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(353, 130, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(354, 130, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(355, 130, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(356, 130, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(357, 130, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(358, 130, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:34 PM', '', '', '200', '0.0', 0, 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh'),
-(359, 131, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(360, 131, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(361, 131, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(362, 131, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(363, 131, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(364, 131, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(365, 131, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(366, 131, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(367, 131, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:48 PM', '', '', '200', '0.0', 0, 'fgyyyy'),
-(368, 132, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(369, 132, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(370, 132, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(371, 132, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(372, 132, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(373, 132, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(374, 132, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(375, 132, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(376, 132, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:50 PM', '', '', '200', '0.0', 0, ''),
-(377, 133, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '08-05-2024', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(378, 133, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(379, 133, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(380, 133, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(381, 133, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(382, 133, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(383, 133, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(384, 133, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(385, 133, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-08', '05:59 PM', '', '', '200', '0.0', 0, ''),
-(386, 134, 16, 10, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '09-05-2024', '07:49 AM', '', '', '200', '0.0', 0, 'vnbbh test test test tsty'),
-(387, 134, 16, 25, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-09', '07:49 AM', '', '', '200', '0.0', 0, 'vnbbh test test test tsty'),
-(388, 134, 16, 29, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-09', '07:49 AM', '', '', '200', '0.0', 0, 'vnbbh test test test tsty'),
-(389, 134, 16, 31, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-09', '07:49 AM', '', '', '200', '0.0', 0, 'vnbbh test test test tsty'),
-(390, 135, 18, 4, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '09-05-2024', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(391, 135, 18, 17, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(392, 135, 18, 19, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(393, 135, 18, 21, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(394, 135, 18, 22, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(395, 135, 18, 23, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(396, 135, 18, 25, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(397, 135, 18, 29, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(398, 135, 18, 32, '50.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:02 AM', '', '', '50', '0.0', 0, 'tygggtyggttt'),
-(399, 136, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '09-05-2024', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(400, 136, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(401, 136, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(402, 136, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(403, 136, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(404, 136, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(405, 136, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(406, 136, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(407, 136, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '11:49 AM', '', '', '200', '0.0', 0, 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy'),
-(408, 137, 18, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '09-05-2024', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(409, 137, 18, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(410, 137, 18, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(411, 137, 18, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(412, 137, 18, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(413, 137, 18, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(414, 137, 18, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(415, 137, 18, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(416, 137, 18, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-09', '12:08 PM', '', '', '200', '0.0', 0, 'vgttgvbh'),
-(417, 138, 17, 10, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '13-05-2024', '03:10 AM', '', '', '200', '0.0', 0, 'this is hopefully the last test'),
-(418, 138, 17, 25, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-13', '03:10 AM', '', '', '200', '0.0', 0, 'this is hopefully the last test'),
-(419, 138, 17, 31, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-13', '03:10 AM', '', '', '200', '0.0', 0, 'this is hopefully the last test'),
-(420, 139, 17, 10, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '13-05-2024', '03:20 AM', '', '', '200', '0.0', 0, 'this is a test again'),
-(421, 139, 17, 25, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-13', '03:20 AM', '', '', '200', '0.0', 0, 'this is a test again'),
-(422, 139, 17, 29, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-13', '03:20 AM', '', '', '200', '0.0', 0, 'this is a test again'),
-(423, 139, 17, 31, '200.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-13', '03:20 AM', '', '', '200', '0.0', 0, 'this is a test again'),
-(424, 140, 17, 10, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '14-05-2024', '05:42 PM', '', '', '400', '0.0', 0, 'test new'),
-(425, 140, 17, 25, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-14', '05:42 PM', '', '', '400', '0.0', 0, 'test new'),
-(426, 140, 17, 29, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-14', '05:42 PM', '', '', '400', '0.0', 0, 'test new'),
-(427, 140, 17, 31, '400.00', 'Ride_now', 'neemkheda', 'neemkheda', 'In City', 'cancel', '2024-05-14', '05:42 PM', '', '', '400', '0.0', 0, 'test new');
+(1, 1, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '23-05-2024', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(2, 1, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(3, 1, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(4, 1, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(5, 1, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(6, 1, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(7, 1, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(8, 1, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(9, 1, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
+(10, 2, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '27-05-2024', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(11, 2, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(12, 2, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(13, 2, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(14, 2, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(15, 2, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(16, 2, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(17, 2, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(18, 2, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
+(19, 3, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '27-05-2024', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(20, 3, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(21, 3, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(22, 3, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(23, 3, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(24, 3, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(25, 3, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(26, 3, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(27, 3, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
+(28, 4, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '27-05-2024', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(29, 4, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(30, 4, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(31, 4, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(32, 4, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(33, 4, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(34, 4, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(35, 4, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
+(36, 4, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu');
 
 -- --------------------------------------------------------
 
@@ -2671,55 +1454,78 @@ INSERT INTO `Refferal_Amount` (`id`, `type`, `code`, `self_amount`, `refer_amoun
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sub_admin_register`
+-- Table structure for table `Senders`
 --
 
-CREATE TABLE `sub_admin_register` (
-  `id` int(11) NOT NULL,
-  `full_name` varchar(255) NOT NULL,
-  `middle_name` varchar(255) NOT NULL,
-  `sur_name` varchar(500) NOT NULL,
+CREATE TABLE `Senders` (
+  `SenderID` int(11) NOT NULL,
+  `FriendlyID` varchar(20) NOT NULL,
+  `UserName` varchar(20) NOT NULL,
+  `Password` varchar(25) NOT NULL,
+  `FirstName` varchar(25) NOT NULL,
+  `LastName` varchar(25) NOT NULL,
+  `Address` varchar(50) DEFAULT NULL,
+  `Address2` varchar(30) DEFAULT NULL,
+  `City` varchar(20) DEFAULT NULL,
+  `State` varchar(20) DEFAULT NULL,
+  `Zip` varchar(12) DEFAULT NULL,
+  `Email` varchar(40) DEFAULT NULL,
+  `Phone` varchar(20) DEFAULT NULL,
+  `Phone2` varchar(20) DEFAULT NULL,
+  `Phone3` varchar(20) DEFAULT NULL,
+  `Status` varchar(1) NOT NULL,
+  `PreferredPayment` varchar(20) DEFAULT NULL,
+  `ForceAuth` tinyint(4) DEFAULT NULL,
+  `NotifyType` varchar(20) DEFAULT NULL,
+  `TimeStampCreated` datetime DEFAULT NULL,
+  `LastUpdated` datetime DEFAULT NULL,
+  `Stripe_CustomerId` varchar(45) DEFAULT NULL,
+  `country_code` varchar(50) NOT NULL,
+  `country_flag` varchar(50) NOT NULL,
+  `user_wallet` varchar(225) NOT NULL,
+  `device_id` longtext NOT NULL,
+  `iosdevice_id` longtext NOT NULL,
+  `device_status` longtext NOT NULL,
+  `id_proof_image` text NOT NULL,
+  `id_expiry_date` varchar(255) NOT NULL,
   `gender` varchar(50) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `country_code` varchar(255) NOT NULL,
-  `contact` varchar(255) NOT NULL,
-  `wrok` varchar(200) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `device_id` varchar(255) NOT NULL,
-  `iosdevice_id` varchar(500) NOT NULL,
-  `device_status` varchar(200) NOT NULL,
-  `address` varchar(200) NOT NULL,
-  `lat` varchar(255) NOT NULL,
-  `long` varchar(255) NOT NULL,
-  `status` varchar(200) NOT NULL,
-  `date` varchar(100) NOT NULL,
-  `user_wallet` varchar(100) NOT NULL,
-  `user_status` varchar(200) NOT NULL,
-  `access_token` varchar(200) NOT NULL,
-  `booking_cancel_time` varchar(255) NOT NULL,
-  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `google_token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `facebook_token` varchar(2552) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `apple_token` varchar(255) NOT NULL,
-  `created_at` varchar(255) NOT NULL,
-  `updated_at` varchar(255) NOT NULL,
-  `secret_key` varchar(255) NOT NULL,
-  `firebase_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `invite_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `company_id` varchar(255) NOT NULL,
-  `generated_code` varchar(255) NOT NULL,
-  `code_start_date` varchar(215) NOT NULL,
-  `code_end_date` varchar(255) NOT NULL,
-  `country_flag` varchar(500) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `company_id` text NOT NULL,
+  `image` mediumtext NOT NULL,
+  `social_id` int(11) NOT NULL,
+  `social_type` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `sub_admin_register`
+-- Dumping data for table `Senders`
 --
 
-INSERT INTO `sub_admin_register` (`id`, `full_name`, `middle_name`, `sur_name`, `gender`, `email`, `password`, `country_code`, `contact`, `wrok`, `image`, `device_id`, `iosdevice_id`, `device_status`, `address`, `lat`, `long`, `status`, `date`, `user_wallet`, `user_status`, `access_token`, `booking_cancel_time`, `type`, `google_token`, `facebook_token`, `apple_token`, `created_at`, `updated_at`, `secret_key`, `firebase_id`, `invite_code`, `company_id`, `generated_code`, `code_start_date`, `code_end_date`, `country_flag`) VALUES
-(1, '', '', '', '', 'barkhapatelciss@gmail.com', '123456', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `Senders` (`SenderID`, `FriendlyID`, `UserName`, `Password`, `FirstName`, `LastName`, `Address`, `Address2`, `City`, `State`, `Zip`, `Email`, `Phone`, `Phone2`, `Phone3`, `Status`, `PreferredPayment`, `ForceAuth`, `NotifyType`, `TimeStampCreated`, `LastUpdated`, `Stripe_CustomerId`, `country_code`, `country_flag`, `user_wallet`, `device_id`, `iosdevice_id`, `device_status`, `id_proof_image`, `id_expiry_date`, `gender`, `company_id`, `image`, `social_id`, `social_type`) VALUES
+(7, 'SEND492879', '', '123456', 'Goa', 'Kk', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, In', '', '', '', '', 'goa@gmail.com', '8085059285', '', '', 'A', '', 0, '', '2024-05-23 00:00:00', '0000-00-00 00:00:00', 'cus_Q9svkJHP4JUIMO', '+91', 'IN', '0', 'cBF93r8aR8Ga0oxoB83BRy:APA91bEGw4uj8i0_MRGvLZ6wnJp2VyJoV3aEFkV01ZsrnSp-IRnLgQrllDpjco7u7v2LvtQScAp-lurS8Qq8H5URd47Q030jlmampADC6J-_5O6ibCfpBe84kv4s_LIxVp6bjgtvZUCd', '', 'Android', 'AG8pskEi71_1716461173', '', 'Male', '', '', 0, ''),
+(8, 'SEND878836', '', '123456Aa', 'barkha', 'patel', '', '', '', '', '', 'bp@gmail.com', '4565789845', '', '', 'D', '', 0, '', '2024-05-27 00:00:00', '0000-00-00 00:00:00', 'cus_QBJqbzmnmyxzSN', '+1', '', '0', '', '', '', 'Em2Fk7A8jr_1716791913.jpg', '2024-06-01', '', '', 'g31q92ywnf_1716796167.png', 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sys_trip_status`
+--
+
+CREATE TABLE `sys_trip_status` (
+  `trip_status_id` char(50) NOT NULL DEFAULT '',
+  `trip_status_name` varchar(50) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sys_trip_status`
+--
+
+INSERT INTO `sys_trip_status` (`trip_status_id`, `trip_status_name`) VALUES
+('A', 'Accepted'),
+('B', 'BakedOutDriver'),
+('C', 'Completed'),
+('D', 'DroppedOff'),
+('N', 'CanceledSender'),
+('P', 'PickedUp'),
+('R', 'Requested');
 
 -- --------------------------------------------------------
 
@@ -2995,27 +1801,6 @@ INSERT INTO `tbl_general_setting` (`set_id`, `radius`, `min_wallet_amount`, `min
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_issue_warning`
---
-
-CREATE TABLE `tbl_issue_warning` (
-  `id` int(11) NOT NULL,
-  `driver_id` int(11) NOT NULL,
-  `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `warning_title` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `warning_description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `warning_date` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `image` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `date` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `time` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `company_id` int(11) NOT NULL,
-  `type_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_notification_list`
 --
 
@@ -3036,435 +1821,59 @@ CREATE TABLE `tbl_notification_list` (
 --
 
 INSERT INTO `tbl_notification_list` (`noti_id`, `trip_id`, `user_id`, `driver_id`, `title`, `message`, `date`, `time`, `type`) VALUES
-(1, '1', '', '41', 'New Booking Request!', 'Booking #1 successfully placed', '2024-02-14', '06:14 PM', 'System'),
-(2, '1', '', '80', 'New Booking Request!', 'Booking #1 successfully placed', '2024-02-14', '06:14 PM', 'System'),
-(3, '1', '', '81', 'New Booking Request!', 'Booking #1 successfully placed', '2024-02-14', '06:14 PM', 'System'),
-(4, '1', '', '82', 'New Booking Request!', 'Booking #1 successfully placed', '2024-02-14', '06:14 PM', 'System'),
-(5, '1', '', '84', 'New Booking Request!', 'Booking #1 successfully placed', '2024-02-14', '06:14 PM', 'System'),
-(6, '1', '2', '', 'New booking request', 'Booking #1 successfully placed', '2024-02-14', '06:14 PM', 'System'),
-(7, '2', '', '41', 'New Booking Request!', 'Booking #2 successfully placed', '2024-02-14', '06:22 PM', 'System'),
-(8, '2', '', '80', 'New Booking Request!', 'Booking #2 successfully placed', '2024-02-14', '06:22 PM', 'System'),
-(9, '2', '', '81', 'New Booking Request!', 'Booking #2 successfully placed', '2024-02-14', '06:22 PM', 'System'),
-(10, '2', '', '82', 'New Booking Request!', 'Booking #2 successfully placed', '2024-02-14', '06:22 PM', 'System'),
-(11, '2', '', '84', 'New Booking Request!', 'Booking #2 successfully placed', '2024-02-14', '06:22 PM', 'System'),
-(12, '2', '1', '', 'New booking request', 'Booking #2 successfully placed', '2024-02-14', '06:22 PM', 'System'),
-(13, '3', '', '41', 'New Booking Request!', 'Booking #3 successfully placed', '2024-02-14', '06:29 PM', 'System'),
-(14, '3', '', '80', 'New Booking Request!', 'Booking #3 successfully placed', '2024-02-14', '06:29 PM', 'System'),
-(15, '3', '', '81', 'New Booking Request!', 'Booking #3 successfully placed', '2024-02-14', '06:29 PM', 'System'),
-(16, '3', '', '82', 'New Booking Request!', 'Booking #3 successfully placed', '2024-02-14', '06:29 PM', 'System'),
-(17, '3', '', '84', 'New Booking Request!', 'Booking #3 successfully placed', '2024-02-14', '06:29 PM', 'System'),
-(18, '3', '1', '', 'New booking request', 'Booking #3 successfully placed', '2024-02-14', '06:29 PM', 'System'),
-(19, '4', '1', '', 'New booking request', 'Booking #4 successfully placed', '2024-02-22', '04:33 PM', 'System'),
-(20, '5', '1', '', 'New booking request', 'Booking #5 successfully placed', '2024-02-26', '12:46 PM', 'System'),
-(21, '6', '', '4', 'New Booking Request!', 'Booking #6 successfully placed', '2024-03-14', '01:05 PM', 'System'),
-(22, '6', '1', '', 'New booking request', 'Booking #6 successfully placed', '2024-03-14', '01:05 PM', 'System'),
-(23, '', '1', '', 'Booking Accepted', 'You Booking #6 has been accepted by driver', '2024-03-14', '04:09 PM', 'System'),
-(24, '', '1', '', 'Booking Accepted', 'You Booking #5 has been accepted by driver', '2024-03-14', '04:16 PM', 'System'),
-(25, '7', '', '4', 'New Booking Request!', 'Booking #7 successfully placed', '2024-03-16', '11:16 AM', 'System'),
-(26, '7', '1', '', 'New booking request', 'Booking #7 successfully placed', '2024-03-16', '11:16 AM', 'System'),
-(27, '', '1', '', 'Booking Accepted', 'You Booking #7 has been accepted by driver', '2024-03-16', '03:11 PM', 'System'),
-(28, '7', '1', '', 'Driver Arrival', 'Driver is arriving for Booking #7', '2024-03-16', '03:11 PM', 'System'),
-(29, '7', '1', '', 'Ride Started', 'Your ride #7 has been started', '2024-03-16', '03:13 PM', 'System'),
-(30, '7', '', '4', 'Regarding Booking', 'You completed ride #7', '2024-03-16', '04:40 PM', 'System'),
-(31, '8', '', '4', 'New Booking Request!', 'Booking #8 successfully placed', '2024-03-16', '05:09 PM', 'System'),
-(32, '8', '1', '', 'New booking request', 'Booking #8 successfully placed', '2024-03-16', '05:09 PM', 'System'),
-(33, '9', '', '4', 'New Booking Request!', 'Booking #9 successfully placed', '2024-03-16', '05:19 PM', 'System'),
-(34, '9', '1', '', 'New booking request', 'Booking #9 successfully placed', '2024-03-16', '05:19 PM', 'System'),
-(35, '', '1', '', 'Booking Accepted', 'You Booking #8 has been accepted by driver', '2024-03-16', '06:21 PM', 'System'),
-(36, '8', '1', '', 'Booking Cancellation', 'Driver has cancelled Booking #8', '2024-03-16', '06:22 PM', 'System'),
-(37, '10', '', '4', 'New Booking Request!', 'Booking #10 successfully placed', '2024-03-16', '06:23 PM', 'System'),
-(38, '10', '1', '', 'New booking request', 'Booking #10 successfully placed', '2024-03-16', '06:23 PM', 'System'),
-(39, '', '1', '', 'Booking Accepted', 'You Booking #10 has been accepted by driver', '2024-03-16', '06:23 PM', 'System'),
-(40, '10', '1', '', 'Booking Cancellation', 'Driver has cancelled Booking #10', '2024-03-16', '06:31 PM', 'System'),
-(41, '11', '', '4', 'New Booking Request!', 'Booking #11 successfully placed', '2024-03-16', '06:33 PM', 'System'),
-(42, '11', '1', '', 'New booking request', 'Booking #11 successfully placed', '2024-03-16', '06:33 PM', 'System'),
-(43, '', '1', '', 'Booking Accepted', 'You Booking #11 has been accepted by driver', '2024-03-16', '06:33 PM', 'System'),
-(44, '11', '1', '', 'Driver Arrival', 'Driver is arriving for Booking #11', '2024-03-16', '06:41 PM', 'System'),
-(45, '11', '1', '', 'Ride Started', 'Your ride #11 has been started', '2024-03-16', '06:42 PM', 'System'),
-(46, '11', '', '4', 'Regarding Booking', 'You completed ride #11', '2024-03-16', '06:42 PM', 'System'),
-(47, '11', '1', '', 'Regarding Booking', 'Your ride #11 has completed', '2024-03-16', '06:42 PM', 'System'),
-(48, '12', '', '4', 'New Booking Request!', 'Booking #12 successfully placed', '2024-03-18', '12:50 PM', 'System'),
-(49, '13', '', '4', 'New Booking Request!', 'Booking #13 successfully placed', '2024-03-18', '03:48 PM', 'System'),
-(50, '14', '', '4', 'New Booking Request!', 'Booking #14 successfully placed', '2024-03-18', '03:58 PM', 'System'),
-(51, '14', '4', '', 'New booking request', 'Booking #14 successfully placed', '2024-03-18', '03:58 PM', 'System'),
-(52, '15', '', '4', 'New Booking Request!', 'Booking #15 successfully placed', '2024-03-18', '04:10 PM', 'System'),
-(53, '15', '4', '', 'New booking request', 'Booking #15 successfully placed', '2024-03-18', '04:10 PM', 'System'),
-(54, '16', '', '4', 'New Booking Request!', 'Booking #16 successfully placed', '2024-03-18', '04:12 PM', 'System'),
-(55, '16', '4', '', 'New booking request', 'Booking #16 successfully placed', '2024-03-18', '04:12 PM', 'System'),
-(56, '17', '', '4', 'New Booking Request!', 'Booking #17 successfully placed', '2024-03-18', '04:18 PM', 'System'),
-(57, '17', '4', '', 'New booking request', 'Booking #17 successfully placed', '2024-03-18', '04:18 PM', 'System'),
-(58, '18', '', '4', 'New Booking Request!', 'Booking #18 successfully placed', '2024-03-18', '04:28 PM', 'System'),
-(59, '18', '4', '', 'New booking request', 'Booking #18 successfully placed', '2024-03-18', '04:28 PM', 'System'),
-(60, '19', '', '4', 'New Booking Request!', 'Booking #19 successfully placed', '2024-03-18', '04:30 PM', 'System'),
-(61, '19', '4', '', 'New booking request', 'Booking #19 successfully placed', '2024-03-18', '04:30 PM', 'System'),
-(62, '20', '', '4', 'New Booking Request!', 'Booking #20 successfully placed', '2024-03-18', '04:34 PM', 'System'),
-(63, '20', '4', '', 'New booking request', 'Booking #20 successfully placed', '2024-03-18', '04:34 PM', 'System'),
-(64, '', '4', '', 'Booking Accepted', 'You Booking #17 has been accepted by driver', '2024-03-18', '04:41 PM', 'System'),
-(65, '21', '', '4', 'New Booking Request!', 'Booking #21 successfully placed', '2024-03-18', '04:42 PM', 'System'),
-(66, '21', '4', '', 'New booking request', 'Booking #21 successfully placed', '2024-03-18', '04:42 PM', 'System'),
-(67, '22', '', '4', 'New Booking Request!', 'Booking #22 successfully placed', '2024-03-18', '04:55 PM', 'System'),
-(68, '22', '4', '', 'New booking request', 'Booking #22 successfully placed', '2024-03-18', '04:55 PM', 'System'),
-(69, '', '4', '', 'Booking Accepted', 'You Booking #22 has been accepted by driver', '2024-03-18', '04:55 PM', 'System'),
-(70, '', '4', '', 'chrthg', 'ytiiiiii', '18-03-2024 06:19 PM', '', 'Admin'),
-(71, '', '5', '', 'chrthg', 'ytiiiiii', '18-03-2024 06:19 PM', '', 'Admin'),
-(72, '', '4', '', 'NT', 'AN', '18-03-2024 06:20 PM', '', 'Admin'),
-(73, '23', '4', '', 'New booking request', 'Booking #23 successfully placed', '2024-03-19', '11:30 AM', 'System'),
-(74, '24', '4', '', 'New booking request', 'Booking #24 successfully placed', '2024-03-19', '11:32 AM', 'System'),
-(75, '25', '4', '', 'New booking request', 'Booking #25 successfully placed', '2024-03-19', '12:33 PM', 'System'),
-(76, '26', '4', '', 'New booking request', 'Booking #26 successfully placed', '2024-03-19', '12:39 PM', 'System'),
-(77, '27', '4', '', 'New booking request', 'Booking #27 successfully placed', '2024-03-19', '01:02 PM', 'System'),
-(78, '28', '4', '', 'New booking request', 'Booking #28 successfully placed', '2024-03-19', '01:24 PM', 'System'),
-(79, '29', '4', '', 'New booking request', 'Booking #29 successfully placed', '2024-03-20', '11:07 AM', 'System'),
-(81, '', '', '11', 'Ok', 'Ter', '21-03-2024 06:35 AM', '', 'Admin'),
-(82, '52', '', '22', 'New Booking Request!', 'Booking #52 successfully placed', '2024-03-21', '04:16 PM', 'System'),
-(83, '52', '', '23', 'New Booking Request!', 'Booking #52 successfully placed', '2024-03-21', '04:16 PM', 'System'),
-(84, '52', '4', '', 'New booking request', 'Booking #52 successfully placed', '2024-03-21', '04:16 PM', 'System'),
-(85, '', '4', '', 'Booking Accepted', 'You Booking #52 has been accepted by driver', '2024-03-21', '04:24 PM', 'System'),
-(86, '52', '4', '', 'Driver Arrival', 'Driver is arriving for Booking #52', '2024-03-21', '04:33 PM', 'System'),
-(87, '52', '4', '', 'Ride Started', 'Your ride #52 has been started', '2024-03-21', '04:34 PM', 'System'),
-(88, '52', '', '23', 'Regarding Booking', 'You completed ride #52', '2024-03-21', '04:34 PM', 'System'),
-(89, '52', '4', '', 'Regarding Booking', 'Your ride #52 has completed', '2024-03-21', '04:34 PM', 'System'),
-(90, '53', '', '22', 'New Booking Request!', 'Booking #53 successfully placed', '2024-03-21', '04:40 PM', 'System'),
-(91, '53', '', '23', 'New Booking Request!', 'Booking #53 successfully placed', '2024-03-21', '04:40 PM', 'System'),
-(92, '53', '4', '', 'New booking request', 'Booking #53 successfully placed', '2024-03-21', '04:40 PM', 'System'),
-(93, '', '4', '', 'Booking Accepted', 'You Booking #53 has been accepted by driver', '2024-03-21', '04:46 PM', 'System'),
-(94, '54', '', '22', 'New Booking Request!', 'Booking #54 successfully placed', '2024-03-21', '04:54 PM', 'System'),
-(95, '54', '', '23', 'New Booking Request!', 'Booking #54 successfully placed', '2024-03-21', '04:54 PM', 'System'),
-(96, '54', '4', '', 'New booking request', 'Booking #54 successfully placed', '2024-03-21', '04:54 PM', 'System'),
-(97, '55', '', '22', 'New Booking Request!', 'Booking #55 successfully placed', '2024-03-21', '05:00 PM', 'System'),
-(98, '55', '', '23', 'New Booking Request!', 'Booking #55 successfully placed', '2024-03-21', '05:00 PM', 'System'),
-(99, '55', '4', '', 'New booking request', 'Booking #55 successfully placed', '2024-03-21', '05:00 PM', 'System'),
-(100, '', '4', '', 'Booking Accepted', 'You Booking #55 has been accepted by driver', '2024-03-21', '05:01 PM', 'System'),
-(101, '56', '', '22', 'New Booking Request!', 'Booking #56 successfully placed', '2024-03-21', '05:04 PM', 'System'),
-(102, '56', '', '23', 'New Booking Request!', 'Booking #56 successfully placed', '2024-03-21', '05:04 PM', 'System'),
-(103, '56', '4', '', 'New booking request', 'Booking #56 successfully placed', '2024-03-21', '05:04 PM', 'System'),
-(104, '', '4', '', 'Booking Accepted', 'You Booking #56 has been accepted by driver', '2024-03-21', '05:07 PM', 'System'),
-(105, '56', '4', '', 'Driver Arrival', 'Driver is arriving for Booking #56', '2024-03-21', '05:07 PM', 'System'),
-(106, '56', '4', '', 'Ride Started', 'Your ride #56 has been started', '2024-03-21', '05:08 PM', 'System'),
-(107, '', '4', '', ' ', 'hello user', '2024-03-21', '05:09 PM', 'System'),
-(108, '', '4', '', ' ', ',', '2024-03-21', '05:10 PM', 'System'),
-(109, '', '4', '', ' ', '(', '2024-03-21', '05:10 PM', 'System'),
-(110, '', '4', '', ' ', '\";()1', '2024-03-21', '05:10 PM', 'System'),
-(111, '', '4', '', ' ', '?ah-;;:;$()()', '2024-03-21', '05:10 PM', 'System'),
-(112, '56', '', '23', 'Regarding Booking', 'You completed ride #56', '2024-03-21', '05:12 PM', 'System'),
-(113, '56', '4', '', 'Regarding Booking', 'Your ride #56 has completed', '2024-03-21', '05:12 PM', 'System'),
-(114, '', '4', '', 'Booking Accepted', 'You Booking #54 has been accepted by driver', '2024-03-21', '05:18 PM', 'System'),
-(115, '57', '', '23', 'New Booking Request!', 'Booking #57 successfully placed', '2024-03-21', '05:20 PM', 'System'),
-(116, '57', '4', '', 'New booking request', 'Booking #57 successfully placed', '2024-03-21', '05:20 PM', 'System'),
-(117, '', '4', '', 'Notification', 'Common Notification', '22-03-2024 01:15 PM', '', 'Admin'),
-(118, '', '5', '', 'Notification', 'Common Notification', '22-03-2024 01:15 PM', '', 'Admin'),
-(119, '', '', '20', 'Notification', 'Common Notification', '22-03-2024 01:15 PM', '', 'Admin'),
-(120, '', '', '23', 'Notification', 'Common Notification', '22-03-2024 01:15 PM', '', 'Admin'),
-(121, '69', '', '23', 'New Booking Request!', 'Booking #69 successfully placed', '2024-03-28', '12:59 PM', 'System'),
-(122, '69', '4', '', 'New booking request', 'Booking #69 successfully placed', '2024-03-28', '12:59 PM', 'System'),
-(123, '70', '', '23', 'New Booking Request!', 'Booking #70 successfully placed', '2024-03-28', '01:00 PM', 'System'),
-(124, '70', '4', '', 'New booking request', 'Booking #70 successfully placed', '2024-03-28', '01:00 PM', 'System'),
-(125, '', '4', '', 'Booking Accepted', 'You Booking #70 has been accepted by driver', '2024-03-28', '01:01 PM', 'System'),
-(126, '', '4', '', 'Booking Accepted', 'You Booking #69 has been accepted by driver', '2024-03-28', '01:02 PM', 'System'),
-(127, '71', '', '23', 'New Booking Request!', 'Booking #71 successfully placed', '2024-03-29', '02:46 PM', 'System'),
-(128, '71', '13', '', 'New booking request', 'Booking #71 successfully placed', '2024-03-29', '02:46 PM', 'System'),
-(129, '72', '', '23', 'New Booking Request!', 'Booking #72 successfully placed', '2024-03-29', '02:55 PM', 'System'),
-(130, '72', '14', '', 'New booking request', 'Booking #72 successfully placed', '2024-03-29', '02:55 PM', 'System'),
-(131, '73', '', '23', 'New Booking Request!', 'Booking #73 successfully placed', '2024-03-29', '06:30 PM', 'System'),
-(132, '73', '13', '', 'New booking request', 'Booking #73 successfully placed', '2024-03-29', '06:30 PM', 'System'),
-(133, '74', '', '23', 'New Booking Request!', 'Booking #74 successfully placed', '2024-03-29', '07:15 PM', 'System'),
-(134, '74', '13', '', 'New booking request', 'Booking #74 successfully placed', '2024-03-29', '07:15 PM', 'System'),
-(135, '75', '', '23', 'New Booking Request!', 'Booking #75 successfully placed', '2024-04-02', '11:55 AM', 'System'),
-(136, '75', '15', '', 'New booking request', 'Booking #75 successfully placed', '2024-04-02', '11:55 AM', 'System'),
-(137, '76', '', '23', 'New Booking Request!', 'Booking #76 successfully placed', '2024-04-02', '12:30 PM', 'System'),
-(138, '76', '15', '', 'New booking request', 'Booking #76 successfully placed', '2024-04-02', '12:30 PM', 'System'),
-(139, '77', '', '23', 'New Booking Request!', 'Booking #77 successfully placed', '2024-04-02', '01:37 PM', 'System'),
-(140, '77', '15', '', 'New booking request', 'Booking #77 successfully placed', '2024-04-02', '01:37 PM', 'System'),
-(141, '79', '', '23', 'New Booking Request!', 'Booking #79 successfully placed', '2024-04-04', '12:24 PM', 'System'),
-(142, '79', '15', '', 'New booking request', 'Booking #79 successfully placed', '2024-04-04', '12:24 PM', 'System'),
-(143, '88', '', '4', 'New Booking Request!', 'Booking #88 successfully placed', '2024-04-09', '06:30 PM', 'System'),
-(144, '88', '', '23', 'New Booking Request!', 'Booking #88 successfully placed', '2024-04-09', '06:30 PM', 'System'),
-(145, '88', '15', '', 'New booking request', 'Booking #88 successfully placed', '2024-04-09', '06:30 PM', 'System'),
-(148, '91', '17', '', 'New booking request', 'Booking #91 successfully placed', '2024-04-16', '07:13 AM', 'System'),
-(149, '92', '17', '', 'New booking request', 'Booking #92 successfully placed', '2024-04-16', '07:52 AM', 'System'),
-(150, '93', '17', '', 'New booking request', 'Booking #93 successfully placed', '2024-04-16', '07:26 PM', 'System'),
-(151, '94', '16', '', 'New booking request', 'Booking #94 successfully placed', '2024-04-17', '07:57 PM', 'System'),
-(152, '95', '', '4', 'New Booking Request!', 'Booking #95 successfully placed', '2024-04-19', '04:37 PM', 'System'),
-(153, '95', '', '23', 'New Booking Request!', 'Booking #95 successfully placed', '2024-04-19', '04:37 PM', 'System'),
-(154, '95', '15', '', 'New booking request', 'Booking #95 successfully placed', '2024-04-19', '04:37 PM', 'System'),
-(155, '96', '', '4', 'New Booking Request!', 'Booking #96 successfully placed', '2024-04-19', '04:48 PM', 'System'),
-(156, '96', '', '23', 'New Booking Request!', 'Booking #96 successfully placed', '2024-04-19', '04:48 PM', 'System'),
-(157, '96', '15', '', 'New booking request', 'Booking #96 successfully placed', '2024-04-19', '04:48 PM', 'System'),
-(158, '97', '', '4', 'New Booking Request!', 'Booking #97 successfully placed', '2024-04-19', '04:51 PM', 'System'),
-(159, '97', '', '23', 'New Booking Request!', 'Booking #97 successfully placed', '2024-04-19', '04:51 PM', 'System'),
-(160, '97', '15', '', 'New booking request', 'Booking #97 successfully placed', '2024-04-19', '04:51 PM', 'System'),
-(161, '', '15', '', 'Booking Accepted', 'You Booking #96 has been accepted by driver', '2024-04-21', '10:11 AM', 'System'),
-(162, '96', '15', '', 'Driver Arrival', 'Driver is arriving for Booking #96', '2024-04-21', '10:13 AM', 'System'),
-(163, '96', '15', '', 'Booking Cancellation', 'Driver has cancelled Booking #96', '2024-04-21', '10:20 AM', 'System'),
-(164, '', '15', '', 'Booking Accepted', 'You Booking #95 has been accepted by driver', '2024-04-21', '10:21 AM', 'System'),
-(165, '95', '15', '', 'Booking Cancellation', 'Driver has cancelled Booking #95', '2024-04-21', '10:23 AM', 'System'),
-(166, '98', '16', '', 'New booking request', 'Booking #98 successfully placed', '2024-04-21', '10:32 AM', 'System'),
-(167, '99', '16', '', 'New booking request', 'Booking #99 successfully placed', '2024-04-21', '10:56 AM', 'System'),
-(168, '100', '16', '', 'New booking request', 'Booking #100 successfully placed', '2024-04-21', '11:17 AM', 'System'),
-(169, '101', '', '4', 'New Booking Request!', 'Booking #101 successfully placed', '2024-04-30', '01:36 PM', 'System'),
-(170, '101', '', '23', 'New Booking Request!', 'Booking #101 successfully placed', '2024-04-30', '01:36 PM', 'System'),
-(171, '101', '18', '', 'New booking request', 'Booking #101 successfully placed', '2024-04-30', '01:36 PM', 'System'),
-(172, '102', '', '4', 'New Booking Request!', 'Booking #102 successfully placed', '2024-04-30', '02:44 PM', 'System'),
-(173, '102', '', '23', 'New Booking Request!', 'Booking #102 successfully placed', '2024-04-30', '02:44 PM', 'System'),
-(174, '102', '18', '', 'New booking request', 'Booking #102 successfully placed', '2024-04-30', '02:44 PM', 'System'),
-(175, '103', '', '4', 'New Booking Request!', 'Booking #103 successfully placed', '2024-04-30', '02:50 PM', 'System'),
-(176, '103', '', '17', 'New Booking Request!', 'Booking #103 successfully placed', '2024-04-30', '02:50 PM', 'System'),
-(177, '103', '', '23', 'New Booking Request!', 'Booking #103 successfully placed', '2024-04-30', '02:50 PM', 'System'),
-(178, '103', '18', '', 'New booking request', 'Booking #103 successfully placed', '2024-04-30', '02:50 PM', 'System'),
-(179, '', '18', '', 'Booking Accepted', 'You Booking #103 has been accepted by driver', '2024-04-30', '03:02 PM', 'System'),
-(180, '103', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #103', '2024-04-30', '03:03 PM', 'System'),
-(181, '103', '18', '', 'Ride Started', 'Your ride #103 has been started', '2024-04-30', '03:03 PM', 'System'),
-(182, '103', '', '17', 'Regarding Booking', 'You completed ride #103', '2024-04-30', '03:05 PM', 'System'),
-(183, '103', '18', '', 'Regarding Booking', 'Your ride #103 has completed', '2024-04-30', '03:05 PM', 'System'),
-(184, '104', '', '4', 'New Booking Request!', 'Booking #104 successfully placed', '2024-05-04', '12:34 PM', 'System'),
-(185, '104', '', '17', 'New Booking Request!', 'Booking #104 successfully placed', '2024-05-04', '12:34 PM', 'System'),
-(186, '104', '', '23', 'New Booking Request!', 'Booking #104 successfully placed', '2024-05-04', '12:34 PM', 'System'),
-(187, '104', '18', '', 'New booking request', 'Booking #104 successfully placed', '2024-05-04', '12:34 PM', 'System'),
-(188, '', '18', '', 'Booking Accepted', 'You Booking #104 has been accepted by driver', '2024-05-04', '12:34 PM', 'System'),
-(189, '104', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #104', '2024-05-04', '03:12 PM', 'System'),
-(190, '104', '18', '', 'Ride Started', 'Your ride #104 has been started', '2024-05-04', '03:12 PM', 'System'),
-(191, '104', '', '17', 'Regarding Booking', 'You completed ride #104', '2024-05-04', '03:13 PM', 'System'),
-(192, '104', '18', '', 'Regarding Booking', 'Your ride #104 has completed', '2024-05-04', '03:13 PM', 'System'),
-(193, '105', '', '4', 'New Booking Request!', 'Booking #105 successfully placed', '2024-05-04', '04:05 PM', 'System'),
-(194, '105', '', '17', 'New Booking Request!', 'Booking #105 successfully placed', '2024-05-04', '04:05 PM', 'System'),
-(195, '105', '', '23', 'New Booking Request!', 'Booking #105 successfully placed', '2024-05-04', '04:05 PM', 'System'),
-(196, '105', '18', '', 'New booking request', 'Booking #105 successfully placed', '2024-05-04', '04:05 PM', 'System'),
-(197, '106', '', '4', 'New Booking Request!', 'Booking #106 successfully placed', '2024-05-04', '04:07 PM', 'System'),
-(198, '106', '', '17', 'New Booking Request!', 'Booking #106 successfully placed', '2024-05-04', '04:07 PM', 'System'),
-(199, '106', '', '23', 'New Booking Request!', 'Booking #106 successfully placed', '2024-05-04', '04:07 PM', 'System'),
-(200, '106', '18', '', 'New booking request', 'Booking #106 successfully placed', '2024-05-04', '04:07 PM', 'System'),
-(201, '', '18', '', 'Booking Accepted', 'You Booking #106 has been accepted by driver', '2024-05-04', '04:08 PM', 'System'),
-(202, '', '18', '', 'Booking Accepted', 'You Booking #105 has been accepted by driver', '2024-05-04', '04:08 PM', 'System'),
-(203, '107', '', '4', 'New Booking Request!', 'Booking #107 successfully placed', '2024-05-04', '04:25 PM', 'System'),
-(204, '107', '', '17', 'New Booking Request!', 'Booking #107 successfully placed', '2024-05-04', '04:25 PM', 'System'),
-(205, '107', '', '23', 'New Booking Request!', 'Booking #107 successfully placed', '2024-05-04', '04:25 PM', 'System'),
-(206, '107', '18', '', 'New booking request', 'Booking #107 successfully placed', '2024-05-04', '04:25 PM', 'System'),
-(207, '106', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #106', '2024-05-04', '04:54 PM', 'System'),
-(208, '', '18', '', 'Booking Accepted', 'You Booking #107 has been accepted by driver', '2024-05-04', '05:10 PM', 'System'),
-(209, '107', '', '17', 'Booking Accepted', 'You accepted request for Booking #107', '2024-05-04', '05:10 PM', 'System'),
-(210, '108', '', '4', 'New Booking Request!', 'Booking #108 successfully placed', '2024-05-04', '05:12 PM', 'System'),
-(211, '108', '', '17', 'New Booking Request!', 'Booking #108 successfully placed', '2024-05-04', '05:12 PM', 'System'),
-(212, '108', '', '23', 'New Booking Request!', 'Booking #108 successfully placed', '2024-05-04', '05:12 PM', 'System'),
-(213, '108', '18', '', 'New booking request', 'Booking #108 successfully placed', '2024-05-04', '05:12 PM', 'System'),
-(214, '109', '', '4', 'New Booking Request!', 'Booking #109 successfully placed', '2024-05-04', '05:13 PM', 'System'),
-(215, '109', '', '17', 'New Booking Request!', 'Booking #109 successfully placed', '2024-05-04', '05:13 PM', 'System'),
-(216, '109', '', '23', 'New Booking Request!', 'Booking #109 successfully placed', '2024-05-04', '05:13 PM', 'System'),
-(217, '109', '18', '', 'New booking request', 'Booking #109 successfully placed', '2024-05-04', '05:13 PM', 'System'),
-(218, '', '18', '', 'Booking Accepted', 'You Booking #109 has been accepted by driver', '2024-05-04', '05:13 PM', 'System'),
-(219, '', '18', '', 'Booking Accepted', 'You Booking #108 has been accepted by driver', '2024-05-04', '05:13 PM', 'System'),
-(220, '109', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #109', '2024-05-04', '05:16 PM', 'System'),
-(221, '108', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #108', '2024-05-04', '05:17 PM', 'System'),
-(222, '109', '18', '', 'Ride Started', 'Your ride #109 has been started', '2024-05-04', '05:24 PM', 'System'),
-(223, '108', '18', '', 'Ride Started', 'Your ride #108 has been started', '2024-05-04', '05:25 PM', 'System'),
-(224, '109', '', '17', 'Regarding Booking', 'You completed ride #109', '2024-05-04', '05:31 PM', 'System'),
-(225, '109', '18', '', 'Regarding Booking', 'Your ride #109 has completed', '2024-05-04', '05:31 PM', 'System'),
-(226, '108', '', '17', 'Regarding Booking', 'You completed ride #108', '2024-05-04', '05:32 PM', 'System'),
-(227, '108', '18', '', 'Regarding Booking', 'Your ride #108 has completed', '2024-05-04', '05:32 PM', 'System'),
-(228, '110', '', '4', 'New Booking Request!', 'Booking #110 successfully placed', '2024-05-04', '05:33 PM', 'System'),
-(229, '110', '', '17', 'New Booking Request!', 'Booking #110 successfully placed', '2024-05-04', '05:33 PM', 'System'),
-(230, '110', '', '23', 'New Booking Request!', 'Booking #110 successfully placed', '2024-05-04', '05:33 PM', 'System'),
-(231, '110', '18', '', 'New booking request', 'Booking #110 successfully placed', '2024-05-04', '05:33 PM', 'System'),
-(232, '111', '', '4', 'New Booking Request!', 'Booking #111 successfully placed', '2024-05-04', '05:34 PM', 'System'),
-(233, '111', '', '17', 'New Booking Request!', 'Booking #111 successfully placed', '2024-05-04', '05:34 PM', 'System'),
-(234, '111', '', '23', 'New Booking Request!', 'Booking #111 successfully placed', '2024-05-04', '05:34 PM', 'System'),
-(235, '111', '18', '', 'New booking request', 'Booking #111 successfully placed', '2024-05-04', '05:34 PM', 'System'),
-(236, '', '18', '', 'Booking Accepted', 'You Booking #111 has been accepted by driver', '2024-05-04', '05:34 PM', 'System'),
-(237, '', '18', '', 'Booking Accepted', 'You Booking #110 has been accepted by driver', '2024-05-04', '05:34 PM', 'System'),
-(238, '111', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #111', '2024-05-04', '05:35 PM', 'System'),
-(239, '111', '18', '', 'Ride Started', 'Your ride #111 has been started', '2024-05-04', '05:35 PM', 'System'),
-(240, '110', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #110', '2024-05-04', '05:35 PM', 'System'),
-(241, '110', '18', '', 'Ride Started', 'Your ride #110 has been started', '2024-05-04', '05:35 PM', 'System'),
-(242, '111', '', '17', 'Regarding Booking', 'You completed ride #111', '2024-05-04', '05:35 PM', 'System'),
-(243, '111', '18', '', 'Regarding Booking', 'Your ride #111 has completed', '2024-05-04', '05:35 PM', 'System'),
-(244, '112', '', '4', 'New Booking Request!', 'Booking #112 successfully placed', '2024-05-04', '05:38 PM', 'System'),
-(245, '112', '', '17', 'New Booking Request!', 'Booking #112 successfully placed', '2024-05-04', '05:38 PM', 'System'),
-(246, '112', '', '23', 'New Booking Request!', 'Booking #112 successfully placed', '2024-05-04', '05:38 PM', 'System'),
-(247, '112', '18', '', 'New booking request', 'Booking #112 successfully placed', '2024-05-04', '05:38 PM', 'System'),
-(248, '113', '', '4', 'New Booking Request!', 'Booking #113 successfully placed', '2024-05-04', '05:42 PM', 'System'),
-(249, '113', '', '17', 'New Booking Request!', 'Booking #113 successfully placed', '2024-05-04', '05:42 PM', 'System'),
-(250, '113', '', '23', 'New Booking Request!', 'Booking #113 successfully placed', '2024-05-04', '05:42 PM', 'System'),
-(251, '113', '18', '', 'New booking request', 'Booking #113 successfully placed', '2024-05-04', '05:42 PM', 'System'),
-(252, '114', '', '4', 'New Booking Request!', 'Booking #114 successfully placed', '2024-05-04', '06:11 PM', 'System'),
-(253, '114', '', '17', 'New Booking Request!', 'Booking #114 successfully placed', '2024-05-04', '06:11 PM', 'System'),
-(254, '114', '', '23', 'New Booking Request!', 'Booking #114 successfully placed', '2024-05-04', '06:11 PM', 'System'),
-(255, '114', '18', '', 'New booking request', 'Booking #114 successfully placed', '2024-05-04', '06:11 PM', 'System'),
-(256, '115', '', '4', 'New Booking Request!', 'Booking #115 successfully placed', '2024-05-04', '06:53 PM', 'System'),
-(257, '115', '', '17', 'New Booking Request!', 'Booking #115 successfully placed', '2024-05-04', '06:53 PM', 'System'),
-(258, '115', '', '23', 'New Booking Request!', 'Booking #115 successfully placed', '2024-05-04', '06:53 PM', 'System'),
-(259, '115', '18', '', 'New booking request', 'Booking #115 successfully placed', '2024-05-04', '06:53 PM', 'System'),
-(260, '110', '', '17', 'Regarding Booking', 'You completed ride #110', '2024-05-04', '07:15 PM', 'System'),
-(261, '110', '18', '', 'Regarding Booking', 'Your ride #110 has completed', '2024-05-04', '07:15 PM', 'System'),
-(262, '107', '18', '', 'Booking Cancellation', 'Driver has cancelled Booking #107', '2024-05-04', '07:15 PM', 'System'),
-(263, '106', '18', '', 'Booking Cancellation', 'Driver has cancelled Booking #106', '2024-05-04', '07:15 PM', 'System'),
-(264, '105', '18', '', 'Booking Cancellation', 'Driver has cancelled Booking #105', '2024-05-04', '07:16 PM', 'System'),
-(265, '', '18', '', 'Booking Accepted', 'You Booking #115 has been accepted by driver', '2024-05-04', '07:17 PM', 'System'),
-(266, '115', '', '17', 'Booking Accepted', 'You accepted request for Booking #115', '2024-05-04', '07:17 PM', 'System'),
-(267, '', '18', '', 'Booking Accepted', 'You Booking #114 has been accepted by driver', '2024-05-04', '07:22 PM', 'System'),
-(268, '116', '', '4', 'New Booking Request!', 'Booking #116 successfully placed', '2024-05-04', '07:26 PM', 'System'),
-(269, '116', '', '17', 'New Booking Request!', 'Booking #116 successfully placed', '2024-05-04', '07:26 PM', 'System'),
-(270, '116', '', '23', 'New Booking Request!', 'Booking #116 successfully placed', '2024-05-04', '07:26 PM', 'System'),
-(271, '116', '18', '', 'New booking request', 'Booking #116 successfully placed', '2024-05-04', '07:26 PM', 'System'),
-(272, '', '18', '', 'Booking Accepted', 'You Booking #116 has been accepted by driver', '2024-05-04', '07:26 PM', 'System'),
-(273, '116', '', '17', 'Booking Accepted', 'You accepted request for Booking #116', '2024-05-04', '07:26 PM', 'System'),
-(274, '117', '', '4', 'New Booking Request!', 'Booking #117 successfully placed', '2024-05-04', '07:32 PM', 'System'),
-(275, '117', '', '17', 'New Booking Request!', 'Booking #117 successfully placed', '2024-05-04', '07:32 PM', 'System'),
-(276, '117', '', '23', 'New Booking Request!', 'Booking #117 successfully placed', '2024-05-04', '07:32 PM', 'System'),
-(277, '117', '18', '', 'New booking request', 'Booking #117 successfully placed', '2024-05-04', '07:32 PM', 'System'),
-(278, '', '18', '', 'Booking Accepted', 'You Booking #117 has been accepted by driver', '2024-05-04', '07:32 PM', 'System'),
-(279, '117', '', '17', 'Booking Accepted', 'You accepted request for Booking #117', '2024-05-04', '07:32 PM', 'System'),
-(280, '118', '17', '', 'New booking request', 'Booking #118 successfully placed', '2024-05-07', '05:56 AM', 'System'),
-(282, '119', '17', '', 'New booking request', 'Booking #119 successfully placed', '2024-05-07', '07:07 AM', 'System'),
-(283, '', '17', '', 'Booking Accepted', 'You Booking #119 has been accepted by driver', '2024-05-07', '07:18 AM', 'System'),
-(284, '119', '17', '', 'Driver Arrival', 'Driver is arriving for Booking #119', '2024-05-07', '07:31 AM', 'System'),
-(285, '119', '17', '', 'Ride Started', 'Your ride #119 has been started', '2024-05-07', '07:31 AM', 'System'),
-(287, '119', '17', '', 'Regarding Booking', 'Your ride #119 has completed', '2024-05-07', '07:32 AM', 'System'),
-(288, '120', '', '31', 'New Booking Request!', 'Booking #120 successfully placed', '2024-05-07', '07:50 AM', 'System'),
-(289, '120', '17', '', 'New booking request', 'Booking #120 successfully placed', '2024-05-07', '07:50 AM', 'System'),
-(290, '121', '', '31', 'New Booking Request!', 'Booking #121 successfully placed', '2024-05-07', '07:52 AM', 'System'),
-(291, '121', '17', '', 'New booking request', 'Booking #121 successfully placed', '2024-05-07', '07:52 AM', 'System'),
-(292, '', '17', '', 'Booking Accepted', 'You Booking #121 has been accepted by driver', '2024-05-07', '07:52 AM', 'System'),
-(293, '121', '17', '', 'Booking Cancellation', 'Driver has cancelled Booking #121', '2024-05-07', '08:26 AM', 'System'),
-(294, '122', '', '31', 'New Booking Request!', 'Booking #122 successfully placed', '2024-05-07', '05:21 PM', 'System'),
-(295, '122', '17', '', 'New booking request', 'Booking #122 successfully placed', '2024-05-07', '05:21 PM', 'System'),
-(296, '', '17', '', 'Booking Accepted', 'You Booking #122 has been accepted by driver', '2024-05-07', '05:27 PM', 'System'),
-(297, '122', '17', '', 'Driver Arrival', 'Driver is arriving for Booking #122', '2024-05-07', '05:28 PM', 'System'),
-(298, '122', '17', '', 'Ride Started', 'Your ride #122 has been started', '2024-05-07', '05:28 PM', 'System'),
-(299, '122', '', '31', 'Regarding Booking', 'You completed ride #122', '2024-05-07', '05:28 PM', 'System'),
-(300, '122', '17', '', 'Regarding Booking', 'Your ride #122 has completed', '2024-05-07', '05:28 PM', 'System'),
-(301, '123', '', '31', 'New Booking Request!', 'Booking #123 successfully placed', '2024-05-07', '05:32 PM', 'System'),
-(302, '123', '17', '', 'New booking request', 'Booking #123 successfully placed', '2024-05-07', '05:32 PM', 'System'),
-(303, '', '17', '', 'Booking Accepted', 'You Booking #123 has been accepted by driver', '2024-05-07', '05:33 PM', 'System'),
-(304, '123', '17', '', 'Driver Arrival', 'Driver is arriving for Booking #123', '2024-05-07', '05:33 PM', 'System'),
-(305, '123', '17', '', 'Ride Started', 'Your ride #123 has been started', '2024-05-07', '05:33 PM', 'System'),
-(306, '123', '', '31', 'Regarding Booking', 'You completed ride #123', '2024-05-07', '05:33 PM', 'System'),
-(307, '123', '17', '', 'Regarding Booking', 'Your ride #123 has completed', '2024-05-07', '05:33 PM', 'System'),
-(308, '', '17', '', 'Booking Accepted', 'You Booking #120 has been accepted by driver', '2024-05-07', '05:42 PM', 'System'),
-(309, '120', '17', '', 'Driver Arrival', 'Driver is arriving for Booking #120', '2024-05-07', '05:43 PM', 'System'),
-(310, '120', '17', '', 'Booking Cancellation', 'Driver has cancelled Booking #120', '2024-05-07', '05:44 PM', 'System'),
-(311, '124', '', '4', 'New Booking Request!', 'Booking #124 successfully placed', '2024-05-08', '02:52 PM', 'System'),
-(312, '124', '', '23', 'New Booking Request!', 'Booking #124 successfully placed', '2024-05-08', '02:52 PM', 'System'),
-(313, '124', '', '32', 'New Booking Request!', 'Booking #124 successfully placed', '2024-05-08', '02:52 PM', 'System'),
-(314, '124', '18', '', 'New booking request', 'Booking #124 successfully placed', '2024-05-08', '02:52 PM', 'System'),
-(315, '', '18', '', 'Booking Accepted', 'You Booking #124 has been accepted by driver', '2024-05-08', '02:53 PM', 'System'),
-(316, '124', '18', '', 'Driver Arrival', 'Driver is arriving for Booking #124', '2024-05-08', '02:58 PM', 'System'),
-(317, '124', '18', '', 'Ride Started', 'Your ride #124 has been started', '2024-05-08', '02:58 PM', 'System'),
-(318, '124', '', '32', 'Regarding Booking', 'You completed ride #124', '2024-05-08', '02:59 PM', 'System'),
-(319, '124', '18', '', 'Regarding Booking', 'Your ride #124 has completed', '2024-05-08', '02:59 PM', 'System'),
-(320, '125', '', '4', 'New Booking Request!', 'Booking #125 successfully placed', '2024-05-08', '03:02 PM', 'System'),
-(321, '125', '', '23', 'New Booking Request!', 'Booking #125 successfully placed', '2024-05-08', '03:02 PM', 'System'),
-(322, '125', '', '32', 'New Booking Request!', 'Booking #125 successfully placed', '2024-05-08', '03:02 PM', 'System'),
-(323, '125', '18', '', 'New booking request', 'Booking #125 successfully placed', '2024-05-08', '03:02 PM', 'System'),
-(324, '', '18', '', 'Booking Accepted', 'You Booking #125 has been accepted by driver', '2024-05-08', '03:02 PM', 'System'),
-(325, '125', '', '32', 'Booking Accepted', 'You accepted request for Booking #125', '2024-05-08', '03:02 PM', 'System'),
-(326, '125', '18', '', 'Booking Cancellation', 'Driver has cancelled Booking #125', '2024-05-08', '03:04 PM', 'System'),
-(327, '126', '', '4', 'New Booking Request!', 'Booking #126 successfully placed', '2024-05-08', '03:14 PM', 'System'),
-(328, '126', '', '23', 'New Booking Request!', 'Booking #126 successfully placed', '2024-05-08', '03:14 PM', 'System'),
-(329, '126', '', '32', 'New Booking Request!', 'Booking #126 successfully placed', '2024-05-08', '03:14 PM', 'System'),
-(330, '126', '18', '', 'New booking request', 'Booking #126 successfully placed', '2024-05-08', '03:14 PM', 'System'),
-(331, '', '18', '', 'Booking Accepted', 'You Booking #126 has been accepted by driver', '2024-05-08', '03:15 PM', 'System'),
-(332, '126', '', '32', 'Booking Accepted', 'You accepted request for Booking #126', '2024-05-08', '03:15 PM', 'System'),
-(333, '127', '', '4', 'New Booking Request!', 'Booking #127 successfully placed', '2024-05-08', '04:40 PM', 'System'),
-(334, '127', '', '23', 'New Booking Request!', 'Booking #127 successfully placed', '2024-05-08', '04:40 PM', 'System'),
-(335, '127', '', '32', 'New Booking Request!', 'Booking #127 successfully placed', '2024-05-08', '04:40 PM', 'System'),
-(336, '127', '18', '', 'New booking request', 'Booking #127 successfully placed', '2024-05-08', '04:40 PM', 'System'),
-(337, '128', '', '4', 'New Booking Request!', 'Booking #128 successfully placed', '2024-05-08', '04:42 PM', 'System'),
-(338, '128', '', '23', 'New Booking Request!', 'Booking #128 successfully placed', '2024-05-08', '04:42 PM', 'System'),
-(339, '128', '', '32', 'New Booking Request!', 'Booking #128 successfully placed', '2024-05-08', '04:42 PM', 'System'),
-(340, '128', '18', '', 'New booking request', 'Booking #128 successfully placed', '2024-05-08', '04:42 PM', 'System'),
-(341, '129', '', '4', 'New Booking Request!', 'Booking #129 successfully placed', '2024-05-08', '05:03 PM', 'System'),
-(342, '129', '', '23', 'New Booking Request!', 'Booking #129 successfully placed', '2024-05-08', '05:03 PM', 'System'),
-(343, '129', '', '32', 'New Booking Request!', 'Booking #129 successfully placed', '2024-05-08', '05:03 PM', 'System'),
-(344, '129', '18', '', 'New booking request', 'Booking #129 successfully placed', '2024-05-08', '05:03 PM', 'System'),
-(345, '130', '', '4', 'New Booking Request!', 'Booking #130 successfully placed', '2024-05-08', '05:34 PM', 'System'),
-(346, '130', '', '23', 'New Booking Request!', 'Booking #130 successfully placed', '2024-05-08', '05:34 PM', 'System'),
-(347, '130', '', '32', 'New Booking Request!', 'Booking #130 successfully placed', '2024-05-08', '05:34 PM', 'System'),
-(348, '130', '18', '', 'New booking request', 'Booking #130 successfully placed', '2024-05-08', '05:34 PM', 'System'),
-(349, '131', '', '4', 'New Booking Request!', 'Booking #131 successfully placed', '2024-05-08', '05:48 PM', 'System'),
-(350, '131', '', '23', 'New Booking Request!', 'Booking #131 successfully placed', '2024-05-08', '05:48 PM', 'System'),
-(351, '131', '', '32', 'New Booking Request!', 'Booking #131 successfully placed', '2024-05-08', '05:48 PM', 'System'),
-(352, '131', '18', '', 'New booking request', 'Booking #131 successfully placed', '2024-05-08', '05:48 PM', 'System'),
-(353, '132', '', '4', 'New Booking Request!', 'Booking #132 successfully placed', '2024-05-08', '05:50 PM', 'System'),
-(354, '132', '', '23', 'New Booking Request!', 'Booking #132 successfully placed', '2024-05-08', '05:50 PM', 'System'),
-(355, '132', '', '32', 'New Booking Request!', 'Booking #132 successfully placed', '2024-05-08', '05:50 PM', 'System'),
-(356, '132', '18', '', 'New booking request', 'Booking #132 successfully placed', '2024-05-08', '05:50 PM', 'System'),
-(357, '133', '', '4', 'New Booking Request!', 'Booking #133 successfully placed', '2024-05-08', '05:59 PM', 'System'),
-(358, '133', '', '23', 'New Booking Request!', 'Booking #133 successfully placed', '2024-05-08', '05:59 PM', 'System'),
-(359, '133', '', '32', 'New Booking Request!', 'Booking #133 successfully placed', '2024-05-08', '05:59 PM', 'System'),
-(360, '133', '18', '', 'New booking request', 'Booking #133 successfully placed', '2024-05-08', '05:59 PM', 'System'),
-(361, '', '', '24', 'fgjghjk', 'ghkgk', '08-05-2024 06:00 PM', '', 'Admin'),
-(362, '', '', '32', 'fgjghjk', 'ghkgk', '08-05-2024 06:00 PM', '', 'Admin'),
-(363, '', '', '24', 'demo tittle', 'demo message', '08-05-2024 06:00 PM', '', 'Admin'),
-(364, '', '', '32', 'demo tittle', 'demo message', '08-05-2024 06:00 PM', '', 'Admin'),
-(365, '', '', '24', 'sagdsg', 'dfhgfdh', '08-05-2024 06:02 PM', '', 'Admin'),
-(366, '', '', '32', 'sagdsg', 'dfhgfdh', '08-05-2024 06:02 PM', '', 'Admin'),
-(367, '', '', '24', 'fgjkghk', 'ghfkhkflhjkl', '08-05-2024 06:02 PM', '', 'Admin'),
-(368, '', '', '32', 'fgjkghk', 'ghfkhkflhjkl', '08-05-2024 06:02 PM', '', 'Admin'),
-(369, '', '', '32', 'asgsdh', 'dfhfdh', '08-05-2024 06:04 PM', '', 'Admin'),
-(370, '', '18', '', 'demo', 'gggg', '08-05-2024 06:10 PM', '', 'Admin'),
-(371, '', '18', '', 'dshfgjhxfgj', 'fgjxjkk', '08-05-2024 06:15 PM', '', 'Admin'),
-(372, '', '', '32', 'dshfgjhxfgj', 'fgjxjkk', '08-05-2024 06:15 PM', '', 'Admin'),
-(373, '', '', '32', 'dj', 'dfjhfgj', '08-05-2024 06:19 PM', '', 'Admin'),
-(374, '', '', '32', 'fdjdjfg', 'dgjfgjfgj', '08-05-2024 06:20 PM', '', 'Admin'),
-(375, '', '', '24', 'fxmjgdmk', 'gfkxfhkfgk', '08-05-2024 06:26 PM', '', 'Admin'),
-(376, '', '', '32', 'fxmjgdmk', 'gfkxfhkfgk', '08-05-2024 06:26 PM', '', 'Admin'),
-(377, '', '', '24', 'fxmjgdmk', 'gfkxfhkfgk', '08-05-2024 06:26 PM', '', 'Admin'),
-(378, '', '', '32', 'fxmjgdmk', 'gfkxfhkfgk', '08-05-2024 06:26 PM', '', 'Admin'),
-(379, '', '18', '', 'ktk', 'gkghl', '08-05-2024 06:29 PM', '', 'Admin'),
-(380, '', '', '32', 'dfjhvf', 'djfgjgh', '08-05-2024 06:29 PM', '', 'Admin'),
-(381, '', '18', '', 'rdhjvcgdc', 'tjsyxjksjg', '08-05-2024 06:30 PM', '', 'Admin'),
-(382, '', '18', '', ';kvgjt', 'fgtnjzfd', '08-05-2024 06:31 PM', '', 'Admin'),
-(383, '', '18', '', 'dhbfc', 'nhgd', '08-05-2024 06:31 PM', '', 'Admin'),
-(384, '', '18', '', 'fncvgn', 'fjjxfg', '08-05-2024 06:32 PM', '', 'Admin'),
-(385, '', '18', '', 'cfdjmkfgk', 'fgxkghk', '08-05-2024 06:33 PM', '', 'Admin'),
-(386, '', '18', '', 'fcrjugtju', 'ykiyhi', '08-05-2024 06:33 PM', '', 'Admin'),
-(387, '', '', '32', 'fcrjugtju', 'ykiyhi', '08-05-2024 06:33 PM', '', 'Admin'),
-(388, '', '', '32', 'gfjhng', 'gjm ghk cgh', '08-05-2024 06:34 PM', '', 'Admin'),
-(389, '', '', '32', 'sdfgj', 'fgjgkghk', '08-05-2024 06:36 PM', '', 'Admin'),
-(390, '', '', '32', 'frjuvdj', 'tgjkmgtjk', '08-05-2024 06:36 PM', '', 'Admin'),
-(391, '', '', '32', 'fvxvgbmk', 'vbmkvbhymkvg', '08-05-2024 06:38 PM', '', 'Admin'),
-(392, '134', '', '29', 'New Booking Request!', 'Booking #134 successfully placed', '2024-05-09', '07:49 AM', 'System'),
-(393, '134', '', '31', 'New Booking Request!', 'Booking #134 successfully placed', '2024-05-09', '07:50 AM', 'System'),
-(394, '134', '16', '', 'New booking request', 'Booking #134 successfully placed', '2024-05-09', '07:50 AM', 'System'),
-(395, '', '16', '', 'Booking Accepted', 'You Booking #134 has been accepted by driver', '2024-05-09', '07:51 AM', 'System'),
-(396, '134', '16', '', 'Driver Arrival', 'Driver is arriving for Booking #134', '2024-05-09', '08:04 AM', 'System'),
-(397, '134', '', '29', 'Regarding Booking', 'You completed ride #134', '2024-05-09', '08:04 AM', 'System'),
-(398, '134', '16', '', 'Regarding Booking', 'Your ride #134 has completed', '2024-05-09', '08:04 AM', 'System'),
-(399, '132', '', '29', 'Regarding Booking', 'You completed ride #132', '2024-05-09', '08:06 AM', 'System'),
-(400, '135', '', '4', 'New Booking Request!', 'Booking #135 successfully placed', '2024-05-09', '11:02 AM', 'System'),
-(401, '135', '', '23', 'New Booking Request!', 'Booking #135 successfully placed', '2024-05-09', '11:02 AM', 'System'),
-(402, '135', '', '29', 'New Booking Request!', 'Booking #135 successfully placed', '2024-05-09', '11:02 AM', 'System'),
-(403, '135', '', '32', 'New Booking Request!', 'Booking #135 successfully placed', '2024-05-09', '11:02 AM', 'System'),
-(404, '135', '18', '', 'New booking request', 'Booking #135 successfully placed', '2024-05-09', '11:02 AM', 'System'),
-(405, '136', '', '4', 'New Booking Request!', 'Booking #136 successfully placed', '2024-05-09', '11:49 AM', 'System'),
-(406, '136', '', '23', 'New Booking Request!', 'Booking #136 successfully placed', '2024-05-09', '11:49 AM', 'System'),
-(407, '136', '', '29', 'New Booking Request!', 'Booking #136 successfully placed', '2024-05-09', '11:49 AM', 'System'),
-(408, '136', '', '32', 'New Booking Request!', 'Booking #136 successfully placed', '2024-05-09', '11:49 AM', 'System'),
-(409, '136', '18', '', 'New booking request', 'Booking #136 successfully placed', '2024-05-09', '11:49 AM', 'System'),
-(410, '', '18', '', 'Booking Accepted', 'You Booking #136 has been accepted by driver', '2024-05-09', '11:50 AM', 'System'),
-(411, '137', '', '4', 'New Booking Request!', 'Booking #137 successfully placed', '2024-05-09', '12:08 PM', 'System'),
-(412, '137', '', '23', 'New Booking Request!', 'Booking #137 successfully placed', '2024-05-09', '12:08 PM', 'System'),
-(413, '137', '', '29', 'New Booking Request!', 'Booking #137 successfully placed', '2024-05-09', '12:08 PM', 'System'),
-(414, '137', '', '32', 'New Booking Request!', 'Booking #137 successfully placed', '2024-05-09', '12:08 PM', 'System'),
-(415, '137', '18', '', 'New booking request', 'Booking #137 successfully placed', '2024-05-09', '12:08 PM', 'System'),
-(416, '', '18', '', 'Booking Accepted', 'You Booking #137 has been accepted by driver', '2024-05-09', '12:26 PM', 'System'),
-(417, '', '18', '', 'Booking Accepted', 'You Booking #137 has been accepted by driver', '2024-05-09', '12:27 PM', 'System'),
-(418, '', '18', '', 'Booking Accepted', 'You Booking #137 has been accepted by driver', '2024-05-09', '12:28 PM', 'System'),
-(419, '', '18', '', 'Booking Accepted', 'You Booking #137 has been accepted by driver', '2024-05-09', '12:29 PM', 'System'),
-(420, '138', '', '10', 'New Booking Request!', 'Booking #138 successfully placed', '2024-05-13', '03:10 AM', 'System'),
-(421, '138', '', '25', 'New Booking Request!', 'Booking #138 successfully placed', '2024-05-13', '03:10 AM', 'System'),
-(422, '138', '', '31', 'New Booking Request!', 'Booking #138 successfully placed', '2024-05-13', '03:10 AM', 'System'),
-(423, '138', '17', '', 'New booking request', 'Booking #138 successfully placed', '2024-05-13', '03:10 AM', 'System'),
-(424, '139', '', '10', 'New Booking Request!', 'Booking #139 successfully placed', '2024-05-13', '03:20 AM', 'System'),
-(425, '139', '', '25', 'New Booking Request!', 'Booking #139 successfully placed', '2024-05-13', '03:20 AM', 'System'),
-(426, '139', '', '29', 'New Booking Request!', 'Booking #139 successfully placed', '2024-05-13', '03:20 AM', 'System'),
-(427, '139', '', '31', 'New Booking Request!', 'Booking #139 successfully placed', '2024-05-13', '03:20 AM', 'System'),
-(428, '139', '17', '', 'New booking request', 'Booking #139 successfully placed', '2024-05-13', '03:20 AM', 'System'),
-(429, '140', '', '10', 'New Booking Request!', 'Booking #140 successfully placed', '2024-05-14', '05:42 PM', 'System'),
-(430, '140', '', '25', 'New Booking Request!', 'Booking #140 successfully placed', '2024-05-14', '05:42 PM', 'System'),
-(431, '140', '', '29', 'New Booking Request!', 'Booking #140 successfully placed', '2024-05-14', '05:42 PM', 'System'),
-(432, '140', '', '31', 'New Booking Request!', 'Booking #140 successfully placed', '2024-05-14', '05:42 PM', 'System'),
-(433, '140', '17', '', 'New booking request', 'Booking #140 successfully placed', '2024-05-14', '05:42 PM', 'System'),
-(434, '', '17', '', 'this a test notification', 'test test 123', '15-05-2024 05:21 PM', '', 'Admin');
+(1, '1', '', '4', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(2, '1', '', '17', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(3, '1', '', '19', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(4, '1', '', '21', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(5, '1', '', '22', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(6, '1', '', '23', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(7, '1', '', '25', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(8, '1', '', '29', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(9, '1', '', '32', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(10, '1', '7', '', 'New booking request', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
+(11, '', '7', '', 'Booking Accepted', 'You Booking #1 has been accepted by driver', '2024-05-23', '05:18 PM', 'System'),
+(12, '2', '', '4', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(13, '2', '', '17', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(14, '2', '', '19', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(15, '2', '', '21', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(16, '2', '', '22', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(17, '2', '', '23', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(18, '2', '', '25', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(19, '2', '', '29', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(20, '2', '', '32', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(21, '2', '7', '', 'New booking request', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
+(22, '', '7', '', 'Booking Accepted', 'You Booking #2 has been accepted by driver', '2024-05-27', '04:43 PM', 'System'),
+(23, '2', '7', '', 'Driver Arrival', 'Driver is arriving for Booking #2', '2024-05-27', '05:01 PM', 'System'),
+(24, '2', '7', '', 'Ride Started', 'Your ride #2 is on the way', '2024-05-27', '05:07 PM', 'System'),
+(25, '2', '', '17', 'Regarding Booking', 'You completed ride #2', '2024-05-27', '05:07 PM', 'System'),
+(26, '2', '7', '', 'Regarding Booking', 'Your ride #2 has completed', '2024-05-27', '05:07 PM', 'System'),
+(27, '3', '', '4', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(28, '3', '', '17', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(29, '3', '', '19', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(30, '3', '', '21', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(31, '3', '', '22', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(32, '3', '', '23', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(33, '3', '', '25', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(34, '3', '', '29', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(35, '3', '', '32', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(36, '3', '7', '', 'New booking request', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
+(37, '', '7', '', 'Booking Accepted', 'You Booking #3 has been accepted by driver', '2024-05-27', '05:14 PM', 'System'),
+(38, '3', '7', '', 'Driver Picked', 'Driver Picked succesfully for Booking #3', '2024-05-27', '05:14 PM', 'System'),
+(39, '3', '7', '', 'Ride Started', 'Your ride #3 is on the way', '2024-05-27', '05:14 PM', 'System'),
+(40, '3', '', '17', 'Regarding Booking', 'You completed ride #3', '2024-05-27', '05:14 PM', 'System'),
+(41, '3', '7', '', 'Regarding Booking', 'Your ride #3 has completed', '2024-05-27', '05:14 PM', 'System'),
+(42, '4', '', '4', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(43, '4', '', '17', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(44, '4', '', '19', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(45, '4', '', '21', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(46, '4', '', '22', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(47, '4', '', '23', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(48, '4', '', '25', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(49, '4', '', '29', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(50, '4', '', '32', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(51, '4', '7', '', 'New booking request', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
+(52, '', '7', '', 'Booking Accepted', 'You Booking #4 has been accepted by driver', '2024-05-27', '05:16 PM', 'System'),
+(53, '4', '', '17', 'Booking Cancellation', 'User has cancelled Booking #4', '2024-05-27', '05:19 PM', 'System');
 
 -- --------------------------------------------------------
 
@@ -3613,7 +2022,9 @@ INSERT INTO `tbl_user_card` (`card_id`, `customer_id`, `payment_method_id`, `car
 (55, 'cus_Q1E7wA7hKeZqcS', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '4242', '5', '2029'),
 (56, 'cus_Q1E7wA7hKeZqcS', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '4242', '12', '2028'),
 (57, 'cus_Q1E7wA7hKeZqcS', 'pm_1PCflOIhs7ZBuE9xUEyxIH3A', '4242', '4', '2025'),
-(58, 'cus_PvsR1satZTDXuK', 'pm_1PDmhlIhs7ZBuE9xTADf1yIu', '4242', '12', '2025');
+(58, 'cus_PvsR1satZTDXuK', 'pm_1PDmhlIhs7ZBuE9xTADf1yIu', '4242', '12', '2025'),
+(59, 'cus_Q1E7wA7hKeZqcS', 'pm_1PJTvUIhs7ZBuE9x6GZ5zyUF', '4242', '4', '2029'),
+(60, 'cus_Q9svkJHP4JUIMO', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', '4242', '4', '2036');
 
 -- --------------------------------------------------------
 
@@ -3679,6 +2090,79 @@ INSERT INTO `tbl_user_write_support` (`id`, `user_id`, `driver_id`, `fullname`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Trips`
+--
+
+CREATE TABLE `Trips` (
+  `TripID` int(11) NOT NULL,
+  `DriverID` int(11) DEFAULT NULL,
+  `SenderID` int(11) DEFAULT NULL,
+  `u_name` varchar(215) NOT NULL,
+  `FromAddress` varchar(50) DEFAULT NULL,
+  `FromAddress2` varchar(50) DEFAULT NULL,
+  `FromCity` varchar(20) DEFAULT NULL,
+  `FromState` varchar(20) DEFAULT NULL,
+  `FromZip` varchar(12) DEFAULT NULL,
+  `source_lat` varchar(255) NOT NULL,
+  `source_long` varchar(255) NOT NULL,
+  `ToAddress` varchar(50) DEFAULT NULL,
+  `ToAddress2` varchar(50) DEFAULT NULL,
+  `ToCity` varchar(20) DEFAULT NULL,
+  `ToState` varchar(20) DEFAULT NULL,
+  `ToZip` varchar(12) DEFAULT NULL,
+  `destination_lat` varchar(255) NOT NULL,
+  `destination_long` varchar(255) NOT NULL,
+  `RequestTime` text NOT NULL,
+  `AcceptTime` text NOT NULL,
+  `PickupTime` text NOT NULL,
+  `DropoffTime` text NOT NULL,
+  `Status` char(1) DEFAULT NULL,
+  `PayStatus` int(11) DEFAULT NULL,
+  `TimeStampCreated` text NOT NULL,
+  `LastUpdated` text NOT NULL,
+  `Notes` text,
+  `InternalNotes` text,
+  `Silent` int(11) DEFAULT NULL,
+  `RouteID` varchar(50) DEFAULT NULL,
+  `PkgID` int(11) NOT NULL,
+  `package_name` varchar(111) NOT NULL,
+  `Cost` decimal(10,2) DEFAULT NULL COMMENT 'trip_fare',
+  `Price` decimal(10,2) DEFAULT NULL COMMENT 'total_fare',
+  `discount` varchar(50) NOT NULL,
+  `coupon_id` int(11) NOT NULL,
+  `payment_mode` varchar(50) NOT NULL,
+  `Paid` tinyint(1) DEFAULT '0',
+  `payment_id` varchar(50) NOT NULL,
+  `CaptureID` varchar(50) DEFAULT NULL COMMENT 'payment_method_id',
+  `ride_type` varchar(255) NOT NULL,
+  `city_status` varchar(55) NOT NULL,
+  `confirmation_code` varchar(111) NOT NULL,
+  `cancel_by` varchar(11) NOT NULL,
+  `cancel_reason` text NOT NULL,
+  `pickup_contact` varchar(25) NOT NULL,
+  `drop_contact` varchar(25) NOT NULL,
+  `driver_lat` varchar(50) NOT NULL,
+  `driver_lng` varchar(50) NOT NULL,
+  `d_address` text NOT NULL,
+  `user_lat` int(50) NOT NULL,
+  `user_lng` int(50) NOT NULL,
+  `u_address` text NOT NULL,
+  `total_duration` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Trips`
+--
+
+INSERT INTO `Trips` (`TripID`, `DriverID`, `SenderID`, `u_name`, `FromAddress`, `FromAddress2`, `FromCity`, `FromState`, `FromZip`, `source_lat`, `source_long`, `ToAddress`, `ToAddress2`, `ToCity`, `ToState`, `ToZip`, `destination_lat`, `destination_long`, `RequestTime`, `AcceptTime`, `PickupTime`, `DropoffTime`, `Status`, `PayStatus`, `TimeStampCreated`, `LastUpdated`, `Notes`, `InternalNotes`, `Silent`, `RouteID`, `PkgID`, `package_name`, `Cost`, `Price`, `discount`, `coupon_id`, `payment_mode`, `Paid`, `payment_id`, `CaptureID`, `ride_type`, `city_status`, `confirmation_code`, `cancel_by`, `cancel_reason`, `pickup_contact`, `drop_contact`, `driver_lat`, `driver_lng`, `d_address`, `user_lat`, `user_lng`, `u_address`, `total_duration`) VALUES
+(1, 17, 7, 'Goa Kk', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Pur', '', 'indore', '', '452014', '22.6856608', '75.8596255', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '23-05-2024 04:21 PM', '', '', '', 'R', 0, '23-05-2024 04:21 PM', '', 'ccgvh', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PJZEmIhs7ZBuE9x1qREX6Qa', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', 'User', 'Booked By Mistake', '+1+18085059284', '+1+19754853453', '', '', '', 0, 0, '', ''),
+(2, 17, 7, 'Goa Kk', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madh', '', 'indore', '', '452014', '22.6856582', '75.8596368', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '27-05-2024 04:42 PM', '05-27-2024  05:01 PM', '05-27-2024  05:07 PM', '05-27-2024  05:07 PM', 'C', 0, '27-05-2024 04:42 PM', '', 'chjkujh', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PL1TMIhs7ZBuE9x2VwfDWRr', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '886065', '', '', '+1+19754853453', '+1+18085059288', '', '', '', 0, 0, '', '25'),
+(3, 17, 7, 'Goa Kk', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madh', '', 'indore', '', '452014', '22.685653', '75.8596405', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '27-05-2024 05:12 PM', '05-27-2024  05:14 PM', '05-27-2024  05:14 PM', '05-27-2024  05:14 PM', 'C', 0, '27-05-2024 05:12 PM', '', 'g,ydufufuf', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PL1wtIhs7ZBuE9x0Lex2v6f', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '793694', '', '', '+18085059284', '+19754853453', '', '', '', 0, 0, '', '2'),
+(4, 17, 7, 'Goa Kk', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madh', '', 'indore', '', '452014', '22.6856603', '75.8596392', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '27-05-2024 05:15 PM', '', '', '', 'N', 0, '27-05-2024 05:15 PM', '', 'dryu', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PL1zwIhs7ZBuE9x2mK2bZUt', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', 'User', 'Driver Arrived Late', '+18085056666', '+15566666666', '', '', '', 0, 0, '', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_register`
 --
 
@@ -3740,6 +2224,7 @@ INSERT INTO `user_register` (`id`, `full_name`, `middle_name`, `sur_name`, `gend
 (5, 'Ashii', '', '', '', 'ashii@gmail.com', '123456Aa', '+91', '4654676', '', 'tkqrvyf2an_1710743195.png', '', '', '', '', '', '', '', '', '', 'Approve', '', '2024-03-18', '', '', '', '', '2024-03-18', '', '58848509167675765', '', '', '', 'A593', '2024-01-08', '2025-04-06', '', 'Apisn5t9om_1710743195.jpg', '2024-03-20', '', '', ''),
 (12, 'Mili', 'patel', 'patel', 'Female', 'baaa@gmail.com', '123456', '+91', '98988957', '', '', '', '', '', 'Indore', '23.6589565', '76.65983265', '', '', '0', 'Approve', '', '2024-03-29', '', '', '', '', '2024-03-29', '', '129985649198988957', '', '', '', 'M1279', '2024-01-08', '2025-04-06', '', 'suiwtzx1j6_1711693005', '', '', '', 'cus_PpDAIpH5E5JMnD'),
 (15, 'Asd', '', 'Check', 'Male', 'as@gmail.com', '123456', '+1', '8085059285', '', '', 'dwk6ze3kTaqvSOUTj90BZh:APA91bG1--fBPAnnJoydWKVrzheT7DKRBoozORZPdou9YX6AXi8kNkGin6pLkIwgfrYIDMSBxmiiiwEN2VPFJ0DwJ7rJfosdBWrr55_3i4XKtqhwbMlxzr2W5dTMBqQJShsstzZNWDUc', '', 'Android', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', '', '', '', '', '0', 'Approve', '', '2024-04-01', '', '', '', '', '2024-04-01', '', '1534280218085059285', '', '', '', 'A1593', '2024-01-08', '2025-04-06', 'US', 'rvmAky1lup_1711976339.jpg', '26-04-2024', '', '', 'cus_PqRKlgohr4mS3b'),
+(19, 'bp', '', '', '', 'bp@gmail.com', '123456Aa', '+91', '4565789845', '', 'hq2brjfw5p_1716791913.png', '', '', '', '', '', '', '', '', '', 'Approve', '', '2024-05-27', '', '', '', '', '2024-05-27', '', '', '', '', '', '', '', '', '', 'Em2Fk7A8jr_1716791913.jpg', '2024-06-01', '', '', 'cus_QBJqbzmnmyxzSN'),
 (18, 'Ss', '', 'Ff', 'Male', 'satishchouhanciss@gmail.com', '123456', '+91', '8085059282', '', '', 'f4OG2eChQM2VggI1TFTRxo:APA91bE0lUaSCaQ3AKWmn82gUmCLefDzHbGMa-lgWTJRG6KoR_eem2AHmTq6_lmfzZOrXFEvnEpmChgZ-2aXzwGFv163VnmCz_lboYmLfNd3Bm0zayXSJt5OnkXFGH_BOZVdgmA6GomC', '', 'Android', 'Dham, Punjab, India', '', '', '', '', '0', 'Approve', '', '2024-04-30', '', '', '', '', '2024-04-30', '', '18481874918085059282', '', '', '', 'S1837', '2024-01-08', '2025-04-06', 'IN', 'pFio9w7rA5_1714464252', '', '', '', 'cus_Q1E7wA7hKeZqcS'),
 (17, 'Test', '', 'Test', 'Male', '12345@12345.com', '123456789', '+1', '2122222222', '', '', 'eRnlydDYRra7g68aOEoGUL:APA91bGdwKrvNpzZJibWZ3XDwDJ_kIQXuFpW2cjWKdNWLKZJlXLnahWOggTRwVLTrO21ryM-_qedz_zirkY-xdursvQ62JNO3lRlqn-3Ob284lik1NBGG4WJec6aUQ2_Fe-aMt5NyftU', '', 'Android', 'B&M Test, Briceni, Moldova', '', '', '', '', '0', 'Approve', '', '2024-04-16', '', '', '', '', '2024-04-16', '', '1755333412122222222', '', '', '', 'T1755', '2024-01-08', '2025-04-06', 'US', '8BDoG7skwn_1713230360.png', '18-04-2024', '', '', 'cus_PvsR1satZTDXuK');
 
@@ -3757,7 +2242,8 @@ ALTER TABLE `admin`
 -- Indexes for table `AreaFromTo`
 --
 ALTER TABLE `AreaFromTo`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `RouteID` (`RouteID`);
 
 --
 -- Indexes for table `AreaList`
@@ -3770,12 +2256,6 @@ ALTER TABLE `AreaList`
 -- Indexes for table `AreaZipCodes`
 --
 ALTER TABLE `AreaZipCodes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `booking_transaction_history`
---
-ALTER TABLE `booking_transaction_history`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3809,40 +2289,10 @@ ALTER TABLE `chat_info`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `company_car_tbl`
---
-ALTER TABLE `company_car_tbl`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `company_register`
---
-ALTER TABLE `company_register`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `Drivers`
 --
 ALTER TABLE `Drivers`
   ADD PRIMARY KEY (`DriverID`);
-
---
--- Indexes for table `driver_bank_details`
---
-ALTER TABLE `driver_bank_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `driver_card_detail`
---
-ALTER TABLE `driver_card_detail`
-  ADD PRIMARY KEY (`card_id`);
-
---
--- Indexes for table `driver_documents`
---
-ALTER TABLE `driver_documents`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `driver_faq`
@@ -3851,28 +2301,10 @@ ALTER TABLE `driver_faq`
   ADD PRIMARY KEY (`df_id`);
 
 --
--- Indexes for table `driver_wallet_transaction_history`
---
-ALTER TABLE `driver_wallet_transaction_history`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `driver_withdraw_request`
---
-ALTER TABLE `driver_withdraw_request`
-  ADD PRIMARY KEY (`withdraw_id`);
-
---
 -- Indexes for table `faq`
 --
 ALTER TABLE `faq`
   ADD PRIMARY KEY (`f_id`);
-
---
--- Indexes for table `getTransactionhistory`
---
-ALTER TABLE `getTransactionhistory`
-  ADD PRIMARY KEY (`wallet_id`);
 
 --
 -- Indexes for table `help_support`
@@ -3917,10 +2349,16 @@ ALTER TABLE `Refferal_Amount`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sub_admin_register`
+-- Indexes for table `Senders`
 --
-ALTER TABLE `sub_admin_register`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `Senders`
+  ADD PRIMARY KEY (`SenderID`);
+
+--
+-- Indexes for table `sys_trip_status`
+--
+ALTER TABLE `sys_trip_status`
+  ADD PRIMARY KEY (`trip_status_id`) USING BTREE;
 
 --
 -- Indexes for table `tbl_about_us`
@@ -3989,12 +2427,6 @@ ALTER TABLE `tbl_general_setting`
   ADD PRIMARY KEY (`set_id`);
 
 --
--- Indexes for table `tbl_issue_warning`
---
-ALTER TABLE `tbl_issue_warning`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `tbl_notification_list`
 --
 ALTER TABLE `tbl_notification_list`
@@ -4037,6 +2469,15 @@ ALTER TABLE `tbl_user_write_support`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `Trips`
+--
+ALTER TABLE `Trips`
+  ADD PRIMARY KEY (`TripID`),
+  ADD KEY `DriverID` (`DriverID`),
+  ADD KEY `SenderID` (`SenderID`),
+  ADD KEY `AreaID` (`RouteID`);
+
+--
 -- Indexes for table `user_register`
 --
 ALTER TABLE `user_register`
@@ -4071,16 +2512,10 @@ ALTER TABLE `AreaZipCodes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `booking_transaction_history`
---
-ALTER TABLE `booking_transaction_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
 -- AUTO_INCREMENT for table `canclebooking`
 --
 ALTER TABLE `canclebooking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=316;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=317;
 
 --
 -- AUTO_INCREMENT for table `canclebooking_driver`
@@ -4107,40 +2542,10 @@ ALTER TABLE `chat_info`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 
 --
--- AUTO_INCREMENT for table `company_car_tbl`
---
-ALTER TABLE `company_car_tbl`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
---
--- AUTO_INCREMENT for table `company_register`
---
-ALTER TABLE `company_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
-
---
 -- AUTO_INCREMENT for table `Drivers`
 --
 ALTER TABLE `Drivers`
-  MODIFY `DriverID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `driver_bank_details`
---
-ALTER TABLE `driver_bank_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
-
---
--- AUTO_INCREMENT for table `driver_card_detail`
---
-ALTER TABLE `driver_card_detail`
-  MODIFY `card_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `driver_documents`
---
-ALTER TABLE `driver_documents`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT;
+  MODIFY `DriverID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `driver_faq`
@@ -4149,28 +2554,10 @@ ALTER TABLE `driver_faq`
   MODIFY `df_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `driver_wallet_transaction_history`
---
-ALTER TABLE `driver_wallet_transaction_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `driver_withdraw_request`
---
-ALTER TABLE `driver_withdraw_request`
-  MODIFY `withdraw_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
-
---
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
   MODIFY `f_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
-
---
--- AUTO_INCREMENT for table `getTransactionhistory`
---
-ALTER TABLE `getTransactionhistory`
-  MODIFY `wallet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=711;
 
 --
 -- AUTO_INCREMENT for table `help_support`
@@ -4194,13 +2581,13 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `notification_tbl`
 --
 ALTER TABLE `notification_tbl`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 
 --
 -- AUTO_INCREMENT for table `panding_booking_request_driver`
 --
 ALTER TABLE `panding_booking_request_driver`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=428;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `penic_notification_list`
@@ -4215,10 +2602,10 @@ ALTER TABLE `Refferal_Amount`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `sub_admin_register`
+-- AUTO_INCREMENT for table `Senders`
 --
-ALTER TABLE `sub_admin_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `Senders`
+  MODIFY `SenderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_about_us`
@@ -4287,16 +2674,10 @@ ALTER TABLE `tbl_general_setting`
   MODIFY `set_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `tbl_issue_warning`
---
-ALTER TABLE `tbl_issue_warning`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `tbl_notification_list`
 --
 ALTER TABLE `tbl_notification_list`
-  MODIFY `noti_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=435;
+  MODIFY `noti_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `tbl_package`
@@ -4320,7 +2701,7 @@ ALTER TABLE `tbl_terms_condition`
 -- AUTO_INCREMENT for table `tbl_user_card`
 --
 ALTER TABLE `tbl_user_card`
-  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `tbl_user_privacy`
@@ -4335,10 +2716,16 @@ ALTER TABLE `tbl_user_write_support`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `Trips`
+--
+ALTER TABLE `Trips`
+  MODIFY `TripID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `user_register`
 --
 ALTER TABLE `user_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

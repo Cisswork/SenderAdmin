@@ -4,7 +4,7 @@
  * @author Ravi Tamada
  * @link URL Tutorial link
  */
-class Firebase1 {
+class Firebase {
  
     // sending push message to single user by firebase reg id
     public function send($to, $message) {

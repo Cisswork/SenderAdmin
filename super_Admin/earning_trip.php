@@ -156,136 +156,58 @@
                 <thead>
                             <tr>
                                 <th class="">S. NO.</th>
-                                <th>Booking Id</th>
-                                <th>Booking Status</th>
-                                <!--<th>Company Name</th>-->
-                                 <th>Source</th>
+                                <th>Trip Id</th>
+                                <th>Trip Status</th>
+                                <th>Source</th>
                                 <th>Destination</th>
                                 <th>Customer</th>
                                 <th>Driver</th>
-                                <th>Booking Date</th>
+                                <th>Trip Date</th>
                                 <th>Package Type</th>
-                                
-                                <!--<th>Distance</th>-->
-                                <!--<th>Duration</th>-->
                                 <th>Payment Mode</th>
-                                <!--<th>Base Fare</th>-->
-                                <!--<th>Distance Fare</th>-->
-                                <!--<th>Time Fare</th>-->
-                                <!--<th>Tax</th>-->
                                 <th>Total Amount</th>
                                 <th>Total Discount</th>
-                                <!--<th>Admin Commission</th>-->
-                                <!--<th>Driver Toll Price</th>-->
-                                <!--<th>Driver Earning</th>-->
                                 <th>Grand Total</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                              <?php
-                                $sql="SELECT * FROM `notification_tbl` WHERE driver_status='end_ride' OR driver_status='Complete' order by id desc ";
-                                 $res=mysqli_query($con,$sql);
-                                  $count=0;                                      
-                                 while($row=mysqli_fetch_assoc($res))
-                                 {
-                                  $id=$row['id'];
-                                  $destination=$row['destination_add'];
-                                  $source=$row['source_add'];
-                                  $uem=$row['user_id'];
-                                  $status=$row['driver_status'];
-                                  $u_na=mysqli_query($con,"SELECT * FROM user_register WHERE id='$uem'");
-                                  $u_row=mysqli_fetch_assoc($u_na); 
-                                  $u_name=$u_row['full_name']." ".$u_row['last_name'];
-                                  $dem=$row['driver_id'];
-                                  $d_na=mysqli_query($con,"SELECT * FROM driver_register WHERE id='$dem'");
-                                  $d_row=mysqli_fetch_assoc($d_na); 
-                                  $d_name=$d_row['fullname']." ".$d_row['last_name'];
-                                  $car=$d_row['car_name'];
-                                  
-                                   $sql3=mysqli_query($con,"SELECT * FROM company_register WHERE id='".$row['company_id']."'");
-                                   $res3=mysqli_fetch_assoc($sql3);
-                                  
-                                  $amount=$row['total_amount'];
-                                  $add=$row['address'];
-                                  $car_name=$row['car_name'];
-                                  $car_number=$row['car_number'];
-                                 $tax=$row['tax_amount'];
-                                  $tamount=$amount+$tax;
-                                  $row['total_amount']-$tamount
-                            ?>  
+                                $sql="SELECT * FROM `Trips` WHERE Status='C' OR Status='D' order by TripID desc";
+                                $res=mysqli_query($con,$sql);
+                                $count=0;                                      
+                                while($row=mysqli_fetch_assoc($res))
+                                {
+                                    $id=$row['TripID'];
+                                    $destination=$row['ToAddress'];
+                                    $source=$row['FromAddress'];
+                                    $uem=$row['SenderID'];
+                                    $status=$row['Status'];
+                                    $u_na=mysqli_query($con,"SELECT * FROM Senders WHERE SenderID='$uem'");
+                                    $u_row=mysqli_fetch_assoc($u_na); 
+                                    $u_name=$u_row['FirstName']." ".$u_row['LastName'];
+                                    $dem=$row['DriverID'];
+                                    $d_na=mysqli_query($con,"SELECT * FROM Drivers WHERE DriverID ='$dem'");
+                                    $d_row=mysqli_fetch_assoc($d_na); 
+                                    $d_name=$d_row['FirstName']." ".$d_row['LastName'];
                                     
-                                    <tr>
-                                
-                                 <td class="center"><?php echo  ++$count;?></td>
-                                 <td class="center"><?php echo $row['id'];?></td>
-                                 <td class="center"><?php 
-                                if($status=='New Booking')
-                                {
-                                    echo 'New Booking';
-                                }
-                                elseif($status=='confirm')
-                                {
-                                    echo 'Confirmed';
-                                }
-                                elseif($status=='accept')
-                                {
-                                    echo 'Accepted';
-                                }
-                                elseif($status=='arrived')
-                                {
-                                    echo 'Arrived';
-                                }
-                                elseif($status=='start_ride')
-                                {
-                                    echo 'Start Ride';
-                                }
-                                 elseif($status=='onthe_way')
-                                {
-                                   echo 'On the Way';     
-                                }
-                                elseif($status=='end_ride' || $status=='Complete')
-                                {
-                                   echo 'Complete'; 
-                                }
-                                elseif($status=='cancel' && $row['cancel_by']=='User')
-                                {
-                                    echo 'Cancelled by user';
-                                }
-                                elseif($status=='cancel' && $row['cancel_by']=='Driver')
-                                {
-                                    echo 'Cancelled by driver';
-                                }
-                                ?></td>
-                                <!--<td class="center"><?php echo $res3['fullname'];?> </td>-->
+                                    $select_status = mysqli_query($con,"SELECT * FROM `sys_trip_status` WHERE `trip_status_id`='$status'");
+                                    $fetch_status = mysqli_fetch_assoc($select_status);
+                            ?>  
+                            <tr>
+                                <td class="center"><?php echo  ++$count;?></td>
+                                <td class="center"><?php echo $row['TripID'];?></td>
+                                <td><?php echo $fetch_status['trip_status_name']; ?></td>
                                 <td class="center"><?php echo $source; ?></td>
                                 <td class="center"><?php echo $destination;?></td>
                                 <td class="center"><?php echo $u_name; ?></td>
                                 <td class="center"><?php echo $d_name; ?></td>
-                                <td class="center"><?php echo $row['ride_date'] ." " .$row['ride_time'];?></td>
+                                <td class="center"><?php echo $row['RequestTime'];?></td>
                                 <td class="center"><?php echo $row['package_name'];?></td>
-                                
-                                <!--<td class="center"><?php echo $row['total_distance'];?></td>-->
-                                <!--<td class="center"><?php echo $row['total_duration'];?></td>-->
                                 <td class="center"><?php echo $row['payment_mode'];?></td>
-                                <!--<td class="center"><?php echo $row['base_fare_cost'];?></td>-->
-                                <!--<td class="center"><?php echo $row['per_km_cost'];?></td>-->
-                                <!--<td class="center"><?php echo $row['price_per_min'];?></td>-->
-                                <!--<td class="center"><?php echo $row['tax_percent'];?></td>-->
-                                 <td class="center"><?php echo $row['trip_fare'];?></td>
+                                <td class="center"><?php echo $row['Cost'];?></td>
                                 <td class="center"><?php echo $row['discount'];?></td>
-                                <!--<td class="center"><?php echo $row['admin_commission'];?></td>-->
-                                <!--<td class="center"><?php echo $row['tolloption_price'];?></td>-->
-                                <!--<td class="center">-->
-                                <!--<?php if($status=='end_ride' || $status=='Complete') {echo $row['driver_earning']-$row['tolloption_price'];}else { echo $row['driver_earning']-$row['tolloption_price']-$row['admin_commission'];}?>-->
-                                <!--</td>-->
-                                <td class="center"><?php echo $row['total_fare'];?></td>
-                                <!--<td class="center">
-                                    <a class="btn btn-success btn-sm view-customer" href="#" id="" data-status="" data-id="">
-                                        <i class="glyphicon glyphicon-zoom-in icon-white"></i>
-                                        View Details
-                                    </a>
-                                </td>-->
+                                <td class="center"><?php echo $row['Price'];?></td>
                                 <td><a href="invoice.php?hv_id=<?php echo $row['id'];?>" class="btn btn-primary"><i class="fa fa-list-ul" aria-hidden="true"></i> <b>View Invoice</b></a></td>
                            </tr>
                            <?php }?>

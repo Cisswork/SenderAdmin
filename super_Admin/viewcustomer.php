@@ -116,20 +116,20 @@ th, td {
                        $path="https://cisswork.com/Android/SenderApp/images/";
                         $def="https://cisswork.com/Android/SenderApp/super_Admin/logo (2).png";
                       //  $select=mysqli_query($con,"SELECT * FROM user_register ORDER BY id desc");
-                        $select=mysqli_query($con,"SELECT * FROM user_register ORDER BY id desc");
+                        $select=mysqli_query($con,"SELECT * FROM Senders ORDER BY SenderID  desc");
                         $count=0;
                         While($row=mysqli_fetch_assoc($select))
                         {
                             
-                        $id=$row['id'];
-                        $status=$row['user_status']
+                        $id=$row['SenderID'];
+                        $status=$row['Status']
                         ?>
                 <tr>
                   <td><?php echo ++$count;?></td>
-                  <td><?php echo $row['full_name'];?></td>
-                  <td><?php echo $row['email'];?></td>
-                  <!--<td><?php echo $row['password'];?></td>-->
-                  <td><?php echo $row['country_code'].$row['contact'];?></td>
+                  <td><?php echo $row['FirstName']." ".$row['LastName'];?></td>
+                  <td><?php echo $row['Email'];?></td>
+                  <!--<td><?php echo $row['Password'];?></td>-->
+                  <td><?php echo $row['country_code'].$row['Phone'];?></td>
                   <!--<td><?php echo $row['address'];?></td>-->
                   <td class="center"><img src="<?php 
                     $pay=$row['image'];
@@ -158,7 +158,7 @@ th, td {
                        <td><?php echo $row['id_expiry_date'];?></td>
                   <!--<td><img src="<?php echo $path.$row['image'];?>" height="100px" width="100"></td>-->
                   <td><?php echo $row['user_wallet'];?></td>
-                  <td><?php if ($status == "Approve" ) {?>
+                  <td><?php if ($status == "A" ) {?>
                             
                                              <img src="dist/img/active.png" style="width:30px;height:30px;">  
                                        <?php }else { ?>
@@ -170,7 +170,7 @@ th, td {
                         <ul class="dropdown-menu">
                             <li><a href="userdetails.php?id=<?php echo $id;?>" data-toggle="tooltip" title="Update"><img src="dist/img/edit-doc.png" style="width:30px;height:30px;"></a></li>
                             <!--li><a href="viewcustomer.php?id=<?php echo $id;?>" data-toggle="tooltip" title="View"><img src="dist/img/inactive.png" style="width:30px;height:30px;"></a></li-->
-                            <?php if ($status == "Approve" ) {?>
+                            <?php if ($status == "A" ) {?>
                                <li><a href="viewcustomer.php?bid=<?php echo $id; ?>" data-toggle="tooltip" title="Disapprove"><img src="dist/img/inactive.png" style="width:30px;height:30px;"></a></li>
                             <?php }else { ?>
                                <li><a href="viewcustomer.php?aid=<?php echo $id; ?>" data-toggle="tooltip" title="Approve"><img src="dist/img/active.png" style="width:30px;height:30px;"></a></li> 
@@ -195,10 +195,10 @@ th, td {
     if(isset($_GET['aid']))
     {
         $aid=$_GET['aid'];
-        $select1=mysqli_query($con,"select * from user_register where id='$aid'");
+        $select1=mysqli_query($con,"select * from Senders where SenderID ='$aid'");
         $selefetch=mysqli_fetch_assoc($select1);
         
-        $record=mysqli_query($con,"update user_register set user_status='Approve' where id='$aid'");
+        $record=mysqli_query($con,"update Senders set Status='A' where SenderID ='$aid'");
         if($record)
         {
             
@@ -223,7 +223,7 @@ th, td {
     if(isset($_GET['bid']))
     {
         $bid=$_GET['bid'];
-        $record=mysqli_query($con,"update user_register set user_status='Disapprove' where id='$bid'");
+        $record=mysqli_query($con,"update Senders set Status='D' where SenderID ='$bid'");
         if($record)
         {
           
@@ -245,7 +245,7 @@ th, td {
      if($_GET['id'])
      {
             $id=$_GET['id'];
-            $delete="DELETE FROM user_register WHERE id='$id'";
+            $delete="DELETE FROM Senders WHERE SenderID ='$id'";
             $del=mysqli_query($con,$delete);
             if($del)
               {

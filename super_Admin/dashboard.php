@@ -310,32 +310,17 @@
                 <section class="content">
                     <div class="row" style="padding: 10px 13px 0 18px;"><!-- /.row -->
                         <?php 
-                            $sql=mysqli_query($con,"select count(id) as count from user_register");
-                            $data=mysqli_fetch_assoc($sql);
-                            
                             $sql1=mysqli_query($con,"select count(DriverID) as count from Drivers");
                             $data1=mysqli_fetch_assoc($sql1);
                         
                             
-                            $sql4=mysqli_query($con,"select count(id) as count from notification_tbl");
+                            $sql4=mysqli_query($con,"select count(TripID) as count from Trips");
                             $data4=mysqli_fetch_assoc($sql4);
                             
-                            
-                            $sql6=mysqli_query($con,"select count(id) as count from booking_cancel");
-                            $data6=mysqli_fetch_assoc($sql6);
-
-                            $total=$data4['count']+$data6['count'];
-                            $total1=$data7+$data8+$data9;
-                            $total2=$datas+$dataa+$datab;
-                            $total3=$datac+$datad+$datae;
-                            
-                            $get=mysqli_query($con,"select count(id) as count from notification_table");
-                            $trip=mysqli_fetch_assoc($get);
-                            $complete=$trip['count'];
-                            $get1=mysqli_query($con,"select count(id) as count from notification_tbl WHERE driver_status='end_ride' OR driver_status='Complete'");
+                            $get1=mysqli_query($con,"select count(TripID) as count from Trips WHERE Status='D' OR Status='C'");
                             $trip1=mysqli_fetch_assoc($get1);
                             $complete1=$trip1['count'];
-                            $get2=mysqli_query($con,"select count(id) as count from notification_tbl WHERE driver_status='cancel'");
+                            $get2=mysqli_query($con,"select count(TripID) as count from Trips WHERE Status='N' OR Status='B'");
                             $trip2=mysqli_fetch_assoc($get2);
                             $complete2=$trip2['count'];
                             $total_trip=$complete1+$complete2;
@@ -396,7 +381,7 @@
                                                             <div class="info-box-content">
                                                             <span class="info-box-text">USERS</span>
                                                             <?php
-                                                                $sql_user=mysqli_query($con,"SELECT * FROM user_register");
+                                                                $sql_user=mysqli_query($con,"SELECT * FROM Senders");
                                                                 $count_user=mysqli_num_rows($sql_user);
                                                             ?>
                                                             <span class="info-box-number"><?php echo $count_user;?></span>
@@ -430,7 +415,7 @@
                                                             <div class="info-box-content">
                                                                 <span class="info-box-text">TOTAL EARNING</span>
                                                                 <?php
-                                                                    $sql_amount=mysqli_query($con,"SELECT  sum(total_fare) as amount FROM notification_tbl where (driver_status='end_ride' OR driver_status ='Complete')");
+                                                                    $sql_amount=mysqli_query($con,"SELECT  sum(Price) as amount FROM Trips where (Status='D' OR Status ='C')");
                                                                     $amount=mysqli_fetch_assoc($sql_amount);
                                                                     $am=$amount['amount'];
                                                                 ?>
@@ -453,7 +438,7 @@
                                                                 <div class="info-box-content">
                                                                 <span class="info-box-text">TOTAL TRIPS</span>
                                                                 <?php
-                                                                    $sql_amount1=mysqli_query($con,"SELECT  count(id) as trips FROM notification_tbl");
+                                                                    $sql_amount1=mysqli_query($con,"SELECT  count(TripID) as trips FROM Trips");
                                                                     $amount1=mysqli_fetch_assoc($sql_amount1);
                                                                     $am1=$amount1['trips'];
                                                                 ?>
@@ -489,13 +474,9 @@
                                                             <div class="info-box-content">
                                                             <span class="info-box-text">CANCELLED TRIPS</span>
                                                             <?php
-                                                                $sql_amount22=mysqli_query($con,"SELECT  count(id) as cancle FROM notification_tbl where driver_status='cancel'");
+                                                                $sql_amount22=mysqli_query($con,"SELECT  count(TripID) as cancle FROM Trips where Status='N' OR Status='B'");
                                                                 $amount22=mysqli_fetch_assoc($sql_amount22);
                                                                 $am22=$amount22['cancle'];
-                                                                
-                                                                $sql_amount5=mysqli_query($con,"SELECT  count(id) as cancles FROM canclebooking");
-                                                                $amount5=mysqli_fetch_assoc($sql_amount5);
-                                                                $am5=$amount5['cancles'];
                                                             ?>
                                                             <span class="info-box-number"> <?php echo $am22; ?></span>
                                                         </div>
@@ -512,7 +493,7 @@
                                                                 <div class="info-box-content">
                                                                 <span class="info-box-text">COMPLETED TRIPS</span>
                                                                 <?php
-                                                                    $sql_amount1=mysqli_query($con,"SELECT  count(id) as trips FROM notification_tbl where driver_status='end_ride' OR driver_status='Complete' ");
+                                                                    $sql_amount1=mysqli_query($con,"SELECT  count(TripID) as trips FROM Trips where Status='C' OR Status='D' ");
                                                                     $amount1=mysqli_fetch_assoc($sql_amount1);
                                                                     $am1=$amount1['trips'];
                                                                 ?>
@@ -692,7 +673,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12"><div id="chartContainer" style="height: 245px; width: 260px;"></div></div>
                                             <div class="col-md-6">
                                                 <?php
-                                                $sql_amount1=mysqli_query($con,"SELECT  count(id) as trips FROM notification_tbl");
+                                                $sql_amount1=mysqli_query($con,"SELECT  count(id) as trips FROM Trips");
                                                 $amount1=mysqli_fetch_assoc($sql_amount1);
                                                 $am1=$amount1['trips'];
                                                 ?>

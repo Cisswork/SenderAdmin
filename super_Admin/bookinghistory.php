@@ -10,7 +10,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Booking History</title>
+  <title>Trip History</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -162,7 +162,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        BOOKING HISTORY
+        TRIP HISTORY
       </h1>
      
     </section>
@@ -201,12 +201,12 @@
                                             <select name="user_id" id="taxi">
                                                <option value="" >Select Sender Name</option>
                                                <?php   
-                                                $sql="SELECT * FROM user_register ORDER BY id DESC";
+                                                $sql="SELECT * FROM Senders ORDER BY SenderID  DESC";
                                                 $res=mysqli_query($con,$sql);
                                                 while($row=mysqli_fetch_assoc($res))
                                                 {
-                                                    $id = $row['id'];
-                                                    $name = $row['full_name']." ".$row['last_name'];
+                                                    $id = $row['SenderID'];
+                                                    $name = $row['FirstName']." ".$row['LastName'];
                                                 ?>
                                                 <option value="<?php echo $id ?>"><?php echo $name ?></option>
                                                 <?php } ?>
@@ -240,28 +240,17 @@
                                 <tr>
                             
                                     <th class="">S. NO.</th>
-                                    <th>Booking Id</th>
-                                    <th>Booking Status</th>
-                                    <!--<th>Company Name</th>-->
+                                    <th>Trip Id</th>
+                                    <th>Trip Status</th>
                                      <th>Source</th>
                                     <th>Destination</th>
                                     <th>Customer</th>
                                     <th>Driver</th>
-                                    <th>Booking Date</th>
+                                    <th>Trip Date</th>
                                     <th>Package Type</th>
-                                    
-                                    <!--<th>Distance</th>-->
-                                    <!--<th>Duration</th>-->
                                     <th>Payment Mode</th>
-                                    <!--<th>Base Fare</th>-->
-                                    <!--<th>Distance Fare</th>-->
-                                    <!--<th>Time Fare</th>-->
-                                    <!--<th>Tax</th>-->
                                     <th>Total Amount</th>
                                     <th>Total Discount</th>
-                                    <!--<th>Admin Commission</th>-->
-                                    <!--<th>Driver Toll Price</th>-->
-                                    <!--<th>Driver Earning</th>-->
                                     <th>Grand Total</th>
                                     <th>Action</th>
                                 </tr>
@@ -273,7 +262,7 @@
                                         $user_id = $_POST['user_id'];
                                         $driver_id = $_POST['driver_id'];
                                         
-                                        $query = "SELECT * FROM `notification_tbl` WHERE 1=1"; // Start with 1=1 to avoid syntax issues
+                                        $query = "SELECT * FROM `Trips` WHERE 1=1"; // Start with 1=1 to avoid syntax issues
                                         
                                         if (!empty($user_id)) {
                                             $query .= " AND `user_id`='$user_id'";
@@ -290,100 +279,56 @@
                                     }
                                     else 
                                     {
-                                      $sql="SELECT * FROM `notification_tbl` order by id desc";
+                                      $sql="SELECT * FROM `Trips` order by TripID  desc";
                                       $res=mysqli_query($con,$sql);
                                     }
                                     $count=0;                                      
                                     while($row=mysqli_fetch_assoc($res))
                                     {
-                                        $id=$row['id'];
-                                        $destination=$row['destination_add'];
-                                        $source=$row['source_add'];
-                                        $uem=$row['user_id'];
-                                        $status=$row['driver_status'];
-                                        $u_na=mysqli_query($con,"SELECT * FROM user_register WHERE id='$uem'");
+                                        $id=$row['TripID'];
+                                        $destination=$row['ToAddress'];
+                                        $source=$row['FromAddress'];
+                                        $uem=$row['SenderID'];
+                                        $status=$row['Status'];
+                                        $u_na=mysqli_query($con,"SELECT * FROM Senders WHERE SenderID='$uem'");
                                         $u_row=mysqli_fetch_assoc($u_na); 
-                                        $u_name=$u_row['full_name']." ".$u_row['last_name'];
-                                        $dem=$row['driver_id'];
+                                        $u_name=$u_row['FirstName']." ".$u_row['LastName'];
+                                        $dem=$row['DriverID'];
                                         $d_na=mysqli_query($con,"SELECT * FROM Drivers WHERE DriverID ='$dem'");
                                         $d_row=mysqli_fetch_assoc($d_na); 
                                         $d_name=$d_row['FirstName']." ".$d_row['LastName'];
                                         
                                         // Determine row color based on status
-                                        if($status == 'New Booking' || $status == 'confirm') {
+                                        if($status == 'R') {
                                             $color = 'LightYellow';
-                                        } elseif (in_array($status, ['accept', 'arrived', 'start_ride', 'onthe_way'])) {
+                                        } elseif (in_array($status, ['A', 'P'])) {
                                             $color = 'LightBlue';
-                                        } elseif (in_array($status, ['end_ride', 'Complete'])) {
+                                        } elseif (in_array($status, ['D','C'])) {
                                             $color = 'LightGreen';
-                                        } elseif ($status == 'cancel' && $row['cancel_by'] == 'User') {
+                                        } elseif ($status == 'N') {
                                             $color = 'LightCoral'; // Light red for cancelled by user
-                                        } elseif ($status == 'cancel' && $row['cancel_by'] == 'Driver') {
+                                        } elseif ($status == 'B') {
                                             $color = 'Salmon'; // Slightly different red for cancelled by driver
                                         }
+                                        
+                                        $select_status = mysqli_query($con,"SELECT * FROM `sys_trip_status` WHERE `trip_status_id`='$status'");
+                                        $fetch_status = mysqli_fetch_assoc($select_status);
                                     ?>  
                                 <tr style='background-color:<?php echo $color;?>'>
                                     <td class="center"><?php echo  ++$count;?></td>
-                                    <td class="center"><?php echo $row['id'];?></td>
-                                    <td class="center"><?php 
-                                    if($status=='New Booking')
-                                    {
-                                        echo 'New Booking';
-                                    }
-                                    elseif($status=='confirm')
-                                    {
-                                        echo 'Confirmed';
-                                    }
-                                    elseif($status=='accept')
-                                    {
-                                        echo 'Accepted';
-                                    }
-                                    elseif($status=='arrived')
-                                    {
-                                        echo 'Arrived';
-                                    }
-                                    elseif($status=='start_ride')
-                                    {
-                                        echo 'Start Ride';
-                                    }
-                                     elseif($status=='onthe_way')
-                                    {
-                                       echo 'On the Way';     
-                                    }
-                                    elseif($status=='end_ride' || $status=='Complete')
-                                    {
-                                       echo 'Complete'; 
-                                    }
-                                    elseif($status=='cancel' && $row['cancel_by']=='User')
-                                    {
-                                        echo 'Cancelled by user';
-                                    }
-                                    elseif($status=='cancel' && $row['cancel_by']=='Driver')
-                                    {
-                                        echo 'Cancelled by driver';
-                                    }
-                                    ?></td>
-                                    <!--<td class="center"><?php echo $res3['fullname'];?> </td>-->
+                                    <td class="center"><?php echo $row['TripID'];?></td>
+                                    <td><?php echo $fetch_status['trip_status_name']; ?></td>
                                     <td class="center"><?php echo $source; ?></td>
                                     <td class="center"><?php echo $destination;?></td>
                                     <td class="center"><?php echo $u_name; ?></td>
                                     <td class="center"><?php echo $d_name; ?></td>
-                                    <td class="center"><?php echo $row['ride_date'] ." " .$row['ride_time'];?></td>
+                                    <td class="center"><?php echo $row['RequestTime'];?></td>
                                     <td class="center"><?php echo $row['package_name'];?></td>
-                                    
-                                    <!--<td class="center"><?php echo $row['total_distance'];?></td>-->
-                                    <!--<td class="center"><?php echo $row['total_duration'];?></td>-->
                                     <td class="center"><?php echo $row['payment_mode'];?></td>
-                                    <!--<td class="center"><?php echo $row['base_fare_cost'];?></td>-->
-                                    <!--<td class="center"><?php echo $row['per_km_cost'];?></td>-->
-                                    <!--<td class="center"><?php echo $row['price_per_min'];?></td>-->
-                                    <!--<td class="center"><?php echo $row['tax_percent'];?></td>-->
-                                    <td class="center"><?php echo $row['trip_fare'];?></td>
-                                    <!--<td class="center"><?php echo $row['admin_commission'];?></td>-->
+                                    <td class="center"><?php echo $row['Cost'];?></td>
                                     <td class="center"><?php echo $row['discount'];?></td>
-                                    <!--<td class="center"></td>-->
-                                    <td class="center"><?php echo $row['total_fare'];?></td>
-                                    <td><a href="invoice.php?hv_id=<?php echo $row['id'];?>" class="btn btn-primary"><i class="fa fa-list-ul" aria-hidden="true"></i> <b>View Invoice</b></a></td>
+                                    <td class="center"><?php echo $row['Price'];?></td>
+                                    <td><a href="invoice.php?hv_id=<?php echo $id;?>" class="btn btn-primary"><i class="fa fa-list-ul" aria-hidden="true"></i> <b>View Invoice</b></a></td>
                                </tr>
                                <?php } ?>
                             </tbody>

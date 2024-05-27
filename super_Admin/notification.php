@@ -99,463 +99,462 @@
             <!-- /.box-header -->
                                     
    <?php
-    date_default_timezone_set('Asia/Kolkata');
-    $date = date('d-m-Y');
-      $time =date('h:i A', time());
-                   if(isset($_POST['submit'])  && ($_POST['framework1']) && ($_POST['framework']))
-                     {
-                        
-					   // Enabling error reporting
-                         error_reporting(0);
-                         ini_set('display_errors', 'On');
-                         
-                         require_once __DIR__ . '/firebase1.php';
-                         require_once __DIR__ . '/push1.php';
-                            
-                             
-                          $firebase = new Firebase();
-                          $push = new Push();
-                          
-					       $o1=$_POST['msg']; 
-                          //$add=$_POST['user']; 
-                           $legal_area=$_POST['framework1'];
-                           if( is_array($legal_area)){
-                            // while (list ($key, $val) = each ($legal_area)) {
-                                 foreach($legal_area as $key => $val) {
-                            //echo "$val <br>";
-                            //
-                            //else{echo "not array";}
-                           
-                           // optional payload
-                              $payload = array();
-                              $payload['team'] = 'India';
-                              $payload['score'] = '5.6';
-                             
-                              // notification title
-                              $title =$_POST['title'];
-                                $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
-                                
-                              // notification message
-                              $message=$o1;
-                               $push->setTitle($title);
-                               $push->setMessage($message);
-                               $push->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
-                              
-                               $push->setIsBackground(FALSE);
-                               $push->setPayload($payload);
-                               
-                               $sql=mysqli_query($con,"SELECT * FROM  `user_register` WHERE id='$val'");
-                               $number_of_rows =@mysqli_num_rows($sql);
-                               if($number_of_rows==0)
-                                {
-                                  $m["result"] = "unsuccessful";
-                            
-                                }
-                                else
-                                {
-                                  while($row=@mysqli_fetch_assoc($sql))
-                                  {
-                                      $dt=$date.' '.$time;
-                                $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
-                                VALUES ('','$val','','$title','$message','$dt','Admin')");
-                                      $ds=$row['device_status'];
-                    	             if($ds=='IOS' || $ds=='Android')
-                    	            {  
-                    	                $deviceTokenu=$row['iosdevice_id'];
-                                        // $json = '';
-                                        // $response = '';
-                                        // $json = $push->getPush();
-                                        // $iosresponse = $firebase->send($deviceToken, $json);
-                                         $m["result"] = "success";
-                                  $regId=$row['device_id'];
-                                   $json = '';
-                                   $response = '';
-                                   $json = $push->getPush();
-                                       
-                                 $response = $firebase->send($regId,$json);
-                               }
-                            } 
-                            //IOS User
-                                $ch = curl_init("https://fcm.googleapis.com/fcm/send");
-
-                                //The device token.
-                                $token = $deviceTokenu; //token here
-                            
-                                //Title of the Notification.
-                                //$title = "Carbon";
-                            
-                                //Body of the Notification.
-                                //$body = "Bear island knows no king but the king in the north, whose name is stark.";
-                            
-                                //Creating the notification array.
-                                $notification = array('title' =>$title , 'body' => $message, 'sound' => 'default', 'badge' => '1');
-                            
-                                //This array contains, the token and the notification. The 'to' attribute stores the token.
-                                $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
-                            
-                                //Generating JSON encoded string form the above array.
-                                $json = json_encode($arrayToSend);
-                                //Setup headers:
-                                $headers = array();
-                                $headers[] = 'Content-Type: application/json';
-                                $headers[] = 'Authorization: key= AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
-                            
-                                //Setup curl, add headers and post parameters.
-                                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-                                curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-                                curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
-                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);//to comment auto response 
-                                //Send the request
-                                $response = curl_exec($ch);
-                            
-                                //Close request
-                                curl_close($ch);
-                                //return $response;
-                               }  }}
-                   // Enabling error reporting
-                         error_reporting(-1);
-                         ini_set('display_errors', 'On');
-                         
-                         require_once __DIR__ . '/firebase.php';
-                         require_once __DIR__ . '/push.php';
-                            
-                           $o1=$_POST['msg'];    
-                          $firebase1 = new Firebase1();
-                          $push1 = new Push1();
-                           $legal_area1=$_POST['framework'];
-                           if( is_array($legal_area1)){
-                            // while (list ($key1, $val1) = each ($legal_area1)) {
-                                 foreach($legal_area1 as $key1 => $val1) {
-                            //echo "$val <br>";
-                            //
-                            //else{echo "not array";}
-                           
-                           // optional payload
-                              $payload1 = array();
-                              $payload1['team'] = 'India';
-                              $payload1['score'] = '5.6';
-                             
-                              // notification title
-                              $title1 =$_POST['title'];
-                                     
-                              // notification message
-                              $message1=$o1;
-                                    
-                               $push1->setTitle($title1);
-                               $push1->setMessage($message1);
-                               $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
-                               $push1->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
-                               $push1->setIsBackground(FALSE);
-                               $push1->setPayload($payload1);
-                        
-                               $sql1=mysqli_query($con,"SELECT * FROM  `Drivers` WHERE DriverID='$val1'");
-                               $number_of_rows1 =@mysqli_num_rows($sql1);
-                               if($number_of_rows1==0)
-                                {
-                                  $m["result"] = "unsuccessful";
-                                }
-                                else
-                                {
-                                  while($row=@mysqli_fetch_assoc($sql1))
-                                  {
-                                      $ds=$row['device_status'];
-                    	             if($ds=='IOS' || $ds=='Android')
-                    	            {  
-                    	                $deviceToken=$row['iosDriver_device_id'];
-                                        $json = '';
-                                        $response = '';
-                                        $json = $push->getPush();
-                                        $iosresponse = $firebase->send($deviceToken, $json);
-                                        $m["result"] = "success";
-                                   $regId1=$row['Driver_device_id'];
-                                   $json1 = '';
-                                   $response1 = '';
-                                   $json1 = $push1->getPush();
-                                       
-                                  $response1 = $firebase1->send($regId1,$json1);
-                                  
-                             $dt=$date.' '.$time;
-                             $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
-                                VALUES ('','','$val1','$title1','$message1','$dt','Admin')");    
-                               }
-                            }
-                            
-                            //IOS Driver
-                            $ch = curl_init("https://fcm.googleapis.com/fcm/send");
-
-                            //The device token.
-                            $token = $deviceToken; //token here
-                        
-                            //Title of the Notification.
-                            //$title = "Carbon";
-                        
-                            //Body of the Notification.
-                            //$body = "Bear island knows no king but the king in the north, whose name is stark.";
-                        
-                            //Creating the notification array.
-                            $notification = array('title' =>$title1 , 'body' => $message1, 'sound' => 'default', 'badge' => '1');
-                        
-                            //This array contains, the token and the notification. The 'to' attribute stores the token.
-                            $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
-                         
-                             $json = json_encode($arrayToSend);
-                            //Setup headers:
-                            $headers = array();
-                            $headers[] = 'Content-Type: application/json';
-                            $headers[] = 'Authorization: key= AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
-                        
-                            //Setup curl, add headers and post parameters.
-                            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-                            curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
-                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);//to comment auto response 
-                            //Send the request
-                            $response = curl_exec($ch);
-                        
-                            //Close request
-                            curl_close($ch);
-                            //return $response;
-                        }
-                           }}
-                        //die; 
-                       
-                        
-                         $perr="Notification is added successfully!";
-                          echo "<script type='text/javascript'>alert(\"$perr\");</script>";
-                                  echo'<script>window.location="notification.php";</script>';
-                                  
+        date_default_timezone_set('Asia/Kolkata');
+        $date = date('d-m-Y');
+        $time =date('h:i A', time());
+        if(isset($_POST['submit'])  && ($_POST['framework1']) && ($_POST['framework']))
+        {
+            
+    	   // Enabling error reporting
+             error_reporting(0);
+             ini_set('display_errors', 'On');
+             
+             require_once __DIR__ . '/firebase1.php';
+             require_once __DIR__ . '/push1.php';
+                
+                 
+              $firebase = new Firebase();
+              $push = new Push();
+              
+    	       $o1=$_POST['msg']; 
+              //$add=$_POST['user']; 
+               $legal_area=$_POST['framework1'];
+               if( is_array($legal_area)){
+                // while (list ($key, $val) = each ($legal_area)) {
+                     foreach($legal_area as $key => $val) {
+                //echo "$val <br>";
+                //
+                //else{echo "not array";}
+               
+               // optional payload
+                  $payload = array();
+                  $payload['team'] = 'India';
+                  $payload['score'] = '5.6';
+                 
+                  // notification title
+                  $title =$_POST['title'];
+                    $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
+                    
+                  // notification message
+                  $message=$o1;
+                   $push->setTitle($title);
+                   $push->setMessage($message);
+                   $push->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
+                  
+                   $push->setIsBackground(FALSE);
+                   $push->setPayload($payload);
+                   
+                   $sql=mysqli_query($con,"SELECT * FROM  `user_register` WHERE id='$val'");
+                   $number_of_rows =@mysqli_num_rows($sql);
+                   if($number_of_rows==0)
+                    {
+                      $m["result"] = "unsuccessful";
+                
                     }
-                    elseif(isset($_POST['submit']) && ($_POST['framework1']) && ($_POST['framework']=='') && ($_POST['msg']) )
-                     {
-                        
-					   // Enabling error reporting
-                         error_reporting(-1);
-                         ini_set('display_errors', 'On');
-                         
-                         require_once __DIR__ . '/firebase1.php';
-                         require_once __DIR__ . '/push1.php';
-                            
-                             
-                          $firebase = new Firebase();
-                          $push = new Push();
-                          
-					       $o1=$_POST['msg']; 
-                          //$add=$_POST['user']; 
-                           $legal_area=$_POST['framework1'];
-                           if( is_array($legal_area)){
-                            // while (list ($key, $val) = each ($legal_area)) {
-                                foreach($legal_area as $key => $val) {
-                            //echo "$val <br>";
-                            //
-                            //else{echo "not array";}
+                    else
+                    {
+                      while($row=@mysqli_fetch_assoc($sql))
+                      {
+                          $dt=$date.' '.$time;
+                    $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
+                    VALUES ('','$val','','$title','$message','$dt','Admin')");
+                          $ds=$row['device_status'];
+        	             if($ds=='IOS' || $ds=='Android')
+        	            {  
+        	                $deviceTokenu=$row['iosdevice_id'];
+                            // $json = '';
+                            // $response = '';
+                            // $json = $push->getPush();
+                            // $iosresponse = $firebase->send($deviceToken, $json);
+                             $m["result"] = "success";
+                      $regId=$row['device_id'];
+                       $json = '';
+                       $response = '';
+                       $json = $push->getPush();
                            
-                           // optional payload
-                              $payload = array();
-                              $payload['team'] = 'India';
-                              $payload['score'] = '5.6';
-                             
-                              // notification title
-                              $title =$_POST['title'];
-                                $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
-                                
-                              // notification message
-                              $message=$o1;
-                               $push->setTitle($title);
-                               $push->setMessage($message);
-                               $push->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
-                              
-                               $push->setIsBackground(FALSE);
-                               $push->setPayload($payload);
-                               
-                               $sql=mysqli_query($con,"SELECT * FROM  `user_register` WHERE id='$val'");
-                               $number_of_rows =@mysqli_num_rows($sql);
-                               if($number_of_rows==0)
-                                {
-                                  $m["result"] = "unsuccessful";
-                            
-                                }
-                                else
-                                {
-                                  while($row=@mysqli_fetch_assoc($sql))
-                                  {
-                                $dt=$date.' '.$time;
-                                 $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
-                                VALUES ('','$val','','$title','$message','$dt','Admin')"); 
-                               
-                                      $ds=$row['device_status'];
-                                       
-                    	             if($ds=='IOS' || $ds=='Android')
-                    	            {  
-                    	               $deviceTokenu=$row['iosdevice_id'];
-                                        // $json = '';
-                                        // $response = '';
-                                        // $json = $push->getPush();
-                                        // $iosresponse = $firebase->send($deviceTokenu, $json);
-                                         $m["result"] = "success";
-                                  $regId=$row['device_id'];
-                                   $json = '';
-                                   $response = '';
-                                   $json = $push->getPush();
-                                       
-                                 $response = $firebase->send($regId,$json);
-                               }
-                            } 
-                            //Ios User
-                                $ch = curl_init("https://fcm.googleapis.com/fcm/send");
-
-                                //The device token.
-                                $token = $deviceTokenu; //token here
-                            
-                                //Title of the Notification.
-                                //$title = "Carbon";
-                            
-                                //Body of the Notification.
-                                //$body = "Bear island knows no king but the king in the north, whose name is stark.";
-                            
-                                //Creating the notification array.
-                                $notification = array('title' =>$title , 'body' => $message, 'sound' => 'default', 'badge' => '1');
-                            
-                                //This array contains, the token and the notification. The 'to' attribute stores the token.
-                                $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
-                            
-                                //Generating JSON encoded string form the above array.
-                                $json = json_encode($arrayToSend);
-                                //Setup headers:
-                                $headers = array();
-                                $headers[] = 'Content-Type: application/json';
-                                $headers[] = 'Authorization: key=AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
-                            
-                                //Setup curl, add headers and post parameters.
-                                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-                                curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-                                curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
-                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                                //Send the request
-                                $response = curl_exec($ch);
-                            
-                                //Close request
-                                curl_close($ch);
-                               }  }}
-                                        
-                                        //$sql=mysqli_query($con,"INSERT INTO `user_admin_notification`(`user_id`, `title`, `message`, `date`, `time`) VALUES('$val3','$title','$message','$date','$time')"); 
-                                  $perr="Notification is added successfully!";
-                                  echo "<script type='text/javascript'>alert(\"$perr\");</script>";
-                                  echo'<script>window.location="notification.php";</script>';
-                     }
-                      elseif(isset($_POST['submit']) && ($_POST['framework1']=='') && ($_POST['framework']) && ($_POST['msg']))
-                     {
-                        
-					   // Enabling error reporting
-                         error_reporting(-1);
-                         ini_set('display_errors', 'On');
+                     $response = $firebase->send($regId,$json);
+                   }
+                } 
+                //IOS User
+                    $ch = curl_init("https://fcm.googleapis.com/fcm/send");
+    
+                    //The device token.
+                    $token = $deviceTokenu; //token here
+                
+                    //Title of the Notification.
+                    //$title = "Carbon";
+                
+                    //Body of the Notification.
+                    //$body = "Bear island knows no king but the king in the north, whose name is stark.";
+                
+                    //Creating the notification array.
+                    $notification = array('title' =>$title , 'body' => $message, 'sound' => 'default', 'badge' => '1');
+                
+                    //This array contains, the token and the notification. The 'to' attribute stores the token.
+                    $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
+                
+                    //Generating JSON encoded string form the above array.
+                    $json = json_encode($arrayToSend);
+                    //Setup headers:
+                    $headers = array();
+                    $headers[] = 'Content-Type: application/json';
+                    $headers[] = 'Authorization: key= AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
+                
+                    //Setup curl, add headers and post parameters.
+                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+                    curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);//to comment auto response 
+                    //Send the request
+                    $response = curl_exec($ch);
+                
+                    //Close request
+                    curl_close($ch);
+                    //return $response;
+                   }  }}
+       // Enabling error reporting
+             error_reporting(-1);
+             ini_set('display_errors', 'On');
+             
+             require_once __DIR__ . '/firebase.php';
+             require_once __DIR__ . '/push.php';
+                
+               $o1=$_POST['msg'];    
+              $firebase1 = new Firebase1();
+              $push1 = new Push1();
+               $legal_area1=$_POST['framework'];
+               if( is_array($legal_area1)){
+                // while (list ($key1, $val1) = each ($legal_area1)) {
+                     foreach($legal_area1 as $key1 => $val1) {
+                //echo "$val <br>";
+                //
+                //else{echo "not array";}
+               
+               // optional payload
+                  $payload1 = array();
+                  $payload1['team'] = 'India';
+                  $payload1['score'] = '5.6';
+                 
+                  // notification title
+                  $title1 =$_POST['title'];
                          
-                         require_once __DIR__ . '/firebase.php';
-                         require_once __DIR__ . '/push.php';
-                            
-                           $o1=$_POST['msg'];    
-                          $firebase1 = new Firebase1();
-                          $push1 = new Push1();
-                          $legal_area1=$_POST['framework'];
-                           if( is_array($legal_area1)){
-                            // while (list ($key4, $val4) = each ($legal_area1)) {
-                                 foreach($legal_area1 as $key4 => $val4) {
-                            //echo "$val <br>";
-                            //
-                            //else{echo "not array";}
+                  // notification message
+                  $message1=$o1;
+                        
+                   $push1->setTitle($title1);
+                   $push1->setMessage($message1);
+                   $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
+                   $push1->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
+                   $push1->setIsBackground(FALSE);
+                   $push1->setPayload($payload1);
+            
+                   $sql1=mysqli_query($con,"SELECT * FROM  `Drivers` WHERE DriverID='$val1'");
+                   $number_of_rows1 =@mysqli_num_rows($sql1);
+                   if($number_of_rows1==0)
+                    {
+                      $m["result"] = "unsuccessful";
+                    }
+                    else
+                    {
+                      while($row=@mysqli_fetch_assoc($sql1))
+                      {
+                          $ds=$row['device_status'];
+        	             if($ds=='IOS' || $ds=='Android')
+        	            {  
+        	                $deviceToken=$row['iosDriver_device_id'];
+                            $json = '';
+                            $response = '';
+                            $json = $push->getPush();
+                            $iosresponse = $firebase->send($deviceToken, $json);
+                            $m["result"] = "success";
+                       $regId1=$row['Driver_device_id'];
+                       $json1 = '';
+                       $response1 = '';
+                       $json1 = $push1->getPush();
                            
-                           // optional payload
-                              $payload1 = array();
-                              $payload1['team'] = 'India';
-                              $payload1['score'] = '5.6';
-                             
-                              // notification title
-                              $title1 =$_POST['title'];
-                                     
-                              // notification message
-                              $message1=$o1;
-                                    
-                               $push1->setTitle($title1);
-                               $push1->setMessage($message1);
-                                $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
-                               $push1->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
-                               $push1->setIsBackground(FALSE);
-                               $push1->setPayload($payload1);
-                               
-                               $sql1=mysqli_query($con,"SELECT * FROM  `Drivers` WHERE DriverID='$val4'");
-                               $number_of_rows1 =@mysqli_num_rows($sql1);
-                               if($number_of_rows1==0)
-                                {
-                                  $m["result"] = "unsuccessful";
+                      $response1 = $firebase1->send($regId1,$json1);
+                      
+                 $dt=$date.' '.$time;
+                 $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
+                    VALUES ('','','$val1','$title1','$message1','$dt','Admin')");    
+                   }
+                }
+                
+                //IOS Driver
+                $ch = curl_init("https://fcm.googleapis.com/fcm/send");
+    
+                //The device token.
+                $token = $deviceToken; //token here
+            
+                //Title of the Notification.
+                //$title = "Carbon";
+            
+                //Body of the Notification.
+                //$body = "Bear island knows no king but the king in the north, whose name is stark.";
+            
+                //Creating the notification array.
+                $notification = array('title' =>$title1 , 'body' => $message1, 'sound' => 'default', 'badge' => '1');
+            
+                //This array contains, the token and the notification. The 'to' attribute stores the token.
+                $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
+             
+                 $json = json_encode($arrayToSend);
+                //Setup headers:
+                $headers = array();
+                $headers[] = 'Content-Type: application/json';
+                $headers[] = 'Authorization: key= AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
+            
+                //Setup curl, add headers and post parameters.
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+                curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);//to comment auto response 
+                //Send the request
+                $response = curl_exec($ch);
+            
+                //Close request
+                curl_close($ch);
+                //return $response;
+            }
+               }}
+            //die; 
+           
+            
+             $perr="Notification is added successfully!";
+              echo "<script type='text/javascript'>alert(\"$perr\");</script>";
+                      echo'<script>window.location="notification.php";</script>';
+                      
+        }
+        elseif(isset($_POST['submit']) && ($_POST['framework1']) && ($_POST['framework']=='') && ($_POST['msg']) )
+        {
+            
+    	   // Enabling error reporting
+             error_reporting(-1);
+             ini_set('display_errors', 'On');
+             
+             require_once __DIR__ . '/firebase1.php';
+             require_once __DIR__ . '/push1.php';
+                
+                 
+              $firebase = new Firebase();
+              $push = new Push();
+              
+    	       $o1=$_POST['msg']; 
+              //$add=$_POST['user']; 
+               $legal_area=$_POST['framework1'];
+               if( is_array($legal_area)){
+                // while (list ($key, $val) = each ($legal_area)) {
+                    foreach($legal_area as $key => $val) {
+                //echo "$val <br>";
+                //
+                //else{echo "not array";}
+               
+               // optional payload
+                  $payload = array();
+                  $payload['team'] = 'India';
+                  $payload['score'] = '5.6';
+                 
+                  // notification title
+                  $title =$_POST['title'];
+                    $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
+                    
+                  // notification message
+                  $message=$o1;
+                   $push->setTitle($title);
+                   $push->setMessage($message);
+                   $push->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
+                  
+                   $push->setIsBackground(FALSE);
+                   $push->setPayload($payload);
+                   
+                   $sql=mysqli_query($con,"SELECT * FROM  `user_register` WHERE id='$val'");
+                   $number_of_rows =@mysqli_num_rows($sql);
+                   if($number_of_rows==0)
+                    {
+                      $m["result"] = "unsuccessful";
+                
+                    }
+                    else
+                    {
+                      while($row=@mysqli_fetch_assoc($sql))
+                      {
+                    $dt=$date.' '.$time;
+                     $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
+                    VALUES ('','$val','','$title','$message','$dt','Admin')"); 
+                   
+                          $ds=$row['device_status'];
+                           
+        	             if($ds=='IOS' || $ds=='Android')
+        	            {  
+        	               $deviceTokenu=$row['iosdevice_id'];
+                            // $json = '';
+                            // $response = '';
+                            // $json = $push->getPush();
+                            // $iosresponse = $firebase->send($deviceTokenu, $json);
+                             $m["result"] = "success";
+                      $regId=$row['device_id'];
+                       $json = '';
+                       $response = '';
+                       $json = $push->getPush();
+                           
+                     $response = $firebase->send($regId,$json);
+                   }
+                } 
+                //Ios User
+                    $ch = curl_init("https://fcm.googleapis.com/fcm/send");
+    
+                    //The device token.
+                    $token = $deviceTokenu; //token here
+                
+                    //Title of the Notification.
+                    //$title = "Carbon";
+                
+                    //Body of the Notification.
+                    //$body = "Bear island knows no king but the king in the north, whose name is stark.";
+                
+                    //Creating the notification array.
+                    $notification = array('title' =>$title , 'body' => $message, 'sound' => 'default', 'badge' => '1');
+                
+                    //This array contains, the token and the notification. The 'to' attribute stores the token.
+                    $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
+                
+                    //Generating JSON encoded string form the above array.
+                    $json = json_encode($arrayToSend);
+                    //Setup headers:
+                    $headers = array();
+                    $headers[] = 'Content-Type: application/json';
+                    $headers[] = 'Authorization: key=AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
+                
+                    //Setup curl, add headers and post parameters.
+                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+                    curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                    //Send the request
+                    $response = curl_exec($ch);
+                
+                    //Close request
+                    curl_close($ch);
+                   }  }}
                             
+                            //$sql=mysqli_query($con,"INSERT INTO `user_admin_notification`(`user_id`, `title`, `message`, `date`, `time`) VALUES('$val3','$title','$message','$date','$time')"); 
+                      $perr="Notification is added successfully!";
+                      echo "<script type='text/javascript'>alert(\"$perr\");</script>";
+                      echo'<script>window.location="notification.php";</script>';
+         }
+        elseif(isset($_POST['submit']) && ($_POST['framework1']=='') && ($_POST['framework']) && ($_POST['msg']))
+        {
+            
+    	   // Enabling error reporting
+             error_reporting(-1);
+             ini_set('display_errors', 'On');
+             
+             require_once __DIR__ . '/firebase.php';
+             require_once __DIR__ . '/push.php';
+                
+               $o1=$_POST['msg'];    
+              $firebase1 = new Firebase1();
+              $push1 = new Push1();
+              $legal_area1=$_POST['framework'];
+               if( is_array($legal_area1))
+               {
+                     foreach($legal_area1 as $key4 => $val4) 
+                     {
+                //echo "$val <br>";
+                
+                  $payload1 = array();
+                  $payload1['team'] = 'India';
+                  $payload1['score'] = '5.6';
+                 
+                  // notification title
+                  $title1 =$_POST['title'];
+                         
+                  // notification message
+                  $message1=$o1;
+                        
+                   $push1->setTitle($title1);
+                   $push1->setMessage($message1);
+                   // $path="http://cisswork.com/Android/guru_taxi/Guru_taxi_Admin/SuperAdmin/dist/img/imageedit_1_3447018947.png";
+                  // $push1->setImage(json_encode($path, JSON_UNESCAPED_SLASHES));
+                  // $push1->setIsBackground(FALSE);
+                   $push1->setPayload($payload1);
+                   
+                   $sql1=mysqli_query($con,"SELECT * FROM  `Drivers` WHERE DriverID='$val4'");
+                   $number_of_rows1 =@mysqli_num_rows($sql1);
+                   if($number_of_rows1==0)
+                    {
+                      $m["result"] = "unsuccessful";
+                
+                    }
+                    else
+                    {
+                      $dt=$date.' '.$time;
+                      $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
+                    VALUES ('','','$val4','$title1','$message1','$dt','Admin')");     
+                      while($row=@mysqli_fetch_assoc($sql1))
+                      {
+                        $ds=$row['device_status'];
+    	             if($ds=='IOS' || $ds=='Android')
+    	            {  
+    	                
+    	            $deviceToken=$row['iosDriver_device_id'];
+                    // $json = '';
+                    // $response = '';
+                    // $json = $push1->getPush();
+                    // $iosresponse = $firebase1->send($deviceToken, $json);  
+                    $m["result"] = "success";
+                       $regId1=$row['Driver_device_id'];
+                       $json1 = '';
+                       $response1 = '';
+                       $json1 = $push1->getPush();
+                       $response1 = $firebase1->send($regId1,$json1);
+                      }
+                }
+                // IOs Driver code   
+               $ch = curl_init("https://fcm.googleapis.com/fcm/send");
+    
+                //The device token.
+                $token = $regId1; //token here
+            
+                //Title of the Notification.
+                //$title = "Carbon";
+            
+                //Body of the Notification.
+                //$body = "Bear island knows no king but the king in the north, whose name is stark.";
+            
+                //Creating the notification array.
+                $notification = array('title' =>$title1 , 'body' => $message1, 'sound' => 'default', 'badge' => '1');
+            
+                //This array contains, the token and the notification. The 'to' attribute stores the token.
+                $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
+             
+                 $json = json_encode($arrayToSend);
+                //Setup headers:
+                $headers = array();
+                $headers[] = 'Content-Type: application/json';
+                $headers[] = 'Authorization: key=AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
+            
+            
+                //Setup curl, add headers and post parameters.
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+                curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                //Send the request
+           echo     $response = curl_exec($ch);
+            
+                //Close request
+                curl_close($ch);
+                //return $response;
+    }
                                 }
-                                else
-                                {
-                                  $dt=$date.' '.$time;
-                                  $sql=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`, `type`)
-                                VALUES ('','','$val4','$title1','$message1','$dt','Admin')");     
-                                  while($row=@mysqli_fetch_assoc($sql1))
-                                  {
-                                    $ds=$row['device_status'];
-                	             if($ds=='IOS' || $ds=='Android')
-                	            {  
-                	                
-                	            $deviceToken=$row['iosDriver_device_id'];
-                                // $json = '';
-                                // $response = '';
-                                // $json = $push1->getPush();
-                                // $iosresponse = $firebase1->send($deviceToken, $json);  
-                                $m["result"] = "success";
-                                   $regId1=$row['Driver_device_id'];
-                                   $json1 = '';
-                                   $response1 = '';
-                                   $json1 = $push1->getPush();
-                                   $response1 = $firebase1->send($regId1,$json1);
-                                  }
                             }
-                            // IOs Driver code   
-                           $ch = curl_init("https://fcm.googleapis.com/fcm/send");
-
-                            //The device token.
-                            $token = $deviceToken; //token here
-                        
-                            //Title of the Notification.
-                            //$title = "Carbon";
-                        
-                            //Body of the Notification.
-                            //$body = "Bear island knows no king but the king in the north, whose name is stark.";
-                        
-                            //Creating the notification array.
-                            $notification = array('title' =>$title1 , 'body' => $message1, 'sound' => 'default', 'badge' => '1');
-                        
-                            //This array contains, the token and the notification. The 'to' attribute stores the token.
-                            $arrayToSend = array('to' => $token, 'notification' => $notification,'priority'=>'high');
-                         
-                             $json = json_encode($arrayToSend);
-                            //Setup headers:
-                            $headers = array();
-                            $headers[] = 'Content-Type: application/json';
-                            $headers[] = 'Authorization: key=AAAAnuz262g:APA91bG4gp3xM3RSrbPKTRUuQHAdBLmk_aISt9OewedbBlfNkeKJ7sIk7jg8txl42cclMTC7SM_YHr2clEL9vtGhI0dl508bSpRv2B7OG0g5j0JlE1dXSsx-rOl6fyksrvdwKLZFqhC8'; // key here
-                        
-                            //Setup curl, add headers and post parameters.
-                            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-                            curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
-                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                            //Send the request
-                            $response = curl_exec($ch);
-                        
-                            //Close request
-                            curl_close($ch);
-                            //return $response;
-}
-                                            }
-                                        }
-                            
-                                  $perr="Notification is added successfully!";
-                                  echo "<script type='text/javascript'>alert(\"$perr\");</script>";
-                                  echo'<script>window.location="notification.php";</script>';
-                                }
-            				?>
+                
+                    //   $perr="Notification is added successfully!";
+                    //   echo "<script type='text/javascript'>alert(\"$perr\");</script>";
+                    //   echo'<script>window.location="notification.php";</script>';
+                    }
+	?>
  
    <form method="post" id="framework_form">
 <div class="row">

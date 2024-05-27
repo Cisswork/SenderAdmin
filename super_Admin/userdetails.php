@@ -180,7 +180,7 @@
                                       <!--<li><a href="#tab_4" data-toggle="tab">User Cancel Request</a></li>-->
                                       <!-- <li><a href="#tab_41" data-toggle="tab">Driver Cancel Request</a></li>-->
                                       <!--<li><a href="#tab_5" data-toggle="tab">Complete Trip</a></li>-->
-                                      <li><a href="#tab_6" data-toggle="tab">Total Payment</a></li>
+                                      <!--<li><a href="#tab_6" data-toggle="tab">Total Payment</a></li>-->
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="tab_0">
@@ -191,22 +191,22 @@
                                           $path="https://cisswork.com/Android/SenderApp/images/";
                                           $def="https://cisswork.com/Android/SenderApp/super_Admin/logo (2).png";
                                           $id=$_GET['id'];
-                                          $sql="SELECT * FROM user_register WHERE id='$id'";
+                                          $sql="SELECT * FROM Senders WHERE SenderID='$id'";
                                           $sql_res=mysqli_query($con,$sql);
                                           $row=mysqli_fetch_assoc($sql_res);
-                                          $id=$row['id'];
-                                          $f_n=$row['full_name'];
+                                          $id=$row['SenderID'];
+                                          $f_n=$row['FirstName'];
+                                          $lastname  = $row['LastName'];
                                           $code=$row['country_code'];
-                                          $cn=$row['contact'];
-                                          $em=$row['email'];
-                                          $ps=$row['password'];
-                                         // $add=$row['address'];
+                                          $cn=$row['Phone'];
+                                          $em=$row['Email'];
+                                          $ps=$row['Password'];
                                           $img=$row['image'];
-                                          //$wo=$row['wrok'];
                                           
                                          if(isset($_POST['add']) && !empty($_POST['add']))
                                          {
                                              $firstname=$_POST['name'];
+                                             $lastname  = $_POST['surname'];
                                              $cd=$_POST['code'];
                                              $contact=$_POST['contact'];
                                              $em=$_POST['email'];
@@ -235,7 +235,7 @@
                                               
                                            if($image=="" && $image1=="")
                                            {
-                                               $insert=mysqli_query($con,"UPDATE `user_register` SET `full_name`='$firstname',`email`='$em',password='$password',`country_code`='$cd',`contact`='$contact',id_expiry_date='$expiry_date' WHERE id='$id'");
+                                               $insert=mysqli_query($con,"UPDATE `Senders` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$em',Password='$password',`country_code`='$cd',`Phone`='$contact',id_expiry_date='$expiry_date' WHERE SenderID='$id'");
                                                //die(mysqli_error($con));
                                                if($insert)
                                                 {
@@ -251,7 +251,7 @@
                                            }
                                            elseif($image!=""  && $image1=="")
                                            {
-                                               $insert=mysqli_query($con,"UPDATE `user_register` SET `full_name`='$firstname',`email`='$em',password='$password',`country_code`='$cd',`contact`='$contact',image='$fname',id_expiry_date='$expiry_date' WHERE id='$id'");
+                                               $insert=mysqli_query($con,"UPDATE `Senders` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$em',Password='$password',`country_code`='$cd',`Phone`='$contact',image='$fname',id_expiry_date='$expiry_date' WHERE SenderID='$id'");
                                                //die(mysqli_error($con));
                                                if($insert)
                                                 {
@@ -267,7 +267,7 @@
                                            }
                                            elseif($image=="" && $image1!="")
                                            {
-                                           $insert=mysqli_query($con,"UPDATE `user_register` SET `full_name`='$firstname',`email`='$em',password='$password',`country_code`='$cd',`contact`='$contact',id_proof_image='$fname1',id_expiry_date='$expiry_date' WHERE id='$id'");
+                                           $insert=mysqli_query($con,"UPDATE `Senders` SET `FirstName`='$firstname',`LastName`='$lastname',`Email`='$em',Password='$password',`country_code`='$cd',`Phone`='$contact',id_proof_image='$fname1',id_expiry_date='$expiry_date' WHERE SenderID='$id'");
                                            //die(mysqli_error($con));
                                            if($insert)
                                             {
@@ -282,15 +282,9 @@
                                             }
                                            }
                                            else
-                                           {
-                                        //   $sizes = array(250 => 250);
-                                        //   $a_name=str_replace(" ","",$_FILES['image']['name']);
-                                        //   foreach ($sizes as $w => $h) 
-                                        //   {
-                                        //       $files[]=resize($w, $h);
-                                        //   }  
+                                           { 
                                            
-                                         $sql=mysqli_query($con,"UPDATE user_register SET full_name='$firstname',password='$password',`country_code`='$cd',`contact`='$contact',email='$em',image='$fname',id_proof_image='$fname1',id_expiry_date='$expiry_date' WHERE id='$id'");
+                                         $sql=mysqli_query($con,"UPDATE Senders SET FirstName='$firstname',`LastName`='$lastname',Password='$password',`country_code`='$cd',`Phone`='$contact',Email='$em',image='$fname',id_proof_image='$fname1',id_expiry_date='$expiry_date' WHERE SenderID='$id'");
                                          
                                      //die(mysqli_error($con));
                                          if($sql)
@@ -310,11 +304,21 @@
                                         
                                     ?>
                      <form role="form" method="post" class="validate" id="emailForm" enctype="multipart/form-data">
-                    
-                      <div class="form-group">
-                        <label class="control-label" for="name">Name</label>
-                        <input type="text" name="name" class="form-control required" placeholder="Name" value="<?php echo $f_n;?>">
-                    </div>
+                   
+                        <div class="form-group col-md-6">
+                            <label class="control-label" for="name">First Name *</label>
+                            <input type="text" name="name"  value="<?php echo $f_n;?>"id="textInput" onblur="clearTextField()" class="form-control required" placeholder="First Name" required>
+                             <div id="errorText3" style="color: red;"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label" for="name">Last Name *</label>
+                            <input type="text" name="surname" value="<?php echo $lastname;?>" id="textInput" onblur="clearTextField()" class="form-control required" placeholder="Last Name" required>
+                             <div id="errorText3" style="color: red;"></div>
+                        </div>
+                    <!--  <div class="form-group">-->
+                    <!--    <label class="control-label" for="name">Name</label>-->
+                    <!--    <input type="text" name="name" class="form-control required" placeholder="Name" value="<?php echo $f_n;?>">-->
+                    <!--</div>-->
                     <div class="form-group">
                         <label class="control-label" for="name">Email</label>
                         <input type="email" name="email" id="emailInput" class="form-control required" autoComplete="new-password" onkeyup="validateEmail()"  onblur="clearEmailField()" value="<?php echo $em;?>">
@@ -326,15 +330,6 @@
                         <input type="password" id="passwordInput" onkeyup="validatePassword()"  name="pass" class="form-control required" autoComplete="new-password" onblur="clearPassword()" value="<?php echo $ps;?>" required>
                         <div id="errorText2" style="color: red;"></div>
                     </div>
-                    
-                    <!--<div class="form-group">-->
-                    <!--    <label class="control-label" for="name">Work (business profile)</label>-->
-                    <!--    <input type="text" name="work" class="form-control required" placeholder="business profile" value="<?php echo $wo;?>">-->
-                    <!--</div>-->
-                  <!--  <div class="form-group">-->
-                  <!--      <label class="control-label"   for="name">Phone</label>-->
-                  <!--     <input  type="tel"  name="contact"  required class="form-control required" placeholder=" Please Enter Phone Number" value="<?php echo $cn;?>">-->
-                  <!--</div>-->
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label class="control-label"   for="name">Phone</label>
