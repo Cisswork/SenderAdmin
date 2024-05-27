@@ -1354,17 +1354,17 @@
 							"formdata": [
 								{
 									"key": "driver_id",
-									"value": "",
+									"value": "17",
 									"type": "text"
 								},
 								{
 									"key": "status",
-									"value": "",
+									"value": "DroppedOff",
 									"type": "text"
 								},
 								{
 									"key": "booking_id",
-									"value": "",
+									"value": "2",
 									"type": "text"
 								},
 								{
@@ -1530,6 +1530,163 @@
 								{
 									"key": "action",
 									"value": "fetch_driver_Ride_later_booking_list"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "driver_fetch_all_ride_now_booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_id",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cisswork.com/Android/SenderApp/API/process.php?action=driver_fetch_all_booking",
+							"protocol": "https",
+							"host": [
+								"cisswork",
+								"com"
+							],
+							"path": [
+								"Android",
+								"SenderApp",
+								"API",
+								"process.php"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "driver_fetch_all_booking"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "driver_fetch_all_ride_later_booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_id",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cisswork.com/Android/SenderApp/API/process.php?action=driver_fetch_all_ride_later_booking",
+							"protocol": "https",
+							"host": [
+								"cisswork",
+								"com"
+							],
+							"path": [
+								"Android",
+								"SenderApp",
+								"API",
+								"process.php"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "driver_fetch_all_ride_later_booking"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "driver_fetch_cancelled_booking_list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_id",
+									"value": "17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cisswork.com/Android/SenderApp/API/process.php?action=driver_fetch_cancelled_booking_list",
+							"protocol": "https",
+							"host": [
+								"cisswork",
+								"com"
+							],
+							"path": [
+								"Android",
+								"SenderApp",
+								"API",
+								"process.php"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "driver_fetch_cancelled_booking_list"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_driver_route_list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "driver_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "route_id_list",
+									"value": "1,2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://cisswork.com/Android/SenderApp/API/process.php?action=update_driver_route_list",
+							"protocol": "https",
+							"host": [
+								"cisswork",
+								"com"
+							],
+							"path": [
+								"Android",
+								"SenderApp",
+								"API",
+								"process.php"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "update_driver_route_list"
 								}
 							]
 						}
@@ -1848,12 +2005,12 @@
 							"formdata": [
 								{
 									"key": "user_id",
-									"value": "1",
+									"value": "7",
 									"type": "text"
 								},
 								{
 									"key": "type",
-									"value": "All",
+									"value": "",
 									"type": "text"
 								},
 								{
@@ -2895,6 +3052,15 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "demo_mail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://cisswork.com/Android/SenderApp/API/demo_mail.php"
+			},
+			"response": []
 		}
 	]
 }
