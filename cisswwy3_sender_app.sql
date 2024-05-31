@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 27, 2024 at 05:23 PM
+-- Generation Time: May 31, 2024 at 11:36 AM
 -- Server version: 5.7.23-23
 -- PHP Version: 8.1.28
 
@@ -637,7 +637,8 @@ INSERT INTO `canclebooking_driver` (`id`, `user_id`, `company_id`, `driver_id`, 
 (282, '18', 0, '17', 'cancle', 'The user did not arrive', '105', '07:16 PM', '2024-05-04'),
 (283, '17', 0, '31', 'cancle', 'User not responding', '121', '08:26 AM', '2024-05-07'),
 (284, '17', 0, '31', 'cancle', 'The user entered the wrong address', '120', '05:44 PM', '2024-05-07'),
-(285, '18', 0, '32', 'cancle', 'bb', '125', '03:04 PM', '2024-05-08');
+(285, '18', 0, '32', 'cancle', 'bb', '125', '03:04 PM', '2024-05-08'),
+(286, '7', 0, '17', 'cancle', 'The user did not arrive', '4', '05:30 PM', '2024-05-27');
 
 -- --------------------------------------------------------
 
@@ -664,50 +665,10 @@ INSERT INTO `canclebooking_driver_new` (`id`, `driver_id`, `status`, `type`, `bo
 (7, '32', 'cancle', 'Ride_now', '127', '04:42 PM', '08-05-2024'),
 (9, '32', 'cancle', 'Ride_now', '128', '05:47 PM', '08-05-2024'),
 (10, '29', 'cancle', 'Ride_now', '131', '08:05 AM', '09-05-2024'),
-(11, '29', 'cancle', 'Ride_now', '130', '08:05 AM', '09-05-2024');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `car_names_tbl`
---
-
-CREATE TABLE `car_names_tbl` (
-  `id` int(200) NOT NULL,
-  `car_name` varchar(200) NOT NULL,
-  `seats` varchar(200) NOT NULL,
-  `image` varchar(500) NOT NULL,
-  `base_fare` varchar(255) NOT NULL,
-  `distance_fare` varchar(255) NOT NULL,
-  `time_fare` varchar(255) NOT NULL,
-  `service_charge` varchar(255) NOT NULL,
-  `admin_commission` varchar(255) NOT NULL,
-  `icon_image` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `car_names_tbl`
---
-
-INSERT INTO `car_names_tbl` (`id`, `car_name`, `seats`, `image`, `base_fare`, `distance_fare`, `time_fare`, `service_charge`, `admin_commission`, `icon_image`, `status`) VALUES
-(7, 'SEDAN', '', '6DAtEz1FCy_1693979735.jpg', '', '', '', '', '', '1zuG86qy7n_1693979719', 'Approve'),
-(2, 'SUV', '', 'AxiszB9lkD_1673612342.jpg', '', '', '', '', '', '1.jpg', 'Approve'),
-(3, 'MINI VAN', '3', 'jk9EvArBzH_1673612325.jpg', '20', '10', '1', '2', '1.5', 'mini-truck-map-pointer-graphic-vector-illustration-eps-80643049.jpg', 'Approve'),
-(6, 'Cerber Luxury', '', 'z3DFpvwuij_1693979636.png', '', '', '', '', '', 'yxm8qF6rE3_1693979622', 'Approve'),
-(9, 'Hatch Back', '', 'BxsumokA7w_1696499117.jpg', '', '', '', '', '', 'nC312lqksz_1696499117.jpg', 'Approve'),
-(10, 'Pick-Up Truck', '', '438ovGDC7z_1696499276.jpg', '', '', '', '', '', '3vu1jwymDx_1696499276.jpg', 'Approve'),
-(13, 'Hi-Lander', '', 'uDwEjq57zs_1696500028.jpg', '', '', '', '', '', 'A34m5B8sun_1696500028.jpg', 'Approve'),
-(15, 'Passenger Vehicle', '', 'GtnB1Dvwp4_1696500434.jpg', '', '', '', '', '', 'kqC2zvpowt_1696500434.jpg', 'Approve'),
-(19, 'Passenger Auto', '', 'w6y9qnoG3l_1696501429.jpg', '', '', '', '', '', 'vunCmx74By_1696501429.jpg', 'Approve'),
-(17, 'Hatch', '', 'Gqv9E6rCki_1696501053.jpg', '', '', '', '', '', '1Git9AuFwq_1696501053.jpg', 'Approve'),
-(20, 'Ferrari', '', 'BHG93EA5yj_1696501568.jpg', '', '', '', '', '', 'nwjkCyp7oz_1696501568.jpg', 'Approve'),
-(21, 'Car', '', '5kFvjywox7_1696669886.jpg', '', '', '', '', '', 'm78zwAskiq_1696669886.jpg', 'Disapprove'),
-(26, 'Mini Car', '', 'BGx0jzuE4A_1698831804.jpg', '', '', '', '', '', 'ylEvrxqzmo_1698831804.jpg', 'Approve'),
-(27, 'XYZ', '', 'pErnD4wG2H_1698832531.jpg', '', '', '', '', '', 'kq92moCAG1_1698832531.jpg', 'Approve'),
-(33, 'Limousine', '', 'oGkn74Ht6w_1705368515.jpg', '', '', '', '', '', 's98r2EGtpn_1705368515.jpg', ''),
-(34, 'mymobile', '', 'Gj9BuqC2p0_1707220663.jpg', '', '', '', '', '', '9u3Dk6yo2j_1707220663.jpg', ''),
-(35, 'myvehicle', '', 'y1umA2vGl7_1707283998.jpg', '', '', '', '', '', 'Dux1z0rnAp_1707283998.jpg', '');
+(11, '29', 'cancle', 'Ride_now', '130', '08:05 AM', '09-05-2024'),
+(13, '29', 'cancle', 'Ride_now', '6', '05:01 PM', '29-05-2024'),
+(14, '29', 'cancle', 'Ride_now', '5', '05:01 PM', '29-05-2024'),
+(15, '17', 'cancle', 'Ride_now', '8', '05:46 PM', '29-05-2024');
 
 -- --------------------------------------------------------
 
@@ -1002,7 +963,7 @@ CREATE TABLE `Drivers` (
 INSERT INTO `Drivers` (`DriverID`, `FriendlyID`, `UserName`, `Password`, `FirstName`, `LastName`, `Address`, `Address2`, `City`, `State`, `Zip`, `Driver_lat`, `Driver_lng`, `Email`, `country_code`, `Phone`, `Phone2`, `Phone3`, `OptIn`, `Status`, `NotifyType`, `OptInChangeTime`, `TimeStampCreated`, `LastUpdated`, `Notes`, `InternalNote`, `LicenseNum`, `LicensePic`, `image`, `Driver_device_id`, `iosDriver_device_id`, `device_status`, `wallet_balance`, `login_status`, `date`, `logout_time`, `login_device_key`, `access_token`, `last_login_time`, `zipcode_list`, `package_list`, `flag`, `available_status`, `rotation`, `driver_online_time`) VALUES
 (1, '', 'BP', '123456', 'Barkha', 'Patel', '206', 'bhawarkua', 'indore', 'Madhyapardesh', '452001', '76.6544356', '23.68586754', 'barkhapatelciss@gmail.com', '+1', '7889657898', '9854326565', '8545698523', 0, '0', 0, NULL, '2024-02-19 08:02:10', NULL, '', '', '459866', 0x6c706d6f6b30733633345f313731303933333339302e706e67, '', '', '', '', '0', '0', '2024-02-19 01:32:10', '', '', '', '', '1,2', '', '', '', '', ''),
 (3, '', 'Naya driver ', '123456', 'driver', 'bhai', '210sai ram plaza ', 'mangal nagar indore ', 'Indore', 'Madhya Pradesh ', '452001', '', '', 'driver1245@gmail.com', '+1', '5886559886', '5965568896', '8966666585', 0, '0', 0, NULL, '2024-02-19 08:03:34', NULL, '', '', 'chjjffhj', 0x6a33416e4246304736395f313730383332393831342e6a7067, '', '', '', '', '0', '0', '05/08/2024 05:42:50', '', '', '', '', '', '', 'US', '', '', ''),
-(4, '', 'driverbhai', '123456', 'driver', 'bhai', 'sai ram plaza ', 'mangal nagal indore', 'Indore', 'Madhya Pradesh ', '452001', '0', '0', 'driver@gmail.com', '+91', '7889657898', '5588888855', '8866666666', 0, '1', 1, NULL, '2024-02-19 11:16:49', NULL, '', '', '459866', 0x416e386a424871477a395f313730383334313430392e6a7067, '', 'cm5B1nr3QQqPFGSls1IHRj:APA91bH2U69VuzxSmZ-aO71LusRYSX1-X6AZJhvgVa1ORBvNXQPUNn3od7jeNo10f4n1-PfJ3tlxv1gfqf8Ovqud', '', 'Android', '0', '0', '03/20/2024 06:22:56', '', 'CPH1809', 'dde5c5b0-e2da-1f22-b3b4-ff66f898f2e7', '', '2,3', '', 'IN', 'UnAvailable', '0', '2024-03-20 18:23:02 '),
+(4, '', 'driverbhai', '123456', 'driver', 'bhai', 'sai ram plaza ', 'mangal nagal indore', 'Indore', 'Madhya Pradesh ', '452001', '0', '0', 'driver@gmail.com', '+91', '7889657898', '5588888855', '8866666666', 0, '1', 1, NULL, '2024-02-19 11:16:49', NULL, '', '', '459866', 0x416e386a424871477a395f313730383334313430392e6a7067, '', '', '', '', '0', '0', '03/20/2024 06:22:56', '', 'CPH1809', 'dde5c5b0-e2da-1f22-b3b4-ff66f898f2e7', '', '2,3', '', 'IN', 'UnAvailable', '0', '2024-03-20 18:23:02 '),
 (9, '', 'Driver Ad', '123456Aa', 'ad', 'sharma', 'jhbvghg', 'jgbhjgb', 'jgbhgbv', 'jgkjhg', '878', '', '', 'ad@gmail.com', '+1', '64578677', '4567987655', '76567567575', 0, '0', 0, NULL, '2024-02-22 13:44:13', NULL, '', '', '5498785', 0x6c7a4273787131356e345f313730383630393435332e6a7067, '', '', '', '', '0', '0', '2024-02-22 07:14:13', '', '', '', '', '', '', '', '', '', ''),
 (10, '', 'HELLO', '123456789', 'l;jl;j', 'jlkjkl', 'kljkljkljlk', 'kljlkj', 'Bhopal', 'jh', '55877', '', '', '456456@456.com', '+1', '2126669999', '2128888555', '2125559999', 0, '1', 0, NULL, '2024-03-14 00:12:37', NULL, '', '', '123456789', 0x766c42457a6d4431366b5f313731303337353135372e6a7067, '', '', '', '', '0', '0', '2024-03-14 05:42:37', '', '', '', '', '1,2', '', 'US', '', '', ''),
 (11, '', 'HELLO', '123456789', 'HELLO', 'HELLO', 'HELLO', 'HELLO', 'Ujjain', 'JHELLO', '258742', '0', '0', '123@123.com', '+1', '2124449696', '2124449696', '2124449696', 0, '0', 0, NULL, '2024-03-14 00:14:46', NULL, '', '', '123456789', 0x6a757642436b3571486f5f313731303337353238362e6a7067, 'BCu28lwHy3_1710375459.jpg', '', '', '', '0', '0', '04/08/2024 07:40:08', '', '', '', '', '1', '', 'US', 'UnAvailable', '0', '2024-03-20 08:44:08 '),
@@ -1010,19 +971,19 @@ INSERT INTO `Drivers` (`DriverID`, `FriendlyID`, `UserName`, `Password`, `FirstN
 (14, '', 'xyz', '123456Aa', 'xyz', 'xyz', 'Navlakha', 'Navlakha', 'Indore', 'Madhya Pradesh', '452001', '', '', 'xyz@gmail.com', '+91', '9424522338', '9424522338', '9424522338', 0, '1', 0, NULL, '2024-03-16 12:01:33', NULL, '', '', '57657', 0x383241346c6a476d6e7a5f313731303539303439332e6a7067, 'EqGp5F3zC9_1710590493.jpg', '', '', '', '0', '0', '2024-03-16 05:31:33', '', '', '', '', '', '', '', '', '', ''),
 (15, '', 'Savitaaa', '123456Aaaaaaaaaaaaaaaaaaa', 'Savitaaa', 'Gangwal', 'ghgfhgf', 'ghfggf', 'gfhhhh', 'gfhhhhhhh', '123456', '', '', 'savitaaa@gmail.com', '+1', '68769789780', '5565655656', '54444444566', 0, '1', 0, NULL, '2024-03-18 06:29:28', NULL, '', '', '45444', 0x72446d374845737534775f313731303734333336382e6a7067, 'nqpuAD275l_1710743368.JPEG', '', '', '', '0', '0', '2024-03-18 11:59:28', '', '', '', '', '', '', '', '', '', ''),
 (16, '', 'BG', '123456Aa', 'BG', 'NH', 'indore', 'indore', 'khandwa', 'madhya pradesh', '450001', '', '', 'bpg@gmail.com', '+1', '216578985', '2132654598', '213265898', 0, '0', 0, NULL, '2024-03-18 06:43:28', NULL, '', '', '346547567', 0x304443773976757271375f313731303734343230382e706e67, '598Gkz6qsD_1710744208.png', '', '', '', '0', '0', '2024-03-18 12:13:28', '', '', '', '', '', '', '', '', '', ''),
-(17, '', 'Driver', '123456', 'Driver', 'Dr', 'Indore ', 'Dewas', 'Indore', 'Madhya Pradesh ', '452001', '22.6856559', '75.8596365', 'driver1@gmail.com', '+91', '9876543225', '9876345684', '8655588885', 0, '1', 0, NULL, '2024-03-18 07:29:43', NULL, '', '', '123', 0x7436707969416d3875455f313731303934323039322e6a7067, '', 'fr0hUjThRReflQ8_Ag4JBC:APA91bEHyJIJ8CRm8Ph5DF88WkwSrWyIoqfzSUweGCm5WihvTZicyfxCqlCHGO2MQrh6dkBnxwIMSEjuqoT_ociQsOSKvQJEd9pf07wc0Xjk0JbdXoStZtaRUqU7Vr8ZYhjAj4oUxEMP', '', 'Android', '0', '1', '05/27/2024 04:39:43', '', 'RMX2193', '6ce966c0-6421-1ff3-9867-178c30747207', '', '3,21', '', 'IN', 'Available', '0.0', '2024-05-27 17:21:35 '),
+(17, '', 'Driver', '123456', 'Driver', 'Dr', 'Indore ', 'Dewas', 'Indore', 'Madhya Pradesh ', '452001', '0', '0', 'driver1@gmail.com', '+91', '9876543225', '9876345684', '8655588885', 0, '1', 0, NULL, '2024-03-18 07:29:43', NULL, '', '', '123', 0x7436707969416d3875455f313731303934323039322e6a7067, '', '', '', '', '0', '0', '05/30/2024 05:37:40', '', '', '', '', '3,21,1,11', '', 'IN', 'UnAvailable', '0', '2024-05-30 17:37:47 '),
 (18, '', 'Ankush', '123456', 'Ramesh', 'Sharma', 'jahhaah', 'babab', 'Indore', 'mp', '452001', '22.6856556', '75.8597525', 'ramesh@gmail.com', '+1', '7584643358', '8754236265', '8527413256', 0, '1', 0, NULL, '2024-03-18 09:57:43', NULL, '', '', '123', 0x426a393269757877746c5f313731303735353836332e6a7067, '2qjv791okn_1710756861.jpg', '', '', '', '0', '1', '03/18/2024 04:19:08', '', '', '', '', '', '', 'US', 'Available', '115.50365447998047', '2024-03-18 16:19:09 '),
 (19, '', 'Newdriver', '123456', 'Newdriver', 'Driver', 'sairam plaza', 'Mangal nagar ', 'Indore', 'Madhya Pradesh', '452001', '22.6856691', '75.85973', 'newdriver@gmail.com', '+91', '5855699855', '9635888555', '3698111445', 0, '1', 0, NULL, '2024-03-18 10:54:55', NULL, '', '', '123456', 0x6f336b386e36694335315f313731303735393239352e6a7067, '', '', '', '', '0', '0', '03/18/2024 04:48:46', '', '', '', '', '3,2', '', 'IN', 'Available', '329.96783447265625', '2024-03-18 16:48:45 '),
-(20, '', 'Lalit', '123456', 'Lalit', 'Patel', 'Navlakha ', 'Mangal Nagar ', 'Indore', 'MP', '452001', '22.6856866', '75.8596581', 'lalit@gmail.com', '+91', '7583816688', '7583816688', '7583816688', 0, '1', 0, NULL, '2024-03-19 07:06:29', NULL, '', '', '123456', 0x4469476d3731337532795f313731303833313938392e6a7067, '', 'eTNPcGv-Swegf2fJOfQrIz:APA91bFvMqYSODVtywSJ0Vogo1W_2Q1O4zKUr-YILFS4UakzYJJDonHDIEMfSpBsWHCNA_BOgvt9jvsb6N_PkYxC', '', 'Android', '0', '1', '03/21/2024 05:25:43', '', 'CPH1809', 'a465c8c0-d568-1f25-9691-7590286d6937', '', '', '', 'IN', 'Available', '248.9341278076172', '2024-03-21 17:26:45 '),
+(20, '', 'Lalit', '123456', 'Lalit', 'Patel', 'Navlakha ', 'Mangal Nagar ', 'Indore', 'MP', '452001', '22.6856866', '75.8596581', 'lalit@gmail.com', '+91', '7583816688', '7583816688', '7583816688', 0, '1', 0, NULL, '2024-03-19 07:06:29', NULL, '', '', '123456', 0x4469476d3731337532795f313731303833313938392e6a7067, '', '', '', '', '0', '1', '03/21/2024 05:25:43', '', 'CPH1809', 'a465c8c0-d568-1f25-9691-7590286d6937', '', '', '', 'IN', 'Available', '248.9341278076172', '2024-03-21 17:26:45 '),
 (21, '', 'abc', '123456', 'Tarun', 'Birla', 'Shivaji Vatika', 'Near I bus stop', 'Indore', 'Madhya Pradesh', '452001', '22.6856872', '75.8596598', 'tarun@gmail.com', '+1', '4845691784', '5588888854', '8866666664', 0, '1', 0, NULL, '2024-03-20 06:15:40', NULL, '', '', 'A123', 0x6d354272784143337a705f313731303931353334302e6a7067, '', '', '', '', '0', '0', '03/21/2024 05:25:26', '', '', '', '', '3', '', 'US', 'Available', '62.364131927490234', '2024-03-21 17:25:17 '),
 (22, '', 'kakka', '123456', 'hqhag', 'kkkjjj', 'gaga', 'gahah', 'Indore', 'kakka', '452014', '22.6856859', '75.8596536', 'kakka@gmail.com', '+91', '9424522558', '9424522575', '9424522994', 0, '1', 0, NULL, '2024-03-21 08:13:36', NULL, '', '', '1515', 0x6f30416a7736426c38735f313731313030383831362e6a7067, '', '', '', '', '0', '1', '03/21/2024 05:55:49', '', '', '', '', '3,2', '', 'IN', 'Available', '304.61114501953125', '2024-03-21 17:55:50 '),
-(23, '', 'Abhishek', '123456', 'Abhishek', 'Gupta', 'Mangal Nagar ', 'Rajiv Gandhi ', 'Indore', 'MP', '452001', '22.6856641', '75.8596711', 'abhishek@gmail.com', '+91', '8527645456', '9635576648', '9578454254', 0, '1', 1, NULL, '2024-03-21 10:36:33', NULL, '', '', '1234', 0x47443275734169746d765f313731313031373339332e6a7067, '', 'cDf_-wEqThm3ZKp0_94phV:APA91bGveE7VQ0WDgfbOQ_TOXCmDE0sQiiWHznAeyZkWZF2SgN8yTA34szEh6zfXMiN3NV_37T5SzbxnezYFF_yc', '', 'Android', '0', '1', '03/22/2024 05:08:06', '', 'Redmi Note 8 Pro', '', '', '3,2', '', 'IN', 'Available', '90.0', '2024-03-28 14:53:00 '),
-(24, '', '', '123456', 'vishnu', 'prajapati', 'Indore, Madhya Pradesh, India', 'Indore, Madhya Pradesh, India', 'Bhopal', 'Madhya Pradesh ', '458775', '', '', 'vishnuprajapati1@gmail.com', '+91', '1234567899', '', '', 0, '0', 0, NULL, '2024-04-11 06:33:03', NULL, '', '', '1234567', 0x6c6a334534467a6e31775f313731323831373138332e6a7067, '', 'egesktIPSTqRt1ePMBPXFO:APA91bGyF09zYpZF9OtFmKJWKOGfCp94dR37QDoWFza_nnVevS_J-zwsKo_Pqk2PCGbhwYzB_sOZ2_zoklFYhjcW', '', 'Android', '0', '0', '2024-04-11 12:03:03', '', '', '', '', '21,33', '', 'IN', '', '', ''),
+(23, '', 'Abhishek', '123456', 'Abhishek', 'Gupta', 'Mangal Nagar ', 'Rajiv Gandhi ', 'Indore', 'MP', '452001', '22.6856641', '75.8596711', 'abhishek@gmail.com', '+91', '8527645456', '9635576648', '9578454254', 0, '1', 1, NULL, '2024-03-21 10:36:33', NULL, '', '', '1234', 0x47443275734169746d765f313731313031373339332e6a7067, '', '', '', '', '0', '1', '03/22/2024 05:08:06', '', 'Redmi Note 8 Pro', '', '', '3,2', '', 'IN', 'Available', '90.0', '2024-03-28 14:53:00 '),
+(24, '', '', '123456', 'vishnu', 'prajapati', 'Indore, Madhya Pradesh, India', 'Indore, Madhya Pradesh, India', 'Bhopal', 'Madhya Pradesh ', '458775', '', '', 'vishnuprajapati1@gmail.com', '+91', '1234567899', '', '', 0, '0', 0, NULL, '2024-04-11 06:33:03', NULL, '', '', '1234567', 0x6c6a334534467a6e31775f313731323831373138332e6a7067, '', '', '', '', '0', '0', '2024-04-11 12:03:03', '', '', '', '', '21,33', '', 'IN', '', '', ''),
 (25, '', '', '123456', 'dheeraj', 'singh', 'Indore, Madhya Pradesh, India', 'Indore, Madhya Pradesh, India', 'Indore', 'mp', '452020', '22.6857222', '75.8595569', 'dheerajkumars430@gmail.com', '+91', '9752115634', '', '', 0, '1', 0, NULL, '2024-04-11 06:44:20', NULL, '', '', 'hhgg', 0x7074763038333145737a5f313731323831373836302e6a7067, '', '', '', '', '0', '0', '04/11/2024 12:20:23', '', '', '', '', '33,1,3,21,11,2,12,Route1', '', 'IN', 'Available', '0.0', '2024-04-11 12:18:50 '),
-(26, '', '', '123456', 'vvvvv', 'ggggg', 'Indore, Madhya Pradesh, India', 'gggggg', 'gyyyt', 'ggvggg', '452020', '', '', 'devidbrusli@gmail.com', '+91', '7089612536', '', '', 0, '0', 0, NULL, '2024-04-12 08:10:23', NULL, '', '', '666666', 0x32466d74697a713630355f313731323930393432332e6a7067, '', 'doe1ld01QzK4VRcr22dOep:APA91bEBFqYvBpL8Rx1OsaYeU9FFTEXG2k-kIYbfHEZbge6-5b8PvqwDDWlHxafYdbWdRmJPelmHkGRcQ71ANjXC', '', 'Android', '0', '0', '2024-04-12 01:40:23', '', '', '', '', '1,21,3', '', 'IN', '', '', ''),
-(29, '', '', '123456789', 'test', 'testd', '45665 Tlajomulco de Zúñiga, Jalisco, Mexico', 'ugg', 'gcg', 'vv', '11234', '', '', '123456@123456.com', '+1', '2122222222', '', '', 0, '1', 0, NULL, '2024-05-07 00:31:16', NULL, '', '', 'staff', 0x3046423234706f31776b5f313731353034313837362e706e67, '', 'fv9vWaGJRxac6ePP-R8Fs2:APA91bHByY-LBDowp8lPQYiZYP5gJMbyZ9wFv-LSAxsaMyQx5RWbchZwfxvDVK_TzdxqelT4_bqbnS1skuXc2K6ti9V583juBBATiHK8kbayhtMCVhfBX9ekGU5v7dx4bN33ftpnZ642', '', 'Android', '0', '1', '05/09/2024 07:22:12', '', 'moto g pure', 'b1eec7e0-f1fb-1fba-b31c-9bd704b0677b', '', '1,21,3,11,2,33,12,Route1,NarwarToDewas,indoreToarea 3,area 3Toarea 1', '', 'US', '', '', ''),
-(30, '', '', '123456789', 'mooooo', 'dooooo', '45664 Jalisco, Mexico', 'fhgj', 'ggg', 'ghg', '123466', '', '', '1112@112.com', '+1', '2122552222', '', '', 0, '0', 0, NULL, '2024-05-07 00:33:44', NULL, '', '', 'off yy', 0x76427733366c463130485f313731353034323032342e706e67, '', 'cWZdRJFySG6MjEjbQI6oA9:APA91bH0CcJTBmv2hSvTBlsPtjSWtCtL1C7-YxwuWkmQItCNM9-RfSSplrNI_iHW-p1rNQSEgQ9BboxmeZHdu4VC', '', 'Android', '0', '0', '2024-05-07 06:03:44', '', '', '', '', '21,3,11', '', 'US', '', '', ''),
-(31, '', '', '123456789', 'newdriver', 'now', 'Indianapolis, IN, USA', 'hyg', 'hvj', 'dgj', '12345 ', '0', '0', '1212@1212.com', '+1', '2124443366', '', '', 0, '1', 0, NULL, '2024-05-07 00:52:30', NULL, '', '', '2156', 0x397634424533463043485f313731353034333135302e706e67, '', 'eAr2WxdTQnu7VdrucUMWjT:APA91bEnnY1KVVHAMBDFG26feY4P5u6UOp89K9UOrr51HQuomSFpkGLtIIpFWr5NlKaY1-1oENlDgZMo-Aa5YUOk', '', 'Android', '0', '0', '05/07/2024 06:23:25', '', 'moto g pure', 'e30e64f0-b06d-1fb4-bfbb-3d9ea979d1fd', '', '1', '', 'US', 'UnAvailable', '0', '2024-05-07 17:27:37 '),
+(26, '', '', '123456', 'vvvvv', 'ggggg', 'Indore, Madhya Pradesh, India', 'gggggg', 'gyyyt', 'ggvggg', '452020', '', '', 'devidbrusli@gmail.com', '+91', '7089612536', '', '', 0, '0', 0, NULL, '2024-04-12 08:10:23', NULL, '', '', '666666', 0x32466d74697a713630355f313731323930393432332e6a7067, '', '', '', '', '0', '0', '2024-04-12 01:40:23', '', '', '', '', '1,21,3', '', 'IN', '', '', ''),
+(29, '', '', '123456789', 'test', 'testd', '45665 Tlajomulco de Zúñiga, Jalisco, Mexico', 'ugg', 'gcg', 'vv', '11234', '', '', '123456@123456.com', '+1', '2122222222', '', '', 0, '1', 0, NULL, '2024-05-07 00:31:16', NULL, '', '', 'staff', 0x3046423234706f31776b5f313731353034313837362e706e67, '', '', '', '', '0', '1', '05/09/2024 07:22:12', '', 'moto g pure', 'b1eec7e0-f1fb-1fba-b31c-9bd704b0677b', '', '11,3,1,21,2', '', 'US', '', '', ''),
+(30, '', '', '123456789', 'mooooo', 'dooooo', '45664 Jalisco, Mexico', 'fhgj', 'ggg', 'ghg', '123466', '', '', '1112@112.com', '+1', '2122552222', '', '', 0, '0', 0, NULL, '2024-05-07 00:33:44', NULL, '', '', 'off yy', 0x76427733366c463130485f313731353034323032342e706e67, '', '', '', '', '0', '0', '2024-05-07 06:03:44', '', '', '', '', '21,3,11', '', 'US', '', '', ''),
+(31, '', '', '123456789', 'newdriver', 'now', 'Indianapolis, IN, USA', 'hyg', 'hvj', 'dgj', '12345 ', '0', '0', '1212@1212.com', '+1', '2124443366', '', '', 0, '1', 0, NULL, '2024-05-07 00:52:30', NULL, '', '', '2156', 0x397634424533463043485f313731353034333135302e706e67, '', '', '', '', '0', '0', '05/07/2024 06:23:25', '', 'moto g pure', 'e30e64f0-b06d-1fb4-bfbb-3d9ea979d1fd', '', '1', '', 'US', 'UnAvailable', '0', '2024-05-07 17:27:37 '),
 (32, '', '', '123456', 'vishnu ', 'prajapati ', 'Indore, Madhya Pradesh, India', 'indore', 'indore', 'Madhya Pradesh ', '452001', '0', '0', 'vishnuprajapati@gmail.com', '+91', '8982411736', '', '', 0, '1', 0, NULL, '2024-05-08 07:51:04', NULL, '', '', 'gjjhyuhvijbct', 0x727839776f456d386e345f313731353135343636342e706e67, '', '', '', '', '0', '0', '05/23/2024 02:51:39', '', '', '', '', '3,21', '', 'IN', 'UnAvailable', '0', '2024-05-23 14:51:42 '),
 (33, '', '', '123456789', 'test once', 'test', 'GHJGHJGHJG, Bhel Chowk, Karanpur, Dehradun, Uttara', 'hhh', 'hhj', 'hhh', '25255', '', '', '12121212@12121212.com', '+1', '2125556666', '', '', 0, '0', 0, NULL, '2024-05-09 01:47:23', NULL, '', '', '123456789', 0x453343357875366f347a5f313731353231393234332e706e67, '', '', '', '', '0', '0', '2024-05-09 07:17:23', '', '', '', '', '1', '', 'US', '', '', ''),
 (34, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '0', 0, NULL, '2024-05-23 06:41:25', NULL, '', '', '', 0x30436a6c3841713433745f31373136343436343835, '', '', '', '', '0', '0', '2024-05-23 12:11:25', '', '', '', '', '', '', '', '', '', ''),
@@ -1084,21 +1045,6 @@ INSERT INTO `faq` (`f_id`, `type_id`, `type`, `ques`, `answer`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `help_support`
---
-
-CREATE TABLE `help_support` (
-  `id` int(100) NOT NULL,
-  `driver_id` varchar(200) NOT NULL,
-  `driver_email` varchar(200) NOT NULL,
-  `driver_name` varchar(200) NOT NULL,
-  `subject_inquiry` varchar(200) NOT NULL,
-  `feedback_inquiry` varchar(200) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `inquiry_table`
 --
 
@@ -1153,179 +1099,6 @@ INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `notification_tbl`
---
-
-CREATE TABLE `notification_tbl` (
-  `id` int(100) NOT NULL,
-  `user_id` varchar(200) NOT NULL,
-  `u_name` varchar(200) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `country_code` varchar(255) NOT NULL,
-  `u_contact` varchar(200) NOT NULL,
-  `ride_type` varchar(500) NOT NULL,
-  `package_id` int(11) NOT NULL,
-  `package_name` varchar(255) NOT NULL,
-  `car_id` varchar(200) NOT NULL,
-  `payment_mode` varchar(200) NOT NULL,
-  `booking_type` varchar(500) NOT NULL,
-  `card_id` varchar(255) NOT NULL,
-  `ride_date` varchar(200) NOT NULL,
-  `ride_time` varchar(215) NOT NULL,
-  `start_time` varchar(255) NOT NULL,
-  `complete_time` varchar(255) NOT NULL,
-  `source_add` varchar(200) NOT NULL,
-  `destination_add` varchar(200) NOT NULL,
-  `driver_id` varchar(200) NOT NULL,
-  `message` varchar(200) NOT NULL,
-  `source_lat` varchar(200) NOT NULL,
-  `source_long` varchar(200) NOT NULL,
-  `destination_lat` varchar(200) NOT NULL,
-  `destination_long` varchar(200) NOT NULL,
-  `driver_status` varchar(200) NOT NULL,
-  `confirmation_code` varchar(200) NOT NULL,
-  `type_name` varchar(255) NOT NULL,
-  `admin_commission` varchar(255) NOT NULL,
-  `driver_earning` varchar(255) NOT NULL,
-  `cancel_by` varchar(255) NOT NULL,
-  `coupon_id` int(11) NOT NULL,
-  `date` varchar(255) NOT NULL COMMENT 'request date',
-  `time` varchar(255) NOT NULL,
-  `source_city` varchar(500) NOT NULL,
-  `destination_city` varchar(500) NOT NULL,
-  `city_status` varchar(255) NOT NULL,
-  `cancel_reason` mediumtext NOT NULL,
-  `ride_end_date` varchar(215) NOT NULL,
-  `ride_end_time` varchar(500) NOT NULL,
-  `trip_fare` varchar(500) NOT NULL,
-  `total_fare` varchar(500) NOT NULL,
-  `discount` varchar(500) NOT NULL,
-  `pickup_contact` varchar(100) NOT NULL,
-  `drop_contact` varchar(100) NOT NULL,
-  `notes` longtext NOT NULL,
-  `payment_id` varchar(100) NOT NULL,
-  `payment_method_id` varchar(111) NOT NULL,
-  `source_zipcode` varchar(50) NOT NULL,
-  `destination_zipcode` varchar(50) NOT NULL,
-  `driver_lat` varchar(50) NOT NULL,
-  `driver_lng` varchar(50) NOT NULL,
-  `d_address` mediumtext NOT NULL,
-  `user_lat` varchar(50) NOT NULL,
-  `user_lng` varchar(50) NOT NULL,
-  `u_address` mediumtext NOT NULL,
-  `total_duration` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `notification_tbl`
---
-
-INSERT INTO `notification_tbl` (`id`, `user_id`, `u_name`, `email`, `country_code`, `u_contact`, `ride_type`, `package_id`, `package_name`, `car_id`, `payment_mode`, `booking_type`, `card_id`, `ride_date`, `ride_time`, `start_time`, `complete_time`, `source_add`, `destination_add`, `driver_id`, `message`, `source_lat`, `source_long`, `destination_lat`, `destination_long`, `driver_status`, `confirmation_code`, `type_name`, `admin_commission`, `driver_earning`, `cancel_by`, `coupon_id`, `date`, `time`, `source_city`, `destination_city`, `city_status`, `cancel_reason`, `ride_end_date`, `ride_end_time`, `trip_fare`, `total_fare`, `discount`, `pickup_contact`, `drop_contact`, `notes`, `payment_id`, `payment_method_id`, `source_zipcode`, `destination_zipcode`, `driver_lat`, `driver_lng`, `d_address`, `user_lat`, `user_lng`, `u_address`, `total_duration`) VALUES
-(1, '2', 'Gopal  Kirar', 'devidbrusli@gmail.com', '+91', '9752115634', 'Ride_now', 26, 'Mini', '', 'Cash', '', '5', '14-02-2024', '06:14 PM', '', '', 'Indore,MP', 'Ujjain,MP', '', '', '22.7196', '75.8577', '23.1765', '75.7885', 'cancel', '', '', '', '', 'Admin', 0, '14-02-2024', '06:14 PM', 'indore', 'ujjain', 'Out City', 'Trip time has been expired', '', '', '510', '500', '10', '+919876567867', '+919876567867', '', '', '', '', '', '', '', '', '', '', '', ''),
-(2, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_now', 0, '', '', 'Cash', '', '', '14-02-2024', '06:22 PM', '', '', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.68571201536094', '75.8597045391798', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '14-02-2024', '06:22 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '100', '100', '0', '+918085059284', '+919754853453', '', '', '', '', '', '', '', '', '', '', '', ''),
-(3, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '14-02-2024', '06:29 PM', '', '', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.68571201536094', '75.8597045391798', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '14-02-2024', '06:29 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '100', '100', '0', '+19754853453', '+18085059284', '', '', '', '', '', '', '', '', '', '', '', ''),
-(4, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '22-02-2024', '04:33 PM', '', '', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.68571201536094', '75.8597045391798', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 1, '22-02-2024', '04:33 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '42.5', '7.5', '+18085059284', '+19754853453', 'please arhent', '', '', '', '', '', '', '', '', '', '', ''),
-(5, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '26-02-2024', '12:46 PM', '', '', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.685712', '75.85970449999999', '22.2138885', '75.4723411', 'cancel', '', '', '', '0', 'User', 1, '26-02-2024', '12:46 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '50', '42.5', '7.5', '+18085059284', '+19754853453', 'fgdfgdfgdfgfdgdf', '', '', '', '', '', '', '', '', '', '', ''),
-(6, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '14-03-2024', '01:05 PM', '', '', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.688524', '75.864181', '22.2138885', '75.4723411', 'cancel', '', '', '', '0', 'User', 0, '14-03-2024', '01:05 PM', 'indore', 'dhamnod', 'Out City', 'ff', '', '', '50', '50.0', '0.0', '+19754853453', '+18085059284', 'fdfdf', '', '', '', '', '', '', '', '', '', '', ''),
-(7, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '16-03-2024', '11:16 AM', '', '', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.68571201536094', '75.8597045391798', '22.213888547917573', '75.47234125435352', 'Complete', '224133', '', '', '', '', 0, '16-03-2024', '11:16 AM', 'indore', 'dhamnod', 'Out City', '', '16-03-2024', '04:40 PM', '50', '50.0', '0.0', '+18085059284', '+19754853453', 'Sam Al jar lana', '', '', '', '', '22.6856518', '75.8597432', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '22.688524', '75.864181', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', '324'),
-(8, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_later', 0, 'Mini', '', 'Cash', '', '', '16-03-2024', '8:09 PM', '', '', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.688523862146965', '75.86418114602566', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'Driver', 0, '16-03-2024', '05:09 PM', 'indore', 'dhamnod', 'Out City', 'The user did not arrive', '', '', '50', '50.0', '0.0', '+18085059284', '+19754853453', '', '', '', '', '', '22.6856537', '75.8597359', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '22.688524', '75.864181', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', ''),
-(9, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '16-03-2024', '05:19 PM', '', '', '160/4 Pipliya Rao AB Road Bhawarkuwa Square, Near, Bholaram Ustad Marg, Indrapuri Colony, Bhanwar Kuwa, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.688266498590956', '75.8633154630661', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '16-03-2024', '05:19 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+19754853453', '+18085059284', 'fdfdfdfd', '', '', '', '', '', '', '', '', '', '', ''),
-(10, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_later', 0, 'Mini', '', 'Cash', '', '', '16-03-2024', '7:00 PM', '', '', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.68571201536094', '75.8597045391798', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'Driver', 0, '16-03-2024', '06:23 PM', 'indore', 'dhamnod', 'Out City', 'The user entered the wrong address', '', '', '50', '50.0', '0.0', '+18085059284', '+19754853453', '', '', '', '', '', '22.6856451', '75.859753', '63, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '22.688524', '75.864181', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', ''),
-(11, '1', 'Heera  Thakur', 'heerathakur@gmail.com', '+91', '8085059284', 'Ride_later', 0, 'Small', '', 'Cash', '', '', '16-03-2024', '7:05 PM', '', '', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.688523862146965', '75.86418114602566', '22.213888547917573', '75.47234125435352', 'Complete', '823089', '', '', '', '', 0, '16-03-2024', '06:33 PM', 'indore', 'dhamnod', 'Out City', '', '16-03-2024', '06:42 PM', '100', '100.0', '0.0', '+18989898989', '+11556699999', '', '', '', '', '', '22.6856445', '75.8597468', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '22.688524', '75.864181', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', '23'),
-(12, '24', '  ', '', '', '', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '18-03-2024', '12:50 PM', '', '', 'M-12, Sai Ram Plaza, 63, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dewas, Madhya Pradesh, India', '', '', '22.68566159337944', '75.85973002016544', '22.96759281204546', '76.0534455254674', 'cancel', '', '', '', '', 'Admin', 0, '18-03-2024', '12:50 PM', 'indore', 'dewas', 'Out City', 'Trip time has been expired', '', '', '', '0.0', '0.0', '+1555889', '+15789655', 'need fast delivery ', '', '', '', '', '', '', '', '', '', '', ''),
-(13, '24', '  ', '', '', '', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '18-03-2024', '03:48 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dewas, Madhya Pradesh, India', '', '', '22.685660665367333', '75.85972633212805', '22.96759281204546', '76.0534455254674', 'cancel', '', '', '', '', 'Admin', 0, '18-03-2024', '03:48 PM', 'indore', 'dewas', 'Out City', 'Trip time has been expired', '', '', '', '0.0', '0.0', '+1878466464', '+175846464', 'hhagag', '', '', '', '', '', '', '', '', '', '', ''),
-(14, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '18-03-2024', '03:58 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '18-03-2024', '03:58 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '', '0.0', '0.0', '+18527413698', '+15995845556', 'cvhh', '', '', '', '', '', '', '', '', '', '', ''),
-(15, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '18-03-2024', '04:10 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '18-03-2024', '04:10 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '', '0.0', '0.0', '+918527419632', '+918711554639', '', '', '', '', '', '', '', '', '', '', '', ''),
-(16, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '18-03-2024', '04:12 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '18-03-2024', '04:12 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '', '0.0', '0.0', '+1884425588', '+189652478', '', '', '', '', '', '', '', '', '', '', '', ''),
-(17, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '18-03-2024', '04:18 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '18-03-2024', '04:18 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '50', '50.0', '0.0', '+918574123698', '+918574123698', '', '', '', '', '', '', '', '', '22.6856688', '75.8597281', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', ''),
-(18, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '18-03-2024', '04:28 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '18-03-2024', '04:28 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '', '100.0', '0.0', '+18855547788', '+1896544788', '', '', '', '', '', '', '', '', '', '', '', ''),
-(19, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '18-03-2024', '04:30 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '18-03-2024', '04:30 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '50', '50.0', '0.0', '+18523697411', '+18844456687', '', '', '', '', '', '', '', '', '', '', '', ''),
-(20, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '18-03-2024', '04:34 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '18-03-2024', '04:34 PM', 'indore', 'dhamnod', 'Out City', 'cjhcg', '', '', '50', '50.0', '0.0', '+918527413698', '+918514796325', '', '', '', '', '', '', '', '', '', '', '', ''),
-(21, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '18-03-2024', '04:42 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.685666233439854', '75.85973236709833', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '18-03-2024', '04:42 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '', '0.0', '0.0', '+19797979949', '+14995959959', 'bbb', '', '', '', '', '', '', '', '', '', '', ''),
-(22, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '18-03-2024', '04:55 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '4', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '18-03-2024', '04:55 PM', 'indore', 'dhamnod', 'Out City', 'Driver Arrived Late', '', '', '50', '50.0', '0.0', '+18963521457', '+18527419632', '', '', '', '', '', '', '', '', '0.0', '0.0', '', ''),
-(23, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Testing Purpose', '', 'Cash', '', '', '19-03-2024', '11:30 AM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.711472746514623', '75.85820853710175', '22.21390282592985', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '19-03-2024', '11:30 AM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '', '0.0', '0.0', '+18652398574', '+18885478866', 'cvjjcbb', '', '', '', '', '', '', '', '', '', '', ''),
-(24, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '19-03-2024', '11:32 AM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.719583040917293', '75.85772573947906', '22.21390282592985', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '19-03-2024', '11:32 AM', 'indore', 'dhamnod', 'Out City', 'Driver Negotiating For The Price', '', '', '', '0.0', '0.0', '+918574123695', '+918547563576', '', '', '', '', '', '', '', '', '', '', '', ''),
-(25, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '19-03-2024', '12:33 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.215692532222793', '75.47382283955812', 'cancel', '', '', '', '0', 'User', 0, '19-03-2024', '12:33 PM', 'indore', 'dhamnod', 'Out City', 'Booked By Mistake', '', '', '', '0.0', '0.0', '+19787845466', '+18754619485', '', '', '', '', '', '', '', '', '', '', '', ''),
-(26, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Tester Package', '', 'Cash', '', '', '19-03-2024', '12:39 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '19-03-2024', '12:39 PM', 'indore', 'dhamnod', 'Out City', 'Driver Arrived Late', '', '', '', '0.0', '0.0', '+918576464858', '+918739944123', '', '', '', '', '', '', '', '', '', '', '', ''),
-(27, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Mini', '', 'Card', '', '6', '19-03-2024', '01:02 PM', '', '', 'Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '19-03-2024', '01:02 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '50', '50.0', '0.0', '+918553698774', '+917555245596', 'cvgffgh', '', '', '', '', '', '', '', '', '', '', ''),
-(28, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '6797084566', 'Ride_now', 0, 'Mini', '', 'Cash', '', '', '19-03-2024', '01:24 PM', '', '', 'Bholaram Ustad Marg, Bholaram Ustad Market, Sector C, Sarvanand Nagar, Bhanwar Kuwa, Indore, Madhya Pradesh, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.68542835280645', '75.86383782327175', '22.21542590902462', '75.47360390424728', 'cancel', '', '', '', '0', 'User', 0, '19-03-2024', '01:24 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '50', '50.0', '0.0', '+918546325589', '+918486669998', 'gff', '', '', '', '', '', '', '', '', '', '', ''),
-(29, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_now', 0, 'Small', '', 'Cash', '', '', '20-03-2024', '11:07 AM', '', '', 'Indore, Madhya Pradesh, India', 'Ujjain, Madhya Pradesh, India', '', '', '22.71956881492173', '75.85772573947906', '23.17648064978196', '75.78851636499166', 'cancel', '', '', '', '0', 'User', 0, '20-03-2024', '11:07 AM', 'indore', 'ujjain', 'Out City', 'Driver Negotiating For The Price', '', '', '', '0.0', '0.0', '+918565775215', '+918442255558', '', '', '', '', '', '', '', '', '', '', '', ''),
-(52, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_now', 0, 'Mini', '', 'Card', '', '6', '21-03-2024', '04:16 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '23', '', '22.685681390969478', '75.85961233824492', '22.213888547917573', '75.47234125435352', 'Complete', '743404', '', '', '', '', 0, '21-03-2024', '04:16 PM', 'indore', 'dhamnod', 'Out City', '', '21-03-2024', '04:34 PM', '50', '50.0', '0.0', '+918864999946', '+918649494884', '', '', '', '', '', '22.6856876', '75.8596574', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '22.6856876', '75.8596574', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '18'),
-(53, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_now', 0, 'Mini', '', 'Card', '', '6', '21-03-2024', '04:40 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '23', '', '22.6856874', '75.8596617', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '21-03-2024', '04:40 PM', 'indore', 'dhamnod', 'Out City', 'Driver Arrived Late', '', '', '50', '50.0', '0.0', '+187976464', '+154949776', 'hello', '', '', '', '', '22.6856816', '75.8596654', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '22.6856816', '75.8596654', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', ''),
-(54, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_later', 0, 'Small', '', 'Card', '', '6', '21-03-2024', '6:00 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '23', '', '22.6856854', '75.8596464', '22.21390282592985', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '21-03-2024', '04:54 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '100', '100.0', '0.0', '+19988555555', '+18665778552', 'yes ', '', '', '', '', '', '', '', '22.6856809', '75.8596627', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', ''),
-(55, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_later', 0, 'Large', '', 'Card', '', '', '22-03-2024', '5:00 PM', '', '', '6F7C+HW4, Dhamnod, Madhya Pradesh 454552, India', 'Dhamnod, Madhya Pradesh, India', '23', '', '22.685680153620186', '75.85964418947697', '22.21390282592985', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '21-03-2024', '05:00 PM', 'indore', 'dhamnod', 'Out City', 'Wrong Location Booking', '', '', '150', '150.0', '0.0', '+19875258888', '+18658896588', '', '', '', '', '', '', '', '', '22.6856678', '75.8596614', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', ''),
-(56, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '21-03-2024', '05:04 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '23', '', '22.685677369584226', '75.859628431499', '22.21390282592985', '75.47234125435352', 'Complete', '770208', '', '', '', '', 0, '21-03-2024', '05:04 PM', 'indore', 'dhamnod', 'Out City', '', '21-03-2024', '05:12 PM', '200', '200.0', '0.0', '+18556663366', '+18997855585', 'notes ', '', '', '', '', '22.6856866', '75.8596593', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '22.6856816', '75.8596395', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '8'),
-(57, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_now', 0, 'Mini', '', 'Card', '', '6', '21-03-2024', '05:20 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856829', '75.859661', '22.213888547917573', '75.47234125435352', 'Complete', '', '', '', '0', 'User', 0, '21-03-2024', '05:20 PM', 'indore', 'dhamnod', 'Out City', 'Booked By Mistake', '', '', '50', '50.0', '0.0', '+18874555888', '+15996577444', 'cvbhhh', '', '', '', '', '', '', '', '', '', '', ''),
-(69, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_now', 0, 'Mini', '', 'Card', '', '6', '28-03-2024', '12:59 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Sanjay Nagar, Dewas, Madhya Pradesh, India', '23', '', '22.68566716145192', '75.85967436432838', '22.68566870813869', '75.85967034101486', 'cancel', '', '', '', '0', 'User', 0, '28-03-2024', '12:59 PM', 'indore', 'indore', 'In City', 'Driver Arrived Late', '', '', '55', '55.0', '0.0', '+91', '+91', '', '', '', '', '', '', '', '', '22.6856671', '75.8596728', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', ''),
-(70, '4', 'Avi  Gupta', 'avi@gmail.com', '+91', '7583816688', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '28-03-2024', '01:00 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Sanjay Nagar, Dewas, Madhya Pradesh, India', '23', '', '22.6856694', '75.8596694', '22.931609350436478', '76.00945126265287', 'cancel', '', '', '', '0', 'User', 0, '28-03-2024', '01:00 PM', 'indore', 'dewas', 'Out City', 'hhg', '', '', '55', '55.0', '0.0', '+919874225588', '+918665556665', '', '', '', '', '', '', '', '', '0.0', '0.0', '', ''),
-(71, '13', 'Satish  Chouhan', 'satishchouhanciss@gmail.com', '+91', '9754853453', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '29-03-2024', '02:46 PM', '', '', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.688524', '75.864181', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '29-03-2024', '02:46 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+19754853453', '+18085059284', '', 'pi_3OzbWvKaFQk0sTZ51hOfL3D5', '', '', '', '', '', '', '', '', '', ''),
-(72, '14', 'Niku  Test', 'niku@gmail.com', '+1', '8085059284', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '29-03-2024', '02:55 PM', '', '', '64, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.685674', '75.8596644', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '29-03-2024', '02:55 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+18085059284', '+19754853453', '', 'pi_3OzbgiKaFQk0sTZ51tdrhCPz', '', '', '', '', '', '', '', '', '', ''),
-(73, '13', 'Satish  Chouhan', 'satishchouhanciss@gmail.com', '+91', '9754853453', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '29-03-2024', '06:30 PM', '', '', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.688524', '75.864181', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '29-03-2024', '06:30 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+18082555555', '+16565656565', '', 'pi_3Ozf1uKaFQk0sTZ50y6b7Nfg', '', '', '', '', '', '', '', '', '', ''),
-(74, '13', 'Satish  Chouhan', 'satishchouhanciss@gmail.com', '+91', '9754853453', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '29-03-2024', '07:15 PM', '', '', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.688524', '75.864181', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '29-03-2024', '07:15 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+18085059299', '+18686868686', '', 'pi_3Ozfk2KaFQk0sTZ50qIBKr6t', '', '', '', '', '', '', '', '', '', ''),
-(75, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '02-04-2024', '11:55 AM', '', '', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856514', '75.8596698', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '0', 'User', 0, '02-04-2024', '11:55 AM', 'indore', 'dhamnod', 'Out City', 'ggh', '', '', '50', '50.0', '0.0', '+11233366666', '+18558888888', '', 'pi_3P10mjIhs7ZBuE9x2h06LsZL', '', '', '', '', '', '', '', '', '', ''),
-(76, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '02-04-2024', '12:30 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856556', '75.8596552', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '02-04-2024', '12:30 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+18085059281', '+19754853453', '', 'pi_3P11JrIhs7ZBuE9x2OJkhxhO', '', '', '', '', '', '', '', '', '', ''),
-(77, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '02-04-2024', '01:37 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856578', '75.8596395', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '02-04-2024', '01:37 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+18085059284', '+11234568888', '', 'pi_3P12NXIhs7ZBuE9x25qFxQcs', '', '', '', '', '', '', '', '', '', ''),
-(79, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Mini', '', 'Card', '', '5', '04-04-2024', '12:24 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh', '', '', '22.6856604', '75.8596542', '22.213888547917573', '75.47234125435352', 'cancel', '', '', '', '', 'Admin', 0, '04-04-2024', '12:24 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+919876567867', '+919876567867', '', 'pi_3P1jxFIhs7ZBuE9x12Yhs6Ll', 'pm_1P1jxBIhs7ZBuE9xM6pzTWhn', '', '', '', '', '', '', '', '', ''),
-(88, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '09-04-2024', '06:30 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856598', '75.8596478', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '09-04-2024', '06:30 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+18085059284', '+19754853453', '', 'pi_3P3eHfIhs7ZBuE9x2mxbmWEr', 'pm_1P16F0Ihs7ZBuE9xqLgTwOou', '', '', '', '', '', '', '', '', ''),
-(89, '16', 'Test  Lastname', '1234@1234.com', '+1', '2122122122', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '10-04-2024', '10:16 AM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '23.0894921', '76.0391909', '23.0557266', '75.92309759999999', 'cancel', '', '', '', '', 'Admin', 0, '10-04-2024', '10:16 AM', 'bagana', 'harnawada', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+12122222222', '+12122222222', 'ggggg', 'pi_3P3t2tIhs7ZBuE9x2R1xEZKQ', 'pm_1P3TBJIhs7ZBuE9x8oqkyzeq', '', '', '', '', '', '', '', '', ''),
-(90, '16', 'Test  Lastname', '1234@1234.com', '+1', '2122122122', 'Ride_now', 0, 'Small', '', 'Card', '', '', '10-04-2024', '10:35 AM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '23.0894921', '76.0391909', '23.0557266', '75.92309759999999', 'Complete', '', '', '', '0', 'User', 0, '10-04-2024', '10:35 AM', 'bagana', 'harnawada', 'Out City', 'Wrong Location Booking', '', '', '100', '100.0', '0.0', '+12122222222', '+12122222222', '6657', 'pi_3P3tLUIhs7ZBuE9x00uNF3fU', 'pm_1P3TE2Ihs7ZBuE9xRpZ8SH5H', '', '', '', '', '', '', '', '', ''),
-(91, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Small', '', 'Card', '', '', '16-04-2024', '07:13 AM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '23.0894921', '76.0391909', '23.0557266', '75.92309759999999', 'cancel', '', '', '', '0', 'User', 0, '16-04-2024', '07:13 AM', 'bagana', 'harnawada', 'Out City', 'Entered Wrong Location', '', '', '100', '100.0', '0.0', '+12122222222', '+12122222222', 'test trry', 'pi_3P613nIhs7ZBuE9x1qByKpZk', 'pm_1P613iIhs7ZBuE9x9uWPf6PL', '', '', '', '', '', '', '', '', ''),
-(92, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '16-04-2024', '07:52 AM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '23.0894921', '76.0391909', '23.0557266', '75.92309759999999', 'cancel', '', '', '', '', 'Admin', 0, '16-04-2024', '07:52 AM', 'bagana', 'harnawada', 'Out City', 'Trip time has been expired', '', '', '50', '50.0', '0.0', '+12122222222', '+12122222222', 'test again', 'pi_3P61fhIhs7ZBuE9x2P1C6znO', 'pm_1P61fZIhs7ZBuE9xDJJmGwxK', '', '', '', '', '', '', '', '', ''),
-(93, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '16-04-2024', '07:26 PM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Ujjain, Madhya Pradesh 456001, India', '', '', '23.0894921', '76.0391909', '23.178615', '75.7691262', 'cancel', '', '', '', '', 'Admin', 0, '16-04-2024', '07:26 PM', 'bagana', 'ujjain', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+12122222222', '+12122222222', '466766', 'pi_3P6CUmIhs7ZBuE9x02vACYCs', 'pm_1P61fZIhs7ZBuE9xDJJmGwxK', '450221', '452001', '', '', '', '', '', '', ''),
-(94, '16', 'Test  Lastname', '1234@1234.com', '+1', '2122122122', 'Ride_now', 0, 'Small', '', 'Card', '', '', '17-04-2024', '07:57 PM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '23.0894921', '76.0391909', '23.0557266', '75.92309759999999', 'cancel', '', '', '', '', 'Admin', 0, '17-04-2024', '07:57 PM', 'bagana', 'harnawada', 'Out City', 'Trip time has been expired', '', '', '100', '100.00', '0.0', '+1212222222', '+1212222222', 'this is for test', 'pi_3P6ZS9Ihs7ZBuE9x27VFJSIz', 'pm_1P3TBJIhs7ZBuE9x8oqkyzeq', '', '', '', '', '', '', '', '', ''),
-(95, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Small', '', 'Card', '', '', '19-04-2024', '04:37 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '27', '', '22.6856518', '75.8596341', '22.2138885', '75.4723411', 'cancel', '', '', '', '0', 'Driver', 0, '19-04-2024', '04:37 PM', 'indore', 'dhamnod', 'Out City', 'ggb k', '', '', '100', '100.00', '0.0', '+19754853453', '+18085059284', '', 'pi_3P7FHZIhs7ZBuE9x09lWi4Xv', 'pm_1P16F0Ihs7ZBuE9xqLgTwOou', '452014', '454552', '40.7041116', '-73.9563671', '206 Hewes St, Brooklyn, NY 11211, USA', '', '', '', ''),
-(96, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Small', '', 'Card', '', '', '19-04-2024', '04:47 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '27', '', '22.6856518', '75.8596341', '22.2138885', '75.4723411', 'cancel', '451747', '', '', '0', 'Driver', 0, '19-04-2024', '04:47 PM', 'indore', 'dhamnod', 'Out City', 'The user did not arrive', '', '', '100', '100.00', '0.0', '+19754853453', '+18085059284', '', 'pi_3P7FNGIhs7ZBuE9x2nfF47O3', 'pm_1P1Sh9Ihs7ZBuE9xtcQKBFvx', '452014', '454552', '40.7042468', '-73.9562295', '204 Hewes St, Brooklyn, NY 11211, USA', '', '', '', ''),
-(97, '15', 'Asd  Check', 'as@gmail.com', '+1', '8085059285', 'Ride_now', 0, 'Small', '', 'Card', '', '', '19-04-2024', '04:51 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856518', '75.8596341', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '19-04-2024', '04:51 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '100', '100.00', '0.0', '+19754853453', '+18085059284', '', 'pi_3P7FVYIhs7ZBuE9x1uwT6Bg0', 'pm_1P1Sh9Ihs7ZBuE9xtcQKBFvx', '452014', '454552', '', '', '', '', '', '', ''),
-(98, '16', 'Test  Lastname', '1234@1234.com', '+1', '2122122122', 'Ride_now', 0, 'Small', '', 'Card', '', '', '21-04-2024', '10:32 AM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '76.0391909', '75.92309759999999', '23.0557266', '23.0557266', 'cancel', '', '', '', '', 'Admin', 0, '21-04-2024', '10:32 AM', '', '', 'In City', 'Trip time has been expired', '', '', '100', '100.00', '0.0', '+121222222', '+1212222222', '', 'pi_3P7sYHIhs7ZBuE9x1NsuRDnB', 'pm_1P3W47Ihs7ZBuE9x9OXEia8M', '455001', '456664', '', '', '', '', '', '', ''),
-(99, '16', 'Test  Lastname', '1234@1234.com', '+1', '2122122122', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '21-04-2024', '10:56 AM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '23.0894921', '76.0391909', '23.0557266', '75.92309759999999', 'cancel', '', '', '', '', 'Admin', 0, '21-04-2024', '10:56 AM', 'bagana', 'harnawada', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+12212122222', '+12222122222', '', 'pi_3P7svQIhs7ZBuE9x0X1vdWxX', 'pm_1P3TBJIhs7ZBuE9x8oqkyzeq', '455001', '456664', '', '', '', '', '', '', ''),
-(100, '16', 'Test  Lastname', '1234@1234.com', '+1', '2122122122', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '21-04-2024', '11:17 AM', '', '', 'Dewas, Madhya Pradesh 455001, India', 'Narwar, Madhya Pradesh 456664, India', '', '', '23.0894921', '76.0391909', '23.0557266', '75.92309759999999', 'cancel', '', '', '', '', 'Admin', 0, '21-04-2024', '11:17 AM', 'bagana', 'harnawada', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+12122222222', '+12122222222', '', 'pi_3P7tEyIhs7ZBuE9x2hZ4nEtG', 'pm_1P3TBJIhs7ZBuE9x8oqkyzeq', '455001', '456664', '', '', '', '', '', '', ''),
-(101, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '30-04-2024', '01:36 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856678', '75.8596407', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '30-04-2024', '01:36 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+18085059284', '+18085059282', '', 'pi_3PBBhwIhs7ZBuE9x0TBPLKSk', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(102, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '30-04-2024', '02:44 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856612', '75.8596403', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '30-04-2024', '02:44 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+18088555555', '+15663556336', '', 'pi_3PBClRIhs7ZBuE9x2e5RsKEP', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(103, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '30-04-2024', '02:50 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856588', '75.8596375', '22.2138885', '75.4723411', 'cancel', '878833', '', '', '', 'Admin', 0, '30-04-2024', '02:50 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '30-04-2024', '03:05 PM', '50', '50.00', '0.0', '+18005500050', '+10600605828', '', 'pi_3PBCrGIhs7ZBuE9x1h3QPcTp', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '22.6856593', '75.8596512', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '', '', '', '15'),
-(104, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '12:34 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856545', '75.8596394', '22.2138885', '75.4723411', 'cancel', '659438', '', '', '', 'Admin', 0, '04-05-2024', '12:34 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '04-05-2024', '03:13 PM', '50', '50.00', '0.0', '+15858822828', '+15030303030', '', 'pi_3PCcdoIhs7ZBuE9x2cCah6Tw', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '22.6856509', '75.8596527', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '159'),
-(105, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Mini', '', 'Card', '', '', '05-05-2024', '4:05 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '17', '', '22.6856582', '75.8596394', '22.2138885', '75.4723411', 'cancel', '', '', '', '0', 'Driver', 0, '04-05-2024', '04:05 PM', 'indore', 'dhamnod', 'Out City', 'The user did not arrive', '', '', '50', '50.00', '0.0', '+18558855850', '+15500555050', 'ctgchvcytdfyuguufyxtc', 'pi_3PCfwKIhs7ZBuE9x1fcZkzzd', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(106, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Mini', '', 'Card', '', '', '05-07-2024', '6:25 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856547', '75.8596415', '22.2138885', '75.4723411', 'cancel', '752746', '', '', '0', 'Driver', 0, '04-05-2024', '04:07 PM', 'indore', 'dhamnod', 'Out City', 'The user did not arrive', '', '', '50', '50.00', '0.0', '+18828225828', '+12828288282', 'g h hchvhcddjuxycctxctt h. hy. yr????????????????', 'pi_3PCfyNIhs7ZBuE9x1MS3KHHT', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(107, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Mini', '', 'Card', '', '', '05-06-2024', '7:24 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856445', '75.8596422', '22.2138885', '75.4723411', 'cancel', '', '', '', '0', 'Driver', 0, '04-05-2024', '04:25 PM', 'indore', 'dhamnod', 'Out City', 'User not responding', '', '', '50', '50.00', '0.0', '+18085059284', '+11223665588', '', 'pi_3PCgFDIhs7ZBuE9x0nkGiMvR', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(108, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '05:12 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856525', '75.8596428', '22.2138885', '75.4723411', 'cancel', '664490', '', '', '', 'Admin', 0, '04-05-2024', '05:12 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '04-05-2024', '05:32 PM', '50', '50.00', '0.0', '+18065058828', '+15005858855', 'fc fgvvuvhvyvtvvtvtvvtuvvyv', 'pi_3PCgytIhs7ZBuE9x22H62xKu', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', '20'),
-(109, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '05:13 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856464', '75.8596452', '22.2138885', '75.4723411', 'cancel', '682737', '', '', '', 'Admin', 0, '04-05-2024', '05:13 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '04-05-2024', '05:31 PM', '50', '50.00', '0.0', '+18258588288', '+15858822525', 'vyyvyctctvyvvytvtcctyvyvtcvtvyvyuvytcctcyvyvvtvtyvuyygv', 'pi_3PCgzeIhs7ZBuE9x2EViNm3m', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', '18'),
-(110, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '05:33 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856474', '75.8596434', '22.2138885', '75.4723411', 'cancel', '259439', '', '', '', 'Admin', 0, '04-05-2024', '05:33 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '04-05-2024', '07:15 PM', '50', '50.00', '0.0', '+18558528822', '+12828822882', 'tctcyccuctctctcvyyvvyyvyvyvyvbuubvuvuuvguvyvyyvyvvyvuyvyvyv', 'pi_3PChJEIhs7ZBuE9x2QuFmRGx', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', '102'),
-(111, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '05:34 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.685649', '75.8596402', '22.2138885', '75.4723411', 'cancel', '805122', '', '', '', 'Admin', 0, '04-05-2024', '05:34 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '04-05-2024', '05:35 PM', '50', '50.00', '0.0', '+18885222585', '+18522852852', 'cgggvccuyvtctvtvtvtvvttvtvybyvvvtvvgvvg. vg vhvgvgvtcctcctctctttctvtycyvvtcftccfctvtcgcctctctctctvtcctctcttcyccyctcctctvyvyvyvyvyvcycyctctvyvyvyvyvyvyvyvyvyvyvyvtvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvybyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyvyuvyvyvyvvyvyg', 'pi_3PChKBIhs7ZBuE9x0yhJGe1k', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', '1'),
-(112, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '05:38 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856468', '75.8596414', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '04-05-2024', '05:38 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+12882822872', '+12882885822', 'txxtxtyccytcttxtx ', 'pi_3PChOaIhs7ZBuE9x1FFzn8iF', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(113, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '05:42 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856509', '75.8596499', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '04-05-2024', '05:42 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+18522255225', '+12822552585', 'thgfghgfhhfghfhgtygfyhvgy', 'pi_3PChSVIhs7ZBuE9x1nhNU6Aa', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(114, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '04-05-2024', '06:11 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856498', '75.8596413', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '04-05-2024', '06:11 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+10582828282', '+12028288282', 'ctgyvucufufyftcctvvyvyguvuvuvcyvyvyvyvuvvuuvvyuuvvuvhvhvhvhvyvu. u uh. uv', 'pi_3PChu9Ihs7ZBuE9x0oKok3Fs', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(115, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Mini', '', 'Card', '', '', '05-06-2024', '6:52 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856465', '75.8596311', '22.2138885', '75.4723411', 'confirm', '', '', '', '', '', 0, '04-05-2024', '06:53 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '50', '50.00', '0.0', '+18668668680', '+16868686060', 'hccjcjjvkvvkkviviv', 'pi_3PCiYbIhs7ZBuE9x12GBSVjR', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(116, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Mini', '', 'Card', '', '', '05-08-2024', '7:26 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856538', '75.8596324', '22.2138885', '75.4723411', 'confirm', '', '', '', '', '', 0, '04-05-2024', '07:26 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '50', '50.00', '0.0', '+10906868668', '+18585686886', 'ugikjgucycxxyccuuv', 'pi_3PCj4bIhs7ZBuE9x1GlyL3hI', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(117, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Mini', '', 'Card', '', '', '05-05-2024', '7:31 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '17', '', '22.6856524', '75.859639', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '04-05-2024', '07:31 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+105500588', '+1055005868', 'v. gcgv', 'pi_3PCjA2Ihs7ZBuE9x2GwiLgSj', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(118, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '07-05-2024', '05:56 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '07-05-2024', '05:56 AM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+12122222222', '+12122222222', 'test this note I just created ', 'pi_3PDbr9Ihs7ZBuE9x0ivSuSIt', 'pm_1P61fZIhs7ZBuE9xDJJmGwxK', '450661', '450661', '', '', '', '', '', '', ''),
-(119, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '07-05-2024', '07:07 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '31', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '183856', '', '', '', 'Admin', 0, '07-05-2024', '07:07 AM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '06-05-2024', '10:02 PM', '50', '50.00', '0.0', '+1212222222', '+12122222222', 'this is Another test', 'pi_3PDcxkIhs7ZBuE9x1xhd7TTq', 'pm_1P61fZIhs7ZBuE9xDJJmGwxK', '450661', '450661', '', '', '', '', '', '', '545'),
-(120, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Small', '', 'Card', '', '', '07-05-2024', '07:50 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '31', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '296691', '', '', '0', 'Driver', 0, '07-05-2024', '07:50 AM', 'neemkheda', 'neemkheda', 'In City', 'The user entered the wrong address', '', '', '100', '100.00', '0.0', '+12122222222', '+13666666666', 'test again ', 'pi_3PDdeGIhs7ZBuE9x2Al9dNe7', 'pm_1P61fZIhs7ZBuE9xDJJmGwxK', '450661', '450661', '', '', '', '', '', '', '');
-INSERT INTO `notification_tbl` (`id`, `user_id`, `u_name`, `email`, `country_code`, `u_contact`, `ride_type`, `package_id`, `package_name`, `car_id`, `payment_mode`, `booking_type`, `card_id`, `ride_date`, `ride_time`, `start_time`, `complete_time`, `source_add`, `destination_add`, `driver_id`, `message`, `source_lat`, `source_long`, `destination_lat`, `destination_long`, `driver_status`, `confirmation_code`, `type_name`, `admin_commission`, `driver_earning`, `cancel_by`, `coupon_id`, `date`, `time`, `source_city`, `destination_city`, `city_status`, `cancel_reason`, `ride_end_date`, `ride_end_time`, `trip_fare`, `total_fare`, `discount`, `pickup_contact`, `drop_contact`, `notes`, `payment_id`, `payment_method_id`, `source_zipcode`, `destination_zipcode`, `driver_lat`, `driver_lng`, `d_address`, `user_lat`, `user_lng`, `u_address`, `total_duration`) VALUES
-(121, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Large', '', 'Card', '', '', '07-05-2024', '07:52 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '31', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '0', 'Driver', 0, '07-05-2024', '07:52 AM', 'neemkheda', 'neemkheda', 'In City', 'User not responding', '', '', '200', '200.00', '0.0', '+12123333333', '+15855855558', 'test xhgjnh', 'pi_3PDdfVIhs7ZBuE9x2EtrZgyF', 'pm_1P61fZIhs7ZBuE9xDJJmGwxK', '450661', '450661', '', '', '', '', '', '', ''),
-(122, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '07-05-2024', '05:21 PM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '31', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '403795', '', '', '', 'Admin', 0, '07-05-2024', '05:21 PM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '07-05-2024', '07:58 AM', '400', '400.00', '0.0', '+12122222222', '+12122222222', 'test again this', 'pi_3PDmY0Ihs7ZBuE9x2Cc93tz1', 'pm_1P61fZIhs7ZBuE9xDJJmGwxK', '450661', '450661', '', '', '', '', '', '', '563'),
-(123, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '07-05-2024', '05:32 PM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '31', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '935023', '', '', '', 'Admin', 0, '07-05-2024', '05:32 PM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '07-05-2024', '08:03 AM', '50', '50.00', '0.0', '+15588888888', '+19969999999', 'test test tst', 'pi_3PDmjSIhs7ZBuE9x2AI5Ffng', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', '569'),
-(124, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '08-05-2024', '02:52 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '32', '', '22.6856631', '75.8596391', '22.2138885', '75.4723411', 'cancel', '886010', '', '', '', 'Admin', 0, '08-05-2024', '02:52 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '08-05-2024', '02:59 PM', '50', '50.00', '0.0', '+1+19754853453', '+1+1.8085059284', '', 'pi_3PE6hjIhs7ZBuE9x2W66NkyT', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', '7'),
-(125, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Mini', '', 'Card', '', '', '05-10-2024', '3:01 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '32', '', '22.685666', '75.8596346', '22.2138885', '75.4723411', 'cancel', '', '', '', '0', 'Driver', 0, '08-05-2024', '03:02 PM', 'indore', 'dhamnod', 'Out City', 'bb', '', '', '50', '50.00', '0.0', '+1+18085059284', '+1+19754853453', '', 'pi_3PE6rKIhs7ZBuE9x2IeMcoob', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(126, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Extra Large', '', 'Card', '', '', '05-09-2024', '4:14 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '32', '', '22.685665', '75.8596414', '22.2138885', '75.4723411', 'confirm', '', '', '', '', '', 0, '08-05-2024', '03:14 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '200', '200.00', '0.0', '+1+1885225588522285', '+1+18523222552222', 'helooo', 'pi_3PE735Ihs7ZBuE9x1MDqTSiJ', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(127, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '08-05-2024', '04:40 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '29', '', '22.685664', '75.8596235', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '08-05-2024', '04:40 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+185852822822522822', '+1+1822552552225', 'gjjutvhhytchuyyfg', 'pi_3PE8OLIhs7ZBuE9x2cghRD0o', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(128, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '08-05-2024', '04:42 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '29', '', '22.6856686', '75.8596362', '22.2138885', '75.4723411', 'cancel', '503870', '', '', '', 'Admin', 0, '08-05-2024', '04:42 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+1606060606', '+1+19060660', 'g. g. h. hvvuvv', 'pi_3PE8QJIhs7ZBuE9x19uTxeXB', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(129, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_later', 0, 'Extra Large', '', 'Card', '', '', '05-09-2024', '5:02 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856663', '75.8596284', '22.2138885', '75.4723411', 'New Booking', '', '', '', '', '', 0, '08-05-2024', '05:03 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '200', '200.00', '0.0', '+1+1522252333', '+1+182222', 'gtuuugghuhggbhuuhuuuuuuhhgyuuvcuuvuvguguvuvyhvbuvyyvvuuvuvvuubbubuubvubuubibubvivivivivubububububibibubibubbuub', 'pi_3PE8kSIhs7ZBuE9x0pvMp66x', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(130, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '08-05-2024', '05:34 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856627', '75.8596361', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '08-05-2024', '05:34 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+15636522555552555', '+1+122552252', 'vyufhhhghhhhhhhhhhhhhhhyyuhhhuuuuihjjjjjiiihbhtyhhhhh', 'pi_3PE9E4Ihs7ZBuE9x0TvkH9RW', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(131, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '08-05-2024', '05:48 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856573', '75.8596462', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '08-05-2024', '05:48 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+1633', '+1+1255', 'fgyyyy', 'pi_3PE9RwIhs7ZBuE9x0WiBlpPN', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(132, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '08-05-2024', '05:50 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '29', '', '22.685668', '75.8596391', '22.2138885', '75.4723411', 'cancel', '888337', '', '', '', 'Admin', 0, '08-05-2024', '05:50 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '08-05-2024', '10:36 PM', '200', '200.00', '0.0', '+1+12222222222', '+1+122555555', '', 'pi_3PE9TJIhs7ZBuE9x03iYS359', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', '286'),
-(133, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '08-05-2024', '05:59 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '29', '', '22.6856666', '75.8596362', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '08-05-2024', '05:59 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+19754853453', '+1+18085059204', '', 'pi_3PE9czIhs7ZBuE9x09FfRvxv', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(134, '16', 'Test  Lastname', '1234@1234.com', '+1', '2122122122', 'Ride_now', 0, 'Large', '', 'Card', '', '', '09-05-2024', '07:49 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '29', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '658750', '', '', '', 'Admin', 0, '09-05-2024', '07:49 AM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '08-05-2024', '10:34 PM', '200', '200.00', '0.0', '+1+121222222222222222222522255555585', '+1+18253535353568),*),*),*),*),*),+,;,,,65686858', 'vnbbh test test test tsty', 'pi_3PEMaOIhs7ZBuE9x2mono3HP', 'pm_1P3TBJIhs7ZBuE9x8oqkyzeq', '450661', '450661', '', '', '', '', '', '', '555'),
-(135, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Mini', '', 'Card', '', '', '09-05-2024', '11:02 AM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856689', '75.8596358', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '09-05-2024', '11:02 AM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '50', '50.00', '0.0', '+1+1522522522522', '+1+1822552555', 'tygggtyggttt', 'pi_3PEPaZIhs7ZBuE9x2HM5XnSI', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(136, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '09-05-2024', '11:49 AM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '32', '', '22.6856693', '75.8596372', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '09-05-2024', '11:49 AM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+18528255282', '+1+1522852855', 'vgtfhjcghchgtgghoololohyggyfftgfgtvhgvggvtgjgy', 'pi_3PEQKDIhs7ZBuE9x2jCTpzvz', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', ''),
-(137, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '09-05-2024', '12:08 PM', '', '', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Puri Colony, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '32', '', '22.6856717', '75.8596401', '22.2138885', '75.4723411', 'cancel', '', '', '', '', 'Admin', 0, '09-05-2024', '12:08 PM', 'indore', 'dhamnod', 'Out City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+19698558558558', '+1+18552558', 'vgttgvbh', 'pi_3PEQcjIhs7ZBuE9x1819gb1g', 'pm_1PCflOIhs7ZBuE9xUEyxIH3A', '452014', '454552', '', '', '', '', '', '', ''),
-(138, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Large', '', 'Card', '', '', '13-05-2024', '03:10 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '13-05-2024', '03:10 AM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+12125553333', '+1+12125556698', 'this is hopefully the last test', 'pi_3PFk8OIhs7ZBuE9x0liGuUVM', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', ''),
-(139, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Large', '', 'Card', '', '', '13-05-2024', '03:20 AM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '13-05-2024', '03:20 AM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '200', '200.00', '0.0', '+1+12122222222', '+1+12122222222', 'this is a test again', 'pi_3PFkHqIhs7ZBuE9x2k2Uu7lT', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', ''),
-(140, '17', 'Test  Test', '12345@12345.com', '+1', '2122222222', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '14-05-2024', '05:42 PM', '', '', 'Pandhana, Madhya Pradesh 450661, India', 'Pandhana, Madhya Pradesh 450661, India', '', '', '21.6762056', '76.1551866', '21.6762056', '76.1551866', 'cancel', '', '', '', '', 'Admin', 0, '14-05-2024', '05:42 PM', 'neemkheda', 'neemkheda', 'In City', 'Trip time has been expired', '', '', '400', '400.00', '0.0', '+1+12122222222', '+1+12122222222', 'test new', 'pi_3PGKDPIhs7ZBuE9x2KuCzc2U', 'pm_1P61j3Ihs7ZBuE9xUwPOcw1F', '450661', '450661', '', '', '', '', '', '', ''),
-(141, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '23-05-2024', '03:25 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856563', '75.859645', '22.2138885', '75.4723411', 'New Booking', '', '', '', '', '', 0, '23-05-2024', '03:25 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '200', '200.00', '0.0', '+1+18085059284', '+1+19754853453', '', 'pi_3PJYNMIhs7ZBuE9x2dbPrLhr', 'pm_1PBBh8Ihs7ZBuE9xHNd6u24n', '452014', '454552', '', '', '', '', '', '', ''),
-(142, '18', 'Ss  Ff', 'satishchouhanciss@gmail.com', '+91', '8085059282', 'Ride_now', 0, 'Extra Large', '', 'Card', '', '', '23-05-2024', '03:34 PM', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', 'Dhamnod, Madhya Pradesh, India', '', '', '22.6856543', '75.8596389', '22.2138885', '75.4723411', 'New Booking', '', '', '', '', '', 0, '23-05-2024', '03:34 PM', 'indore', 'dhamnod', 'Out City', '', '', '', '200', '200.00', '0.0', '+1+18085059284', '+1+19754853453', 'good morning ????', 'pi_3PJYVOIhs7ZBuE9x28lgbXmk', 'pm_1PCfkYIhs7ZBuE9xZk9soJIl', '452014', '454552', '', '', '', '', '', '', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `panding_booking_request_driver`
 --
 
@@ -1355,101 +1128,78 @@ CREATE TABLE `panding_booking_request_driver` (
 --
 
 INSERT INTO `panding_booking_request_driver` (`id`, `trip_id`, `user_id`, `driver_id`, `total_price`, `ride_type`, `source_city`, `destination_city`, `city_status`, `status`, `date`, `time`, `admin_commission`, `trip_fare`, `total_fare`, `discount`, `coupen_id`, `notes`) VALUES
-(1, 1, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '23-05-2024', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(2, 1, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(3, 1, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(4, 1, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(5, 1, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(6, 1, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(7, 1, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(8, 1, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(9, 1, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-23', '04:21 PM', '', '', '200', '0.0', 0, 'ccgvh'),
-(10, 2, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '27-05-2024', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(11, 2, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(12, 2, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(13, 2, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(14, 2, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(15, 2, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(16, 2, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(17, 2, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(18, 2, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '04:42 PM', '', '', '200', '0.0', 0, 'chjkujh'),
-(19, 3, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '27-05-2024', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(20, 3, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(21, 3, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(22, 3, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(23, 3, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(24, 3, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(25, 3, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(26, 3, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(27, 3, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:12 PM', '', '', '200', '0.0', 0, 'g,ydufufuf'),
-(28, 4, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '27-05-2024', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(29, 4, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'accept', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(30, 4, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(31, 4, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(32, 4, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(33, 4, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(34, 4, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(35, 4, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu'),
-(36, 4, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'cancel', '2024-05-27', '05:15 PM', '', '', '200', '0.0', 0, 'dryu');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `penic_notification_list`
---
-
-CREATE TABLE `penic_notification_list` (
-  `id` int(11) NOT NULL,
-  `booking_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `driver_id` int(11) NOT NULL,
-  `alert_msg` mediumtext NOT NULL,
-  `current_location` mediumtext NOT NULL,
-  `lat` varchar(333) NOT NULL,
-  `lng` varchar(333) NOT NULL,
-  `type` varchar(323) NOT NULL,
-  `date` varchar(561) NOT NULL,
-  `time` varchar(561) NOT NULL,
-  `status` varchar(500) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `penic_notification_list`
---
-
-INSERT INTO `penic_notification_list` (`id`, `booking_id`, `user_id`, `driver_id`, `alert_msg`, `current_location`, `lat`, `lng`, `type`, `date`, `time`, `status`) VALUES
-(1, 52, 4, 23, 'There is a problem ,Please help !!', 'Mangal Nagar,Indore,Madhya Pradesh,452001, India', '22.685685', '75.8596601', 'Driver', '2024-03-21', '04:33 PM', ''),
-(2, 52, 4, 23, 'There is a problem ,Please help !!', 'Mangal Nagar,Indore,Madhya Pradesh,452001, India', '22.6856857', '75.8596601', 'Driver', '2024-03-21', '04:34 PM', ''),
-(3, 96, 15, 27, 'There is a problem ,Please help !!', 'Brooklyn,,New York,11211, United States', '40.7041904', '-73.9562112', 'Driver', '2024-04-21', '10:16 AM', ''),
-(4, 96, 15, 27, 'There is a problem ,Please help !!', 'Brooklyn,,New York,11211, United States', '40.7041901', '-73.9562114', 'Driver', '2024-04-21', '10:16 AM', ''),
-(5, 96, 15, 27, 'There is a problem ,Please help !!', 'Brooklyn,,New York,11211, United States', '40.7042079', '-73.9562601', 'Driver', '2024-04-21', '10:18 AM', ''),
-(6, 96, 15, 27, 'There is a problem ,Please help !!', 'Brooklyn,,New York,11211, United States', '40.7042454', '-73.9561497', 'Driver', '2024-04-21', '10:19 AM', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Refferal_Amount`
---
-
-CREATE TABLE `Refferal_Amount` (
-  `id` int(11) NOT NULL,
-  `type` varchar(215) NOT NULL,
-  `code` varchar(255) NOT NULL,
-  `self_amount` varchar(500) NOT NULL,
-  `refer_amount` varchar(500) NOT NULL,
-  `start_date` varchar(255) NOT NULL,
-  `end_date` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `time` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Refferal_Amount`
---
-
-INSERT INTO `Refferal_Amount` (`id`, `type`, `code`, `self_amount`, `refer_amount`, `start_date`, `end_date`, `date`, `time`) VALUES
-(12, 'USER', '', '500', '250', '2024-01-08', '2025-04-06', '08-01-24', '10:02 AM'),
-(13, 'DRIVER', '', '300', '600', '2024-01-08', '2024-04-06', '08-01-24', '10:03 AM');
+(1, 11, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:10 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(2, 11, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:10 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(3, 11, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:10 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(4, 11, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:11 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(5, 11, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:11 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(6, 11, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:11 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(7, 11, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:11 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(8, 11, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:11 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(9, 11, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:11 PM', '', '', '200', '0.0', 0, 'svdvdrbthrbntn'),
+(10, 12, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(11, 12, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(12, 12, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(13, 12, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(14, 12, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(15, 12, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(16, 12, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(17, 12, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(18, 12, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:20 PM', '', '', '200', '0.0', 0, ''),
+(19, 13, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(20, 13, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(21, 13, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(22, 13, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(23, 13, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(24, 13, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(25, 13, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(26, 13, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(27, 13, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:27 PM', '', '', '200', '0.0', 0, 'ghh'),
+(28, 14, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(29, 14, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(30, 14, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(31, 14, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(32, 14, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(33, 14, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(34, 14, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(35, 14, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(36, 14, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:36 PM', '', '', '200', '0.0', 0, 'vvb'),
+(37, 15, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(38, 15, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(39, 15, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(40, 15, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(41, 15, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(42, 15, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(43, 15, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(44, 15, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(45, 15, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:51 PM', '', '', '200', '0.0', 0, ''),
+(46, 16, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(47, 16, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(48, 16, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(49, 16, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(50, 16, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(51, 16, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(52, 16, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(53, 16, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(54, 16, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:53 PM', '', '', '200', '0.0', 0, ''),
+(55, 17, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(56, 17, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(57, 17, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(58, 17, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(59, 17, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(60, 17, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(61, 17, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(62, 17, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(63, 17, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(64, 18, 7, 4, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '30-05-2024', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(65, 18, 7, 17, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(66, 18, 7, 19, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(67, 18, 7, 21, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(68, 18, 7, 22, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(69, 18, 7, 23, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(70, 18, 7, 25, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(71, 18, 7, 29, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, ''),
+(72, 18, 7, 32, '200.00', 'Ride_now', 'indore', 'dhamnod', 'Out City', 'New Booking', '2024-05-30', '12:57 PM', '', '', '200', '0.0', 0, '');
 
 -- --------------------------------------------------------
 
@@ -1501,7 +1251,8 @@ CREATE TABLE `Senders` (
 
 INSERT INTO `Senders` (`SenderID`, `FriendlyID`, `UserName`, `Password`, `FirstName`, `LastName`, `Address`, `Address2`, `City`, `State`, `Zip`, `Email`, `Phone`, `Phone2`, `Phone3`, `Status`, `PreferredPayment`, `ForceAuth`, `NotifyType`, `TimeStampCreated`, `LastUpdated`, `Stripe_CustomerId`, `country_code`, `country_flag`, `user_wallet`, `device_id`, `iosdevice_id`, `device_status`, `id_proof_image`, `id_expiry_date`, `gender`, `company_id`, `image`, `social_id`, `social_type`) VALUES
 (7, 'SEND492879', '', '123456', 'Goa', 'Kk', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, In', '', '', '', '', 'goa@gmail.com', '8085059285', '', '', 'A', '', 0, '', '2024-05-23 00:00:00', '0000-00-00 00:00:00', 'cus_Q9svkJHP4JUIMO', '+91', 'IN', '0', 'cBF93r8aR8Ga0oxoB83BRy:APA91bEGw4uj8i0_MRGvLZ6wnJp2VyJoV3aEFkV01ZsrnSp-IRnLgQrllDpjco7u7v2LvtQScAp-lurS8Qq8H5URd47Q030jlmampADC6J-_5O6ibCfpBe84kv4s_LIxVp6bjgtvZUCd', '', 'Android', 'AG8pskEi71_1716461173', '', 'Male', '', '', 0, ''),
-(8, 'SEND878836', '', '123456Aa', 'barkha', 'patel', '', '', '', '', '', 'bp@gmail.com', '4565789845', '', '', 'D', '', 0, '', '2024-05-27 00:00:00', '0000-00-00 00:00:00', 'cus_QBJqbzmnmyxzSN', '+1', '', '0', '', '', '', 'Em2Fk7A8jr_1716791913.jpg', '2024-06-01', '', '', 'g31q92ywnf_1716796167.png', 0, '');
+(8, 'SEND878836', '', '123456Aa', 'barkha', 'patel', '', '', '', '', '', 'bp@gmail.com', '4565789845', '', '', 'D', '', 0, '', '2024-05-27 00:00:00', '0000-00-00 00:00:00', 'cus_QBJqbzmnmyxzSN', '+1', '', '0', '', '', '', 'Em2Fk7A8jr_1716791913.jpg', '2024-06-01', '', '', 'g31q92ywnf_1716796167.png', 0, ''),
+(9, 'SEND864798', '', '123456789', 'Test', 'Sender', 'Gös Eriks väg 123, Borlänge, Sweden', '', '', '', '', '123123@123.com', '2122122222', '', '', 'A', '', 0, '', '2024-05-29 00:00:00', '0000-00-00 00:00:00', 'cus_QC8mGQrcSVOJSx', '+1', 'US', '0', 'eIwfq3thSQ2WLFNpult3Kn:APA91bHcASGx9Nos3DjI7Z7aXb_KabToRLg5Oa-caeRyB0pyUbn4ZU3hlY59oI_ulxac0wlSkffK3W6aM892z0IdLYI_AQHeodNOw6GfdfUfhFs1G6X-EnDW90N3wFv8gL2R_1Q3e4MG', '', 'Android', 'uBm4z5kp71_1716981439', '', 'Male', '', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -1593,24 +1344,6 @@ INSERT INTO `tbl_cancel_reason` (`reason_id`, `reason_for`, `cancel_reason`, `st
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_city`
---
-
-CREATE TABLE `tbl_city` (
-  `id` int(11) NOT NULL,
-  `company_id` int(11) NOT NULL,
-  `city` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `latitude` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `longitude` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `date` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `time` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `address` mediumtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_complain_list`
 --
 
@@ -1635,74 +1368,6 @@ INSERT INTO `tbl_complain_list` (`id`, `driver_id`, `user_id`, `booking_id`, `ti
 (1, 23, 0, 56, 'driver...', 'driver complaint report', '4qB5Fkn8vC_1711094033.jpg', 'Driver', '2024-03-22', '01:23 PM'),
 (2, 23, 0, 56, 'hhyy', 'hhhhhhhhgg', '37s6rG1lH4_1711107110.jpg', 'Driver', '2024-03-22', '05:01 PM'),
 (3, 31, 0, 119, 'test this compain', 'this is a test complain', 'ru1p0Eol5m_1715047835.png', 'Driver', '2024-05-07', '07:40 AM');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_coupon`
---
-
-CREATE TABLE `tbl_coupon` (
-  `id` int(11) NOT NULL,
-  `type` varchar(215) NOT NULL,
-  `code` varchar(255) NOT NULL,
-  `amount` varchar(500) NOT NULL,
-  `discount` varchar(500) NOT NULL,
-  `discription` varchar(500) NOT NULL,
-  `start_date` varchar(255) NOT NULL,
-  `end_date` varchar(255) NOT NULL,
-  `date` varchar(255) NOT NULL,
-  `time` varchar(255) NOT NULL,
-  `user_amount` varchar(255) NOT NULL,
-  `remaining_amount` varchar(500) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_coupon`
---
-
-INSERT INTO `tbl_coupon` (`id`, `type`, `code`, `amount`, `discount`, `discription`, `start_date`, `end_date`, `date`, `time`, `user_amount`, `remaining_amount`) VALUES
-(1, '', 'Usernew10', '1000', '15', 'BEST TRIP 15% OFF', '2024-02-01', '2024-02-29', '07-02-24', '07:38 AM', '', '1000');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_driver_bank_detail`
---
-
-CREATE TABLE `tbl_driver_bank_detail` (
-  `bank_id` int(11) NOT NULL,
-  `iDriverId` varchar(255) NOT NULL,
-  `vPaymentEmail` varchar(255) NOT NULL,
-  `vBankAccountHolderName` varchar(255) NOT NULL,
-  `vAccountNumber` varchar(255) NOT NULL,
-  `vBankLocation` varchar(255) NOT NULL,
-  `vBankName` varchar(255) NOT NULL,
-  `vBIC_SWIFT_Code` varchar(255) NOT NULL,
-  `eDisplay` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_driver_card`
---
-
-CREATE TABLE `tbl_driver_card` (
-  `iCardId` int(11) NOT NULL,
-  `iDriverId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `secret_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `card_no` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `account_holder_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exp_month` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exp_year` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cvv` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `vStripeToken` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fAmount` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `StripeChargeCard` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ChargeCardStatus` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `DefaultPaymentCard` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1760,47 +1425,6 @@ INSERT INTO `tbl_driver_terms_condition` (`tid`, `type_id`, `terms_condition`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_fair_cost`
---
-
-CREATE TABLE `tbl_fair_cost` (
-  `id` int(11) NOT NULL,
-  `company_id` int(11) NOT NULL,
-  `city1` int(11) NOT NULL,
-  `city1_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `city2` int(11) NOT NULL,
-  `city2_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `ride_share_ride` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `private_ride_price` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `date` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `city1_add` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `city2_add` mediumtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_general_setting`
---
-
-CREATE TABLE `tbl_general_setting` (
-  `set_id` int(11) NOT NULL,
-  `radius` varchar(255) NOT NULL,
-  `min_wallet_amount` varchar(255) NOT NULL,
-  `min_withdraw_amount` varchar(255) NOT NULL,
-  `max_withdraw_amount` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_general_setting`
---
-
-INSERT INTO `tbl_general_setting` (`set_id`, `radius`, `min_wallet_amount`, `min_withdraw_amount`, `max_withdraw_amount`) VALUES
-(9, '10', '1', '1', '50000');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_notification_list`
 --
 
@@ -1821,59 +1445,70 @@ CREATE TABLE `tbl_notification_list` (
 --
 
 INSERT INTO `tbl_notification_list` (`noti_id`, `trip_id`, `user_id`, `driver_id`, `title`, `message`, `date`, `time`, `type`) VALUES
-(1, '1', '', '4', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(2, '1', '', '17', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(3, '1', '', '19', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(4, '1', '', '21', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(5, '1', '', '22', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(6, '1', '', '23', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(7, '1', '', '25', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(8, '1', '', '29', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(9, '1', '', '32', 'New Booking Request!', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(10, '1', '7', '', 'New booking request', 'Booking #1 successfully placed', '2024-05-23', '04:21 PM', 'System'),
-(11, '', '7', '', 'Booking Accepted', 'You Booking #1 has been accepted by driver', '2024-05-23', '05:18 PM', 'System'),
-(12, '2', '', '4', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(13, '2', '', '17', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(14, '2', '', '19', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(15, '2', '', '21', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(16, '2', '', '22', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(17, '2', '', '23', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(18, '2', '', '25', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(19, '2', '', '29', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(20, '2', '', '32', 'New Booking Request!', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(21, '2', '7', '', 'New booking request', 'Booking #2 successfully placed', '2024-05-27', '04:42 PM', 'System'),
-(22, '', '7', '', 'Booking Accepted', 'You Booking #2 has been accepted by driver', '2024-05-27', '04:43 PM', 'System'),
-(23, '2', '7', '', 'Driver Arrival', 'Driver is arriving for Booking #2', '2024-05-27', '05:01 PM', 'System'),
-(24, '2', '7', '', 'Ride Started', 'Your ride #2 is on the way', '2024-05-27', '05:07 PM', 'System'),
-(25, '2', '', '17', 'Regarding Booking', 'You completed ride #2', '2024-05-27', '05:07 PM', 'System'),
-(26, '2', '7', '', 'Regarding Booking', 'Your ride #2 has completed', '2024-05-27', '05:07 PM', 'System'),
-(27, '3', '', '4', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(28, '3', '', '17', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(29, '3', '', '19', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(30, '3', '', '21', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(31, '3', '', '22', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(32, '3', '', '23', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(33, '3', '', '25', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(34, '3', '', '29', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(35, '3', '', '32', 'New Booking Request!', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(36, '3', '7', '', 'New booking request', 'Booking #3 successfully placed', '2024-05-27', '05:12 PM', 'System'),
-(37, '', '7', '', 'Booking Accepted', 'You Booking #3 has been accepted by driver', '2024-05-27', '05:14 PM', 'System'),
-(38, '3', '7', '', 'Driver Picked', 'Driver Picked succesfully for Booking #3', '2024-05-27', '05:14 PM', 'System'),
-(39, '3', '7', '', 'Ride Started', 'Your ride #3 is on the way', '2024-05-27', '05:14 PM', 'System'),
-(40, '3', '', '17', 'Regarding Booking', 'You completed ride #3', '2024-05-27', '05:14 PM', 'System'),
-(41, '3', '7', '', 'Regarding Booking', 'Your ride #3 has completed', '2024-05-27', '05:14 PM', 'System'),
-(42, '4', '', '4', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(43, '4', '', '17', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(44, '4', '', '19', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(45, '4', '', '21', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(46, '4', '', '22', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(47, '4', '', '23', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(48, '4', '', '25', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(49, '4', '', '29', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(50, '4', '', '32', 'New Booking Request!', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(51, '4', '7', '', 'New booking request', 'Booking #4 successfully placed', '2024-05-27', '05:15 PM', 'System'),
-(52, '', '7', '', 'Booking Accepted', 'You Booking #4 has been accepted by driver', '2024-05-27', '05:16 PM', 'System'),
-(53, '4', '', '17', 'Booking Cancellation', 'User has cancelled Booking #4', '2024-05-27', '05:19 PM', 'System');
+(1, '11', '', '4', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:10 PM', 'System'),
+(2, '11', '', '17', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:10 PM', 'System'),
+(3, '11', '', '19', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(4, '11', '', '21', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(5, '11', '', '22', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(6, '11', '', '23', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(7, '11', '', '25', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(8, '11', '', '29', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(9, '11', '', '32', 'New Booking Request!', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(10, '11', '7', '', 'New booking request', 'Booking #11 successfully placed', '2024-05-30', '12:11 PM', 'System'),
+(11, '12', '', '4', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(12, '12', '', '17', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(13, '12', '', '19', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(14, '12', '', '21', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(15, '12', '', '22', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(16, '12', '', '23', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(17, '12', '', '25', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(18, '12', '', '29', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(19, '12', '', '32', 'New Booking Request!', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(20, '12', '7', '', 'New booking request', 'Booking #12 successfully placed', '2024-05-30', '12:20 PM', 'System'),
+(21, '13', '', '4', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(22, '13', '', '17', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(23, '13', '', '19', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(24, '13', '', '21', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(25, '13', '', '22', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(26, '13', '', '23', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(27, '13', '', '25', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(28, '13', '', '29', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(29, '13', '', '32', 'New Booking Request!', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(30, '13', '7', '', 'New booking request', 'Booking #13 successfully placed', '2024-05-30', '12:27 PM', 'System'),
+(31, '14', '', '4', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(32, '14', '', '17', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(33, '14', '', '19', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(34, '14', '', '21', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(35, '14', '', '22', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(36, '14', '', '23', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(37, '14', '', '25', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(38, '14', '', '29', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(39, '14', '', '32', 'New Booking Request!', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(40, '14', '7', '', 'New booking request', 'Booking #14 successfully placed', '2024-05-30', '12:36 PM', 'System'),
+(41, '15', '', '4', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(42, '15', '', '17', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(43, '15', '', '19', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(44, '15', '', '21', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(45, '15', '', '22', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(46, '15', '', '23', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(47, '15', '', '25', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(48, '15', '', '29', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(49, '15', '', '32', 'New Booking Request!', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(50, '15', '7', '', 'New booking request', 'Booking #15 successfully placed', '2024-05-30', '12:51 PM', 'System'),
+(51, '16', '', '4', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(52, '16', '', '17', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(53, '16', '', '19', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(54, '16', '', '21', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(55, '16', '', '22', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(56, '16', '', '23', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(57, '16', '', '25', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(58, '16', '', '29', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(59, '16', '', '32', 'New Booking Request!', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(60, '16', '7', '', 'New booking request', 'Booking #16 successfully placed', '2024-05-30', '12:53 PM', 'System'),
+(61, '17', '', '17', 'New Booking Request!', 'Booking #17 successfully placed', '2024-05-30', '12:57 PM', 'System'),
+(62, '17', '7', '', 'New booking request', 'Booking #17 successfully placed', '2024-05-30', '12:57 PM', 'System'),
+(63, '18', '', '17', 'New Booking Request!', 'Booking #18 successfully placed', '2024-05-30', '12:57 PM', 'System'),
+(64, '18', '7', '', 'New booking request', 'Booking #18 successfully placed', '2024-05-30', '12:57 PM', 'System');
 
 -- --------------------------------------------------------
 
@@ -2024,7 +1659,8 @@ INSERT INTO `tbl_user_card` (`card_id`, `customer_id`, `payment_method_id`, `car
 (57, 'cus_Q1E7wA7hKeZqcS', 'pm_1PCflOIhs7ZBuE9xUEyxIH3A', '4242', '4', '2025'),
 (58, 'cus_PvsR1satZTDXuK', 'pm_1PDmhlIhs7ZBuE9xTADf1yIu', '4242', '12', '2025'),
 (59, 'cus_Q1E7wA7hKeZqcS', 'pm_1PJTvUIhs7ZBuE9x6GZ5zyUF', '4242', '4', '2029'),
-(60, 'cus_Q9svkJHP4JUIMO', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', '4242', '4', '2036');
+(60, 'cus_Q9svkJHP4JUIMO', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', '4242', '4', '2036'),
+(61, 'cus_QC8mGQrcSVOJSx', 'pm_1PLkWpIhs7ZBuE9xan6i0fYv', '4242', '4', '2029');
 
 -- --------------------------------------------------------
 
@@ -2158,75 +1794,21 @@ INSERT INTO `Trips` (`TripID`, `DriverID`, `SenderID`, `u_name`, `FromAddress`, 
 (1, 17, 7, 'Goa Kk', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Pur', '', 'indore', '', '452014', '22.6856608', '75.8596255', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '23-05-2024 04:21 PM', '', '', '', 'R', 0, '23-05-2024 04:21 PM', '', 'ccgvh', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PJZEmIhs7ZBuE9x1qREX6Qa', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', 'User', 'Booked By Mistake', '+1+18085059284', '+1+19754853453', '', '', '', 0, 0, '', ''),
 (2, 17, 7, 'Goa Kk', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madh', '', 'indore', '', '452014', '22.6856582', '75.8596368', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '27-05-2024 04:42 PM', '05-27-2024  05:01 PM', '05-27-2024  05:07 PM', '05-27-2024  05:07 PM', 'C', 0, '27-05-2024 04:42 PM', '', 'chjkujh', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PL1TMIhs7ZBuE9x2VwfDWRr', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '886065', '', '', '+1+19754853453', '+1+18085059288', '', '', '', 0, 0, '', '25'),
 (3, 17, 7, 'Goa Kk', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madh', '', 'indore', '', '452014', '22.685653', '75.8596405', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '27-05-2024 05:12 PM', '05-27-2024  05:14 PM', '05-27-2024  05:14 PM', '05-27-2024  05:14 PM', 'C', 0, '27-05-2024 05:12 PM', '', 'g,ydufufuf', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PL1wtIhs7ZBuE9x0Lex2v6f', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '793694', '', '', '+18085059284', '+19754853453', '', '', '', 0, 0, '', '2'),
-(4, 17, 7, 'Goa Kk', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madh', '', 'indore', '', '452014', '22.6856603', '75.8596392', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '27-05-2024 05:15 PM', '', '', '', 'N', 0, '27-05-2024 05:15 PM', '', 'dryu', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PL1zwIhs7ZBuE9x2mK2bZUt', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', 'User', 'Driver Arrived Late', '+18085056666', '+15566666666', '', '', '', 0, 0, '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_register`
---
-
-CREATE TABLE `user_register` (
-  `id` int(11) NOT NULL,
-  `full_name` varchar(255) NOT NULL,
-  `middle_name` varchar(255) NOT NULL,
-  `sur_name` varchar(500) NOT NULL,
-  `gender` varchar(50) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `country_code` varchar(255) NOT NULL,
-  `contact` varchar(255) NOT NULL,
-  `wrok` varchar(200) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `device_id` varchar(255) NOT NULL,
-  `iosdevice_id` varchar(500) NOT NULL,
-  `device_status` varchar(200) NOT NULL,
-  `address` varchar(200) NOT NULL,
-  `lat` varchar(255) NOT NULL,
-  `long` varchar(255) NOT NULL,
-  `status` varchar(200) NOT NULL,
-  `date` varchar(100) NOT NULL,
-  `user_wallet` varchar(100) NOT NULL,
-  `user_status` varchar(200) NOT NULL,
-  `access_token` varchar(200) NOT NULL,
-  `booking_cancel_time` varchar(255) NOT NULL,
-  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `google_token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `facebook_token` varchar(2552) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `apple_token` varchar(255) NOT NULL,
-  `created_at` varchar(255) NOT NULL,
-  `updated_at` varchar(255) NOT NULL,
-  `secret_key` varchar(255) NOT NULL,
-  `firebase_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `invite_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `company_id` varchar(255) NOT NULL,
-  `generated_code` varchar(255) NOT NULL,
-  `code_start_date` varchar(215) NOT NULL,
-  `code_end_date` varchar(255) NOT NULL,
-  `country_flag` varchar(500) NOT NULL,
-  `id_proof_image` mediumtext NOT NULL,
-  `id_expiry_date` varchar(111) NOT NULL,
-  `social_id` varchar(500) NOT NULL,
-  `social_type` varchar(255) NOT NULL,
-  `customerID` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user_register`
---
-
-INSERT INTO `user_register` (`id`, `full_name`, `middle_name`, `sur_name`, `gender`, `email`, `password`, `country_code`, `contact`, `wrok`, `image`, `device_id`, `iosdevice_id`, `device_status`, `address`, `lat`, `long`, `status`, `date`, `user_wallet`, `user_status`, `access_token`, `booking_cancel_time`, `type`, `google_token`, `facebook_token`, `apple_token`, `created_at`, `updated_at`, `secret_key`, `firebase_id`, `invite_code`, `company_id`, `generated_code`, `code_start_date`, `code_end_date`, `country_flag`, `id_proof_image`, `id_expiry_date`, `social_id`, `social_type`, `customerID`) VALUES
-(1, 'Heera', '', 'Thakur', 'Male', 'heerathakur@gmail.com', '123456', '+91', '8085059284', '', '', '', '', '', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', '', '', '', '', '0', 'Approve', '', '2024-02-05', '', '', '', '', '2024-02-05', '', '1468846918085059284', '', '', '', '176', '2024-01-08', '2025-04-06', 'IN', 'l4En85Gk73_1707129989.jpg', '29-02-2024', '', '', ''),
-(2, 'Gopal', '', 'Kirar', 'Male', 'devidbrusli@gmail.com', 'Abc!@#123', '+91', '9752115634', '', 'dg80yh3fo7_1708004333.jpg', 'crOlsxuUQICa-IYySWNVUw:APA91bGXKw9AwCLoxZ25yPjs0pnyeOPjukSRNLiEO7WZEUua3unFLAUMhgVJdE7kPVpe_hu-HK8Tdxlrc7aiPRnDAAsqfCsjodTa-DIEQAafKWZp1S2qxYY8TToDy88OKGTIAPdf53KE', '', 'Android', '107, 9930Spaces,3, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '', '', '', '', '0', 'Approve', '', '2024-02-07', '', '', '', '', '2024-02-07', '', '2168211919752115634', '', '', '', '248', '2024-01-08', '2025-04-06', 'IN', 'mvzj0351pH_1707315628.jpg', '2024-06-22', '', '', ''),
-(3, 'ujioi', '', 'jk', 'Male', '123@123.com', '123456789', '+1', '2122125555', '', 'y3n4dlfw5c_1710742503.png', '', '', '', '5879 Sullivan Trail, Nazareth, PA, USA', '', '', '', '', '0', 'Approve', '', '2024-03-14', '', '', '', '', '2024-03-14', '', '312140812122125555', '', '', '', '331', '2024-01-08', '2025-04-06', 'US', 'p9D1wEtFAq_1710384229.jpg', '2024-05-31', '', '', ''),
-(16, 'Test', '', 'Lastname', 'Male', '1234@1234.com', '123456789', '+1', '2122122122', '', '', 'cXwMJYuSTHmME75nYhH_p5:APA91bG8tVB0Ikfj777CNt1MaoDavazJN2xZ19upTg3AXI18jRXvTjM8X_jGE7mHYaBiqVaZuQJ9CtBMfz9pasPBgwgDaQ5dPQqxKckqpKkc2vFMP_H7CuJzjZ5GixFl1zFu5bof3bO7', '', 'Android', '123 Test St, Waconia, MN, USA', '', '', '', '', '0', 'Approve', '', '2024-04-08', '', '', '', '', '2024-04-08', '', '1669557312122122122', '', '', '', 'T1698', '2024-01-08', '2025-04-06', 'US', '2nHmDopj3x_1712537669.png', '10-04-2024', '', '', 'cus_PssEdOAHjDXhCW'),
-(4, 'Avi', '', 'Gupta', 'Male', 'avi@gmail.com', '123456', '+91', '7583816688', '', 'HvFktrl3zw_1710755139.jpg', '', '', '', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madhya Pradesh 452014, India', '', '', '', '', '0', 'Approve', '', '2024-03-16', '', '', '', '', '2024-03-16', '', '4174496917504564995', '', '', '', '487', '2024-01-08', '2025-04-06', 'IN', 'sz7BwjmxEi_1710828363.jpg', '31-03-2024', '', '', ''),
-(5, 'Ashii', '', '', '', 'ashii@gmail.com', '123456Aa', '+91', '4654676', '', 'tkqrvyf2an_1710743195.png', '', '', '', '', '', '', '', '', '', 'Approve', '', '2024-03-18', '', '', '', '', '2024-03-18', '', '58848509167675765', '', '', '', 'A593', '2024-01-08', '2025-04-06', '', 'Apisn5t9om_1710743195.jpg', '2024-03-20', '', '', ''),
-(12, 'Mili', 'patel', 'patel', 'Female', 'baaa@gmail.com', '123456', '+91', '98988957', '', '', '', '', '', 'Indore', '23.6589565', '76.65983265', '', '', '0', 'Approve', '', '2024-03-29', '', '', '', '', '2024-03-29', '', '129985649198988957', '', '', '', 'M1279', '2024-01-08', '2025-04-06', '', 'suiwtzx1j6_1711693005', '', '', '', 'cus_PpDAIpH5E5JMnD'),
-(15, 'Asd', '', 'Check', 'Male', 'as@gmail.com', '123456', '+1', '8085059285', '', '', 'dwk6ze3kTaqvSOUTj90BZh:APA91bG1--fBPAnnJoydWKVrzheT7DKRBoozORZPdou9YX6AXi8kNkGin6pLkIwgfrYIDMSBxmiiiwEN2VPFJ0DwJ7rJfosdBWrr55_3i4XKtqhwbMlxzr2W5dTMBqQJShsstzZNWDUc', '', 'Android', 'bus stop, 160/4, Bhanvarkuan, Vishnupuri i, Pipliya Rao, Indore, Madhya Pradesh 452001, India', '', '', '', '', '0', 'Approve', '', '2024-04-01', '', '', '', '', '2024-04-01', '', '1534280218085059285', '', '', '', 'A1593', '2024-01-08', '2025-04-06', 'US', 'rvmAky1lup_1711976339.jpg', '26-04-2024', '', '', 'cus_PqRKlgohr4mS3b'),
-(19, 'bp', '', '', '', 'bp@gmail.com', '123456Aa', '+91', '4565789845', '', 'hq2brjfw5p_1716791913.png', '', '', '', '', '', '', '', '', '', 'Approve', '', '2024-05-27', '', '', '', '', '2024-05-27', '', '', '', '', '', '', '', '', '', 'Em2Fk7A8jr_1716791913.jpg', '2024-06-01', '', '', 'cus_QBJqbzmnmyxzSN'),
-(18, 'Ss', '', 'Ff', 'Male', 'satishchouhanciss@gmail.com', '123456', '+91', '8085059282', '', '', 'f4OG2eChQM2VggI1TFTRxo:APA91bE0lUaSCaQ3AKWmn82gUmCLefDzHbGMa-lgWTJRG6KoR_eem2AHmTq6_lmfzZOrXFEvnEpmChgZ-2aXzwGFv163VnmCz_lboYmLfNd3Bm0zayXSJt5OnkXFGH_BOZVdgmA6GomC', '', 'Android', 'Dham, Punjab, India', '', '', '', '', '0', 'Approve', '', '2024-04-30', '', '', '', '', '2024-04-30', '', '18481874918085059282', '', '', '', 'S1837', '2024-01-08', '2025-04-06', 'IN', 'pFio9w7rA5_1714464252', '', '', '', 'cus_Q1E7wA7hKeZqcS'),
-(17, 'Test', '', 'Test', 'Male', '12345@12345.com', '123456789', '+1', '2122222222', '', '', 'eRnlydDYRra7g68aOEoGUL:APA91bGdwKrvNpzZJibWZ3XDwDJ_kIQXuFpW2cjWKdNWLKZJlXLnahWOggTRwVLTrO21ryM-_qedz_zirkY-xdursvQ62JNO3lRlqn-3Ob284lik1NBGG4WJec6aUQ2_Fe-aMt5NyftU', '', 'Android', 'B&M Test, Briceni, Moldova', '', '', '', '', '0', 'Approve', '', '2024-04-16', '', '', '', '', '2024-04-16', '', '1755333412122222222', '', '', '', 'T1755', '2024-01-08', '2025-04-06', 'US', '8BDoG7skwn_1713230360.png', '18-04-2024', '', '', 'cus_PvsR1satZTDXuK');
+(4, 17, 7, 'Goa Kk', '315, Mangal Nagar Road, Mangal Nagar, Indore, Madh', '', 'indore', '', '452014', '22.6856603', '75.8596392', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '27-05-2024 05:15 PM', '', '', '', 'B', 0, '27-05-2024 05:15 PM', '', 'dryu', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PL1zwIhs7ZBuE9x2mK2bZUt', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', 'Driver', 'The user did not arrive', '+18085056666', '+15566666666', '', '', '', 0, 0, '', ''),
+(5, 0, 9, 'Test Sender', 'Pandhana, Madhya Pradesh 450661, India', '', 'neemkheda', '', '450661', '21.6762056', '76.1551866', 'Pandhana, Madhya Pradesh 450661, India', '', 'neemkheda', '', '450661', '21.6762056', '76.1551866', '29-05-2024 04:48 PM', '', '', '', 'R', 0, '29-05-2024 04:48 PM', '', 'drop-off at front door', '', 0, '1', 0, 'Extra Large', 400.00, 400.00, '0.0', 0, 'Card', 0, 'pi_3PLkWyIhs7ZBuE9x1It6VYcs', 'pm_1PLkWpIhs7ZBuE9xan6i0fYv', 'Ride_now', 'In City', '', '', '', '+12122222222', '+12122222222', '', '', '', 0, 0, '', ''),
+(6, 0, 9, 'Test Sender', 'Pandhana, Madhya Pradesh 450661, India', '', 'neemkheda', '', '450661', '21.6762056', '76.1551866', 'Pandhana, Madhya Pradesh 450661, India', '', 'neemkheda', '', '450661', '21.6762056', '76.1551866', '29-05-2024 04:55 PM', '', '', '', 'R', 0, '29-05-2024 04:55 PM', '', 'test notification ', '', 0, '1', 0, 'Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PLkdaIhs7ZBuE9x1rob9YAm', 'pm_1PLkWpIhs7ZBuE9xan6i0fYv', 'Ride_now', 'In City', '', '', '', '+12122122222', '+12122222222', '', '', '', 0, 0, '', ''),
+(7, 0, 9, 'Test Sender', 'Pandhana, Madhya Pradesh 450661, India', '', 'neemkheda', '', '450661', '21.6762056', '76.1551866', 'Pandhana, Madhya Pradesh 450661, India', '', 'neemkheda', '', '450661', '21.6762056', '76.1551866', '29-05-2024 04:58 PM', '', '', '', 'R', 0, '29-05-2024 04:58 PM', '', 'test neighborhood ', '', 0, '1', 0, 'Extra Large', 400.00, 400.00, '0.0', 0, 'Card', 0, 'pi_3PLkgcIhs7ZBuE9x2MdGq9cJ', 'pm_1PLkWpIhs7ZBuE9xan6i0fYv', 'Ride_now', 'In City', '', '', '', '+12122222222', '+12122222222', '', '', '', 0, 0, '', ''),
+(8, 0, 7, 'Goa Kk', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, In', '', 'indore', '', '452014', '22.6857147', '75.8595282', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '29-05-2024 05:33 PM', '', '', '', 'R', 0, '29-05-2024 05:33 PM', '', ' vvvv', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PLlE6Ihs7ZBuE9x1mGCPAaH', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+11234567898', '+15255885585', '', '', '', 0, 0, '', ''),
+(9, 0, 7, 'Goa Kk', 'Sai Ram Plaza, Mangal Nagar Road, Mangal Nagar, In', '', 'indore', '', '452014', '22.6857098', '75.8595383', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '29-05-2024 05:47 PM', '', '', '', 'R', 0, '29-05-2024 05:47 PM', '', 'vbbb', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PLlRyIhs7ZBuE9x0JQqhrNn', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+15556998855', '+15555888888', '', '', '', 0, 0, '', ''),
+(10, 0, 7, 'Goa Kk', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Pur', '', 'indore', '', '452014', '22.6856687', '75.8596577', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:09 PM', '', '', '', 'R', 0, '30-05-2024 12:09 PM', '', 'bzbsbzbs', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM2dyIhs7ZBuE9x23PV4NW4', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+19497979794', '+1+14994944949', '', '', '', 0, 0, '', ''),
+(11, 0, 7, 'Goa Kk', 'Sai Ram Plaza, G1-B, Mangal Nagar Road, Vishnu Pur', '', 'indore', '', '452014', '22.6856638', '75.8596721', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:10 PM', '', '', '', 'R', 0, '30-05-2024 12:10 PM', '', 'svdvdrbthrbntn', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM2fUIhs7ZBuE9x1urTraOJ', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+15595955984', '+1+14848495959', '', '', '', 0, 0, '', ''),
+(12, 0, 7, 'Goa Kk', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452', '', 'indore', '', '452014', '22.6856578', '75.8596627', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:20 PM', '', '', '', 'R', 0, '30-05-2024 12:20 PM', '', '', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM2ouIhs7ZBuE9x0ylV6VgZ', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+18085059284', '+1+15566668656', '', '', '', 0, 0, '', ''),
+(13, 0, 7, 'Goa Kk', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452', '', 'indore', '', '452014', '22.6856596', '75.8596612', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:27 PM', '', '', '', 'R', 0, '30-05-2024 12:27 PM', '', 'ghh', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM2vFIhs7ZBuE9x2aSbgnqw', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+18855525555', '+1+18522555555', '', '', '', 0, 0, '', ''),
+(14, 0, 7, 'Goa Kk', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452', '', 'indore', '', '452014', '22.6856586', '75.8596665', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:36 PM', '', '', '', 'R', 0, '30-05-2024 12:36 PM', '', 'vvb', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM346Ihs7ZBuE9x288CUMMp', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+15665533668', '+1+18999855666', '', '', '', 0, 0, '', ''),
+(15, 0, 7, 'Goa Kk', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452', '', 'indore', '', '452014', '22.6856586', '75.8596665', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:51 PM', '', '', '', 'R', 0, '30-05-2024 12:51 PM', '', '', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM346Ihs7ZBuE9x288CUMMp', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+15665533668', '+1+18999855666', '', '', '', 0, 0, '', ''),
+(16, 0, 7, 'Goa Kk', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452', '', 'indore', '', '452014', '22.6856586', '75.8596665', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:53 PM', '', '', '', 'R', 0, '30-05-2024 12:53 PM', '', '', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM346Ihs7ZBuE9x288CUMMp', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+15665533668', '+1+18999855666', '', '', '', 0, 0, '', ''),
+(17, 0, 7, 'Goa Kk', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452', '', 'indore', '', '452014', '22.6856586', '75.8596665', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:57 PM', '', '', '', 'R', 0, '30-05-2024 12:57 PM', '', '', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM346Ihs7ZBuE9x288CUMMp', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+15665533668', '+1+18999855666', '', '', '', 0, 0, '', ''),
+(18, 0, 7, 'Goa Kk', 'MVP5+7V4, Mangal Nagar, Indore, Madhya Pradesh 452', '', 'indore', '', '452014', '22.6856586', '75.8596665', 'Dhamnod, Madhya Pradesh, India', '', 'dhamnod', '', '454552', '22.2138885', '75.4723411', '30-05-2024 12:57 PM', '', '', '', 'R', 0, '30-05-2024 12:57 PM', '', '', '', 0, '3', 0, 'Extra Large', 200.00, 200.00, '0.0', 0, 'Card', 0, 'pi_3PM346Ihs7ZBuE9x288CUMMp', 'pm_1PJZEfIhs7ZBuE9xJqXZw5an', 'Ride_now', 'Out City', '', '', '', '+1+15665533668', '+1+18999855666', '', '', '', 0, 0, '', '');
 
 --
 -- Indexes for dumped tables
@@ -2277,12 +1859,6 @@ ALTER TABLE `canclebooking_driver_new`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `car_names_tbl`
---
-ALTER TABLE `car_names_tbl`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `chat_info`
 --
 ALTER TABLE `chat_info`
@@ -2307,12 +1883,6 @@ ALTER TABLE `faq`
   ADD PRIMARY KEY (`f_id`);
 
 --
--- Indexes for table `help_support`
---
-ALTER TABLE `help_support`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `inquiry_table`
 --
 ALTER TABLE `inquiry_table`
@@ -2325,27 +1895,9 @@ ALTER TABLE `messages`
   ADD PRIMARY KEY (`msg_id`);
 
 --
--- Indexes for table `notification_tbl`
---
-ALTER TABLE `notification_tbl`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `panding_booking_request_driver`
 --
 ALTER TABLE `panding_booking_request_driver`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `penic_notification_list`
---
-ALTER TABLE `penic_notification_list`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `Refferal_Amount`
---
-ALTER TABLE `Refferal_Amount`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2373,34 +1925,10 @@ ALTER TABLE `tbl_cancel_reason`
   ADD PRIMARY KEY (`reason_id`);
 
 --
--- Indexes for table `tbl_city`
---
-ALTER TABLE `tbl_city`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `tbl_complain_list`
 --
 ALTER TABLE `tbl_complain_list`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_coupon`
---
-ALTER TABLE `tbl_coupon`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_driver_bank_detail`
---
-ALTER TABLE `tbl_driver_bank_detail`
-  ADD PRIMARY KEY (`bank_id`);
-
---
--- Indexes for table `tbl_driver_card`
---
-ALTER TABLE `tbl_driver_card`
-  ADD PRIMARY KEY (`iCardId`);
 
 --
 -- Indexes for table `tbl_driver_privacy`
@@ -2413,18 +1941,6 @@ ALTER TABLE `tbl_driver_privacy`
 --
 ALTER TABLE `tbl_driver_terms_condition`
   ADD PRIMARY KEY (`tid`);
-
---
--- Indexes for table `tbl_fair_cost`
---
-ALTER TABLE `tbl_fair_cost`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tbl_general_setting`
---
-ALTER TABLE `tbl_general_setting`
-  ADD PRIMARY KEY (`set_id`);
 
 --
 -- Indexes for table `tbl_notification_list`
@@ -2478,12 +1994,6 @@ ALTER TABLE `Trips`
   ADD KEY `AreaID` (`RouteID`);
 
 --
--- Indexes for table `user_register`
---
-ALTER TABLE `user_register`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -2521,19 +2031,13 @@ ALTER TABLE `canclebooking`
 -- AUTO_INCREMENT for table `canclebooking_driver`
 --
 ALTER TABLE `canclebooking_driver`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=286;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=287;
 
 --
 -- AUTO_INCREMENT for table `canclebooking_driver_new`
 --
 ALTER TABLE `canclebooking_driver_new`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `car_names_tbl`
---
-ALTER TABLE `car_names_tbl`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `chat_info`
@@ -2560,12 +2064,6 @@ ALTER TABLE `faq`
   MODIFY `f_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT for table `help_support`
---
-ALTER TABLE `help_support`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `inquiry_table`
 --
 ALTER TABLE `inquiry_table`
@@ -2578,34 +2076,16 @@ ALTER TABLE `messages`
   MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `notification_tbl`
---
-ALTER TABLE `notification_tbl`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
-
---
 -- AUTO_INCREMENT for table `panding_booking_request_driver`
 --
 ALTER TABLE `panding_booking_request_driver`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `penic_notification_list`
---
-ALTER TABLE `penic_notification_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `Refferal_Amount`
---
-ALTER TABLE `Refferal_Amount`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `Senders`
 --
 ALTER TABLE `Senders`
-  MODIFY `SenderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `SenderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_about_us`
@@ -2620,34 +2100,10 @@ ALTER TABLE `tbl_cancel_reason`
   MODIFY `reason_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `tbl_city`
---
-ALTER TABLE `tbl_city`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `tbl_complain_list`
 --
 ALTER TABLE `tbl_complain_list`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `tbl_coupon`
---
-ALTER TABLE `tbl_coupon`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `tbl_driver_bank_detail`
---
-ALTER TABLE `tbl_driver_bank_detail`
-  MODIFY `bank_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tbl_driver_card`
---
-ALTER TABLE `tbl_driver_card`
-  MODIFY `iCardId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_driver_privacy`
@@ -2662,22 +2118,10 @@ ALTER TABLE `tbl_driver_terms_condition`
   MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `tbl_fair_cost`
---
-ALTER TABLE `tbl_fair_cost`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tbl_general_setting`
---
-ALTER TABLE `tbl_general_setting`
-  MODIFY `set_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
 -- AUTO_INCREMENT for table `tbl_notification_list`
 --
 ALTER TABLE `tbl_notification_list`
-  MODIFY `noti_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `noti_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `tbl_package`
@@ -2701,7 +2145,7 @@ ALTER TABLE `tbl_terms_condition`
 -- AUTO_INCREMENT for table `tbl_user_card`
 --
 ALTER TABLE `tbl_user_card`
-  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `tbl_user_privacy`
@@ -2719,13 +2163,7 @@ ALTER TABLE `tbl_user_write_support`
 -- AUTO_INCREMENT for table `Trips`
 --
 ALTER TABLE `Trips`
-  MODIFY `TripID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `user_register`
---
-ALTER TABLE `user_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `TripID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

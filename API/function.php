@@ -2187,8 +2187,8 @@ class Sender
         
                                      $row1=mysqli_fetch_assoc($sql_userId1);
                                      $ds1=$row1['device_status'];
-                                     // if($ds1=='IOS' || $ds1=='Android')
-                                     // {
+                                    if($ds1=='IOS' || $ds1=='Android')
+                                    {
                                          $sql1=mysqli_query($con,"INSERT INTO `tbl_notification_list`(`trip_id`,`user_id`, `driver_id`, `title`, `message`, `date`,time ,`type`)
                                                    VALUES ('$insert_id','','$em','$title','$message','$date','$time','System')");
                              
@@ -2241,7 +2241,7 @@ class Sender
                                          
                                          //Close request
                                          curl_close($ch);
-                                     // }
+                                    }
                                      
                                  }                  
                              }
