@@ -102,30 +102,34 @@
                 </thead>
                 <tbody>
                     <?php
-                        $path="https://cisswork.com/Android/Cerber_taxi/images/";
-                        $def="https://cisswork.com/Android/Cerber_taxi/Cerber_super_Admin/logo (2).png";
+                        $path="https://cisswork.com/Android/SenderApp/images/";
+                        $def="https://cisswork.com/Android/SenderApp/super_Admin/logo (2).png";
                         $select=mysqli_query($con,"SELECT * FROM tbl_user_write_support WHERE type='User' ORDER BY id desc");
                         $count=1;
+                   
                         while($row=mysqli_fetch_assoc($select))
                         {
                             
                         $driver_id=$row['user_id'];
-                        $sell=mysqli_query($con,"SELECT * FROM `user_register` WHERE id='$driver_id'");
+                        $sell=mysqli_query($con,"SELECT * FROM `Senders` WHERE SenderID='$driver_id'");
                         $fet=mysqli_fetch_assoc($sell);
+                        $c_f = mysqli_num_rows($sell);
+                        if($c_f > 0)
+                        {
                         $status=$row['user_status']
                         ?>
                 <tr>
                     <td><?php echo $count++;?></td>
-                    <td><?php echo $fet['full_name']." ".$fet['middle_name']." ".$fet['sur_name'];?> </td>
-                    <td><?php echo $fet['email'];?></td>
-                    <td><?php echo $fet['country_code'].$fet['contact'];?></td>
+                    <td><?php echo $fet['FirstName']." ".$fet['LastName'];?> </td>
+                    <td><?php echo $fet['Email'];?></td>
+                    <td><?php echo $fet['country_code'].$fet['Phone'];?></td>
                     <td><?php echo $row['subject'];?></td>
                     <td><?php echo $row['message'];?></td>
                     <td><?php echo $row['date'];?></td>
                     <td><?php echo $row['time'];?></td>
                  </tr>
                 <?php 
-                }
+                }}
                 ?>
                 </tbody>
                 
