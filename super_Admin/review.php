@@ -329,15 +329,15 @@
                                                                 $res1=mysqli_fetch_assoc($sql1);
                                                                 $d_name=$res1['FirstName']." ".$res1['LastName'];
                                                                 
-                                                                $sql2=mysqli_query($con,"SELECT * FROM user_register WHERE id='".$row['user_id']."'");
+                                                                $sql2=mysqli_query($con,"SELECT * FROM Senders WHERE SenderID='".$row['user_id']."'");
                                                                 $res2=mysqli_fetch_assoc($sql2);
-                                                                
+                                                                $u_name=$res2['FirstName']." ".$res2['LastName'];
                                                             ?>
                                                             <tr>
                                                               <td><?php echo ++$count;?></td>
                                                               <td><?php echo $row['booking_id'];?></td>
                                                               <td><?php echo $d_name;?> </td>
-                                                              <td><?php echo $res2['full_name']." ".$res2['middle_name']." ".$res2['sur_name'];?> </td>
+                                                              <td><?php echo $u_name?> </td>
                                                               <td><?php echo $row['driver_rated'];?></td>
                                                               <td><?php echo $row['date'];?></td>
                                                               <td><?php echo $row['time'];?></td>
